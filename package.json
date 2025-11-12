@@ -1,11 +1,13 @@
 {
   "name": "agentforce-roadmap",
-  "version": "3.1.0",
-  "description": "Agentforce Roadmap - AI-Powered Customer Experience Platform",
+  "version": "4.0.0",
+  "description": "Agentforce Roadmap - AI-Powered Customer Experience Platform with RAG Chat",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "python3 -m http.server 8000"
+    "dev": "nodemon server.js",
+    "setup-db": "node scripts/setup-database.js",
+    "ingest-data": "node scripts/ingest-data.js"
   },
   "engines": {
     "node": ">=18.x"
@@ -15,11 +17,22 @@
     "roadmap",
     "salesforce",
     "ai",
-    "crm"
+    "crm",
+    "rag",
+    "chatbot"
   ],
   "author": "Ajay Kumar",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pg": "^8.11.3",
+    "pgvector": "^0.1.8",
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

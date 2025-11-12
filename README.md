@@ -1,213 +1,432 @@
-# Agentforce Roadmap
+# 🚀 Agentforce Roadmap Portal
 
-A modern, interactive web application for visualizing the Agentforce product roadmap with multiple views, dark theme support, and comprehensive release notes.
+An interactive, AI-powered roadmap portal for Agentforce features with intelligent RAG (Retrieval-Augmented Generation) chat capabilities.
 
-![Agentforce Roadmap](https://img.shields.io/badge/Version-3.1.0-blue)
-![Node](https://img.shields.io/badge/Node-%3E%3D18.x-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)
+![Node](https://img.shields.io/badge/node-%3E%3D18.x-green.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## 🌟 Features
+---
 
-### Multiple Roadmap Versions
-- **V1 - Core Roadmap**: Essential features and capabilities (17 items)
-- **V2 - Extended Roadmap**: Comprehensive roadmap with all V1 items plus 23 additional advanced features (40 items total)
-- **Customer Facing - Release Notes**: Official Salesforce release notes for Winter '26, Summer '25, Spring '25, and Winter '25
+## ✨ Features
 
-### Interactive Views
-- **Timeline View**: Chronological visualization of roadmap items
-- **Grid View**: Card-based layout for easy scanning
-- **List View**: Compact list format with key details
-- **Release Detail Pages**: Deep-dive into each release with expandable feature details
+### 📊 Roadmap Views
+- **V1 Core Roadmap** - 17 essential features
+- **V2 Extended Roadmap** - 40 comprehensive features with product owners & PRD links
+- **Customer Facing Release Notes** - Winter '26, Summer '25, Spring '25, Winter '25
+- **Multiple View Modes** - Timeline, Grid, and List views
+- **Advanced Filtering** - By category, status, and quarter
+- **Search Functionality** - Find features instantly
 
-### Professional Theme System
-- **Light Theme**: Clean, modern interface with Salesforce-inspired colors
-- **Dark Theme**: Professional dark mode with blue-tinted cards
-- **Theme Toggle**: Smooth slider switch (☀️ ⟷ 🌙) with localStorage persistence
-- **Responsive Design**: Optimized for desktop, tablet, and mobile
+### 🤖 AI-Powered Chat (NEW!)
+- **RAG Architecture** - Retrieval-Augmented Generation with PostgreSQL + pgvector
+- **Natural Language Queries** - Ask questions in plain English
+- **Contextual Answers** - AI responses based on actual roadmap data
+- **Source Citations** - See which features informed each answer
+- **Chat History** - Persistent conversation tracking
+- **Smart Suggestions** - Quick question prompts
 
-### Advanced Features
-- **Search & Filters**: Real-time search with category and status filters
-- **Product Owners**: V2 items include PM names and PRD links
-- **Expandable Details**: Rich feature descriptions with capabilities and use cases
-- **Export Functionality**: Export roadmap data
-- **Banner Image**: Professional Agentforce 360 branding
+### 🎨 Modern UI/UX
+- **Professional Theme** - Clean, modern design system
+- **Dark/Light Mode** - Toggle with persistent preference
+- **Responsive Design** - Works on desktop, tablet, and mobile
+- **Smooth Animations** - Polished user experience
+- **Accessible** - WCAG compliant
+
+---
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     Frontend (Static)                        │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
+│  │ HTML/CSS │  │ Roadmap  │  │ Release  │  │   Chat   │   │
+│  │   UI     │  │   Data   │  │  Notes   │  │  Widget  │   │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘   │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+                         ↓ API Calls
+┌─────────────────────────────────────────────────────────────┐
+│                   Backend (Express.js)                       │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │              RAG Service Layer                        │  │
+│  │  • Query Processing  • Context Retrieval             │  │
+│  │  • Answer Generation • History Management            │  │
+│  └──────────────────────────────────────────────────────┘  │
+└────────────┬─────────────────────────┬──────────────────────┘
+             │                         │
+             ↓                         ↓
+┌────────────────────────┐  ┌──────────────────────────┐
+│  PostgreSQL + pgvector │  │     OpenAI API           │
+│  • Vector Embeddings   │  │  • text-embedding-3-small│
+│  • Similarity Search   │  │  • gpt-4-turbo-preview   │
+│  • Chat History        │  │  • Completions           │
+└────────────────────────┘  └──────────────────────────┘
+```
+
+---
 
 ## 🚀 Quick Start
 
-### Local Development
+### Prerequisites
+
+- **Node.js** >= 18.x
+- **PostgreSQL** >= 15 with pgvector extension
+- **OpenAI API Key** (for chat functionality)
+
+### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/agentforce-roadmap.git
-cd agentforce-roadmap
+git clone https://github.com/ajaykumar127/agentforceroadmap.git
+cd agentforceroadmap
 
 # Install dependencies
 npm install
 
-# Start the development server
+# Configure environment
+cp .env.example .env
+# Edit .env with your DATABASE_URL and OPENAI_API_KEY
+
+# Setup database
+npm run setup-db
+
+# Ingest data (generates embeddings)
+npm run ingest-data
+
+# Start the server
 npm start
-
-# Or use Python's simple server
-python3 -m http.server 8000
 ```
 
-Visit `http://localhost:3000` (or `http://localhost:8000` for Python server)
+Open http://localhost:3000 and start exploring!
 
-### Deploy to Heroku
+---
 
-```bash
-# Login to Heroku
-heroku login
+## 📖 Documentation
 
-# Create Heroku app
-heroku create your-app-name
+- **[RAG Setup Guide](RAG_SETUP_GUIDE.md)** - Complete setup instructions for the chat system
+- **[Heroku Deployment](HEROKU_DEPLOYMENT.md)** - Deploy to Heroku with Postgres
+- **[Theme Guide](THEME_GUIDE.md)** - Design system documentation
+- **[Dark Theme Guide](DARK_THEME_GUIDE.md)** - Dark mode implementation
 
-# Deploy
-git push heroku main
+---
 
-# Open your app
-heroku open
-```
+## 🎯 Usage
 
-See [HEROKU_DEPLOYMENT.md](HEROKU_DEPLOYMENT.md) for detailed deployment instructions.
+### Roadmap Portal
 
-## 📦 Project Structure
+1. **Switch Versions** - Use the dropdown to toggle between V1, V2, and Customer Facing views
+2. **Change Views** - Click Timeline, Grid, or List icons
+3. **Filter** - Select category, status, or quarter
+4. **Search** - Type to find specific features
+5. **View Details** - Click any feature card for full information
+
+### AI Chat
+
+1. **Open Chat** - Click the chat button (bottom right)
+2. **Ask Questions** - Type naturally, e.g., "What features are coming in Q1 2025?"
+3. **View Sources** - See which features informed the answer
+4. **Continue Conversation** - Chat history is preserved
+
+#### Example Questions
+
+- "What features are coming in Q1 2025?"
+- "Tell me about Slack integration"
+- "What's new in Winter '26?"
+- "Who owns the Agent Analytics feature?"
+- "Show me all completed features"
+- "What are the WhatsApp capabilities?"
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **HTML5/CSS3** - Modern semantic markup
+- **Vanilla JavaScript** - No framework dependencies
+- **CSS Variables** - Dynamic theming
+- **LocalStorage** - Persistent preferences
+
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web framework
+- **PostgreSQL** - Relational database
+- **pgvector** - Vector similarity search
+- **OpenAI API** - Embeddings & completions
+
+### Deployment
+- **Heroku** - Cloud platform
+- **Heroku Postgres** - Managed database
+- **Git** - Version control
+
+---
+
+## 📁 Project Structure
 
 ```
 agentforce-roadmap/
 ├── index.html              # Main HTML file
-├── styles.css              # Complete styling with light/dark themes
-├── app.js                  # Application logic and interactivity
+├── styles.css              # Main stylesheet
+├── chat.css                # Chat widget styles
+├── app.js                  # Roadmap application logic
+├── chat.js                 # Chat widget frontend
 ├── data.js                 # Roadmap data (V1 & V2)
-├── release-details.js      # Customer-facing release notes data
-├── server.js               # Express server for production
-├── package.json            # Node.js dependencies
+├── release-details.js      # Release notes data
+├── server.js               # Express server
+├── package.json            # Node dependencies
 ├── Procfile                # Heroku configuration
+├── .env.example            # Environment template
 ├── .gitignore              # Git ignore rules
-└── docs/                   # Documentation
-    ├── README.md
-    ├── THEME_GUIDE.md
-    ├── DARK_THEME_GUIDE.md
+│
+├── db/
+│   ├── schema.sql          # Database schema
+│   └── connection.js       # Database connection pool
+│
+├── services/
+│   ├── openai-service.js   # OpenAI API integration
+│   └── rag-service.js      # RAG logic
+│
+├── scripts/
+│   ├── setup-database.js   # Database setup script
+│   └── ingest-data.js      # Data ingestion script
+│
+└── docs/
+    ├── RAG_SETUP_GUIDE.md
     ├── HEROKU_DEPLOYMENT.md
-    └── STATUS_UPDATE_SUMMARY.md
+    ├── THEME_GUIDE.md
+    └── DARK_THEME_GUIDE.md
 ```
-
-## 🎨 Theme System
-
-### Light Theme (Default)
-- Clean white backgrounds
-- Professional Salesforce blue (#0070d2)
-- Subtle shadows and borders
-- High contrast for readability
-
-### Dark Theme
-- Dark navy/black backgrounds (#0f1419)
-- Bright blue accents (#1b96ff)
-- Blue-tinted cards for customer releases
-- Enhanced shadows for depth
-
-**Toggle**: Click the ☀️/🌙 slider in the top-right header
-
-## 📊 Data Structure
-
-### V1 Roadmap (17 items)
-- Q4 2024: Foundation features (Agent Builder, Service Agent, SDR)
-- Q1 2025: Expansion (Marketing Agent, Analytics, Slack)
-- Q2 2025: Intelligence (Multi-Agent, Voice, Custom Models)
-- Q3 2025: Scale (Security, Teams, Personalization)
-- Q4 2025+: Future innovations
-
-### V2 Roadmap (40 items)
-- All V1 items included
-- 23 additional advanced features
-- Product owner names for each V2 feature
-- PRD links for deeper documentation
-
-### Customer Facing
-- Winter '26 Release (Current)
-- Summer '25 Release
-- Spring '25 Release
-- Winter '25 Release
-
-## 🛠️ Technologies
-
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Backend**: Node.js, Express.js
-- **Styling**: CSS Custom Properties (CSS Variables)
-- **Deployment**: Heroku-ready
-- **Version Control**: Git
-
-## 🎯 Key Features
-
-### Search & Filter
-- Real-time search across all roadmap items
-- Filter by category (Features, Enhancements, Integrations)
-- Filter by status (Completed, In-Progress, Planned, Future)
-- Filter by quarter/period
-
-### Status Tracking
-- ✅ **Completed**: Delivered features (Q4 2024 - Q2 2025)
-- 🔄 **In-Progress**: Current development (Q3 2025)
-- 📅 **Planned**: Upcoming features (Q4 2025)
-- 🔮 **Future**: Long-term vision (2026+)
-
-### V2 Exclusive
-- Product Manager/Owner information
-- Direct links to PRD documents
-- Extended feature descriptions
-- Advanced capabilities
-
-## 📱 Responsive Design
-
-Optimized for:
-- 💻 Desktop (1400px+)
-- 📱 Tablet (768px - 1400px)
-- 📱 Mobile (< 768px)
-
-## 🔒 Security
-
-- HTTPS enabled (on Heroku)
-- No sensitive data in code
-- Environment variables supported
-- .gitignore configured
-
-## 📖 Documentation
-
-- **[THEME_GUIDE.md](THEME_GUIDE.md)**: Complete design system documentation
-- **[DARK_THEME_GUIDE.md](DARK_THEME_GUIDE.md)**: Dark theme implementation details
-- **[HEROKU_DEPLOYMENT.md](HEROKU_DEPLOYMENT.md)**: Step-by-step deployment guide
-- **[STATUS_UPDATE_SUMMARY.md](STATUS_UPDATE_SUMMARY.md)**: Roadmap status tracking
-
-## 🤝 Contributing
-
-This is an internal Salesforce project. For updates or corrections:
-
-1. Update the data in `data.js` or `release-details.js`
-2. Test locally
-3. Commit changes
-4. Deploy to Heroku
-
-## 📝 License
-
-MIT License - See LICENSE file for details
-
-## 🎉 Credits
-
-- **Design**: Salesforce-inspired professional theme
-- **Data Sources**: 
-  - [V1 Roadmap Slides](https://docs.google.com/presentation/d/1cq4ZopwHC553L7A1CqfPvxYRnFvpPbWbrOIzkn_zBm4/)
-  - [V2 Roadmap Slides](https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/)
-  - [Salesforce Release Notes](https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm)
-
-## 📞 Support
-
-For questions or issues:
-- Check the documentation in the `/docs` folder
-- Review the inline code comments
-- Consult the Google Slides sources
 
 ---
 
-**Built with ❤️ for Agentforce**
+## 🔧 Configuration
 
-Last Updated: November 12, 2025 | Version 3.1.0
+### Environment Variables
+
+Create a `.env` file:
+
+```env
+# Database
+DATABASE_URL=postgresql://user:pass@localhost:5432/agentforce_roadmap
+
+# OpenAI
+OPENAI_API_KEY=sk-your-api-key-here
+
+# Server
+PORT=3000
+NODE_ENV=development
+
+# Chat
+MAX_CONTEXT_ITEMS=5
+EMBEDDING_MODEL=text-embedding-3-small
+CHAT_MODEL=gpt-4-turbo-preview
+```
+
+### Database Setup
+
+```bash
+# Create database
+createdb agentforce_roadmap
+
+# Run schema
+npm run setup-db
+
+# Ingest data
+npm run ingest-data
+```
+
+---
+
+## 🌐 Deployment
+
+### Heroku
+
+```bash
+# Create app
+heroku create agentforce-roadmap
+
+# Add PostgreSQL
+heroku addons:create heroku-postgresql:essential-0
+
+# Enable pgvector
+heroku pg:psql
+CREATE EXTENSION vector;
+\q
+
+# Set environment
+heroku config:set OPENAI_API_KEY=sk-your-key
+
+# Deploy
+git push heroku main
+
+# Setup database
+heroku run npm run setup-db
+heroku run npm run ingest-data
+
+# Open app
+heroku open
+```
+
+See [HEROKU_DEPLOYMENT.md](HEROKU_DEPLOYMENT.md) for detailed instructions.
+
+---
+
+## 🧪 Testing
+
+### Test API Endpoints
+
+```bash
+# Health check
+curl http://localhost:3000/health
+
+# Chat
+curl -X POST http://localhost:3000/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"message": "What features are in Q1 2025?"}'
+
+# Search
+curl -X POST http://localhost:3000/api/search \
+  -H "Content-Type: application/json" \
+  -d '{"query": "Slack", "limit": 5}'
+```
+
+### Manual Testing
+
+1. Open http://localhost:3000
+2. Test all views (Timeline, Grid, List)
+3. Test filters and search
+4. Toggle dark/light theme
+5. Open chat and ask questions
+6. Verify sources are displayed
+
+---
+
+## 📊 Database Schema
+
+### Key Tables
+
+**roadmap_items** - Stores V1 & V2 roadmap features
+- 40 items with embeddings
+- Includes owners, PRD links, status
+
+**release_notes** - Stores customer-facing release notes
+- 47 features across 4 releases
+- Includes capabilities, use cases
+
+**chat_history** - Stores conversation history
+- Session-based tracking
+- Context preservation
+
+See [db/schema.sql](db/schema.sql) for complete schema.
+
+---
+
+## 🤝 Contributing
+
+### Adding New Features
+
+1. Update `data.js` or `release-details.js`
+2. Run `npm run ingest-data` to regenerate embeddings
+3. Test in the portal and chat
+
+### Modifying Chat Behavior
+
+Edit `services/rag-service.js`:
+- Adjust `MAX_CONTEXT_ITEMS` for more/less context
+- Modify system prompt for different tone
+- Change similarity threshold
+
+### Styling Changes
+
+- `styles.css` - Main portal styles
+- `chat.css` - Chat widget styles
+- Use CSS variables for theming
+
+---
+
+## 🐛 Troubleshooting
+
+### Chat Not Working
+
+1. Check OpenAI API key: `heroku config`
+2. Verify database connection: `heroku pg:info`
+3. Check logs: `heroku logs --tail`
+
+### No Search Results
+
+1. Verify data ingestion: `SELECT COUNT(*) FROM roadmap_items;`
+2. Check embeddings: `SELECT COUNT(*) FROM roadmap_items WHERE embedding IS NOT NULL;`
+3. Re-run ingestion: `npm run ingest-data`
+
+### Database Connection Failed
+
+1. Check `DATABASE_URL` format
+2. Verify PostgreSQL is running
+3. Test connection: `psql $DATABASE_URL`
+
+See [RAG_SETUP_GUIDE.md](RAG_SETUP_GUIDE.md) for more troubleshooting.
+
+---
+
+## 📈 Roadmap
+
+### Upcoming Features
+
+- [ ] Multi-language support
+- [ ] Export to PDF/Excel
+- [ ] Email notifications for updates
+- [ ] Advanced analytics dashboard
+- [ ] Integration with Jira/Asana
+- [ ] Voice chat interface
+- [ ] Mobile app
+
+---
+
+## 📝 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+---
+
+## 👥 Authors
+
+**Ajay Kumar**
+- GitHub: [@ajaykumar127](https://github.com/ajaykumar127)
+- Email: ajaykumar@salesforce.com
+
+---
+
+## 🙏 Acknowledgments
+
+- **Salesforce** - For Agentforce platform
+- **OpenAI** - For GPT-4 and embeddings API
+- **pgvector** - For PostgreSQL vector extension
+- **Heroku** - For hosting platform
+
+---
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/ajaykumar127/agentforceroadmap/issues)
+- **Documentation**: See `/docs` folder
+- **Email**: ajaykumar@salesforce.com
+
+---
+
+## 🎉 Live Demo
+
+**Production**: https://agentforce-roadmap-f730ba3f6113.herokuapp.com/
+
+**Features**:
+- ✅ V1 & V2 Roadmaps (40 features)
+- ✅ Customer Release Notes (4 releases)
+- ✅ AI-Powered Chat (RAG)
+- ✅ Dark/Light Theme
+- ✅ Responsive Design
+
+---
+
+**Built with ❤️ for the Agentforce team**
+
+**Version**: 4.0.0 | **Last Updated**: November 12, 2025
