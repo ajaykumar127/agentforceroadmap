@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentforce Roadmap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-with-image">
+                    <img src="https://contentstatic.techgig.com/photo/124544867/agentforce-360-salesforces-big-leap-in-ai-powered-crm.jpg?16374" 
+                         alt="Agentforce 360" 
+                         class="header-banner-image">
+                    <div class="logo-text">
+                        <h1>Agentforce Roadmap</h1>
+                        <p class="subtitle">AI-Powered Customer Experience Platform</p>
+                    </div>
+                </div>
+                <div class="version-info" id="versionInfo" style="margin-top: 0.5rem;"></div>
+            </div>
+            <div class="header-actions">
+                <div class="theme-toggle-container">
+                    <span class="theme-label">☀️</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="theme-slider"></span>
+                    </label>
+                    <span class="theme-label">🌙</span>
+                </div>
+                <div class="version-selector">
+                    <label for="versionSelect">Version:</label>
+                    <select id="versionSelect" class="version-select">
+                        <option value="v1">V1 - Core Roadmap</option>
+                        <option value="v2">V2 - Extended Roadmap</option>
+                        <option value="customer">Customer Facing - Release Notes</option>
+                    </select>
+                </div>
+                <button class="btn-secondary" id="exportBtn">
+                    <span>📥</span> Export
+                </button>
+            </div>
+            </div>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls-bar">
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="timeline">
+                    <span>📊</span> Timeline
+                </button>
+                <button class="view-btn" data-view="grid">
+                    <span>📋</span> Grid
+                </button>
+                <button class="view-btn" data-view="list">
+                    <span>📝</span> List
+                </button>
+            </div>
+            
+            <div class="filters">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search roadmap items...">
+                    <span class="search-icon">🔍</span>
+                </div>
+                
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="feature">Features</option>
+                    <option value="enhancement">Enhancements</option>
+                    <option value="integration">Integrations</option>
+                    <option value="infrastructure">Infrastructure</option>
+                </select>
+                
+                <select id="statusFilter" class="filter-select">
+                    <option value="all">All Status</option>
+                    <option value="completed">Completed</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="planned">Planned</option>
+                    <option value="future">Future</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Customer Facing Release Notes View -->
+            <div id="customerView" class="view-container">
+                <div class="customer-release-container">
+                    <div class="release-intro">
+                        <h2>📋 Official Salesforce Release Notes</h2>
+                        <p>Access official customer-facing documentation for Einstein and Agentforce features by release.</p>
+                    </div>
+                    <div class="release-cards">
+                        <div class="release-card">
+                            <div class="release-header">
+                                <h3>❄️ Winter '26</h3>
+                                <span class="release-badge current">Current Release</span>
+                            </div>
+                            <p class="release-description">Latest Einstein and Agentforce features, enhancements, and updates for Winter '26 release.</p>
+                            <div class="release-meta">
+                                <span class="meta-item">📅 Release: Winter 2026</span>
+                                <span class="meta-item">🔖 Version: 258</span>
+                            </div>
+                            <a href="#" 
+                               data-release="winter-26"
+                               class="release-link release-detail-link">
+                                View Winter '26 Release Details →
+                            </a>
+                            <a href="https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=258&type=5" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="release-link release-external-link">
+                                📄 Official Salesforce Documentation →
+                            </a>
+                        </div>
+                        
+                        <div class="release-card">
+                            <div class="release-header">
+                                <h3>☀️ Summer '25</h3>
+                                <span class="release-badge previous">Previous Release</span>
+                            </div>
+                            <p class="release-description">Einstein and Agentforce features, enhancements, and updates for Summer '25 release.</p>
+                            <div class="release-meta">
+                                <span class="meta-item">📅 Release: Summer 2025</span>
+                                <span class="meta-item">🔖 Version: 256</span>
+                            </div>
+                            <a href="#" 
+                               data-release="summer-25"
+                               class="release-link release-detail-link">
+                                View Summer '25 Release Details →
+                            </a>
+                            <a href="https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=256&type=5" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="release-link release-external-link">
+                                📄 Official Salesforce Documentation →
+                            </a>
+                        </div>
+
+                        <div class="release-card">
+                            <div class="release-header">
+                                <h3>🌸 Spring '25</h3>
+                                <span class="release-badge archived">Archived</span>
+                            </div>
+                            <p class="release-description">Einstein and Agentforce features from Spring '25 release.</p>
+                            <div class="release-meta">
+                                <span class="meta-item">📅 Release: Spring 2025</span>
+                                <span class="meta-item">🔖 Version: 254</span>
+                            </div>
+                            <a href="#" 
+                               data-release="spring-25"
+                               class="release-link release-detail-link">
+                                View Spring '25 Release Details →
+                            </a>
+                            <a href="https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=254&type=5" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="release-link release-external-link">
+                                📄 Official Salesforce Documentation →
+                            </a>
+                        </div>
+
+                        <div class="release-card">
+                            <div class="release-header">
+                                <h3>❄️ Winter '25</h3>
+                                <span class="release-badge archived">Archived</span>
+                            </div>
+                            <p class="release-description">Einstein and Agentforce features from Winter '25 release.</p>
+                            <div class="release-meta">
+                                <span class="meta-item">📅 Release: Winter 2025</span>
+                                <span class="meta-item">🔖 Version: 252</span>
+                            </div>
+                            <a href="#" 
+                               data-release="winter-25"
+                               class="release-link release-detail-link">
+                                View Winter '25 Release Details →
+                            </a>
+                            <a href="https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=252&type=5" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="release-link release-external-link">
+                                📄 Official Salesforce Documentation →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="release-footer">
+                        <p>💡 <strong>Tip:</strong> These links open official Salesforce documentation in a new tab. For internal roadmap planning, switch to V1 or V2 above.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Release Detail View -->
+            <div id="releaseDetailView" class="view-container">
+                <div class="release-detail-container">
+                    <button class="back-button" id="backToReleases">
+                        ← Back to All Releases
+                    </button>
+                    <div id="releaseDetailContent"></div>
+                </div>
+            </div>
+
+            <!-- Timeline View -->
+            <div id="timelineView" class="view-container active">
+                <div class="timeline-container">
+                    <div id="timelineContent"></div>
+                </div>
+            </div>
+
+            <!-- Grid View -->
+            <div id="gridView" class="view-container">
+                <div class="grid-container" id="gridContent"></div>
+            </div>
+
+            <!-- List View -->
+            <div id="listView" class="view-container">
+                <div class="list-container" id="listContent"></div>
+            </div>
+        </main>
+
+        <!-- Modal for Item Details -->
+        <div id="itemModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="release-details.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

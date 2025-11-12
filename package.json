@@ -1,0 +1,23 @@
+{
+  "name": "agentforce-roadmap",
+  "version": "3.1.0",
+  "description": "Agentforce Roadmap - AI-Powered Customer Experience Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "python3 -m http.server 8000"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "keywords": [
+    "agentforce",
+    "roadmap",
+    "salesforce",
+    "ai",
+    "crm"
+  ],
+  "author": "Ajay Kumar",
+  "license": "MIT"
+}
+
