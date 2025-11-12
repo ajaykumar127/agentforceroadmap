@@ -13,11 +13,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Handle 404s - send back to index.html (for client-side routing if needed)
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
 // Start the server
 app.listen(PORT, () => {
     console.log(`🚀 Agentforce Roadmap server running on port ${PORT}`);
