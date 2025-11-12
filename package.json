@@ -18,6 +18,8 @@
     "crm"
   ],
   "author": "Ajay Kumar",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
-
