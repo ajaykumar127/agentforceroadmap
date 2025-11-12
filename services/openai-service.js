@@ -1,10 +1,15 @@
 const OpenAI = require('openai');
 require('dotenv').config();
 
-// Initialize OpenAI client
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
-});
+// Initialize OpenAI client (only if API key is provided)
+let openai = null;
+if (process.env.OPENAI_API_KEY) {
+    openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY
+    });
+} else {
+    console.warn('⚠️  OPENAI_API_KEY not set - Chat functionality will be disabled');
+}
 
 const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL || 'text-embedding-3-small';
 const CHAT_MODEL = process.env.CHAT_MODEL || 'gpt-4-turbo-preview';
@@ -15,6 +20,10 @@ const CHAT_MODEL = process.env.CHAT_MODEL || 'gpt-4-turbo-preview';
  * @returns {Promise<number[]>} - Embedding vector
  */
 async function generateEmbedding(text) {
+    if (!openai) {
+        throw new Error('OpenAI API key not configured. Please set OPENAI_API_KEY environment variable.');
+    }
+    
     try {
         const response = await openai.embeddings.create({
             model: EMBEDDING_MODEL,
@@ -35,6 +44,10 @@ async function generateEmbedding(text) {
  * @returns {Promise<number[][]>} - Array of embedding vectors
  */
 async function generateEmbeddingsBatch(texts) {
+    if (!openai) {
+        throw new Error('OpenAI API key not configured. Please set OPENAI_API_KEY environment variable.');
+    }
+    
     try {
         const response = await openai.embeddings.create({
             model: EMBEDDING_MODEL,
@@ -56,6 +69,10 @@ async function generateEmbeddingsBatch(texts) {
  * @returns {Promise<string>} - Generated response
  */
 async function generateChatCompletion(messages, options = {}) {
+    if (!openai) {
+        throw new Error('OpenAI API key not configured. Please set OPENAI_API_KEY environment variable.');
+    }
+    
     try {
         const response = await openai.chat.completions.create({
             model: options.model || CHAT_MODEL,
@@ -81,6 +98,10 @@ async function generateChatCompletion(messages, options = {}) {
  * @param {Object} options - Additional options
  */
 async function generateChatCompletionStream(messages, onChunk, options = {}) {
+    if (!openai) {
+        throw new Error('OpenAI API key not configured. Please set OPENAI_API_KEY environment variable.');
+    }
+    
     try {
         const stream = await openai.chat.completions.create({
             model: options.model || CHAT_MODEL,

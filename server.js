@@ -31,6 +31,14 @@ app.post('/api/chat', async (req, res) => {
             return res.status(400).json({ error: 'Message is required' });
         }
         
+        // Check if OpenAI is configured
+        if (!process.env.OPENAI_API_KEY) {
+            return res.status(503).json({ 
+                error: 'Chat service not configured',
+                message: 'OpenAI API key is not set. Please configure OPENAI_API_KEY environment variable to enable chat functionality.'
+            });
+        }
+        
         const session = sessionId || `session-${Date.now()}`;
         
         console.log(`💬 Chat request: "${message}" (session: ${session})`);
