@@ -949,3 +949,685 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = { roadmapData, roadmapDataV1, roadmapDataV2 };
 }
 
+
+
+// Agentforce Roadmap Data - V3
+// Updated: March 18, 2026
+// Source: https://docs.google.com/presentation/d/11g5VdITfFogvlE83M43xRsS_Lnyn9KO_kGKoClSTtXI/
+// Note: This data has been refined with improved titles, categories, and descriptions
+
+const roadmapDataV3 = [
+    // ===== Q1 2026 =====
+    {
+        id: 1,
+        title: "Open Web Search as OOTB action",
+        description: "Complete: Open Web Search as OOTB action In Progress: Open Web Search in Prompt Builder Details: Enable web search as part of Standard Knowledge Action for real-time answers Web Search Action: Open Web Search Combine web search results with files and internal knowledge for accurate responses Creatio",
+        category: "knowledge",
+        status: "completed",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Feb-Mar 2026 (safe harbor, target date only)",
+        details: {
+            overview: "Complete: Open Web Search as OOTB action In Progress: Open Web Search in Prompt Builder Details: Enable web search as part of Standard Knowledge Action for real-time answers Web Search Action: Open Web Search Combine web search results with files and internal knowledge for accurate responses Creatio",
+            keyFeatures: [],
+            impact: "Users can execute web-based, and knowledge-driven tasks Eliminate context-switching between internal and external research tools Allow end users to focus on analysis by automating data extraction from trusted websites (via Allowed domains in search the web Agent Action ) Multi-Vendor Web Search Supp"
+        }
+    },
+    {
+        id: 2,
+        title: "Allow prompt templates to be used anywhere and everywhere. Two main aspects:",
+        description: "Allow prompt templates to be used anywhere and everywhere. Two main aspects: Execute: a prompt template should be able to be invoked by any application [via existing or enhanced APIs] Author: users create prompt templates from other interfaces such as Grid, Test center, Slack, etc.",
+        category: "testing",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar 2026 (safe harbor, target date)",
+        details: {
+            overview: "Allow prompt templates to be used anywhere and everywhere. Two main aspects: Execute: a prompt template should be able to be invoked by any application [via existing or enhanced APIs] Author: users create prompt templates from other interfaces such as Grid, Test center, Slack, etc.",
+            keyFeatures: [],
+            impact: "Easier way to create AI instructions flexibly, across any interface or application Embeddable Prompt Composer Build Today Roadmap Confidential"
+        }
+    },
+    {
+        id: 3,
+        title: "Support multi-turn conversation simulation and testing for both text and voice agents.",
+        description: "Support multi-turn conversation simulation and testing for both text and voice agents. Allow users to simulate realistic user interactions, identify logic/voice behavioral issues, and evaluate if the agent successfully resolved the user’s intent over the course of a full session Users can simulate t",
+        category: "testing",
+        status: "pilot",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar 2026 Pilot (safe harbor, target date only)",
+        details: {
+            overview: "Support multi-turn conversation simulation and testing for both text and voice agents. Allow users to simulate realistic user interactions, identify logic/voice behavioral issues, and evaluate if the agent successfully resolved the user’s intent over the course of a full session Users can simulate t",
+            keyFeatures: [],
+            impact: "Current testing capabilities are limited to single Q&A pairs (turn-level). Customers have expressed a need to test entire conversations across both text and voice modalities in order to handle complex scenarios: Multi-step conversation flows Branching logic and conditional paths Context and state re"
+        }
+    },
+    {
+        id: 4,
+        title: "Switch to Google Gemini for Agentforce Reasoning Engine plus standard/custom actions",
+        description: "Switch to Google Gemini for Agentforce Reasoning Engine plus standard/custom actions Initial launch will support NGA’s Daisy Planner only [Voice/Flash planner on horizon] Gemini 3 Flash support is the primary target model for Mar-Apr 2026 GA, with Gemini 3 Pro now available in LLM GW (as of Dec 2025",
+        category: "feature",
+        status: "in-progress",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar-Apr 2026  (safe harbor, target date only)",
+        details: {
+            overview: "Switch to Google Gemini for Agentforce Reasoning Engine plus standard/custom actions Initial launch will support NGA’s Daisy Planner only [Voice/Flash planner on horizon] Gemini 3 Flash support is the primary target model for Mar-Apr 2026 GA, with Gemini 3 Pro now available in LLM GW (as of Dec 2025",
+            keyFeatures: [],
+            impact: "Provide customers with preferred model choice Agentforce on Gemini Live in Pilot now LLM Model Support Confidential"
+        }
+    },
+    {
+        id: 5,
+        title: "Transitioning to Salesforce hosted, fine-tuned version of GPT OSS",
+        description: "Customer impact should be minimal as the following updates are related to backend updates to enhance performance and security Text evals, topic classification / hyper classifiers, citations, etc all currently use QWEN based models Transitioning to Salesforce hosted, fine-tuned version of GPT OSS",
+        category: "knowledge",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar 2026  (safe harbor, target date only)",
+        details: {
+            overview: "Customer impact should be minimal as the following updates are related to backend updates to enhance performance and security Text evals, topic classification / hyper classifiers, citations, etc all currently use QWEN based models Transitioning to Salesforce hosted, fine-tuned version of GPT OSS",
+            keyFeatures: [],
+            impact: "Customers will benefit from performance and latency reduction of our instance of GPT OSS, while also meeting model compliance/security requirements Transition from QWEN based models to GPTOSS Model compliance/security/performance enhancements Source Image: AI Research: https://www.salesforceairesear"
+        }
+    },
+    {
+        id: 6,
+        title: "In Progress: LLM Batch Processing in Gov Cloud",
+        description: "In Progress: LLM Batch Processing in Gov Cloud Previously released: Dec 2025: LLM Batch Processing via system pipeline (prompt templates Batch API through provider Batch API) - APEX Feb 2026: LLM Batch Processing for Flow (prompt templates Batch API through provider Batch API) Flow + Anthropic suppo",
+        category: "platform",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar-Apr 2026 (safe harbor)",
+        details: {
+            overview: "In Progress: LLM Batch Processing in Gov Cloud Previously released: Dec 2025: LLM Batch Processing via system pipeline (prompt templates Batch API through provider Batch API) - APEX Feb 2026: LLM Batch Processing for Flow (prompt templates Batch API through provider Batch API) Flow + Anthropic suppo",
+            keyFeatures: [],
+            impact: "The shift to Model Provider Batch APIs significantly enhances capacity and efficiency. Previously, Prompt Template batch processing relied on the single generation API, necessitating staggered, asynchronous LLM calls to prevent rate limiting, which capped capacity at 1,000 generations per 24 hours. "
+        }
+    },
+    {
+        id: 7,
+        title: "Intelligent dynamic routing will be incorporated from scale tier to priority tier when necessary",
+        description: "All sandbox org agents will have the same model performance profile, similar to production active orgs. In the backend, an increase of utilization to scale tiers will be adopted: revised routing will send non AF traffic to scale tiers during non-business hours of US time and have 24x7 high utilizati",
+        category: "integration",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar 2026 (safe harbor, target date only)",
+        details: {
+            overview: "All sandbox org agents will have the same model performance profile, similar to production active orgs. In the backend, an increase of utilization to scale tiers will be adopted: revised routing will send non AF traffic to scale tiers during non-business hours of US time and have 24x7 high utilizati",
+            keyFeatures: [],
+            impact: "Customers expect predictable throughput and latency when customers use Sandbox orgs for Agentforce agents This feature enhancement is designed to improve performance within sandbox org environments as well as operational efficiencies that improve model/latency/limits AF Sandbox Orgs routing on premi"
+        }
+    },
+    {
+        id: 8,
+        title: "Gov Cloud FedRamp High catch up",
+        description: "Gov Cloud civilian instance has all GA features released Feb - July 2025 Features have completed GVAT review",
+        category: "analytics",
+        status: "in-progress",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar-Apr 2026 (safe harbor, target date only)",
+        details: {
+            overview: "Gov Cloud civilian instance has all GA features released Feb - July 2025 Features have completed GVAT review",
+            keyFeatures: [],
+            impact: "Gov Cloud requirements needed to unlock adoption across pub sector Details: Reliant on internal Qwen model transition In Progress: Testing Center & Evals, Citation & Instruction Adherence Pending: Optimization, Batch LLM, Planner Ready: Analytics Gov Cloud Confidential"
+        }
+    },
+    {
+        id: 9,
+        title: "High demand for multi-agent interoperability for scalable outcomes across Agentic projects",
+        description: "Enterprise-grade, interoperable orchestration layer that makes agent networks work in production securely, and at scale. Agents across different Salesforce orgs discovering, communicating, and collaborating through shared standards and trusted governance",
+        category: "feature",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Dec - Mar 2026 (safe harbor, target date only)",
+        details: {
+            overview: "Enterprise-grade, interoperable orchestration layer that makes agent networks work in production securely, and at scale. Agents across different Salesforce orgs discovering, communicating, and collaborating through shared standards and trusted governance",
+            keyFeatures: [],
+            impact: "High demand for multi-agent interoperability for scalable outcomes across Agentic projects MOMA Pilot Closed customer pilot, December 2025 Interoperability Confidential"
+        }
+    },
+    {
+        id: 10,
+        title: "A2A Inbound:",
+        description: "March 2026 A2A Inbound: Allows external agents to connect to AF agents June 2026 A2A Outbound: Allow internal agents to connect to external 3P agents Agent Card: 3P agents advertise their capabilities, allowing customers to identify if the 3P agent is the right fit for the task Universal Handshake: ",
+        category: "feature",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar",
+        details: {
+            overview: "March 2026 A2A Inbound: Allows external agents to connect to AF agents June 2026 A2A Outbound: Allow internal agents to connect to external 3P agents Agent Card: 3P agents advertise their capabilities, allowing customers to identify if the 3P agent is the right fit for the task Universal Handshake: ",
+            keyFeatures: [],
+            impact: "High demand for agent 2 agent interoperability for scalable outcomes across Agentic projects, not siloed within one vendor’s stack 3P Agents (A2A) Pilot Closed pilot Interoperability Confidential"
+        }
+    },
+    {
+        id: 11,
+        title: "Simple way to connect an Agent to Slack",
+        description: "Simple way to connect an Agent to Slack Eliminate reliance on generic API-based connection Reduce install and compatibility friction for customers using existing legacy Slack apps",
+        category: "integration",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar 2026 (safe harbor, target date only)",
+        details: {
+            overview: "Simple way to connect an Agent to Slack Eliminate reliance on generic API-based connection Reduce install and compatibility friction for customers using existing legacy Slack apps",
+            keyFeatures: [],
+            impact: "Today, bringing an Agent into Slack requires configuring a generic API connection via Salesforce Connected App - the process is confusing for admins - it is unclear in the UI that this is the required step. This feature has been created to remove compatibility issues running between legacy Salesforc"
+        }
+    },
+    {
+        id: 12,
+        title: "Conversational quality, interactions more natural and responsive",
+        description: "Conversational quality, interactions more natural and responsive Multimodal: flip between text and voice within the same conversation Rich content & media: render images, tables, and markdowns Page navigation and website events such as clicks enable more tailored guidance SCV (Service Cloud Voice)/ ",
+        category: "memory",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar 2026 + multiple phases (safe harbor, target dates)",
+        details: {
+            overview: "Conversational quality, interactions more natural and responsive Multimodal: flip between text and voice within the same conversation Rich content & media: render images, tables, and markdowns Page navigation and website events such as clicks enable more tailored guidance SCV (Service Cloud Voice)/ ",
+            keyFeatures: [],
+            impact: "Meet market demand as well as improve agentic experience for customers Agentforce Voice Enhanced Platform & Voice TAM Expansion Deploy Confidential"
+        }
+    },
+    {
+        id: 13,
+        title: "A unified planner will combine both voice and chat agents together",
+        description: "A unified planner will combine both voice and chat agents together",
+        category: "feature",
+        status: "in-progress",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Mar-Apr 2026 (safe harbor, target date only)",
+        details: {
+            overview: "A unified planner will combine both voice and chat agents together",
+            keyFeatures: [],
+            impact: "Currently voice and chat are using separate planners, causing inefficient end to end processes This will reduce the complexity of having to support multiple planners and bring determinism to voice agents (and more) Details: Voice planner (Flash) and NGA planner (Daisy) Flash and Daisy planners are a"
+        }
+    },
+    {
+        id: 14,
+        title: "Org level consent management",
+        description: "Org level consent management AI features migration to self-service consent management",
+        category: "feature",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Feb 2026 (safe harbor, target date only)",
+        details: {
+            overview: "Org level consent management AI features migration to self-service consent management",
+            keyFeatures: [],
+            impact: "Allow customers to easily manage consent for data usage in global models, service improvement, and R&D activities. Consent Management for customer data usage Release notes Security & Privacy Confidential"
+        }
+    },
+    {
+        id: 15,
+        title: "This capability is for SALESFORCE INTERNAL STAFF ONLY -",
+        description: "This capability is for SALESFORCE INTERNAL STAFF ONLY - do not try to sell this Provide a framework for internal teams to build immutable/uneditable agents to the end-user, enabling automatic updates to agents without a migration script There will be no UI for file based agents",
+        category: "feature",
+        status: "planned",
+        period: "Q1 2026",
+        quarter: "Q1 2026",
+        date: "Feb 2026 (safe harbor, target date only)",
+        details: {
+            overview: "This capability is for SALESFORCE INTERNAL STAFF ONLY - do not try to sell this Provide a framework for internal teams to build immutable/uneditable agents to the end-user, enabling automatic updates to agents without a migration script There will be no UI for file based agents",
+            keyFeatures: [],
+            impact: "As an internal cloud team building agents: I want to create agents that are in the background and created from the system I want to create an agent that is uneditable by my end customer and controlled only by my team I want to push automatic upgrades to my agent without requiring data migrations I w"
+        }
+    },
+
+    // ===== Q2 2026 =====
+    {
+        id: 16,
+        title: "Agent Conversation Memory",
+        description: "Agent conversation memory as well as user profile memory This feature will track a logged-in user's role and personal memory ensuring a personalized and contextual experience. Agents will carry context across sessions, recall past interactions and deliver faster, smarter workflows Opt-in privacy, go",
+        category: "memory",
+        status: "pilot",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "Closed Pilot Apr-May 2026  (safe harbor, target date only)",
+        details: {
+            overview: "Agent conversation memory as well as user profile memory This feature will track a logged-in user's role and personal memory ensuring a personalized and contextual experience. Agents will carry context across sessions, recall past interactions and deliver faster, smarter workflows Opt-in privacy, go",
+            keyFeatures: [],
+            impact: "A better user experience if agents can retain short and long term memory of previous sessions and preferences. AI Context Confidential"
+        }
+    },
+    {
+        id: 17,
+        title: "ADL as a Retriever Action:",
+        description: "ADL as a Retriever Action: Enable grounding on multiple data sources by allowing multiple ADL retriever actions within an agent. This will expose Retriever Actions as a native agent action (similar to Apex, Flow, etc.) and allow attaching multiple ADLs to a single agent in the builder. Future enhanc",
+        category: "knowledge",
+        status: "planned",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "Apr-May 2026 (safe harbor, target dates)",
+        details: {
+            overview: "ADL as a Retriever Action: Enable grounding on multiple data sources by allowing multiple ADL retriever actions within an agent. This will expose Retriever Actions as a native agent action (similar to Apex, Flow, etc.) and allow attaching multiple ADLs to a single agent in the builder. Future enhanc",
+            keyFeatures: [],
+            impact: "Access Multiple Knowledge Sources: Previously, each agent was limited to one ADL (without workarounds). Retriever Actions/Expansion to an n-n model will enable customers to access multiple knowledge sources and answer complex queries. Expedite ADL Creation: Previously, Search Indexes were created as"
+        }
+    },
+    {
+        id: 18,
+        title: "Connection Variables Support",
+        description: "Introduction of an object that automatically represents the Surface context data of the Surface associated with the Agent Session during runtime. The object mimics how Salesforce Flow handles $Record, offering a simpler, declarative entry point to Surface context data Provides admin configurability ",
+        category: "memory",
+        status: "planned",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "Apr-May  2026 (safe harbor, target date only)",
+        details: {
+            overview: "Introduction of an object that automatically represents the Surface context data of the Surface associated with the Agent Session during runtime. The object mimics how Salesforce Flow handles $Record, offering a simpler, declarative entry point to Surface context data Provides admin configurability ",
+            keyFeatures: [],
+            impact: "There is currently no OOTB way to reference a context variable scoped specific to a Surface (consistently), and this requires manual input variables or confusing naming conventions. Connection Variables Support Also named as “surface specific context variables support” AI Context Confidential"
+        }
+    },
+    {
+        id: 19,
+        title: "Support for the following:",
+        description: "Provide admin configurability to use custom connections, custom response actions, modify connection Instructions, add determinism to tailor the last mile experience for Agents. Support for the following: Custom Connections & Custom Response Actions Custom Messaging Components in Agents Customizing C",
+        category: "memory",
+        status: "planned",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "May-June 2026 (safe harbor, target date only)",
+        details: {
+            overview: "Provide admin configurability to use custom connections, custom response actions, modify connection Instructions, add determinism to tailor the last mile experience for Agents. Support for the following: Custom Connections & Custom Response Actions Custom Messaging Components in Agents Customizing C",
+            keyFeatures: [],
+            impact: "Agents currently rely on LLM-driven planning to determine response actions, which may lead to inconsistent or unpredictable UI experiences. Admins lack fine-grained surface-aware configuration ability available to them today. Problems experienced: lack of control over when response actions aka outpu"
+        }
+    },
+    {
+        id: 20,
+        title: "Renaming topics and actions to subagents and tools",
+        description: "Renaming topics and actions to subagents and tools",
+        category: "platform",
+        status: "pilot",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "April 2026 (Target Beta, safe harbor)",
+        details: {
+            overview: "Renaming topics and actions to subagents and tools",
+            keyFeatures: [],
+            impact: "Position Agentforce competitively and inline with market innovation Rename Topics and Actions Subagents and Tools AI Setup & Build Confidential Topics Actions Subagents Tools"
+        }
+    },
+    {
+        id: 21,
+        title: "Quick start experience",
+        description: "Quick start experience AI tooling for developers One click setup, enabling developers to build agents instantly using preferred tools like Claude Code One-click paths include: Builder → Complete Claude Code Experience",
+        category: "platform",
+        status: "pilot",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "April 2026 (Target Beta, safe harbor)",
+        details: {
+            overview: "Quick start experience AI tooling for developers One click setup, enabling developers to build agents instantly using preferred tools like Claude Code One-click paths include: Builder → Complete Claude Code Experience",
+            keyFeatures: [],
+            impact: "Reduce technical friction and time to value Developer Easy Self Service Easy setup to build agents for developers AI Setup Confidential Image for roadmap visibility only, UI may be subject to change"
+        }
+    },
+    {
+        id: 22,
+        title: "Grid supports querying data across CRM, DC, running Agents, Prompts and Invocable Actions.",
+        description: "A spreadsheet-like interface that allows users to rapidly design, test, and operationalize AI workflows at scale. Combines Salesforce data, prompts, actions, and agents in a single surface, making it easy to build complex AI processes without writing code. Flexibly discover your data and do more wit",
+        category: "testing",
+        status: "in-progress",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "April 2026 (Target GA, safe harbor)",
+        details: {
+            overview: "A spreadsheet-like interface that allows users to rapidly design, test, and operationalize AI workflows at scale. Combines Salesforce data, prompts, actions, and agents in a single surface, making it easy to build complex AI processes without writing code. Flexibly discover your data and do more wit",
+            keyFeatures: [],
+            impact: "Our customers were faced with 50+ hours trying to test AI workflows, pulling in data from multiple sources, manually processing data, and running custom script for AI models. Agentforce Grid simplifies these manual efforts by providing a single, intuitive interface where anyone can create and run wo"
+        }
+    },
+    {
+        id: 23,
+        title: "Improved experience for analytics and enhanced experience with optimization to tie it to analytics",
+        description: "Improved experience for analytics and enhanced experience with optimization to tie it to analytics Integrated data models for additional services such as feedback, RAG, DW, etc. Improvements include deflection and abandonment metrics, as well as revised ASA (Service Agent), and Employee Agent Analyt",
+        category: "analytics",
+        status: "planned",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "Apr 2026  (safe harbor, target date only)",
+        details: {
+            overview: "Improved experience for analytics and enhanced experience with optimization to tie it to analytics Integrated data models for additional services such as feedback, RAG, DW, etc. Improvements include deflection and abandonment metrics, as well as revised ASA (Service Agent), and Employee Agent Analyt",
+            keyFeatures: [],
+            impact: "Based off customer feedback, additional granularity within Agent reporting is required for optimal usage. Agentforce Analytics | Revised Experience Observe Confidential"
+        }
+    },
+    {
+        id: 24,
+        title: "Metadata support for pro-code users",
+        description: "Metadata support for pro-code users Enhanced custom evaluations (evals) Create test cases from observability sessions Feature parity with Testing Center in setup",
+        category: "testing",
+        status: "in-progress",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "April 2026  (safe harbor, target date only)",
+        details: {
+            overview: "Metadata support for pro-code users Enhanced custom evaluations (evals) Create test cases from observability sessions Feature parity with Testing Center in setup",
+            keyFeatures: [],
+            impact: "Testing Center advancements unified with the rest of the Next Gen Authoring Suite of features, creating better stability, recoverability, user experience within the UI, allowing for all the above feature capabilities to be created) Next Gen Testing GA Roadmap visual only, subject to change Test Conf"
+        }
+    },
+    {
+        id: 25,
+        title: "Custom Scorers Beta",
+        description: "Define and manage scorers (view, create prompt/expression-based, edit, test, activate, clone) in Studio Use Scorers in testing UI, API, CLI & Observability (abandonment, deflection, custom: CSAT, quality)",
+        category: "analytics",
+        status: "planned",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "April 2026  (safe harbor, target date only)",
+        details: {
+            overview: "Define and manage scorers (view, create prompt/expression-based, edit, test, activate, clone) in Studio Use Scorers in testing UI, API, CLI & Observability (abandonment, deflection, custom: CSAT, quality)",
+            keyFeatures: [],
+            impact: "Enable the ability to test agents so they meet their intended function (e.g. product relevance, brand tone), and adherence by providing configurable evaluation metrics Custom Scorers Beta Roadmap visual only, subject to change Test Confidential"
+        }
+    },
+    {
+        id: 26,
+        title: "Planner provides detailed error messages instead of, “something went wrong”.",
+        description: "Comprehensive error handling architecture that transforms generic technical failures into transparent, actionable, user-centric events Planner provides detailed error messages instead of, “something went wrong”.",
+        category: "feature",
+        status: "planned",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "Apr  2026 (safe harbor, target date only)",
+        details: {
+            overview: "Comprehensive error handling architecture that transforms generic technical failures into transparent, actionable, user-centric events Planner provides detailed error messages instead of, “something went wrong”.",
+            keyFeatures: [],
+            impact: "Reduce the need for ~40% customer investigations Agentforce Platform Error Architecture Backend architectural changes to improve speed and performance *intended for roadmap illustrative purposes only Cloud Performance Confidential"
+        }
+    },
+    {
+        id: 27,
+        title: "Enhanced Customer Agent Security Options for SOQL Actions",
+        description: "More flexible and granular security controls when building customer-facing service agents (ASAs) Phased by complexity: external Org Wide Defaults ( OWDs ), Contact ID Filtering, User Mode & Action-Based Perm Sets",
+        category: "memory",
+        status: "planned",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "Apr 2026  (safe harbor, target date only)",
+        details: {
+            overview: "More flexible and granular security controls when building customer-facing service agents (ASAs) Phased by complexity: external Org Wide Defaults ( OWDs ), Contact ID Filtering, User Mode & Action-Based Perm Sets",
+            keyFeatures: [],
+            impact: "Improve default security posture while enabling flexible, least-privilege permission models for agents. Historically, the lack of consistent patterns for how agents authenticate and execute actions has created risk and complexity for customers. Security & Privacy Confidential"
+        }
+    },
+    {
+        id: 28,
+        title: "May - June 2026",
+        description: "An improved Agent API (v2) designed to eliminate high latency, multi-hop legacy architecture of Einstein Bots (v1.x) Roadmap includes integration with Daisy ++ engine, conversational endpoints streaming direct from start session / send message, parity with scrt (service cloud run time), voice, next ",
+        category: "memory",
+        status: "planned",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "May - June 2026",
+        details: {
+            overview: "An improved Agent API (v2) designed to eliminate high latency, multi-hop legacy architecture of Einstein Bots (v1.x) Roadmap includes integration with Daisy ++ engine, conversational endpoints streaming direct from start session / send message, parity with scrt (service cloud run time), voice, next ",
+            keyFeatures: [],
+            impact: "Collapses service dependency chain down to a single core reasoning layer Reduces Time to First Message (TTFM) and Time to First Audio (TTFA) Agent API 2.0 Multiple rollouts and phased approach Interoperability Confidential"
+        }
+    },
+    {
+        id: 29,
+        title: "Experience will include NGA, API Catalog, External Services, Platform Radio",
+        description: "Ability to onboard Salesforce 1P MCP servers and deliver a usable, safe NGA integration experience for builders Experience will include NGA, API Catalog, External Services, Platform Radio",
+        category: "platform",
+        status: "in-progress",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "April 2026",
+        details: {
+            overview: "Ability to onboard Salesforce 1P MCP servers and deliver a usable, safe NGA integration experience for builders Experience will include NGA, API Catalog, External Services, Platform Radio",
+            keyFeatures: [],
+            impact: "Enable 3P MCP Servers to be connected to AF Agents, allowing Agentforce to be more interoperable MCP Client & Gateway GA Multiple rollouts and phased approach Interoperability Confidential"
+        }
+    },
+    {
+        id: 30,
+        title: "Currently in closed customer pilots, beta",
+        description: "Single-Org Multi-Agent (SOMA) facilitates multiple Salesforce AI agents to collaborate within a single org Behind the scenes, a primary orchestrator agent intelligently coordinates and delegates tasks to specialized agents, ensuring each task is handled by the agent best equipped for it. SOMA preser",
+        category: "memory",
+        status: "pilot",
+        period: "Q2 2026",
+        quarter: "Q2 2026",
+        date: "Beta Apr 2026 (safe harbor, target dates only)",
+        details: {
+            overview: "Single-Org Multi-Agent (SOMA) facilitates multiple Salesforce AI agents to collaborate within a single org Behind the scenes, a primary orchestrator agent intelligently coordinates and delegates tasks to specialized agents, ensuring each task is handled by the agent best equipped for it. SOMA preser",
+            keyFeatures: [],
+            impact: "End users can manage one unified conversational touchpoint, instead of trying to manage conversations with different agents individually. S OMA Beta Currently in closed customer pilots, beta Apr 2026 Interoperability Confidential"
+        }
+    },
+
+    // ===== Q4 2026 =====
+    {
+        id: 31,
+        title: "Beta Dec 2025;",
+        description: "Agentforce Studio - home for all the following: Agentforce Assistant Canvas Interaction Summary Simulator for Agentforce Builder Agent Graph [editable via canvas or script] Connections File Explorer Script View Metadata APIs",
+        category: "memory",
+        status: "in-progress",
+        period: "Q4 2026",
+        quarter: "Q4 2026",
+        date: "Beta Dec 2025;",
+        details: {
+            overview: "Agentforce Studio - home for all the following: Agentforce Assistant Canvas Interaction Summary Simulator for Agentforce Builder Agent Graph [editable via canvas or script] Connections File Explorer Script View Metadata APIs",
+            keyFeatures: [],
+            impact: "A new way to configure agents that showcases an industry leading interface, facilitating granular detail through script and session tracing views - as well as non technical capabilities such as a conversational agent, a natural language instruction canvas, as well as picklists to select logical/dete"
+        }
+    },
+
+    // ===== TBD =====
+    {
+        id: 32,
+        title: "Agentforce Data Library DC1 Support has been launching across 3 x key phases",
+        description: "Agentforce Data Library DC1 Support has been launching across 3 x key phases Phase 1 [GA, June 2025]: Data Sources = Custom Retriever Default data space = Y; Non-default data space = Y Phase 2 [Mar 2026]: Data Sources = Salesforce Knowledge & Files Default data space = Y; Non-default data space = N ",
+        category: "knowledge",
+        status: "in-progress",
+        period: "TBD",
+        quarter: "TBD",
+        date: "Various targets across phases  (safe harbor, target date only)",
+        details: {
+            overview: "Agentforce Data Library DC1 Support has been launching across 3 x key phases Phase 1 [GA, June 2025]: Data Sources = Custom Retriever Default data space = Y; Non-default data space = Y Phase 2 [Mar 2026]: Data Sources = Salesforce Knowledge & Files Default data space = Y; Non-default data space = N ",
+            keyFeatures: [],
+            impact: "Data Cloud One allows multiple Orgs to share a central Data Cloud instance. Enabling ADL to be DC1 compatible allows customers to create agents in companion orgs and access data from their respective data spaces ADL Data Cloud 1 (DC1) Compatibility Phase 2: Mar 2026; Phase 3: May-June AI Context Con"
+        }
+    },
+    {
+        id: 33,
+        title: "Designed for AI Practitioners",
+        description: "Agentforce Roadmap Designed for AI Practitioners Q2 Mar Apr May 2 026",
+        category: "feature",
+        status: "planned",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Agentforce Roadmap Designed for AI Practitioners Q2 Mar Apr May 2 026",
+            keyFeatures: [],
+            impact: ""
+        }
+    },
+    {
+        id: 34,
+        title: "Mar 2026: Performance Metrics",
+        description: "Integrate unit testing metrics directly into Prompt Builder UI Display performance metrics such as token size and latency, evaluation API metrics and allow custom evaluations. Provide an option to link directly to Testing Center for batch testing",
+        category: "analytics",
+        status: "planned",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Integrate unit testing metrics directly into Prompt Builder UI Display performance metrics such as token size and latency, evaluation API metrics and allow custom evaluations. Provide an option to link directly to Testing Center for batch testing",
+            keyFeatures: [],
+            impact: "Allow Prompt Builder UI users to test using consistent and standardized metrics/methods across Salesforce AI Prompt Builder Testing Test Confidential"
+        }
+    },
+    {
+        id: 35,
+        title: "Orchestration",
+        description: "Operate Orchestration Experiences Roadmap Highlights Control New New New New Next Next Next Next Voice Global Availability GA | Feb - WT Sydney Voice in Mobile SDK GA | March MCP Support Beta | Today Multi-Agent Orchestration Beta | April - TDX Agentforce Script GA | Feb 2 6 Agentforce Script for V",
+        category: "testing",
+        status: "in-progress",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Operate Orchestration Experiences Roadmap Highlights Control New New New New Next Next Next Next Voice Global Availability GA | Feb - WT Sydney Voice in Mobile SDK GA | March MCP Support Beta | Today Multi-Agent Orchestration Beta | April - TDX Agentforce Script GA | Feb 2 6 Agentforce Script for V",
+            keyFeatures: [],
+            impact: ""
+        }
+    },
+    {
+        id: 36,
+        title: "Escalation: wait time + business hours",
+        description: "safe harbor, target dates only: Jan 26 NGA setup Feb 26 Escalation: wait time + business hours Downloadable transcripts (text only) Mar 26 Post-chat Pre-chat Auth: verified external user 1 Mobile SDK for Agentforce with Voice April 26: Voice mode TBC: File upload/attachments",
+        category: "platform",
+        status: "in-progress",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "safe harbor, target dates only: Jan 26 NGA setup Feb 26 Escalation: wait time + business hours Downloadable transcripts (text only) Mar 26 Post-chat Pre-chat Auth: verified external user 1 Mobile SDK for Agentforce with Voice April 26: Voice mode TBC: File upload/attachments",
+            keyFeatures: [],
+            impact: "Currently not at parity with ECV1 and the integration of voice mode is in high demand. Parity provides critical functionality for customers migrating from ECV1 (escalation, pre/post chat, transcripts, etc. Voice mode enables a new modality for crafting hands-off in web agentic experiences and improv"
+        }
+    },
+    {
+        id: 37,
+        title: "Previously Released:",
+        description: "Previously Released: Standard flex types, instruction only prompts, optional inputs Feb 2026 : Version level inputs, configurable resources, inline picker",
+        category: "prompts",
+        status: "planned",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Previously Released: Standard flex types, instruction only prompts, optional inputs Feb 2026 : Version level inputs, configurable resources, inline picker",
+            keyFeatures: [],
+            impact: "Provides flexibility to ensure that templates can adapt to unforeseen grounding information and varying input quantities within existing standard types & connected UI experiences, without requiring the creation of entirely new templates and deployment user experiences. Configurable inputs and resour"
+        }
+    },
+    {
+        id: 38,
+        title: "Deeper Dive",
+        description: "Deeper Dive ~30, 60, 90 Days Intended for internal purposes only",
+        category: "feature",
+        status: "planned",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Deeper Dive ~30, 60, 90 Days Intended for internal purposes only",
+            keyFeatures: [],
+            impact: ""
+        }
+    },
+    {
+        id: 39,
+        title: "SSOT Agentforce Roadmap",
+        description: "SSOT Agentforce Roadmap June 2025 and before Editions July 2025 Edition August 2025 Edition September 2025 Edition October 2025 [ Dreamforce SIC Content ] November 2025 December 2025 January February 2026 March 2026 [this edition] Technical Release Readiness (TRR) July 2025 ( webinar ) August",
+        category: "feature",
+        status: "planned",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "SSOT Agentforce Roadmap June 2025 and before Editions July 2025 Edition August 2025 Edition September 2025 Edition October 2025 [ Dreamforce SIC Content ] November 2025 December 2025 January February 2026 March 2026 [this edition] Technical Release Readiness (TRR) July 2025 ( webinar ) August",
+            keyFeatures: [],
+            impact: ""
+        }
+    },
+    {
+        id: 40,
+        title: "Salesforce AI Cross Cloud Roadmap Easy Finder",
+        description: "Salesforce AI Cross Cloud Roadmap Easy Finder Data 360 [requires POP certification] [Ryan Raso, POP Data 360 ] Tableau [Lara Niemala PMM, Amy Lin Loiacono PMM Deep-dive] Slack [Max Brenssell, PM] Sales Cloud [Krithika Viswanathan PMM, Victor Weilin Liu, PM ] Service Cloud [Mala Ravi PMM, Hari",
+        category: "feature",
+        status: "planned",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Salesforce AI Cross Cloud Roadmap Easy Finder Data 360 [requires POP certification] [Ryan Raso, POP Data 360 ] Tableau [Lara Niemala PMM, Amy Lin Loiacono PMM Deep-dive] Slack [Max Brenssell, PM] Sales Cloud [Krithika Viswanathan PMM, Victor Weilin Liu, PM ] Service Cloud [Mala Ravi PMM, Hari",
+            keyFeatures: [],
+            impact: ""
+        }
+    },
+    {
+        id: 41,
+        title: "​Customers      Trailblazers      Partners      Employees  Communities      Veterans      Nonprofits",
+        description: "​Customers Trailblazers Partners Employees Communities Veterans Nonprofits",
+        category: "feature",
+        status: "planned",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "​Customers Trailblazers Partners Employees Communities Veterans Nonprofits",
+            keyFeatures: [],
+            impact: ""
+        }
+    },
+    {
+        id: 42,
+        title: "Roadmap Disclaimer",
+        description: "Roadmap Disclaimer Nomenclature referenced is intended for INTERNAL use only All product feature names referenced from this slide onward are intended for internal use only For example, you may see features with “v2 Phase 3” or “Phase 1”, and other similar internal naming conventions included We have",
+        category: "knowledge",
+        status: "planned",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Roadmap Disclaimer Nomenclature referenced is intended for INTERNAL use only All product feature names referenced from this slide onward are intended for internal use only For example, you may see features with “v2 Phase 3” or “Phase 1”, and other similar internal naming conventions included We have",
+            keyFeatures: [],
+            impact: ""
+        }
+    },
+    {
+        id: 43,
+        title: "Product Roadmap Index | Q1 Feb",
+        description: "Product Roadmap Index | Q1 Feb Product Area Delivered Jan 2026 About to Release Feb 2026 On Track to Release Mar 2026 In Active Build Apr 2026 Context Metadata, Retrievers, File Formats ADL DC1 Compatibility (Phase 3) Multi-vendor web search support Agentforce Data Library - Enhancements Response C",
+        category: "analytics",
+        status: "in-progress",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Product Roadmap Index | Q1 Feb Product Area Delivered Jan 2026 About to Release Feb 2026 On Track to Release Mar 2026 In Active Build Apr 2026 Context Metadata, Retrievers, File Formats ADL DC1 Compatibility (Phase 3) Multi-vendor web search support Agentforce Data Library - Enhancements Response C",
+            keyFeatures: [],
+            impact: ""
+        }
+    },
+    {
+        id: 44,
+        title: "Product Roadmap Index | Q2 Mar",
+        description: "Product Roadmap Index | Q2 Mar Product Area Delivered Feb 2026 About to Release Mar 2026 On Track to Release Apr 2026 In Active Build May 2026+ Context Metadata, Retrievers, File Formats ADL DC1 Compatibility (Phase 3) Multi-vendor web search support Agentforce Data Library - Enhancements Agent Co",
+        category: "analytics",
+        status: "in-progress",
+        period: "TBD",
+        quarter: "TBD",
+        date: "",
+        details: {
+            overview: "Product Roadmap Index | Q2 Mar Product Area Delivered Feb 2026 About to Release Mar 2026 On Track to Release Apr 2026 In Active Build May 2026+ Context Metadata, Retrievers, File Formats ADL DC1 Compatibility (Phase 3) Multi-vendor web search support Agentforce Data Library - Enhancements Agent Co",
+            keyFeatures: [],
+            impact: ""
+        }
+    }
+
+];
+
+// Export for use in application
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { roadmapDataV3 };
+}

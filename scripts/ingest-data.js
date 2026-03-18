@@ -1,6 +1,6 @@
 const { pool, query } = require('../db/connection');
 const { generateEmbeddingsBatch } = require('../services/openai-service');
-const { roadmapDataV1, roadmapDataV2 } = require('../data');
+const { roadmapDataV1, roadmapDataV2, roadmapDataV3 } = require('../data');
 const releaseNotesData = require('../release-details');
 require('dotenv').config();
 
@@ -45,12 +45,13 @@ function prepareReleaseText(release, category, feature) {
  */
 async function ingestRoadmapData() {
     console.log('📊 Ingesting roadmap data...\n');
-    
-    // Combine V1 and V2 data with version tags
+
+    // Combine V1, V2 and V3 data with version tags
     const v1Items = roadmapDataV1.map(item => ({ ...item, version: 'v1' }));
     const v2Items = roadmapDataV2.map(item => ({ ...item, version: 'v2' }));
-    const allItems = [...v1Items, ...v2Items];
-    
+    const v3Items = roadmapDataV3.map(item => ({ ...item, version: 'v3' }));
+    const allItems = [...v1Items, ...v2Items, ...v3Items];
+
     console.log(`   Processing ${allItems.length} roadmap items...`);
     
     // Prepare texts for embedding

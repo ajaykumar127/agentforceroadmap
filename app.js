@@ -3,10 +3,11 @@
 
 class RoadmapApp {
     constructor() {
-        this.currentVersion = 'v1';
+        this.currentVersion = 'v3';
         this.dataVersions = {
             v1: roadmapDataV1,
-            v2: roadmapDataV2
+            v2: roadmapDataV2,
+            v3: roadmapDataV3
         };
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
@@ -45,15 +46,20 @@ class RoadmapApp {
         const versionInfo = document.getElementById('versionInfo');
         let versionName = '';
         let itemCount = '';
-        
+
         if (this.currentVersion === 'customer') {
             versionName = 'Customer Facing - Release Notes';
             itemCount = 'Official Salesforce Documentation';
         } else {
-            versionName = this.currentVersion === 'v1' ? 'V1 - Core Roadmap' : 'V2 - Extended Roadmap';
+            const versionNames = {
+                'v1': 'V1 - Core Roadmap',
+                'v2': 'V2 - Extended Roadmap',
+                'v3': 'V3 - Q1-Q2 2026 Roadmap (Updated March 2026)'
+            };
+            versionName = versionNames[this.currentVersion] || 'V1 - Core Roadmap';
             itemCount = `${this.data.length} items`;
         }
-        
+
         versionInfo.innerHTML = `<strong>${versionName}</strong> • ${itemCount}`;
     }
 
