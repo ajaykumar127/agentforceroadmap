@@ -3,11 +3,13 @@
 
 class RoadmapApp {
     constructor() {
-        this.currentVersion = 'v3';
+        this.currentVersion = 'combined';
         this.dataVersions = {
+            combined: roadmapDataCombined,
+            gus: roadmapDataGUS,
             v1: roadmapDataV1,
             v2: roadmapDataV2,
-            v3: roadmapDataV3
+            v3: roadmapDataV3,
         };
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
@@ -52,9 +54,11 @@ class RoadmapApp {
             itemCount = 'Official Salesforce Documentation';
         } else {
             const versionNames = {
+                'combined': 'Historical Roadmap (V1 + V2 + V3 combined)',
+                'gus': 'GUS Live - Build 262 Epics (Pulled May 2026)',
                 'v1': 'V1 - Core Roadmap',
                 'v2': 'V2 - Extended Roadmap',
-                'v3': 'V3 - Q1-Q2 2026 Roadmap (Updated March 2026)'
+                'v3': 'V3 - Q1-Q2 2026 Roadmap (Updated March 2026)',
             };
             versionName = versionNames[this.currentVersion] || 'V1 - Core Roadmap';
             itemCount = `${this.data.length} items`;
@@ -256,10 +260,28 @@ class RoadmapApp {
             periods[item.period].push(item);
         });
 
-        // Sort periods
-        const periodOrder = ['Q4 2024', 'Q1 2025', 'Q2 2025', 'Q3 2025', 'Q4 2025', '2026+'];
+        // Sort periods — handles both legacy Q-format and new seasonal names
+        const periodOrder = [
+            'Q4 2024',
+            "Summer '24 (252)", "Winter '25 (254)", "Spring '25 (256)",
+            'Q1 2025', 'Q2 2025', 'Q3 2025',
+            "Summer '25 (258)", "Summer '25 Patch (258.patch)",
+            'Q4 2025',
+            "Winter '26 (260)", "Winter '26 Patch (260.patch)",
+            'Q1 2026', 'Q2 2026',
+            "Spring '26 (262)", "Spring '26 Patch (262.patch)",
+            "Summer '26 (264)",
+            'Q4 2026',
+            "Winter '27 (266)", "Spring '27 (268)", "Summer '27 (270)",
+            '2026+', 'Backlog', 'TBD',
+        ];
         const sortedPeriods = Object.keys(periods).sort((a, b) => {
-            return periodOrder.indexOf(a) - periodOrder.indexOf(b);
+            const ai = periodOrder.indexOf(a);
+            const bi = periodOrder.indexOf(b);
+            if (ai !== -1 && bi !== -1) return ai - bi;
+            if (ai !== -1) return -1;
+            if (bi !== -1) return 1;
+            return a.localeCompare(b);
         });
 
         let html = '';
@@ -284,8 +306,16 @@ class RoadmapApp {
         this.attachItemListeners();
     }
 
+    getBuildLabel(item) {
+        if (item.scheduledBuild && typeof SALESFORCE_BUILDS !== 'undefined' && SALESFORCE_BUILDS[item.scheduledBuild]) {
+            return SALESFORCE_BUILDS[item.scheduledBuild].name + ' (' + item.scheduledBuild + ')';
+        }
+        return item.scheduledBuild ? 'Build ' + item.scheduledBuild : (item.period || '');
+    }
+
     createTimelineItem(item) {
         const ownerHtml = item.owner ? `<span class="meta-item">👤 ${item.owner}</span>` : '';
+        const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
         return `
             <div class="timeline-item status-${item.status}" data-id="${item.id}">
                 <div class="item-header">
@@ -294,7 +324,7 @@ class RoadmapApp {
                 </div>
                 <p class="item-description">${item.description}</p>
                 <div class="item-meta">
-                    <span class="meta-item">📅 ${item.date}</span>
+                    ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
                     ${ownerHtml}
                     <span class="meta-item">
                         <span class="category-tag">${this.formatCategory(item.category)}</span>
@@ -314,6 +344,7 @@ class RoadmapApp {
 
         const html = this.filteredData.map(item => {
             const ownerHtml = item.owner ? `<span class="meta-item">👤 ${item.owner}</span>` : '';
+            const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
             return `
                 <div class="grid-item status-${item.status}" data-id="${item.id}">
                     <div class="item-header">
@@ -322,7 +353,7 @@ class RoadmapApp {
                     </div>
                     <p class="item-description">${item.description}</p>
                     <div class="item-meta">
-                        <span class="meta-item">📅 ${item.date}</span>
+                        ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
                         ${ownerHtml}
                         <span class="meta-item">
                             <span class="category-tag">${this.formatCategory(item.category)}</span>
@@ -346,6 +377,7 @@ class RoadmapApp {
 
         const html = this.filteredData.map(item => {
             const ownerHtml = item.owner ? `<span class="meta-item">👤 ${item.owner}</span>` : '';
+            const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
             return `
                 <div class="list-item" data-id="${item.id}">
                     <div class="list-item-status ${item.status}"></div>
@@ -357,7 +389,7 @@ class RoadmapApp {
                         <span class="status-badge ${item.status}">${this.formatStatus(item.status)}</span>
                         <span class="category-tag">${this.formatCategory(item.category)}</span>
                         ${ownerHtml}
-                        <span class="meta-item">📅 ${item.date}</span>
+                        ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
                     </div>
                 </div>
             `;
@@ -384,10 +416,35 @@ class RoadmapApp {
         const modal = document.getElementById('itemModal');
         const modalBody = document.getElementById('modalBody');
 
-        // Owner and PRD section (V2 features)
+        // Build release label using SALESFORCE_BUILDS lookup
+        const buildLabel = (item.scheduledBuild && typeof SALESFORCE_BUILDS !== 'undefined' && SALESFORCE_BUILDS[item.scheduledBuild])
+            ? `${SALESFORCE_BUILDS[item.scheduledBuild].name} (Build ${item.scheduledBuild})`
+            : (item.scheduledBuild ? `Build ${item.scheduledBuild}` : '');
+        const gaDate = (item.scheduledBuild && typeof SALESFORCE_BUILDS !== 'undefined' && SALESFORCE_BUILDS[item.scheduledBuild])
+            ? SALESFORCE_BUILDS[item.scheduledBuild].gaDate : null;
+
+        // Owner, PRD, and GUS metadata section
         let ownerPrdHtml = '';
-        if (item.owner || item.prdLink) {
+        const hasGUSFields = item.version === 'gus' && (item.scheduledBuild || item.devLead || item.designLead || item.qualityLead || item.team || item.health);
+        if (item.owner || item.prdLink || hasGUSFields) {
             ownerPrdHtml = '<div class="modal-section owner-prd-section">';
+            if (buildLabel) {
+                ownerPrdHtml += `
+                    <div class="owner-info">
+                        <span class="owner-label">🗓️ Release:</span>
+                        <span class="owner-name"><strong>${buildLabel}</strong>${gaDate ? ` · GA: ${gaDate}` : ''}</span>
+                    </div>
+                `;
+            }
+            if (item.health) {
+                const healthIcon = item.health === 'Completed' ? '✅' : item.health === 'On Track' ? '🟢' : item.health === 'Blocked' ? '🔴' : '🟡';
+                ownerPrdHtml += `
+                    <div class="owner-info">
+                        <span class="owner-label">${healthIcon} Health:</span>
+                        <span class="owner-name">${item.health}</span>
+                    </div>
+                `;
+            }
             if (item.owner) {
                 ownerPrdHtml += `
                     <div class="owner-info">
@@ -395,6 +452,18 @@ class RoadmapApp {
                         <span class="owner-name">${item.owner}</span>
                     </div>
                 `;
+            }
+            if (item.devLead) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🛠️ Dev Lead:</span><span class="owner-name">${item.devLead}</span></div>`;
+            }
+            if (item.designLead && item.designLead !== '-') {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🎨 Design Lead:</span><span class="owner-name">${item.designLead}</span></div>`;
+            }
+            if (item.qualityLead && item.qualityLead !== '-') {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🧪 Quality Lead:</span><span class="owner-name">${item.qualityLead}</span></div>`;
+            }
+            if (item.team && item.team !== '-') {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🏢 Team:</span><span class="owner-name">${item.team}</span></div>`;
             }
             if (item.prdLink) {
                 ownerPrdHtml += `
@@ -444,8 +513,8 @@ class RoadmapApp {
                 <div class="modal-meta">
                     <span class="status-badge ${item.status}">${this.formatStatus(item.status)}</span>
                     <span class="category-tag">${this.formatCategory(item.category)}</span>
-                    <span class="meta-item">📅 ${item.date}</span>
-                    <span class="meta-item">📊 ${item.quarter}</span>
+                    ${item.date && item.date !== '-' ? `<span class="meta-item">📅 ${item.date}</span>` : ''}
+                    <span class="meta-item">📊 ${buildLabel || item.quarter || item.period}</span>
                 </div>
             </div>
             ${ownerPrdHtml}
