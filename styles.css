@@ -1168,6 +1168,12 @@ body {
     color: var(--text-tertiary);
 }
 
+.release-badge.upcoming {
+    background: linear-gradient(135deg, #e8f4fd, #d0e8f7);
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}
+
 .release-description {
     color: var(--text-secondary);
     line-height: 1.6;

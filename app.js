@@ -641,6 +641,7 @@ class RoadmapApp {
 
     formatReleaseStatus(status) {
         const statusMap = {
+            'upcoming': 'Upcoming Release',
             'current': 'Current Release',
             'previous': 'Previous Release',
             'archived': 'Archived'
