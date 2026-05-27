@@ -167,7 +167,7 @@ class RoadmapApp {
                 'v1': 'V1 - Core Roadmap',
                 'v2': 'V2 - Extended Roadmap',
                 'v3': 'V3 - Q1-Q2 2026 Roadmap (Updated March 2026)',
-                'v4': 'V4 - June 2026 SSOT (Latest, deck updated May 26, 2026)',
+                'v4': 'Latest View May-June 2026',
             };
             versionName = versionNames[this.currentVersion] || 'V1 - Core Roadmap';
             itemCount = `${this.data.length} items`;
