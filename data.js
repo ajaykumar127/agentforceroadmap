@@ -38,7 +38,11 @@ const roadmapDataV1 = [
     
     // Q4 2024 - Foundation
     {
-        id: 1,
+        id: 1,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Agent Builder Launch",
         description: "Low-code platform for building custom AI agents with pre-built templates and drag-and-drop interface.",
         category: "feature",
@@ -59,7 +63,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 2,
+        id: 2,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Service Agent for Customer Support",
         description: "AI-powered agent that handles customer inquiries across multiple channels with contextual understanding.",
         category: "feature",
@@ -80,7 +88,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 3,
+        id: 3,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Sales Development Representative (SDR) Agent",
         description: "Autonomous agent that qualifies leads, schedules meetings, and nurtures prospects through the sales pipeline.",
         category: "feature",
@@ -103,7 +115,11 @@ const roadmapDataV1 = [
 
     // Q1 2025 - Expansion
     {
-        id: 4,
+        id: 4,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Marketing Campaign Agent",
         description: "AI agent that creates, optimizes, and manages marketing campaigns across multiple channels.",
         category: "feature",
@@ -124,7 +140,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 5,
+        id: 5,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Advanced Analytics & Insights",
         description: "Enhanced analytics dashboard with predictive insights and agent performance metrics.",
         category: "enhancement",
@@ -145,7 +165,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 6,
+        id: 6,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Slack Integration",
         description: "Native Slack integration allowing agents to operate within Slack channels and DMs.",
         category: "integration",
@@ -168,7 +192,11 @@ const roadmapDataV1 = [
 
     // Q2 2025 - Intelligence
     {
-        id: 7,
+        id: 7,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Multi-Agent Orchestration",
         description: "Framework for multiple agents to collaborate and hand off tasks seamlessly.",
         category: "feature",
@@ -189,7 +217,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 8,
+        id: 8,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Voice & Telephony Integration",
         description: "Voice-enabled agents with telephony integration for phone-based interactions.",
         category: "integration",
@@ -210,7 +242,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 9,
+        id: 9,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Custom Model Integration",
         description: "Support for bringing your own AI models and integrating with external LLMs.",
         category: "feature",
@@ -233,7 +269,11 @@ const roadmapDataV1 = [
 
     // Q3 2025 - Scale
     {
-        id: 10,
+        id: 10,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Enterprise Security & Compliance",
         description: "Advanced security features including data residency, audit logs, and compliance certifications.",
         category: "infrastructure",
@@ -254,7 +294,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 11,
+        id: 11,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Microsoft Teams Integration",
         description: "Native Microsoft Teams integration for seamless agent interactions within Teams.",
         category: "integration",
@@ -275,7 +319,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 12,
+        id: 12,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Advanced Personalization Engine",
         description: "AI-driven personalization that adapts agent responses based on user preferences and behavior.",
         category: "enhancement",
@@ -298,7 +346,11 @@ const roadmapDataV1 = [
 
     // Q4 2025 - Innovation
     {
-        id: 13,
+        id: 13,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Autonomous Workflow Automation",
         description: "Agents that can independently create and execute complex workflows based on business objectives.",
         category: "feature",
@@ -319,7 +371,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 14,
+        id: 14,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Industry-Specific Agent Templates",
         description: "Pre-configured agent templates for healthcare, financial services, retail, and manufacturing.",
         category: "feature",
@@ -340,7 +396,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 15,
+        id: 15,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Multimodal Agent Capabilities",
         description: "Agents that can process and generate images, videos, and documents in addition to text.",
         category: "feature",
@@ -363,7 +423,11 @@ const roadmapDataV1 = [
 
     // 2026 and Beyond
     {
-        id: 16,
+        id: 16,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Cognitive Memory & Learning",
         description: "Long-term memory systems that allow agents to learn and improve from every interaction.",
         category: "feature",
@@ -384,7 +448,11 @@ const roadmapDataV1 = [
         }
     },
     {
-        id: 17,
+        id: 17,        owner: "— Sample data (illustrative)",
+        pmm: null,
+        engLead: null,
+        gusProgram: "V1 placeholder dataset — predates real GUS attribution",
+
         title: "Agent Marketplace",
         description: "Ecosystem for sharing, discovering, and deploying community-built agents and components.",
         category: "feature",
@@ -1001,7 +1069,11 @@ const roadmapDataCombined = [
 const roadmapDataV3 = [
     // ===== Q1 2026 =====
     {
-        id: 1,
+        id: 1,        owner: "Rakesh MONDAL",
+        pmm: "Kaustubh Wadhone",
+        engLead: "Bibekjyoti Deroy",
+        gusProgram: "36. Multi-Vendor Web Search Support",
+
         title: "Open Web Search as OOTB action",
         description: "Complete: Open Web Search as OOTB action In Progress: Open Web Search in Prompt Builder Details: Enable web search as part of Standard Knowledge Action for real-time answers Web Search Action: Open Web Search Combine web search results with files and internal knowledge for accurate responses Creatio",
         category: "knowledge",
@@ -1016,7 +1088,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 2,
+        id: 2,        owner: "Jaswinder Rattanpal",
+        pmm: null,
+        engLead: "Kavya Murali",
+        gusProgram: "24. [Prompt Builder] Embeddable Prompt Composer",
+
         title: "Allow prompt templates to be used anywhere and everywhere. Two main aspects:",
         description: "Allow prompt templates to be used anywhere and everywhere. Two main aspects: Execute: a prompt template should be able to be invoked by any application [via existing or enhanced APIs] Author: users create prompt templates from other interfaces such as Grid, Test center, Slack, etc.",
         category: "testing",
@@ -1031,7 +1107,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 3,
+        id: 3,        owner: "Aarvi Shah",
+        pmm: "Billie Greenhalgh",
+        engLead: "Nikhil Bojja",
+        gusProgram: "05. Voice & Conversation Testing Experience",
+
         title: "Support multi-turn conversation simulation and testing for both text and voice agents.",
         description: "Support multi-turn conversation simulation and testing for both text and voice agents. Allow users to simulate realistic user interactions, identify logic/voice behavioral issues, and evaluate if the agent successfully resolved the user’s intent over the course of a full session Users can simulate t",
         category: "testing",
@@ -1046,7 +1126,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 4,
+        id: 4,        owner: "Darvish Shadravan",
+        pmm: "Tim Lawrence",
+        engLead: "Aaron Chan",
+        gusProgram: "08. Agentforce on Gemini + Model Provider Platform Enhancements",
+
         title: "Switch to Google Gemini for Agentforce Reasoning Engine plus standard/custom actions",
         description: "Switch to Google Gemini for Agentforce Reasoning Engine plus standard/custom actions Initial launch will support NGA’s Daisy Planner only [Voice/Flash planner on horizon] Gemini 3 Flash support is the primary target model for Mar-Apr 2026 GA, with Gemini 3 Pro now available in LLM GW (as of Dec 2025",
         category: "feature",
@@ -1061,7 +1145,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 5,
+        id: 5,        owner: "Darvish Shadravan",
+        pmm: "Arathi Selvaraj",
+        engLead: "Aaron Chan",
+        gusProgram: "02. Transition from QWEN based models to GPTOSS",
+
         title: "Transitioning to Salesforce hosted, fine-tuned version of GPT OSS",
         description: "Customer impact should be minimal as the following updates are related to backend updates to enhance performance and security Text evals, topic classification / hyper classifiers, citations, etc all currently use QWEN based models Transitioning to Salesforce hosted, fine-tuned version of GPT OSS",
         category: "knowledge",
@@ -1076,7 +1164,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 6,
+        id: 6,        owner: "Nancy Xu",
+        pmm: "Arathi Selvaraj",
+        engLead: "Rajul Vashistha",
+        gusProgram: "19. Gov Cloud FedRamp Catchup for AI Cloud",
+
         title: "In Progress: LLM Batch Processing in Gov Cloud",
         description: "In Progress: LLM Batch Processing in Gov Cloud Previously released: Dec 2025: LLM Batch Processing via system pipeline (prompt templates Batch API through provider Batch API) - APEX Feb 2026: LLM Batch Processing for Flow (prompt templates Batch API through provider Batch API) Flow + Anthropic suppo",
         category: "platform",
@@ -1091,7 +1183,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 7,
+        id: 7,        owner: "Shiva Raaj Kotini",
+        pmm: null,
+        engLead: "Abhijit Bare",
+        gusProgram: "04. AF Sandbox Orgs routing to premium tier + increase scale tier efficiency",
+
         title: "Intelligent dynamic routing will be incorporated from scale tier to priority tier when necessary",
         description: "All sandbox org agents will have the same model performance profile, similar to production active orgs. In the backend, an increase of utilization to scale tiers will be adopted: revised routing will send non AF traffic to scale tiers during non-business hours of US time and have 24x7 high utilizati",
         category: "integration",
@@ -1106,7 +1202,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 8,
+        id: 8,        owner: "Nancy Xu",
+        pmm: "Arathi Selvaraj",
+        engLead: "Rajul Vashistha",
+        gusProgram: "19. Gov Cloud FedRamp Catchup for AI Cloud",
+
         title: "Gov Cloud FedRamp High catch up",
         description: "Gov Cloud civilian instance has all GA features released Feb - July 2025 Features have completed GVAT review",
         category: "analytics",
@@ -1121,7 +1221,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 9,
+        id: 9,        owner: "Pragya Anand",
+        pmm: "Nehal Padia",
+        engLead: "Aaron Chan",
+        gusProgram: "08. Multi Agent Orchestration DF Demos",
+
         title: "High demand for multi-agent interoperability for scalable outcomes across Agentic projects",
         description: "Enterprise-grade, interoperable orchestration layer that makes agent networks work in production securely, and at scale. Agents across different Salesforce orgs discovering, communicating, and collaborating through shared standards and trusted governance",
         category: "feature",
@@ -1136,7 +1240,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 10,
+        id: 10,        owner: "Pragya Anand",
+        pmm: "Nehal Padia",
+        engLead: "Sarah Boaz-Shelley",
+        gusProgram: "28. 3P A2A Customer Pilot (Inbound Only)",
+
         title: "A2A Inbound:",
         description: "March 2026 A2A Inbound: Allows external agents to connect to AF agents June 2026 A2A Outbound: Allow internal agents to connect to external 3P agents Agent Card: 3P agents advertise their capabilities, allowing customers to identify if the 3P agent is the right fit for the task Universal Handshake: ",
         category: "feature",
@@ -1151,7 +1259,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 11,
+        id: 11,        owner: "Abhi Rathna",
+        pmm: "Courtney Ewing",
+        engLead: null,
+        gusProgram: "38. Slack connection ease of use and adoption",
+
         title: "Simple way to connect an Agent to Slack",
         description: "Simple way to connect an Agent to Slack Eliminate reliance on generic API-based connection Reduce install and compatibility friction for customers using existing legacy Slack apps",
         category: "integration",
@@ -1166,7 +1278,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 12,
+        id: 12,        owner: "Matthew Rastovac",
+        pmm: "Barb Meade",
+        engLead: "Andy Shah",
+        gusProgram: "13. Next Gen Chat Pilot",
+
         title: "Conversational quality, interactions more natural and responsive",
         description: "Conversational quality, interactions more natural and responsive Multimodal: flip between text and voice within the same conversation Rich content & media: render images, tables, and markdowns Page navigation and website events such as clicks enable more tailored guidance SCV (Service Cloud Voice)/ ",
         category: "memory",
@@ -1181,7 +1297,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 13,
+        id: 13,        owner: "Ethan Limchayseng",
+        pmm: "Nicole Mejia",
+        engLead: "Deepak Tundagura",
+        gusProgram: "02. Voice + Daisy Planner Unification",
+
         title: "A unified planner will combine both voice and chat agents together",
         description: "A unified planner will combine both voice and chat agents together",
         category: "feature",
@@ -1196,7 +1316,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 14,
+        id: 14,        owner: "— Section / Meta",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Org-level consent — no GUS program identified yet",
+
         title: "Org level consent management",
         description: "Org level consent management AI features migration to self-service consent management",
         category: "feature",
@@ -1211,7 +1335,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 15,
+        id: 15,        owner: "Shiv Ramanna",
+        pmm: "Srikrishna Joshi",
+        engLead: "Nikhil Bojja",
+        gusProgram: "Agentforce Supervisor",
+
         title: "This capability is for SALESFORCE INTERNAL STAFF ONLY -",
         description: "This capability is for SALESFORCE INTERNAL STAFF ONLY - do not try to sell this Provide a framework for internal teams to build immutable/uneditable agents to the end-user, enabling automatic updates to agents without a migration script There will be no UI for file based agents",
         category: "feature",
@@ -1228,7 +1356,11 @@ const roadmapDataV3 = [
 
     // ===== Q2 2026 =====
     {
-        id: 16,
+        id: 16,        owner: "Paritosh Umesan",
+        pmm: "Kaustubh Wadhone",
+        engLead: "Bibekjyoti Deroy",
+        gusProgram: "43. Agent Context and Conversation Memory",
+
         title: "Agent Conversation Memory",
         description: "Agent conversation memory as well as user profile memory This feature will track a logged-in user's role and personal memory ensuring a personalized and contextual experience. Agents will carry context across sessions, recall past interactions and deliver faster, smarter workflows Opt-in privacy, go",
         category: "memory",
@@ -1243,7 +1375,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 17,
+        id: 17,        owner: "Sameer Abhinkar",
+        pmm: "Kaustubh Wadhone",
+        engLead: "Lily Xiao",
+        gusProgram: "10. Agentforce Data Library - Enhancements",
+
         title: "ADL as a Retriever Action:",
         description: "ADL as a Retriever Action: Enable grounding on multiple data sources by allowing multiple ADL retriever actions within an agent. This will expose Retriever Actions as a native agent action (similar to Apex, Flow, etc.) and allow attaching multiple ADLs to a single agent in the builder. Future enhanc",
         category: "knowledge",
@@ -1258,7 +1394,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 18,
+        id: 18,        owner: "Abhi Rathna",
+        pmm: "Courtney Ewing",
+        engLead: null,
+        gusProgram: "12. Connection Inputs Support",
+
         title: "Connection Variables Support",
         description: "Introduction of an object that automatically represents the Surface context data of the Surface associated with the Agent Session during runtime. The object mimics how Salesforce Flow handles $Record, offering a simpler, declarative entry point to Surface context data Provides admin configurability ",
         category: "memory",
@@ -1273,7 +1413,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 19,
+        id: 19,        owner: "Abhi Rathna",
+        pmm: "Courtney Ewing",
+        engLead: null,
+        gusProgram: "11. Response Customization Support for Connections",
+
         title: "Support for the following:",
         description: "Provide admin configurability to use custom connections, custom response actions, modify connection Instructions, add determinism to tailor the last mile experience for Agents. Support for the following: Custom Connections & Custom Response Actions Custom Messaging Components in Agents Customizing C",
         category: "memory",
@@ -1288,7 +1432,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 20,
+        id: 20,        owner: "Aron Kale",
+        pmm: "Billie Greenhalgh",
+        engLead: "Christopher Chiu",
+        gusProgram: "20. Rename Topics --> Subagents",
+
         title: "Renaming topics and actions to subagents and tools",
         description: "Renaming topics and actions to subagents and tools",
         category: "platform",
@@ -1303,7 +1451,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 21,
+        id: 21,        owner: "Tanner McGrath",
+        pmm: "Samatha Kung",
+        engLead: "Vinitha Ravichandran",
+        gusProgram: "07. Developer Easy Self Service",
+
         title: "Quick start experience",
         description: "Quick start experience AI tooling for developers One click setup, enabling developers to build agents instantly using preferred tools like Claude Code One-click paths include: Builder → Complete Claude Code Experience",
         category: "platform",
@@ -1318,7 +1470,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 22,
+        id: 22,        owner: "Avi Shah",
+        pmm: "Samatha Kung",
+        engLead: "Vishal Shah",
+        gusProgram: "29. Agentforce Grid GA (~April)",
+
         title: "Grid supports querying data across CRM, DC, running Agents, Prompts and Invocable Actions.",
         description: "A spreadsheet-like interface that allows users to rapidly design, test, and operationalize AI workflows at scale. Combines Salesforce data, prompts, actions, and agents in a single surface, making it easy to build complex AI processes without writing code. Flexibly discover your data and do more wit",
         category: "testing",
@@ -1333,7 +1489,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 23,
+        id: 23,        owner: "Nir Tzavchon",
+        pmm: "Srikrishna Joshi",
+        engLead: "Eleanor Ashkenazi",
+        gusProgram: "11. Agentforce Analytics 2.0 Beta",
+
         title: "Improved experience for analytics and enhanced experience with optimization to tie it to analytics",
         description: "Improved experience for analytics and enhanced experience with optimization to tie it to analytics Integrated data models for additional services such as feedback, RAG, DW, etc. Improvements include deflection and abandonment metrics, as well as revised ASA (Service Agent), and Employee Agent Analyt",
         category: "analytics",
@@ -1348,7 +1508,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 24,
+        id: 24,        owner: "Ran Fu",
+        pmm: "Billie Greenhalgh",
+        engLead: "Nikhil Bojja",
+        gusProgram: "13. New testing experience in AF Studio & NGA - GA",
+
         title: "Metadata support for pro-code users",
         description: "Metadata support for pro-code users Enhanced custom evaluations (evals) Create test cases from observability sessions Feature parity with Testing Center in setup",
         category: "testing",
@@ -1363,7 +1527,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 25,
+        id: 25,        owner: "Itay Oren",
+        pmm: null,
+        engLead: "Dov Tendler",
+        gusProgram: "Agentforce Custom Scorer - GA",
+
         title: "Custom Scorers Beta",
         description: "Define and manage scorers (view, create prompt/expression-based, edit, test, activate, clone) in Studio Use Scorers in testing UI, API, CLI & Observability (abandonment, deflection, custom: CSAT, quality)",
         category: "analytics",
@@ -1378,7 +1546,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 26,
+        id: 26,        owner: "Kevin Wang (Agentforce)",
+        pmm: "Billie Greenhalgh",
+        engLead: "Siddharth Ray",
+        gusProgram: "19. Agentforce Platform Error Architecture",
+
         title: "Planner provides detailed error messages instead of, “something went wrong”.",
         description: "Comprehensive error handling architecture that transforms generic technical failures into transparent, actionable, user-centric events Planner provides detailed error messages instead of, “something went wrong”.",
         category: "feature",
@@ -1393,7 +1565,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 27,
+        id: 27,        owner: "Tulsi Patel",
+        pmm: null,
+        engLead: "Travis Stubbendeck",
+        gusProgram: "04. Enhanced Customer Agent Security Options for SOQL Actions (Track 5)",
+
         title: "Enhanced Customer Agent Security Options for SOQL Actions",
         description: "More flexible and granular security controls when building customer-facing service agents (ASAs) Phased by complexity: external Org Wide Defaults ( OWDs ), Contact ID Filtering, User Mode & Action-Based Perm Sets",
         category: "memory",
@@ -1408,7 +1584,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 28,
+        id: 28,        owner: "Moe Basi",
+        pmm: "Nehal Padia",
+        engLead: "Lily Xiao",
+        gusProgram: "09.. MCP Client & Gateway GA",
+
         title: "May - June 2026",
         description: "An improved Agent API (v2) designed to eliminate high latency, multi-hop legacy architecture of Einstein Bots (v1.x) Roadmap includes integration with Daisy ++ engine, conversational endpoints streaming direct from start session / send message, parity with scrt (service cloud run time), voice, next ",
         category: "memory",
@@ -1423,7 +1603,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 29,
+        id: 29,        owner: "Moe Basi",
+        pmm: "Nehal Padia",
+        engLead: "Lily Xiao",
+        gusProgram: "09.. MCP Client & Gateway GA",
+
         title: "Experience will include NGA, API Catalog, External Services, Platform Radio",
         description: "Ability to onboard Salesforce 1P MCP servers and deliver a usable, safe NGA integration experience for builders Experience will include NGA, API Catalog, External Services, Platform Radio",
         category: "platform",
@@ -1438,7 +1622,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 30,
+        id: 30,        owner: "Udit Chandna",
+        pmm: "Kaustubh Wadhone",
+        engLead: "Malav Shah",
+        gusProgram: "29. [Pilot] Agentic UI Automation",
+
         title: "Currently in closed customer pilots, beta",
         description: "Single-Org Multi-Agent (SOMA) facilitates multiple Salesforce AI agents to collaborate within a single org Behind the scenes, a primary orchestrator agent intelligently coordinates and delegates tasks to specialized agents, ensuring each task is handled by the agent best equipped for it. SOMA preser",
         category: "memory",
@@ -1455,7 +1643,11 @@ const roadmapDataV3 = [
 
     // ===== Q4 2026 =====
     {
-        id: 31,
+        id: 31,        owner: "Pragya Anand",
+        pmm: "Nehal Padia",
+        engLead: "Sarah Boaz-Shelley",
+        gusProgram: "06. Agent API v2",
+
         title: "Beta Dec 2025;",
         description: "Agentforce Studio - home for all the following: Agentforce Assistant Canvas Interaction Summary Simulator for Agentforce Builder Agent Graph [editable via canvas or script] Connections File Explorer Script View Metadata APIs",
         category: "memory",
@@ -1472,7 +1664,11 @@ const roadmapDataV3 = [
 
     // ===== TBD =====
     {
-        id: 32,
+        id: 32,        owner: "Sameer Abhinkar",
+        pmm: "Kaustubh Wadhone",
+        engLead: "Lily Xiao",
+        gusProgram: "10. Agentforce Data Library - Enhancements",
+
         title: "Agentforce Data Library DC1 Support has been launching across 3 x key phases",
         description: "Agentforce Data Library DC1 Support has been launching across 3 x key phases Phase 1 [GA, June 2025]: Data Sources = Custom Retriever Default data space = Y; Non-default data space = Y Phase 2 [Mar 2026]: Data Sources = Salesforce Knowledge & Files Default data space = Y; Non-default data space = N ",
         category: "knowledge",
@@ -1487,7 +1683,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 33,
+        id: 33,        owner: "— Section header",
+        pmm: null,
+        engLead: null,
+        gusProgram: "SSOT cover slide",
+
         title: "Designed for AI Practitioners",
         description: "Agentforce Roadmap Designed for AI Practitioners Q2 Mar Apr May 2 026",
         category: "feature",
@@ -1502,7 +1702,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 34,
+        id: 34,        owner: "Liz Awad",
+        pmm: null,
+        engLead: "Ashish Gite",
+        gusProgram: "20. Prompt Builder Testing",
+
         title: "Mar 2026: Performance Metrics",
         description: "Integrate unit testing metrics directly into Prompt Builder UI Display performance metrics such as token size and latency, evaluation API metrics and allow custom evaluations. Provide an option to link directly to Testing Center for batch testing",
         category: "analytics",
@@ -1517,7 +1721,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 35,
+        id: 35,        owner: "— Section header",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Orchestration section divider",
+
         title: "Orchestration",
         description: "Operate Orchestration Experiences Roadmap Highlights Control New New New New Next Next Next Next Voice Global Availability GA | Feb - WT Sydney Voice in Mobile SDK GA | March MCP Support Beta | Today Multi-Agent Orchestration Beta | April - TDX Agentforce Script GA | Feb 2 6 Agentforce Script for V",
         category: "testing",
@@ -1532,7 +1740,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 36,
+        id: 36,        owner: "Cory Anderson",
+        pmm: "Nicole Mejia",
+        engLead: "Sarah Boaz-Shelley",
+        gusProgram: "34. Handling Unsuccessful Escalations from Agents to Humans",
+
         title: "Escalation: wait time + business hours",
         description: "safe harbor, target dates only: Jan 26 NGA setup Feb 26 Escalation: wait time + business hours Downloadable transcripts (text only) Mar 26 Post-chat Pre-chat Auth: verified external user 1 Mobile SDK for Agentforce with Voice April 26: Voice mode TBC: File upload/attachments",
         category: "platform",
@@ -1547,7 +1759,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 37,
+        id: 37,        owner: "— Section header",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Previously Released divider",
+
         title: "Previously Released:",
         description: "Previously Released: Standard flex types, instruction only prompts, optional inputs Feb 2026 : Version level inputs, configurable resources, inline picker",
         category: "prompts",
@@ -1562,7 +1778,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 38,
+        id: 38,        owner: "— Section header",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Deeper Dive section divider",
+
         title: "Deeper Dive",
         description: "Deeper Dive ~30, 60, 90 Days Intended for internal purposes only",
         category: "feature",
@@ -1577,7 +1797,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 39,
+        id: 39,        owner: "— Section header",
+        pmm: null,
+        engLead: null,
+        gusProgram: "SSOT cover slide",
+
         title: "SSOT Agentforce Roadmap",
         description: "SSOT Agentforce Roadmap June 2025 and before Editions July 2025 Edition August 2025 Edition September 2025 Edition October 2025 [ Dreamforce SIC Content ] November 2025 December 2025 January February 2026 March 2026 [this edition] Technical Release Readiness (TRR) July 2025 ( webinar ) August",
         category: "feature",
@@ -1592,7 +1816,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 40,
+        id: 40,        owner: "— Cross-cloud index",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Cross-cloud roadmap finder (slide 45 of June '26 SSOT)",
+
         title: "Salesforce AI Cross Cloud Roadmap Easy Finder",
         description: "Salesforce AI Cross Cloud Roadmap Easy Finder Data 360 [requires POP certification] [Ryan Raso, POP Data 360 ] Tableau [Lara Niemala PMM, Amy Lin Loiacono PMM Deep-dive] Slack [Max Brenssell, PM] Sales Cloud [Krithika Viswanathan PMM, Victor Weilin Liu, PM ] Service Cloud [Mala Ravi PMM, Hari",
         category: "feature",
@@ -1607,7 +1835,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 41,
+        id: 41,        owner: "— Section header",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Thank-you slide",
+
         title: "​Customers      Trailblazers      Partners      Employees  Communities      Veterans      Nonprofits",
         description: "​Customers Trailblazers Partners Employees Communities Veterans Nonprofits",
         category: "feature",
@@ -1622,7 +1854,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 42,
+        id: 42,        owner: "— Section header",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Roadmap disclaimer slide",
+
         title: "Roadmap Disclaimer",
         description: "Roadmap Disclaimer Nomenclature referenced is intended for INTERNAL use only All product feature names referenced from this slide onward are intended for internal use only For example, you may see features with “v2 Phase 3” or “Phase 1”, and other similar internal naming conventions included We have",
         category: "knowledge",
@@ -1637,7 +1873,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 43,
+        id: 43,        owner: "— Index / Multi-program",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Q1 Feb roadmap index slide (covers all product areas)",
+
         title: "Product Roadmap Index | Q1 Feb",
         description: "Product Roadmap Index | Q1 Feb Product Area Delivered Jan 2026 About to Release Feb 2026 On Track to Release Mar 2026 In Active Build Apr 2026 Context Metadata, Retrievers, File Formats ADL DC1 Compatibility (Phase 3) Multi-vendor web search support Agentforce Data Library - Enhancements Response C",
         category: "analytics",
@@ -1652,7 +1892,11 @@ const roadmapDataV3 = [
         }
     },
     {
-        id: 44,
+        id: 44,        owner: "— Index / Multi-program",
+        pmm: null,
+        engLead: null,
+        gusProgram: "Q2 Mar roadmap index slide (covers all product areas)",
+
         title: "Product Roadmap Index | Q2 Mar",
         description: "Product Roadmap Index | Q2 Mar Product Area Delivered Feb 2026 About to Release Mar 2026 On Track to Release Apr 2026 In Active Build May 2026+ Context Metadata, Retrievers, File Formats ADL DC1 Compatibility (Phase 3) Multi-vendor web search support Agentforce Data Library - Enhancements Agent Co",
         category: "analytics",

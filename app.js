@@ -61,9 +61,10 @@ class RoadmapApp {
         const ownerCounts = {};
         const thisMonth = [];
         const monthLabels = ['May 2026','June 2026'];
+        const isMeta = name => !name || name.startsWith('—');
         data.forEach(i => {
             if (counts[i.status] !== undefined) counts[i.status]++;
-            if (i.owner) {
+            if (i.owner && !isMeta(i.owner)) {
                 owners.add(i.owner);
                 ownerCounts[i.owner] = (ownerCounts[i.owner] || 0) + 1;
             }
@@ -369,15 +370,20 @@ class RoadmapApp {
             (byOwner[key] = byOwner[key] || []).push(item);
         });
 
-        // Sort: largest groups first; Unassigned last
+        // Sort: real owners (largest first) → meta/sample groups → Unassigned
+        const isMeta = name => name === 'Unassigned' || name.startsWith('—');
         const sorted = Object.entries(byOwner).sort((a,b) => {
-            if (a[0] === 'Unassigned') return 1;
-            if (b[0] === 'Unassigned') return -1;
+            const am = isMeta(a[0]), bm = isMeta(b[0]);
+            if (am && !bm) return 1;
+            if (!am && bm) return -1;
             return b[1].length - a[1].length;
         });
 
-        const initials = name => name === 'Unassigned' ? '?' :
-            name.replace(/\(.*?\)/g,'').trim().split(/\s+/).map(s=>s[0]).slice(0,2).join('').toUpperCase();
+        const initials = name => {
+            if (name === 'Unassigned') return '?';
+            if (name.startsWith('—')) return '∗';
+            return name.replace(/\(.*?\)/g,'').trim().split(/\s+/).map(s=>s[0]).slice(0,2).join('').toUpperCase();
+        };
 
         const statusDot = s => `<span class="dot status-dot-${s}" title="${this.formatStatus(s)}"></span>`;
 
@@ -401,8 +407,9 @@ class RoadmapApp {
                 </div>
             `).join('');
 
+            const metaClass = isMeta(owner) ? ' is-meta' : '';
             return `
-                <div class="owner-card">
+                <div class="owner-card${metaClass}">
                     <div class="owner-card-header">
                         <div class="owner-avatar">${initials(owner)}</div>
                         <div class="owner-card-meta">

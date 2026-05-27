@@ -2389,3 +2389,19 @@ body {
 .item-title {
     letter-spacing: -0.01em;
 }
+
+/* Owner cards for meta/sample groups — visually distinct */
+.owner-card.is-meta {
+    background: var(--bg-secondary);
+    border-style: dashed;
+    opacity: 0.85;
+}
+.owner-card.is-meta .owner-avatar {
+    background: linear-gradient(135deg, #94a3b8, #64748b);
+    box-shadow: none;
+}
+.owner-card.is-meta .owner-name-title {
+    color: var(--text-tertiary);
+    font-style: italic;
+    font-weight: 600;
+}
