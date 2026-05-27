@@ -1701,7 +1701,11 @@ if (typeof module !== 'undefined' && module.exports) {
 const roadmapDataV4 = [
     // ---------------- CONTEXT ----------------
     {
-        id: 1,
+        id: 1,        owner: "Manjeet Singh",
+        pmm: "Samatha Kung",
+        engLead: "Navin Ramineni",
+        gusProgram: "17. Unmeter Data Cloud & Automatically Enable STDM, Analytics, and Observability",
+
         title: "Unmeter Data Cloud, auto-enable STDM → Observability",
         description: "Removes Data Cloud metering for Agentforce-related telemetry and auto-enables Standard Data Model (STDM) flow into Observability so customers get session/agent telemetry out of the box.",
         category: "context",
@@ -1720,7 +1724,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 2,
+        id: 2,        owner: "Sameer Abhinkar",
+        pmm: "Kaustubh Wadhone",
+        engLead: "Lily Xiao",
+        gusProgram: "10. Agentforce Data Library - Enhancements",
+
         title: "Agentforce Data Library — Enhancements (ADL Async Architecture)",
         description: "ADL as a Retriever Action: enable grounding on multiple data sources by allowing multiple ADL retriever actions per agent. Future enhancements include real-time API integration (JIT index support).",
         category: "context",
@@ -1740,7 +1748,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 3,
+        id: 3,        owner: "Abhi Rathna",
+        pmm: "Courtney Ewing",
+        engLead: null,
+        gusProgram: "12. Connection Inputs Support",
+
         title: "Connection Variables Support (Surface-specific context variables)",
         description: "Introduces an object that automatically represents Surface context data of the Surface associated with the Agent Session at runtime — mirroring Flow's $Record. Provides scoped variables per Connection (Case → ASAEmail, Lead → SDREmail, Voice Call → Telephony).",
         category: "context",
@@ -1760,7 +1772,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 4,
+        id: 4,        owner: "Abhi Rathna",
+        pmm: "Courtney Ewing",
+        engLead: null,
+        gusProgram: "11. Response Customization Support for Connections",
+
         title: "Response Customization — Support for Surfaces / Connections",
         description: "Admin configurability to use custom connections, custom response actions, modify connection instructions, and add determinism to tailor the last-mile experience for Agents.",
         category: "context",
@@ -1783,7 +1799,11 @@ const roadmapDataV4 = [
 
     // ---------------- OPERATE ----------------
     {
-        id: 5,
+        id: 5,        owner: "Itay Oren",
+        pmm: null,
+        engLead: "Dov Tendler",
+        gusProgram: "Agentforce Custom Scorer - GA",
+
         title: "Custom Scorers (Beta)",
         description: "Define and manage scorers (view, create prompt/expression-based, edit, test, activate, clone) in Studio. Use scorers in testing UI, API, CLI, and Observability (abandonment, deflection, custom CSAT/quality).",
         category: "operate",
@@ -1803,7 +1823,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 6,
+        id: 6,        owner: "Ran Fu",
+        pmm: "Billie Greenhalgh",
+        engLead: "Nikhil Bojja",
+        gusProgram: "13. New testing experience in AF Studio & NGA - GA",
+
         title: "New Testing Center (Beta)",
         description: "Next-Gen Testing Center: metadata support for pro-code users, enhanced custom evals, create test cases from observability sessions, feature parity with Testing Center in Setup.",
         category: "operate",
@@ -1823,7 +1847,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 7,
+        id: 7,        owner: "Darvish Shadravan",
+        pmm: "Tim Lawrence",
+        engLead: "Aaron Chan",
+        gusProgram: "08. Agentforce on Gemini + Model Provider Platform Enhancements",
+
         title: "Agentforce on Gemini",
         description: "Switch to Google Gemini for Agentforce Reasoning Engine plus standard/custom actions. Initial launch supports NGA's Daisy Planner; Gemini 3 Flash is the primary target model. Live in Pilot now.",
         category: "operate",
@@ -1843,7 +1871,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 8,
+        id: 8,        owner: "Aarvi Shah",
+        pmm: "Billie Greenhalgh",
+        engLead: "Nikhil Bojja",
+        gusProgram: "05. Voice & Conversation Testing Experience",
+
         title: "Voice & Conversation Testing Experience (Beta)",
         description: "Multi-turn conversation simulation and testing for both text and voice agents. Simulate realistic user interactions, identify logic/voice behavioral issues, and evaluate intent resolution across full sessions.",
         category: "operate",
@@ -1863,7 +1895,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 9,
+        id: 9,        owner: "Maor Pichadze",
+        pmm: "Srikrishna Joshi",
+        engLead: "Navin Ramineni",
+        gusProgram: "21. Agent Health Monitoring - GA",
+
         title: "Agent Health Monitoring — GA",
         description: "Built as part of the Observability suite (using Tableau). Monitor agents' health KPIs and get alerted when metrics pass custom thresholds. Live in beta now; GA target June 2026.",
         category: "operate",
@@ -1882,7 +1918,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 10,
+        id: 10,        owner: "Tulsi Patel",
+        pmm: null,
+        engLead: "Travis Stubbendeck",
+        gusProgram: "04. Enhanced Customer Agent Security Options for SOQL Actions (Track 5)",
+
         title: "Enhanced Customer Agent Security Options for SOQL Actions (Track 5)",
         description: "More flexible, granular security controls when building customer-facing service agents (ASAs). Phased: external Org-Wide Defaults (OWDs), Contact ID Filtering, User Mode & Action-based Permission Sets.",
         category: "operate",
@@ -1903,7 +1943,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 11,
+        id: 11,        owner: "Shiva Raaj Kotini",
+        pmm: null,
+        engLead: "Abhijit Bare",
+        gusProgram: "04. AF Sandbox Orgs routing to premium tier + increase scale tier efficiency",
+
         title: "AF Sandbox Orgs Routing on Premium Tier",
         description: "All sandbox-org agents get the same model performance profile as production active orgs. Backend routing utilizes scale tiers more aggressively and intelligently routes back to priority tier when needed.",
         category: "operate",
@@ -1922,7 +1966,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 12,
+        id: 12,        owner: "Kevin Wang (Agentforce)",
+        pmm: "Billie Greenhalgh",
+        engLead: "Siddharth Ray",
+        gusProgram: "19. Agentforce Platform Error Architecture",
+
         title: "Agentforce Platform Error Architecture",
         description: "Comprehensive error-handling architecture that turns generic technical failures into transparent, actionable, user-centric events. Planner provides detailed error messages instead of \"something went wrong.\"",
         category: "operate",
@@ -1941,7 +1989,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 13,
+        id: 13,        owner: "Armen Khachatryan",
+        pmm: "Billie Greenhalgh",
+        engLead: "Rama Raman",
+        gusProgram: "14. Online Experimentation",
+
         title: "Online Experimentation (Pilot)",
         description: "Split production traffic between agent versions (\"Challenger\" vs \"Champion\") to validate improvements across topic selection, action execution, and implicit signals (resolution, exit, escalation, sentiment).",
         category: "operate",
@@ -1963,7 +2015,11 @@ const roadmapDataV4 = [
 
     // ---------------- CONTROL ----------------
     {
-        id: 14,
+        id: 14,        owner: "Kevin Wang (Agentforce)",
+        pmm: null,
+        engLead: "Christopher Chiu",
+        gusProgram: "23. Upgrade Legacy Agents to Agent Script + NGA",
+
         title: "Agent Upgrade to New Agent Builder & Script",
         description: "Migration tool that lets early-adopter customers move existing legacy-builder agents into Next-Gen Authoring (Agent Builder + Agent Script) without losing prior configuration.",
         category: "control",
@@ -1982,7 +2038,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 15,
+        id: 15,        owner: "Tanner McGrath",
+        pmm: "Samatha Kung",
+        engLead: "Vinitha Ravichandran",
+        gusProgram: "07. Developer Easy Self Service",
+
         title: "Developer Easy Self-Service",
         description: "One-click setup for developers to build agents instantly using preferred tools like Claude Code. Quick-start experience, AI tooling, Builder → Complete and Claude Code paths, and \"Build your own org.\"",
         category: "control",
@@ -2003,7 +2063,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 16,
+        id: 16,        owner: "Jaswinder Rattanpal",
+        pmm: null,
+        engLead: "Kavya Murali",
+        gusProgram: "24. [Prompt Builder] Embeddable Prompt Composer",
+
         title: "Embeddable Prompt Composer",
         description: "Allow prompt templates to be used and authored anywhere — invoked by any application via existing/enhanced APIs, and authored from Grid, Test Center, Slack, etc.",
         category: "control",
@@ -2023,7 +2087,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 17,
+        id: 17,        owner: "Liz Awad",
+        pmm: null,
+        engLead: "Ashish Gite",
+        gusProgram: "20. Prompt Builder Testing",
+
         title: "Prompt Builder Testing",
         description: "Integrate unit-testing metrics directly into the Prompt Builder UI: token size, latency, evaluation API metrics, custom evaluations, and direct link to Testing Center for batch testing.",
         category: "control",
@@ -2045,7 +2113,11 @@ const roadmapDataV4 = [
 
     // ---------------- ORCHESTRATION ----------------
     {
-        id: 18,
+        id: 18,        owner: "Moe Basi",
+        pmm: "Nehal Padia",
+        engLead: "Lily Xiao",
+        gusProgram: "09.. MCP Client & Gateway GA",
+
         title: "MCP Client & Gateway — GA",
         description: "Onboard Salesforce 1P MCP servers and deliver a usable, safe NGA integration experience. Experience spans NGA, API Catalog, External Services, and Platform Radio.",
         category: "orchestration",
@@ -2064,7 +2136,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 19,
+        id: 19,        owner: "Moe Basi",
+        pmm: "Nehal Padia",
+        engLead: "Joe Wang",
+        gusProgram: "07. MCP Client Support for External Tools as Custom Actions - Pilot",
+
         title: "Agentforce Policies for External APIs and MCP Servers",
         description: "Policy controls governing how Agentforce agents interact with external APIs and MCP servers — including auth, rate, and trust boundaries.",
         category: "orchestration",
@@ -2082,7 +2158,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 20,
+        id: 20,        owner: "Udit Chandna",
+        pmm: "Kaustubh Wadhone",
+        engLead: "Malav Shah",
+        gusProgram: "29. [Pilot] Agentic UI Automation",
+
         title: "Agentic UI Automation (Closed Pilot)",
         description: "Closed customer pilot for agentic UI automation — agents that drive UI surfaces directly to complete tasks.",
         category: "orchestration",
@@ -2100,7 +2180,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 21,
+        id: 21,        owner: "Nir Tzavchon",
+        pmm: "Srikrishna Joshi",
+        engLead: "Eleanor Ashkenazi",
+        gusProgram: "11. Agentforce Analytics 2.0 Beta",
+
         title: "Agent Analytics — Revised Experience",
         description: "Improved analytics with optimization tied in. Integrated data models for feedback, RAG, DW, etc. Adds deflection/abandonment metrics and revised ASA + Employee Agent analytics.",
         category: "orchestration",
@@ -2120,7 +2204,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 22,
+        id: 22,        owner: "Pragya Anand",
+        pmm: "Nehal Padia",
+        engLead: "John Townsend",
+        gusProgram: "09. SOMA Beta",
+
         title: "SOMA — Single-Org Multi-Agent (Beta)",
         description: "Beta release of SOMA: multi-agent orchestration scoped to a single Salesforce org.",
         category: "orchestration",
@@ -2138,7 +2226,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 23,
+        id: 23,        owner: "Pragya Anand",
+        pmm: "Nehal Padia",
+        engLead: "John Townsend",
+        gusProgram: "27. MOMA Customer Pilot",
+
         title: "MOMA — Multi-Org Multi-Agent (Pilot)",
         description: "Enterprise-grade interoperable orchestration layer making agent networks work in production. Agents across different Salesforce orgs discover, communicate, and collaborate via shared standards and trusted governance.",
         category: "orchestration",
@@ -2158,7 +2250,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 24,
+        id: 24,        owner: "Pragya Anand",
+        pmm: "Nehal Padia",
+        engLead: "Sarah Boaz-Shelley",
+        gusProgram: "28. 3P A2A Customer Pilot (Inbound Only)",
+
         title: "3P Agent (A2A) Customer Pilot",
         description: "Closed pilot enabling external (3P) agents to connect to Agentforce via the Agent-to-Agent (A2A) standard, with Agent Cards, universal handshake, and built-in security & observability.",
         category: "orchestration",
@@ -2179,7 +2275,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 25,
+        id: 25,        owner: "Pragya Anand",
+        pmm: "Nehal Padia",
+        engLead: "Sarah Boaz-Shelley",
+        gusProgram: "06. Agent API v2",
+
         title: "Agent API 2.0",
         description: "Improved Agent API (v2) eliminating the high-latency, multi-hop legacy architecture of Einstein Bots (v1.x). Built on A2A, with Daisy++ engine integration, conversational endpoints streaming directly from start session / send message, and a Temporal-backed runtime for long-running async tasks.",
         category: "orchestration",
@@ -2202,7 +2302,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 26,
+        id: 26,        owner: "Shiva Raaj Kotini",
+        pmm: "Tim Lawrence",
+        engLead: "Abhijit Bare",
+        gusProgram: "33. Extensible API Platform (LLMG 2.0)",
+
         title: "Extensible API Platform (LLGM 2.0)",
         description: "Next iteration of the LLM Gateway / language-model platform underpinning Agentforce — extensible APIs across providers, scoring, batching, and async processing.",
         category: "orchestration",
@@ -2223,7 +2327,11 @@ const roadmapDataV4 = [
 
     // ---------------- EXPERIENCES ----------------
     {
-        id: 27,
+        id: 27,        owner: "Ethan Limchayseng",
+        pmm: "Nicole Mejia",
+        engLead: "Deepak Tundagura",
+        gusProgram: "02. Voice + Daisy Planner Unification",
+
         title: "Voice in New Builder",
         description: "Voice agent authoring is now first-class inside the Next-Gen Agent Builder, unifying text and voice configuration.",
         category: "experiences",
@@ -2241,7 +2349,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 28,
+        id: 28,        owner: "William Matteson",
+        pmm: "Samatha Kung",
+        engLead: "Jagadeesh Gajula",
+        gusProgram: "02. Agentforce Voice TAM Expansion",
+
         title: "Global Language Support for Voice (Beta)",
         description: "Extends voice agent language coverage beyond the initial set; phased rollout including French, German, Spanish in March–April and additional languages on a rolling basis.",
         category: "experiences",
@@ -2260,7 +2372,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 29,
+        id: 29,        owner: "Matthew Rastovac",
+        pmm: "Courtney Ewing",
+        engLead: "Andy Shah",
+        gusProgram: "15. Enhanced Chat V2(ECv2) + Mobile SDK wave 2",
+
         title: "Enhanced Chat V2 (Voice)",
         description: "ECv2 for web + Mobile SDK Wave 2: adds voice mode and Mobile SDK 1 to Enhanced Chat. File upload/attachments TBC.",
         category: "experiences",
@@ -2279,7 +2395,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 30,
+        id: 30,        owner: "Bert Legrand",
+        pmm: "Courtney Ewing",
+        engLead: "Pavan Vadapalli",
+        gusProgram: "25. WhatsApp + SMS Improvements",
+
         title: "WhatsApp & SMS Improvements",
         description: "Phased rollout: April Beta supports inbound WhatsApp voice notes; June Beta adds outbound voice notes; roadmap includes SMS Long Message Support.",
         category: "experiences",
@@ -2298,7 +2418,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 31,
+        id: 31,        owner: "Andrew Mangano",
+        pmm: "Diana Westnedge",
+        engLead: "Eric Engelking",
+        gusProgram: "22. Agentforce Voice on Mobile GA",
+
         title: "Agentforce Voice on Mobile",
         description: "Customers can enable mobile customers and workforce with next-generation voice capabilities. Phased rollouts include CarPlay integration and voice-to-human chat escalation.",
         category: "experiences",
@@ -2317,7 +2441,11 @@ const roadmapDataV4 = [
         }
     },
     {
-        id: 32,
+        id: 32,        owner: "Matthew Rastovac",
+        pmm: "Courtney Ewing",
+        engLead: "Andy Shah",
+        gusProgram: "18. ECV2 for Web + Mobile SDK Ph 3: Agentic Client",
+
         title: "Enhanced Chat V2 — Agentic Client (Phase 3)",
         description: "Phase-3 agentic client capabilities for Enhanced Chat V2: contextual chat, fallback, streaming voice transcript (June); custom context events, message-level feedback, conversation labels, invitations, PDF previews, conversational surveys, suggested replies (July); client actions (Sept).",
         category: "experiences",

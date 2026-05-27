@@ -1927,3 +1927,465 @@ body {
     color: #959492;
     margin: 1.5rem 0 0;
 }
+
+/* ============================================================
+   MODERN UI POLISH (May 2026 — V4 SSOT release)
+   Layered on top of existing styles. Adds:
+   - Dashboard stat strip
+   - Filter chips
+   - Owner view (cards with avatars + per-owner stats)
+   - Refined status pills (semantic colors)
+   - People chips (Owner / PMM / Eng Lead) on cards
+   - Subtle motion + improved hover states
+   ============================================================ */
+
+:root {
+    --status-completed:   #1f9d55;
+    --status-completed-bg:#e7f7ee;
+    --status-progress:    #1976ff;
+    --status-progress-bg: #e6f0ff;
+    --status-planned:     #f59e0b;
+    --status-planned-bg:  #fff5e0;
+    --status-future:      #6b7280;
+    --status-future-bg:   #f1f3f6;
+    --status-pilot:       #7c3aed;
+    --status-pilot-bg:    #f1ebff;
+    --chip-bg:            #ffffff;
+    --chip-border:        #d8dde6;
+    --chip-active-bg:     #0070d2;
+    --chip-active-color:  #ffffff;
+}
+
+[data-theme="dark"] {
+    --status-completed-bg:#0e3826;
+    --status-progress-bg: #102a4f;
+    --status-planned-bg:  #3a2a07;
+    --status-future-bg:   #1c2230;
+    --status-pilot-bg:    #2a1d52;
+    --chip-bg:            #1f2937;
+    --chip-border:        #374151;
+    --chip-active-bg:     #1b96ff;
+    --chip-active-color:  #0a1f44;
+}
+
+/* ===== Dashboard ===== */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(110px, 1fr)) 2fr;
+    gap: 0.75rem;
+    padding: 1rem 2rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .dashboard-stats .stat-callout { grid-column: span 3; }
+}
+@media (max-width: 600px) {
+    .dashboard-stats { grid-template-columns: repeat(2, 1fr); padding: 1rem; }
+    .dashboard-stats .stat-callout { grid-column: span 2; }
+}
+
+.stat-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    position: relative;
+    overflow: hidden;
+}
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--text-tertiary);
+    opacity: 0.5;
+}
+.stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.stat-card .stat-num {
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}
+.stat-card .stat-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+.stat-card.is-total::before     { background: linear-gradient(90deg,#0070d2,#1b96ff); }
+.stat-card.is-completed::before { background: var(--status-completed); }
+.stat-card.is-completed .stat-num { color: var(--status-completed); }
+.stat-card.is-in-progress::before { background: var(--status-progress); }
+.stat-card.is-in-progress .stat-num { color: var(--status-progress); }
+.stat-card.is-planned::before { background: var(--status-planned); }
+.stat-card.is-planned .stat-num { color: var(--status-planned); }
+.stat-card.is-future::before { background: var(--status-future); }
+.stat-card.is-future .stat-num { color: var(--status-future); }
+.stat-card.is-owners::before { background: linear-gradient(90deg,#7c3aed,#1b96ff); }
+
+.stat-callout {
+    background: linear-gradient(135deg, rgba(0,112,210,0.08), rgba(123,58,237,0.08));
+    border-color: rgba(0,112,210,0.25);
+}
+.stat-callout::before { background: linear-gradient(90deg,#0070d2,#7c3aed); }
+.stat-callout-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+}
+.stat-callout-num {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.stat-callout-sub {
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+}
+.owner-pill {
+    background: rgba(0,112,210,0.1);
+    color: var(--primary-color);
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.72rem;
+}
+
+/* ===== Filter chips ===== */
+.filter-chips-bar {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.chip-group {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.chip-group-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    color: var(--text-tertiary);
+    margin-right: 0.25rem;
+}
+.chip {
+    background: var(--chip-bg);
+    border: 1px solid var(--chip-border);
+    color: var(--text-secondary);
+    padding: 0.32rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    transition: all 0.15s ease;
+    font-family: inherit;
+}
+.chip:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+.chip.is-active {
+    background: var(--chip-active-bg);
+    color: var(--chip-active-color);
+    border-color: var(--chip-active-bg);
+    box-shadow: 0 2px 8px rgba(0,112,210,0.25);
+}
+.chip-count {
+    background: rgba(0,0,0,0.06);
+    color: inherit;
+    padding: 0.05rem 0.4rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    min-width: 1.4rem;
+    text-align: center;
+}
+.chip.is-active .chip-count { background: rgba(255,255,255,0.25); }
+.chip-clear {
+    background: transparent;
+    border-color: transparent;
+    color: var(--danger-color, #c23934);
+    font-weight: 600;
+}
+.chip-clear:hover { background: rgba(194,57,52,0.08); border-color: rgba(194,57,52,0.2); }
+
+/* ===== Refined status badges (semantic colors) ===== */
+.status-badge {
+    border-radius: 999px !important;
+    padding: 0.22rem 0.65rem !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.status-badge.completed {
+    background: var(--status-completed-bg) !important;
+    color: var(--status-completed) !important;
+    border-color: rgba(31,157,85,0.2);
+}
+.status-badge.completed::before { content: "✓"; font-weight: 700; }
+.status-badge.in-progress {
+    background: var(--status-progress-bg) !important;
+    color: var(--status-progress) !important;
+    border-color: rgba(25,118,255,0.2);
+}
+.status-badge.in-progress::before { content: "▶"; }
+.status-badge.planned {
+    background: var(--status-planned-bg) !important;
+    color: var(--status-planned) !important;
+    border-color: rgba(245,158,11,0.25);
+}
+.status-badge.planned::before { content: "◐"; }
+.status-badge.future {
+    background: var(--status-future-bg) !important;
+    color: var(--status-future) !important;
+    border-color: rgba(107,114,128,0.2);
+}
+.status-badge.future::before { content: "○"; }
+.status-badge.pilot {
+    background: var(--status-pilot-bg) !important;
+    color: var(--status-pilot) !important;
+    border-color: rgba(124,58,237,0.25);
+}
+.status-badge.pilot::before { content: "⚡"; }
+
+/* ===== People chips (owner / PMM / eng lead) ===== */
+.item-people {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
+    border-top: 1px dashed var(--border-light);
+}
+.people-chip {
+    font-size: 0.7rem;
+    padding: 0.18rem 0.55rem;
+    border-radius: 6px;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-light);
+    font-weight: 500;
+    white-space: nowrap;
+}
+.people-chip.people-owner {
+    background: rgba(0,112,210,0.08);
+    color: var(--primary-color);
+    border-color: rgba(0,112,210,0.2);
+    font-weight: 600;
+}
+.people-chip.people-pmm {
+    background: rgba(124,58,237,0.08);
+    color: #7c3aed;
+    border-color: rgba(124,58,237,0.2);
+}
+.people-chip.people-eng {
+    background: rgba(31,157,85,0.08);
+    color: var(--status-completed);
+    border-color: rgba(31,157,85,0.2);
+}
+
+/* ===== Owner view ===== */
+.owner-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 1.25rem;
+}
+.owner-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 1.1rem;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.owner-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+
+.owner-card-header {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 0.85rem;
+}
+.owner-avatar {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0070d2, #7c3aed);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 12px rgba(0,112,210,0.25);
+}
+.owner-card-meta { flex: 1; min-width: 0; }
+.owner-name-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+.owner-sub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 0.2rem;
+    font-size: 0.74rem;
+    color: var(--text-tertiary);
+}
+.owner-sub-item { white-space: nowrap; }
+.owner-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    flex-shrink: 0;
+}
+.owner-stat {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+.owner-stat small { font-size: 0.62rem; font-weight: 600; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; margin-left: 0.2rem; }
+.owner-stat-mini {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.05rem 0.3rem;
+    border-radius: 4px;
+    margin-left: 0.15rem;
+}
+.owner-stat-mini.status-completed { background: var(--status-completed-bg); color: var(--status-completed); }
+.owner-stat-mini.status-in-progress { background: var(--status-progress-bg); color: var(--status-progress); }
+.owner-stat-mini.status-planned { background: var(--status-planned-bg); color: var(--status-planned); }
+.owner-stat-mini.status-future { background: var(--status-future-bg); color: var(--status-future); }
+
+.owner-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.owner-feature {
+    padding: 0.55rem 0.7rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: background 0.12s ease;
+}
+.owner-feature:hover { background: var(--bg-secondary); }
+.owner-feature-main {
+    display: flex;
+    gap: 0.55rem;
+    align-items: center;
+}
+.owner-feature-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+.owner-feature-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+    margin-left: 1.1rem;
+}
+.owner-feature-meta .meta-item {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+}
+
+.dot {
+    display: inline-block;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.status-dot-completed { background: var(--status-completed); }
+.status-dot-in-progress { background: var(--status-progress); }
+.status-dot-planned { background: var(--status-planned); }
+.status-dot-future { background: var(--status-future); }
+.status-dot-pilot { background: var(--status-pilot); }
+
+/* ===== Card refinement (timeline / grid items) ===== */
+.timeline-item, .grid-item {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.15s ease !important;
+}
+.timeline-item:hover, .grid-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg) !important;
+}
+.timeline-item.status-completed   { border-left: 4px solid var(--status-completed); }
+.timeline-item.status-in-progress { border-left: 4px solid var(--status-progress); }
+.timeline-item.status-planned     { border-left: 4px solid var(--status-planned); }
+.timeline-item.status-future      { border-left: 4px solid var(--status-future); }
+.timeline-item.status-pilot       { border-left: 4px solid var(--status-pilot); }
+.grid-item.status-completed   { border-top: 3px solid var(--status-completed); }
+.grid-item.status-in-progress { border-top: 3px solid var(--status-progress); }
+.grid-item.status-planned     { border-top: 3px solid var(--status-planned); }
+.grid-item.status-future      { border-top: 3px solid var(--status-future); }
+.grid-item.status-pilot       { border-top: 3px solid var(--status-pilot); }
+
+/* ===== Modal owner section refinement ===== */
+.owner-prd-section {
+    background: linear-gradient(135deg, rgba(0,112,210,0.04), rgba(124,58,237,0.04)) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: 1rem 1.1rem !important;
+    border: 1px solid var(--border-light) !important;
+}
+
+/* ===== Subtle entrance animation for cards ===== */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.timeline-item, .grid-item, .owner-card, .stat-card {
+    animation: fadeUp 0.25s ease both;
+}
+
+/* ===== Refined typography ===== */
+.item-title {
+    letter-spacing: -0.01em;
+}

@@ -87,6 +87,9 @@
             </div>
         </header>
 
+        <!-- Status Dashboard -->
+        <div class="dashboard-stats" id="dashboardStats"></div>
+
         <!-- Controls -->
         <div class="controls-bar">
             <div class="view-toggle">
@@ -99,23 +102,22 @@
                 <button class="view-btn" data-view="list">
                     <span>📝</span> List
                 </button>
+                <button class="view-btn" data-view="owner">
+                    <span>👥</span> Owners
+                </button>
             </div>
-            
+
             <div class="filters">
                 <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Search roadmap items...">
+                    <input type="text" id="searchInput" placeholder="Search features, owners, descriptions… (press / to focus)">
                     <span class="search-icon">🔍</span>
                 </div>
-                
-                <select id="categoryFilter" class="filter-select">
+
+                <select id="categoryFilter" class="filter-select" hidden>
                     <option value="all">All Categories</option>
-                    <option value="feature">Features</option>
-                    <option value="enhancement">Enhancements</option>
-                    <option value="integration">Integrations</option>
-                    <option value="infrastructure">Infrastructure</option>
                 </select>
-                
-                <select id="statusFilter" class="filter-select">
+
+                <select id="statusFilter" class="filter-select" hidden>
                     <option value="all">All Status</option>
                     <option value="completed">Completed</option>
                     <option value="in-progress">In Progress</option>
@@ -124,6 +126,9 @@
                 </select>
             </div>
         </div>
+
+        <!-- Filter Chips (replaces dropdowns visually) -->
+        <div class="filter-chips-bar" id="filterChipsBar"></div>
 
         <!-- Main Content Area -->
         <main class="main-content">
@@ -259,6 +264,11 @@
             <!-- List View -->
             <div id="listView" class="view-container">
                 <div class="list-container" id="listContent"></div>
+            </div>
+
+            <!-- Owner View -->
+            <div id="ownerView" class="view-container">
+                <div class="owner-container" id="ownerContent"></div>
             </div>
         </main>
 

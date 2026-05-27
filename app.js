@@ -15,6 +15,8 @@ class RoadmapApp {
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
         this.currentView = 'timeline';
+        this.activeFilters = { category: new Set(), status: new Set() };
+        this.searchQuery = '';
         this.initTheme();
         this.init();
     }
@@ -42,7 +44,111 @@ class RoadmapApp {
     init() {
         this.setupEventListeners();
         this.updateVersionInfo();
+        this.renderDashboard();
+        this.renderFilterChips();
         this.render();
+    }
+
+    // ----- Dashboard -----
+    renderDashboard() {
+        const el = document.getElementById('dashboardStats');
+        if (!el) return;
+        if (this.currentVersion === 'customer') { el.innerHTML = ''; return; }
+
+        const data = this.data;
+        const counts = { total: data.length, completed: 0, 'in-progress': 0, planned: 0, future: 0, pilot: 0 };
+        const owners = new Set();
+        const ownerCounts = {};
+        const thisMonth = [];
+        const monthLabels = ['May 2026','June 2026'];
+        data.forEach(i => {
+            if (counts[i.status] !== undefined) counts[i.status]++;
+            if (i.owner) {
+                owners.add(i.owner);
+                ownerCounts[i.owner] = (ownerCounts[i.owner] || 0) + 1;
+            }
+            if (monthLabels.includes(i.period)) thisMonth.push(i);
+        });
+        const topOwners = Object.entries(ownerCounts).sort((a,b)=>b[1]-a[1]).slice(0,3);
+
+        const stat = (n, label, klass) => `
+            <div class="stat-card ${klass||''}">
+                <div class="stat-num">${n}</div>
+                <div class="stat-label">${label}</div>
+            </div>`;
+        el.innerHTML = `
+            ${stat(counts.total, 'Total Features', 'is-total')}
+            ${stat(counts.completed, 'Delivered', 'is-completed')}
+            ${stat(counts['in-progress'], 'In Progress', 'is-in-progress')}
+            ${stat(counts.planned, 'Planned', 'is-planned')}
+            ${stat(counts.future, 'In Build', 'is-future')}
+            ${stat(owners.size, 'Owners', 'is-owners')}
+            <div class="stat-card stat-callout">
+                <div class="stat-callout-title">📅 This window (May–Jun ’26)</div>
+                <div class="stat-callout-num">${thisMonth.length} features</div>
+                ${topOwners.length ? `<div class="stat-callout-sub">Top owners: ${topOwners.map(([n,c])=>`<span class="owner-pill">${n} · ${c}</span>`).join(' ')}</div>` : ''}
+            </div>
+        `;
+    }
+
+    // ----- Filter chips -----
+    renderFilterChips() {
+        const bar = document.getElementById('filterChipsBar');
+        if (!bar) return;
+        if (this.currentVersion === 'customer') { bar.innerHTML = ''; return; }
+
+        const cats = [...new Set(this.data.map(i => i.category))].filter(Boolean).sort();
+        const statuses = ['completed','in-progress','planned','future','pilot']
+            .filter(s => this.data.some(i => i.status === s));
+
+        const chipHtml = (group, value, label, count) => {
+            const active = this.activeFilters[group].has(value);
+            return `<button class="chip ${active?'is-active':''} chip-${group}-${value}"
+                            data-group="${group}" data-value="${value}">
+                       <span class="chip-label">${label}</span>
+                       <span class="chip-count">${count}</span>
+                    </button>`;
+        };
+
+        const statusCounts = {};
+        const catCounts = {};
+        this.data.forEach(i => {
+            statusCounts[i.status] = (statusCounts[i.status] || 0) + 1;
+            catCounts[i.category] = (catCounts[i.category] || 0) + 1;
+        });
+
+        const statusChips = statuses.map(s => chipHtml('status', s, this.formatStatus(s), statusCounts[s] || 0)).join('');
+        const catChips = cats.map(c => chipHtml('category', c, this.formatCategory(c), catCounts[c] || 0)).join('');
+
+        const clearBtn = (this.activeFilters.category.size + this.activeFilters.status.size) > 0
+            ? `<button class="chip chip-clear" id="chipClear">Clear all ✕</button>` : '';
+
+        bar.innerHTML = `
+            <div class="chip-group">
+                <span class="chip-group-label">Status</span>
+                ${statusChips}
+            </div>
+            <div class="chip-group">
+                <span class="chip-group-label">Category</span>
+                ${catChips}
+            </div>
+            ${clearBtn}
+        `;
+
+        const clear = document.getElementById('chipClear');
+        if (clear) clear.addEventListener('click', () => {
+            this.activeFilters.category.clear();
+            this.activeFilters.status.clear();
+            this.renderFilterChips();
+            this.applyFilters();
+        });
+    }
+
+    toggleChip(group, value) {
+        const set = this.activeFilters[group];
+        if (set.has(value)) set.delete(value); else set.add(value);
+        this.renderFilterChips();
+        this.applyFilters();
     }
 
     updateVersionInfo() {
@@ -77,7 +183,7 @@ class RoadmapApp {
                 this.toggleTheme();
             });
         }
-        
+
         // Version selector
         document.getElementById('versionSelect').addEventListener('change', (e) => {
             this.switchVersion(e.target.value);
@@ -96,14 +202,17 @@ class RoadmapApp {
             this.handleSearch(e.target.value);
         });
 
-        // Filters
-        document.getElementById('categoryFilter').addEventListener('change', () => {
-            this.applyFilters();
-        });
-
-        document.getElementById('statusFilter').addEventListener('change', () => {
-            this.applyFilters();
-        });
+        // Filter chips (event delegation)
+        const chipsBar = document.getElementById('filterChipsBar');
+        if (chipsBar) {
+            chipsBar.addEventListener('click', (e) => {
+                const chip = e.target.closest('.chip');
+                if (!chip) return;
+                const group = chip.dataset.group;
+                const value = chip.dataset.value;
+                if (group && value) this.toggleChip(group, value);
+            });
+        }
 
         // Export button
         document.getElementById('exportBtn').addEventListener('click', () => {
@@ -152,41 +261,45 @@ class RoadmapApp {
 
     switchVersion(version) {
         this.currentVersion = version;
-        
+
+        const controlsBar = document.querySelector('.controls-bar');
+        const chipsBar = document.getElementById('filterChipsBar');
+        const dashboard = document.getElementById('dashboardStats');
+
         // Handle customer facing version (release notes)
         if (version === 'customer') {
-            // Hide controls bar (no need for view toggle or filters)
-            document.querySelector('.controls-bar').style.display = 'none';
-            
-            // Show customer view
-            document.querySelectorAll('.view-container').forEach(container => {
-                container.classList.remove('active');
-            });
+            controlsBar.style.display = 'none';
+            if (chipsBar) chipsBar.style.display = 'none';
+            if (dashboard) dashboard.style.display = 'none';
+
+            document.querySelectorAll('.view-container').forEach(c => c.classList.remove('active'));
             document.getElementById('customerView').classList.add('active');
-            
             this.updateVersionInfo();
             return;
         }
-        
-        // Show controls bar for V1/V2
-        document.querySelector('.controls-bar').style.display = 'block';
-        
-        // Update data for V1/V2
+
+        // Show controls + chips + dashboard for data versions
+        controlsBar.style.display = '';
+        if (chipsBar) chipsBar.style.display = '';
+        if (dashboard) dashboard.style.display = '';
+
+        // Update data
         this.data = this.dataVersions[version];
+        this.activeFilters.category.clear();
+        this.activeFilters.status.clear();
+        this.searchQuery = '';
         this.filteredData = [...this.data];
-        
-        // Reset filters
+
+        // Reset UI
         document.getElementById('searchInput').value = '';
-        document.getElementById('categoryFilter').value = 'all';
-        document.getElementById('statusFilter').value = 'all';
-        
-        // Show the current view (timeline, grid, or list)
-        document.querySelectorAll('.view-container').forEach(container => {
-            container.classList.remove('active');
-        });
+
+        // Show the current view (timeline, grid, list, or owner)
+        document.querySelectorAll('.view-container').forEach(c => c.classList.remove('active'));
         document.getElementById(`${this.currentView}View`).classList.add('active');
-        
+
         this.updateVersionInfo();
+        this.renderDashboard();
+        this.renderFilterChips();
         this.render();
     }
 
@@ -209,40 +322,115 @@ class RoadmapApp {
     }
 
     handleSearch(query) {
-        const lowerQuery = query.toLowerCase();
-        this.filteredData = this.data.filter(item => {
-            return item.title.toLowerCase().includes(lowerQuery) ||
-                   item.description.toLowerCase().includes(lowerQuery) ||
-                   item.category.toLowerCase().includes(lowerQuery);
-        });
-        this.render();
+        this.searchQuery = (query || '').toLowerCase();
+        this.applyFilters();
     }
 
     applyFilters() {
-        const categoryFilter = document.getElementById('categoryFilter').value;
-        const statusFilter = document.getElementById('statusFilter').value;
+        const q = this.searchQuery;
+        const cats = this.activeFilters.category;
+        const sts = this.activeFilters.status;
 
         this.filteredData = this.data.filter(item => {
-            const categoryMatch = categoryFilter === 'all' || item.category === categoryFilter;
-            const statusMatch = statusFilter === 'all' || item.status === statusFilter;
-            return categoryMatch && statusMatch;
+            const catMatch = cats.size === 0 || cats.has(item.category);
+            const stMatch = sts.size === 0 || sts.has(item.status);
+            if (!catMatch || !stMatch) return false;
+            if (!q) return true;
+            const haystack = [
+                item.title, item.description, item.category, item.status,
+                item.owner, item.pmm, item.engLead, item.gusProgram, item.period
+            ].filter(Boolean).join(' ').toLowerCase();
+            return haystack.includes(q);
         });
 
         this.render();
     }
 
     render() {
+        this.renderDashboard();
         switch(this.currentView) {
-            case 'timeline':
-                this.renderTimeline();
-                break;
-            case 'grid':
-                this.renderGrid();
-                break;
-            case 'list':
-                this.renderList();
-                break;
+            case 'timeline': this.renderTimeline(); break;
+            case 'grid':     this.renderGrid();     break;
+            case 'list':     this.renderList();     break;
+            case 'owner':    this.renderOwnerView();break;
         }
+    }
+
+    // ----- Owner view -----
+    renderOwnerView() {
+        const container = document.getElementById('ownerContent');
+        if (!container) return;
+        if (this.filteredData.length === 0) { container.innerHTML = this.getEmptyState(); return; }
+
+        // Group by owner; items without owner go into 'Unassigned'
+        const byOwner = {};
+        this.filteredData.forEach(item => {
+            const key = item.owner || 'Unassigned';
+            (byOwner[key] = byOwner[key] || []).push(item);
+        });
+
+        // Sort: largest groups first; Unassigned last
+        const sorted = Object.entries(byOwner).sort((a,b) => {
+            if (a[0] === 'Unassigned') return 1;
+            if (b[0] === 'Unassigned') return -1;
+            return b[1].length - a[1].length;
+        });
+
+        const initials = name => name === 'Unassigned' ? '?' :
+            name.replace(/\(.*?\)/g,'').trim().split(/\s+/).map(s=>s[0]).slice(0,2).join('').toUpperCase();
+
+        const statusDot = s => `<span class="dot status-dot-${s}" title="${this.formatStatus(s)}"></span>`;
+
+        const html = sorted.map(([owner, items]) => {
+            const counts = {completed:0,'in-progress':0,planned:0,future:0,pilot:0};
+            items.forEach(i => { if (counts[i.status]!==undefined) counts[i.status]++; });
+            const pmmSet = new Set(items.map(i=>i.pmm).filter(Boolean));
+            const engSet = new Set(items.map(i=>i.engLead).filter(Boolean));
+
+            const featuresHtml = items.map(item => `
+                <div class="owner-feature" data-id="${item.id}">
+                    <div class="owner-feature-main">
+                        ${statusDot(item.status)}
+                        <span class="owner-feature-title">${item.title}</span>
+                    </div>
+                    <div class="owner-feature-meta">
+                        <span class="status-badge ${item.status}">${this.formatStatus(item.status)}</span>
+                        <span class="meta-item">🗓️ ${item.period || item.date || '—'}</span>
+                        <span class="meta-item">${this.formatCategory(item.category)}</span>
+                    </div>
+                </div>
+            `).join('');
+
+            return `
+                <div class="owner-card">
+                    <div class="owner-card-header">
+                        <div class="owner-avatar">${initials(owner)}</div>
+                        <div class="owner-card-meta">
+                            <h3 class="owner-name-title">${owner}</h3>
+                            <div class="owner-sub">
+                                ${pmmSet.size ? `<span class="owner-sub-item">PMM: ${[...pmmSet].join(', ')}</span>` : ''}
+                                ${engSet.size ? `<span class="owner-sub-item">Eng: ${[...engSet].join(', ')}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="owner-stats">
+                            <span class="owner-stat">${items.length} <small>features</small></span>
+                            <span class="owner-stat-mini status-completed">${counts.completed} ✓</span>
+                            <span class="owner-stat-mini status-in-progress">${counts['in-progress']} ▶</span>
+                            <span class="owner-stat-mini status-planned">${counts.planned} ◐</span>
+                            <span class="owner-stat-mini status-future">${counts.future} ○</span>
+                        </div>
+                    </div>
+                    <div class="owner-features">
+                        ${featuresHtml}
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        container.innerHTML = html;
+        container.querySelectorAll('.owner-feature').forEach(el => {
+            el.addEventListener('click', () => this.showItemDetails(parseInt(el.dataset.id)));
+        });
     }
 
     renderTimeline() {
@@ -317,8 +505,16 @@ class RoadmapApp {
         return item.scheduledBuild ? 'Build ' + item.scheduledBuild : (item.period || '');
     }
 
+    ownerChips(item) {
+        const chips = [];
+        if (item.owner) chips.push(`<span class="people-chip people-owner" title="Product Owner">👤 ${item.owner}</span>`);
+        if (item.pmm)   chips.push(`<span class="people-chip people-pmm" title="PMM">🎯 ${item.pmm}</span>`);
+        if (item.engLead) chips.push(`<span class="people-chip people-eng" title="Engineering Lead">⚙️ ${item.engLead}</span>`);
+        return chips.join('');
+    }
+
     createTimelineItem(item) {
-        const ownerHtml = item.owner ? `<span class="meta-item">👤 ${item.owner}</span>` : '';
+        const peopleHtml = this.ownerChips(item);
         const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
         return `
             <div class="timeline-item status-${item.status}" data-id="${item.id}">
@@ -329,11 +525,9 @@ class RoadmapApp {
                 <p class="item-description">${item.description}</p>
                 <div class="item-meta">
                     ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
-                    ${ownerHtml}
-                    <span class="meta-item">
-                        <span class="category-tag">${this.formatCategory(item.category)}</span>
-                    </span>
+                    <span class="meta-item"><span class="category-tag">${this.formatCategory(item.category)}</span></span>
                 </div>
+                ${peopleHtml ? `<div class="item-people">${peopleHtml}</div>` : ''}
             </div>
         `;
     }
@@ -347,7 +541,7 @@ class RoadmapApp {
         }
 
         const html = this.filteredData.map(item => {
-            const ownerHtml = item.owner ? `<span class="meta-item">👤 ${item.owner}</span>` : '';
+            const peopleHtml = this.ownerChips(item);
             const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
             return `
                 <div class="grid-item status-${item.status}" data-id="${item.id}">
@@ -358,11 +552,9 @@ class RoadmapApp {
                     <p class="item-description">${item.description}</p>
                     <div class="item-meta">
                         ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
-                        ${ownerHtml}
-                        <span class="meta-item">
-                            <span class="category-tag">${this.formatCategory(item.category)}</span>
-                        </span>
+                        <span class="meta-item"><span class="category-tag">${this.formatCategory(item.category)}</span></span>
                     </div>
+                    ${peopleHtml ? `<div class="item-people">${peopleHtml}</div>` : ''}
                 </div>
             `;
         }).join('');
@@ -373,7 +565,7 @@ class RoadmapApp {
 
     renderList() {
         const container = document.getElementById('listContent');
-        
+
         if (this.filteredData.length === 0) {
             container.innerHTML = this.getEmptyState();
             return;
@@ -430,7 +622,7 @@ class RoadmapApp {
         // Owner, PRD, and GUS metadata section
         let ownerPrdHtml = '';
         const hasGUSFields = item.version === 'gus' && (item.scheduledBuild || item.devLead || item.designLead || item.qualityLead || item.team || item.health);
-        if (item.owner || item.prdLink || hasGUSFields) {
+        if (item.owner || item.pmm || item.engLead || item.gusProgram || item.prdLink || hasGUSFields) {
             ownerPrdHtml = '<div class="modal-section owner-prd-section">';
             if (buildLabel) {
                 ownerPrdHtml += `
@@ -457,6 +649,12 @@ class RoadmapApp {
                     </div>
                 `;
             }
+            if (item.pmm) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🎯 PMM:</span><span class="owner-name">${item.pmm}</span></div>`;
+            }
+            if (item.engLead) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">⚙️ Engineering Lead:</span><span class="owner-name">${item.engLead}</span></div>`;
+            }
             if (item.devLead) {
                 ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🛠️ Dev Lead:</span><span class="owner-name">${item.devLead}</span></div>`;
             }
@@ -468,6 +666,14 @@ class RoadmapApp {
             }
             if (item.team && item.team !== '-') {
                 ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🏢 Team:</span><span class="owner-name">${item.team}</span></div>`;
+            }
+            if (item.gusProgram) {
+                ownerPrdHtml += `
+                    <div class="owner-info">
+                        <span class="owner-label">📌 GUS Program:</span>
+                        <span class="owner-name">${item.gusProgram}</span>
+                    </div>
+                `;
             }
             if (item.prdLink) {
                 ownerPrdHtml += `
@@ -704,10 +910,23 @@ class RoadmapApp {
 
     formatCategory(category) {
         const categoryMap = {
-            'feature': '✨ Feature',
-            'enhancement': '⚡ Enhancement',
-            'integration': '🔗 Integration',
-            'infrastructure': '🏗️ Infrastructure'
+            // V4 SSOT product areas
+            'context':       '📚 Context',
+            'operate':       '🔬 Operate',
+            'control':       '🛠️ Control',
+            'orchestration': '🔗 Orchestration',
+            'experiences':   '💬 Experiences',
+            // Legacy V1/V2/V3 categories
+            'feature':        '✨ Feature',
+            'enhancement':    '⚡ Enhancement',
+            'integration':    '🔗 Integration',
+            'infrastructure': '🏗️ Infrastructure',
+            'knowledge':      '📚 Knowledge',
+            'testing':        '🧪 Testing',
+            'platform':       '🏗️ Platform',
+            'analytics':      '📊 Analytics',
+            'memory':         '🧠 Memory',
+            'prompts':        '✍️ Prompts'
         };
         return categoryMap[category] || category;
     }
