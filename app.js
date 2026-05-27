@@ -3,13 +3,14 @@
 
 class RoadmapApp {
     constructor() {
-        this.currentVersion = 'combined';
+        this.currentVersion = 'v4';
         this.dataVersions = {
             combined: roadmapDataCombined,
             gus: roadmapDataGUS,
             v1: roadmapDataV1,
             v2: roadmapDataV2,
             v3: roadmapDataV3,
+            v4: roadmapDataV4,
         };
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
@@ -54,11 +55,12 @@ class RoadmapApp {
             itemCount = 'Official Salesforce Documentation';
         } else {
             const versionNames = {
-                'combined': 'Historical Roadmap (V1 + V2 + V3 combined)',
+                'combined': 'Historical Roadmap (V1 + V2 + V3 + V4 combined)',
                 'gus': 'GUS Live - Build 262 Epics (Pulled May 2026)',
                 'v1': 'V1 - Core Roadmap',
                 'v2': 'V2 - Extended Roadmap',
                 'v3': 'V3 - Q1-Q2 2026 Roadmap (Updated March 2026)',
+                'v4': 'V4 - June 2026 SSOT (Latest, deck updated May 26, 2026)',
             };
             versionName = versionNames[this.currentVersion] || 'V1 - Core Roadmap';
             itemCount = `${this.data.length} items`;
@@ -270,8 +272,10 @@ class RoadmapApp {
             "Winter '26 (260)", "Winter '26 Patch (260.patch)",
             'Q1 2026', 'Q2 2026',
             "Spring '26 (262)", "Spring '26 Patch (262.patch)",
+            'May 2026', 'June 2026',
             "Summer '26 (264)",
-            'Q4 2026',
+            'July 2026', 'August 2026+',
+            'Q3 2026', 'Q4 2026',
             "Winter '27 (266)", "Spring '27 (268)", "Summer '27 (270)",
             '2026+', 'Backlog', 'TBD',
         ];

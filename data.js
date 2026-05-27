@@ -1,6 +1,8 @@
 // Agentforce Roadmap Data
 // V1 Source: https://docs.google.com/presentation/d/1cq4ZopwHC553L7A1CqfPvxYRnFvpPbWbrOIzkn_zBm4/
 // V2 Source: https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/
+// V4 Source: https://docs.google.com/presentation/d/10I9Uzw-La3JQTMw8PyyxcdB9lsd6QBC2nVR2NRDgIkU/
+//            "June26- Public Roadmap Single Source of Truth (SSOT)" — extracted 2026-05-27
 
 // Salesforce Release Build → Seasonal Name mapping
 // GA dates sourced from GUS ADM_Release__c (R0 = General Availability to all production orgs)
@@ -1679,6 +1681,673 @@ roadmapDataV3.forEach((item, idx) => {
 // Export for use in application
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { roadmapDataV3, roadmapDataCombined };
+}
+
+// =====================================================================
+// V4 — June 2026 SSOT (Single Source of Truth) Agentforce Roadmap
+// Source: https://docs.google.com/presentation/d/10I9Uzw-La3JQTMw8PyyxcdB9lsd6QBC2nVR2NRDgIkU/edit
+// "June26- Public Roadmap Single Source of Truth (SSOT)"
+// Last updated in deck: May 26th 2026 — extracted 2026-05-27
+// Structured around the Q2 June Roadmap Index (slide 11) with detail
+// from per-feature deep-dive slides 13–42.
+// Status legend (mapped from index columns):
+//   completed   = Delivered May 2026
+//   in-progress = About to Release June 2026
+//   planned     = On Track July 2026
+//   future      = In Active Build August 2026+
+// Categories follow the deck's 5 product areas:
+//   context | operate | control | orchestration | experiences
+// =====================================================================
+const roadmapDataV4 = [
+    // ---------------- CONTEXT ----------------
+    {
+        id: 1,
+        title: "Unmeter Data Cloud, auto-enable STDM → Observability",
+        description: "Removes Data Cloud metering for Agentforce-related telemetry and auto-enables Standard Data Model (STDM) flow into Observability so customers get session/agent telemetry out of the box.",
+        category: "context",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered May 2026",
+        details: {
+            overview: "As part of June 2026 SSOT, Salesforce removed Data Cloud unit metering for Agentforce STDM ingest and auto-routes session traces into Observability so customers don't need to configure Data Cloud separately.",
+            keyFeatures: [
+                "No incremental Data Cloud meter for Agentforce STDM",
+                "Auto-enabled Standard Data Model → Observability pipeline",
+                "Out-of-the-box session/agent traces visible in Observability"
+            ],
+            impact: "Removes a major adoption blocker for Observability and Agent Health Monitoring."
+        }
+    },
+    {
+        id: 2,
+        title: "Agentforce Data Library — Enhancements (ADL Async Architecture)",
+        description: "ADL as a Retriever Action: enable grounding on multiple data sources by allowing multiple ADL retriever actions per agent. Future enhancements include real-time API integration (JIT index support).",
+        category: "context",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — June 2026 (safe harbor, target dates)",
+        details: {
+            overview: "ADL Retriever Actions become a native agent action (similar to Apex/Flow), allowing multiple ADLs to be attached to a single agent in the builder. Subsequent waves add JIT/real-time index support.",
+            keyFeatures: [
+                "Expose Retriever Action as a native agent action in the builder",
+                "Attach multiple ADLs (n-to-n) per agent for multi-knowledge grounding",
+                "Async architecture removes the prior synchronous Search Index creation bottleneck",
+                "Future: real-time API integration / JIT index support"
+            ],
+            impact: "Customers can ground a single agent on multiple knowledge sources without custom Apex or Ensemble Retriever workarounds. Expedites ADL creation."
+        }
+    },
+    {
+        id: 3,
+        title: "Connection Variables Support (Surface-specific context variables)",
+        description: "Introduces an object that automatically represents Surface context data of the Surface associated with the Agent Session at runtime — mirroring Flow's $Record. Provides scoped variables per Connection (Case → ASAEmail, Lead → SDREmail, Voice Call → Telephony).",
+        category: "context",
+        status: "planned",
+        period: "July 2026",
+        quarter: "Q3 2026",
+        date: "On Track — July 2026 (safe harbor, target date)",
+        details: {
+            overview: "Adds a declarative, surface-scoped context variable model so admins can reference connection-specific data without manual input variables or naming conventions.",
+            keyFeatures: [
+                "Auto-bound runtime object representing Surface context",
+                "Admin-configurable Connection-scoped custom variables",
+                "OOTB scoped variables across Surfaces (Case, Lead, Voice Call, etc.)",
+                "Mirrors Flow's $Record pattern for familiar declarative authoring"
+            ],
+            impact: "Removes a major source of fragility in agent configurations — surface context can be referenced consistently at design and run time."
+        }
+    },
+    {
+        id: 4,
+        title: "Response Customization — Support for Surfaces / Connections",
+        description: "Admin configurability to use custom connections, custom response actions, modify connection instructions, and add determinism to tailor the last-mile experience for Agents.",
+        category: "context",
+        status: "future",
+        period: "August 2026+",
+        quarter: "Q3 2026",
+        date: "In Active Build — May–July 2026 phased (safe harbor, target dates)",
+        details: {
+            overview: "Gives admins fine-grained, surface-aware control over how agents structure responses, including custom messaging components, deterministic AF Script controls in canvas, and per-channel customization.",
+            keyFeatures: [
+                "Custom Connections & Custom Response Actions",
+                "Custom Messaging Components in Agents",
+                "Customizing Connection & response action instructions",
+                "Deterministic / AF Script-based controls in canvas",
+                "Per-channel customization (web chat vs SMS vs WhatsApp, etc.)"
+            ],
+            impact: "Closes the gap between LLM-driven planning and the predictable UI experiences customers need on regulated/branded channels."
+        }
+    },
+
+    // ---------------- OPERATE ----------------
+    {
+        id: 5,
+        title: "Custom Scorers (Beta)",
+        description: "Define and manage scorers (view, create prompt/expression-based, edit, test, activate, clone) in Studio. Use scorers in testing UI, API, CLI, and Observability (abandonment, deflection, custom CSAT/quality).",
+        category: "operate",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — April–May 2026 Beta (safe harbor, target dates)",
+        details: {
+            overview: "Configurable evaluation framework so customers can verify product relevance, brand tone, adherence and other criteria with their own scorers.",
+            keyFeatures: [
+                "Author prompt-based and expression-based scorers in Studio",
+                "Test, activate, and clone scorers",
+                "Use scorers in Testing UI, API, CLI",
+                "Wire scorers into Observability (abandonment, deflection, CSAT, quality)"
+            ],
+            impact: "Customers can prove agents meet their intended function with metrics they define, not just OOTB ones."
+        }
+    },
+    {
+        id: 6,
+        title: "New Testing Center (Beta)",
+        description: "Next-Gen Testing Center: metadata support for pro-code users, enhanced custom evals, create test cases from observability sessions, feature parity with Testing Center in Setup.",
+        category: "operate",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — April/May 2026 Beta (safe harbor)",
+        details: {
+            overview: "Re-platforms Testing Center onto the Next-Gen Authoring stack for better stability, recoverability, and richer authoring of evaluations.",
+            keyFeatures: [
+                "Metadata support for pro-code users",
+                "Enhanced custom evaluations",
+                "Create test cases directly from Observability sessions",
+                "Feature parity with the Setup Testing Center"
+            ],
+            impact: "Unifies testing with the rest of the NGA suite and lets customers convert real production sessions into regression tests."
+        }
+    },
+    {
+        id: 7,
+        title: "Agentforce on Gemini",
+        description: "Switch to Google Gemini for Agentforce Reasoning Engine plus standard/custom actions. Initial launch supports NGA's Daisy Planner; Gemini 3 Flash is the primary target model. Live in Pilot now.",
+        category: "operate",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — June 2026 (safe harbor, target date)",
+        details: {
+            overview: "Adds Google Gemini as a first-class reasoning model for Agentforce, broadening model choice beyond OpenAI/Anthropic for both standard and custom actions.",
+            keyFeatures: [
+                "Gemini 3 Flash as primary GA target model",
+                "Gemini 3 Pro available in LLM Gateway (since Dec 2025)",
+                "Initial launch: NGA's Daisy Planner",
+                "Voice / Flash planner support on the horizon"
+            ],
+            impact: "Customers gain preferred-model choice and can route reasoning across providers based on cost/latency/quality."
+        }
+    },
+    {
+        id: 8,
+        title: "Voice & Conversation Testing Experience (Beta)",
+        description: "Multi-turn conversation simulation and testing for both text and voice agents. Simulate realistic user interactions, identify logic/voice behavioral issues, and evaluate intent resolution across full sessions.",
+        category: "operate",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — Apr Pilot / June Beta (safe harbor, target date)",
+        details: {
+            overview: "Extends Testing Center beyond single Q&A pairs into full multi-turn, multi-modal conversation evaluation — including replaying production conversations against new agent versions.",
+            keyFeatures: [
+                "Multi-turn conversation simulation (text + voice)",
+                "OOTB and custom evals on full sessions",
+                "Replay production sessions against new agent versions",
+                "Voice-specific evaluation: latency, tone, interruption"
+            ],
+            impact: "Lets customers test branching logic, state retention, and voice nuances that turn-level testing can't catch."
+        }
+    },
+    {
+        id: 9,
+        title: "Agent Health Monitoring — GA",
+        description: "Built as part of the Observability suite (using Tableau). Monitor agents' health KPIs and get alerted when metrics pass custom thresholds. Live in beta now; GA target June 2026.",
+        category: "operate",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — GA June 2026 (safe harbor)",
+        details: {
+            overview: "Granular, OOTB Tableau visualizations for agent health metrics with threshold-based alerting, enabling customers to scale agent projects up or down based on quantitative signals.",
+            keyFeatures: [
+                "OOTB health KPIs for each agent",
+                "Threshold-based alerting on custom metrics",
+                "Tableau-based visualizations as part of Observability"
+            ],
+            impact: "Closes a top customer ask for production agent health visibility."
+        }
+    },
+    {
+        id: 10,
+        title: "Enhanced Customer Agent Security Options for SOQL Actions (Track 5)",
+        description: "More flexible, granular security controls when building customer-facing service agents (ASAs). Phased: external Org-Wide Defaults (OWDs), Contact ID Filtering, User Mode & Action-based Permission Sets.",
+        category: "operate",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — May–June 2026 (safe harbor, target date)",
+        details: {
+            overview: "Reduces the manual filtering burden for direct-to-consumer ASA deployments by introducing configured record-level security and a scoped/safe system mode.",
+            keyFeatures: [
+                "Configured record-level security",
+                "Scoped Access Mode (safe system mode)",
+                "External Org-Wide Defaults (OWDs)",
+                "Contact ID Filtering",
+                "User Mode & Action-based Permission Sets"
+            ],
+            impact: "Improves default security posture and enables least-privilege permission models for customer-facing agents."
+        }
+    },
+    {
+        id: 11,
+        title: "AF Sandbox Orgs Routing on Premium Tier",
+        description: "All sandbox-org agents get the same model performance profile as production active orgs. Backend routing utilizes scale tiers more aggressively and intelligently routes back to priority tier when needed.",
+        category: "operate",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — May–June 2026 (safe harbor, target date)",
+        details: {
+            overview: "Backend architectural changes to give Agentforce sandbox orgs predictable throughput and latency by routing them on the premium tier with intelligent dynamic fallback.",
+            keyFeatures: [
+                "Same model performance profile in sandbox as production",
+                "24x7 high utilization on scale tier (non-AF traffic shifted off-hours)",
+                "Intelligent dynamic routing from scale → priority tier when needed"
+            ],
+            impact: "Removes the perf/latency gap that has historically blocked customers from validating agents in sandbox before production."
+        }
+    },
+    {
+        id: 12,
+        title: "Agentforce Platform Error Architecture",
+        description: "Comprehensive error-handling architecture that turns generic technical failures into transparent, actionable, user-centric events. Planner provides detailed error messages instead of \"something went wrong.\"",
+        category: "operate",
+        status: "planned",
+        period: "July 2026",
+        quarter: "Q3 2026",
+        date: "On Track — June–July 2026 (safe harbor, target date)",
+        details: {
+            overview: "Backend architectural overhaul for error handling in the Agentforce platform, exposing detailed, actionable failure context all the way up to the planner and customer support.",
+            keyFeatures: [
+                "Transparent, user-centric error events",
+                "Detailed planner error messages (no more \"something went wrong\")",
+                "Actionable error categorization for triage and self-service"
+            ],
+            impact: "Targets a ~40% reduction in customer investigations driven by opaque platform errors."
+        }
+    },
+    {
+        id: 13,
+        title: "Online Experimentation (Pilot)",
+        description: "Split production traffic between agent versions (\"Challenger\" vs \"Champion\") to validate improvements across topic selection, action execution, and implicit signals (resolution, exit, escalation, sentiment).",
+        category: "operate",
+        status: "planned",
+        period: "July 2026",
+        quarter: "Q3 2026",
+        date: "On Track — Aug 2026 target Beta (safe harbor, target date)",
+        details: {
+            overview: "Today, agent updates are all-or-nothing. Online Experimentation lets admins safely validate new versions against real traffic before rolling them out broadly.",
+            keyFeatures: [
+                "Champion/Challenger version split on production traffic",
+                "Compare topic selection and action execution outcomes",
+                "Compare implicit signals: resolution, exit, escalation, sentiment",
+                "Validate prompts/instructions against real-world messy input"
+            ],
+            impact: "Removes the riskiest part of iterating on production agents — being unable to know whether a change actually improves outcomes."
+        }
+    },
+
+    // ---------------- CONTROL ----------------
+    {
+        id: 14,
+        title: "Agent Upgrade to New Agent Builder & Script",
+        description: "Migration tool that lets early-adopter customers move existing legacy-builder agents into Next-Gen Authoring (Agent Builder + Agent Script) without losing prior configuration.",
+        category: "control",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — May 2026 (safe harbor, target date)",
+        details: {
+            overview: "Old-builder components are converted into Agent Script equivalents and exposed in the new builder UI, with both old and new versions available in a list view.",
+            keyFeatures: [
+                "Old-builder components converted to Agent Script",
+                "List of old + new builder versions to click into",
+                "In-org migration option, no rebuilding required"
+            ],
+            impact: "Protects the time early Agentforce customers invested in the legacy builder while moving them onto Next-Gen Authoring."
+        }
+    },
+    {
+        id: 15,
+        title: "Developer Easy Self-Service",
+        description: "One-click setup for developers to build agents instantly using preferred tools like Claude Code. Quick-start experience, AI tooling, Builder → Complete and Claude Code paths, and \"Build your own org.\"",
+        category: "control",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — April–May 2026 Target Beta (safe harbor)",
+        details: {
+            overview: "Removes the technical friction in standing up a build environment so developers can go from idea to working agent in minutes. Launched at TDx via labs.agentforce.com.",
+            keyFeatures: [
+                "One-click setup",
+                "Builder → Complete path",
+                "Claude Code experience",
+                "Build-your-own-org provisioning",
+                "Continued integration of new experiments"
+            ],
+            impact: "Reduces developer time-to-value and meets developers in the tools they already use."
+        }
+    },
+    {
+        id: 16,
+        title: "Embeddable Prompt Composer",
+        description: "Allow prompt templates to be used and authored anywhere — invoked by any application via existing/enhanced APIs, and authored from Grid, Test Center, Slack, etc.",
+        category: "control",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — May–June 2026 (safe harbor, target date)",
+        details: {
+            overview: "Decouples prompt-template execution and authoring from a single UI so prompts become a first-class capability anywhere AI is needed.",
+            keyFeatures: [
+                "Execute: invoke a prompt template from any application",
+                "Author: create prompt templates from Grid, Test Center, Slack, etc.",
+                "Existing and enhanced APIs",
+                "Embeddable composer UI"
+            ],
+            impact: "Easier, more flexible way to create AI instructions across any interface or application."
+        }
+    },
+    {
+        id: 17,
+        title: "Prompt Builder Testing",
+        description: "Integrate unit-testing metrics directly into the Prompt Builder UI: token size, latency, evaluation API metrics, custom evaluations, and direct link to Testing Center for batch testing.",
+        category: "control",
+        status: "planned",
+        period: "July 2026",
+        quarter: "Q3 2026",
+        date: "On Track — Mar (perf metrics), July 2026 (OOTB+custom evals, batch) (safe harbor)",
+        details: {
+            overview: "Brings Prompt Builder authoring onto the same evaluation primitives used elsewhere in Agentforce, so prompt iteration can be evidence-based.",
+            keyFeatures: [
+                "Performance metrics inline (token size, latency)",
+                "Evaluation API metrics in the Prompt Builder UI",
+                "Custom evaluations",
+                "One-click jump to Testing Center for batch testing"
+            ],
+            impact: "Prompt Builder users get consistent, standardized testing across Salesforce AI."
+        }
+    },
+
+    // ---------------- ORCHESTRATION ----------------
+    {
+        id: 18,
+        title: "MCP Client & Gateway — GA",
+        description: "Onboard Salesforce 1P MCP servers and deliver a usable, safe NGA integration experience. Experience spans NGA, API Catalog, External Services, and Platform Radio.",
+        category: "orchestration",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — GA May 2026",
+        details: {
+            overview: "Makes Model Context Protocol a first-class integration in Agentforce, letting agents call 1P and 3P MCP servers safely from the builder.",
+            keyFeatures: [
+                "Onboard 1P MCP servers into NGA",
+                "API Catalog + External Services + Platform Radio integration",
+                "Connect 3P MCP servers to AF agents"
+            ],
+            impact: "Unlocks broad agent interoperability — Agentforce agents can use the same MCP ecosystem as the rest of the industry."
+        }
+    },
+    {
+        id: 19,
+        title: "Agentforce Policies for External APIs and MCP Servers",
+        description: "Policy controls governing how Agentforce agents interact with external APIs and MCP servers — including auth, rate, and trust boundaries.",
+        category: "orchestration",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — May 2026",
+        details: {
+            overview: "Ships alongside MCP Client & Gateway GA so customers can govern outbound MCP/API traffic at the platform level.",
+            keyFeatures: [
+                "Policy controls for outbound external API calls",
+                "Policy controls for MCP server interactions"
+            ],
+            impact: "Required guardrail for enterprise rollout of external MCP integrations."
+        }
+    },
+    {
+        id: 20,
+        title: "Agentic UI Automation (Closed Pilot)",
+        description: "Closed customer pilot for agentic UI automation — agents that drive UI surfaces directly to complete tasks.",
+        category: "orchestration",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — Closed Pilot May 2026",
+        details: {
+            overview: "Initial closed pilot exploring agents that operate UI surfaces, paired with the broader orchestration push.",
+            keyFeatures: [
+                "Closed-pilot UI automation",
+                "Coordinated with NGA + MCP integration"
+            ],
+            impact: "Foundational research toward agentic clients that can act on UIs in addition to APIs."
+        }
+    },
+    {
+        id: 21,
+        title: "Agent Analytics — Revised Experience",
+        description: "Improved analytics with optimization tied in. Integrated data models for feedback, RAG, DW, etc. Adds deflection/abandonment metrics and revised ASA + Employee Agent analytics.",
+        category: "orchestration",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — May 2026 (safe harbor, target date)",
+        details: {
+            overview: "Reworks Agentforce Analytics for richer granularity and tighter coupling between optimization and reporting.",
+            keyFeatures: [
+                "Deflection and abandonment metrics",
+                "Revised ASA (Service Agent) Analytics",
+                "Revised Employee Agent Analytics",
+                "Integrated data models — Feedback, RAG, DW"
+            ],
+            impact: "Analytics are now actionable inputs to optimization, not just dashboards."
+        }
+    },
+    {
+        id: 22,
+        title: "SOMA — Single-Org Multi-Agent (Beta)",
+        description: "Beta release of SOMA: multi-agent orchestration scoped to a single Salesforce org.",
+        category: "orchestration",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — Beta June 2026",
+        details: {
+            overview: "First production-grade multi-agent orchestration capability inside an org, enabling delegation and escalation between agents.",
+            keyFeatures: [
+                "Multi-agent orchestration within a single org",
+                "Foundation for delegation and escalation patterns"
+            ],
+            impact: "Unlocks composed multi-agent workflows without crossing org boundaries."
+        }
+    },
+    {
+        id: 23,
+        title: "MOMA — Multi-Org Multi-Agent (Pilot)",
+        description: "Enterprise-grade interoperable orchestration layer making agent networks work in production. Agents across different Salesforce orgs discover, communicate, and collaborate via shared standards and trusted governance.",
+        category: "orchestration",
+        status: "planned",
+        period: "July 2026",
+        quarter: "Q3 2026",
+        date: "On Track — Mar–June 2026 closed customer pilot (safe harbor)",
+        details: {
+            overview: "Extends multi-agent orchestration across org boundaries with the governance, discovery, and trust primitives needed for production.",
+            keyFeatures: [
+                "Cross-org agent discovery",
+                "Shared standards for communication and collaboration",
+                "Trusted governance",
+                "Closed customer pilot (Dec 2025 onward)"
+            ],
+            impact: "Customers with multi-org Salesforce footprints can compose agent networks at enterprise scale."
+        }
+    },
+    {
+        id: 24,
+        title: "3P Agent (A2A) Customer Pilot",
+        description: "Closed pilot enabling external (3P) agents to connect to Agentforce via the Agent-to-Agent (A2A) standard, with Agent Cards, universal handshake, and built-in security & observability.",
+        category: "orchestration",
+        status: "future",
+        period: "August 2026+",
+        quarter: "Q3 2026",
+        date: "In Active Build — April–June 2026 closed pilot (safe harbor)",
+        details: {
+            overview: "First open inbound A2A integration so customers aren't siloed inside any single vendor's agent stack.",
+            keyFeatures: [
+                "A2A Inbound: external agents connect to AF agents",
+                "Agent Card: 3P agents advertise capabilities for discovery",
+                "Universal Handshake: JSON-RPC over TLS 1.3 with OAuth2",
+                "Agent2Agent communication for shared, multi-step tasks",
+                "Built-in encryption, access control, and auditable cross-domain logs"
+            ],
+            impact: "High demand for vendor-neutral agent interoperability across enterprise stacks."
+        }
+    },
+    {
+        id: 25,
+        title: "Agent API 2.0",
+        description: "Improved Agent API (v2) eliminating the high-latency, multi-hop legacy architecture of Einstein Bots (v1.x). Built on A2A, with Daisy++ engine integration, conversational endpoints streaming directly from start session / send message, and a Temporal-backed runtime for long-running async tasks.",
+        category: "orchestration",
+        status: "future",
+        period: "August 2026+",
+        quarter: "Q3 2026",
+        date: "In Active Build — Jun–Jul 2026, Dev Preview April 26 (safe harbor)",
+        details: {
+            overview: "Collapses the service-dependency chain down to a single core reasoning layer, reducing Time to First Message (TTFM) and Time to First Audio (TTFA), and laying the foundation for long-running async agent tasks.",
+            keyFeatures: [
+                "Daisy++ engine integration",
+                "Streaming conversational endpoints from start session / send message",
+                "Parity with SCRT (Service Cloud Run Time)",
+                "Voice support",
+                "Next-gen authoring preview",
+                "Built on the open A2A standard",
+                "Temporal-backed runtime for long-running async tasks"
+            ],
+            impact: "Architectural reset that enables modern voice latencies, long-running agent tasks, and open interop."
+        }
+    },
+    {
+        id: 26,
+        title: "Extensible API Platform (LLGM 2.0)",
+        description: "Next iteration of the LLM Gateway / language-model platform underpinning Agentforce — extensible APIs across providers, scoring, batching, and async processing.",
+        category: "orchestration",
+        status: "future",
+        period: "August 2026+",
+        quarter: "Q3 2026",
+        date: "In Active Build — Aug 2026+ (safe harbor)",
+        details: {
+            overview: "Extends the LLM Gateway into a broader, extensible API platform so the same primitives serve agent runtime, prompt builder, evaluations, and batch.",
+            keyFeatures: [
+                "Extensible provider abstraction",
+                "Unified primitives across runtime, prompt, evals, batch",
+                "Foundation for Agent API 2.0 and Online Experimentation"
+            ],
+            impact: "Makes the model layer composable and provider-agnostic for downstream features."
+        }
+    },
+
+    // ---------------- EXPERIENCES ----------------
+    {
+        id: 27,
+        title: "Voice in New Builder",
+        description: "Voice agent authoring is now first-class inside the Next-Gen Agent Builder, unifying text and voice configuration.",
+        category: "experiences",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — May 2026",
+        details: {
+            overview: "Brings voice configuration into the same authoring surface as text, removing the previous split tooling experience.",
+            keyFeatures: [
+                "Author voice agents inside Next-Gen Agent Builder",
+                "Unified text + voice configuration"
+            ],
+            impact: "Eliminates the context switch between text and voice authoring tools."
+        }
+    },
+    {
+        id: 28,
+        title: "Global Language Support for Voice (Beta)",
+        description: "Extends voice agent language coverage beyond the initial set; phased rollout including French, German, Spanish in March–April and additional languages on a rolling basis.",
+        category: "experiences",
+        status: "completed",
+        period: "May 2026",
+        quarter: "Q2 2026",
+        date: "Delivered — Beta May 2026 (rolling languages)",
+        details: {
+            overview: "Continues the voice globalization push beyond English with rolling additions per region/customer demand.",
+            keyFeatures: [
+                "French, German, Spanish (March–April 2026)",
+                "Rolling addition of more languages",
+                "Beta global availability"
+            ],
+            impact: "Voice agents become viable for non-English-first customers."
+        }
+    },
+    {
+        id: 29,
+        title: "Enhanced Chat V2 (Voice)",
+        description: "ECv2 for web + Mobile SDK Wave 2: adds voice mode and Mobile SDK 1 to Enhanced Chat. File upload/attachments TBC.",
+        category: "experiences",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — May–June 2026 (safe harbor)",
+        details: {
+            overview: "Multimodal upgrade to Enhanced Chat: voice in addition to text, plus Mobile SDK distribution.",
+            keyFeatures: [
+                "Voice mode in Enhanced Chat V2",
+                "Mobile SDK 1 distribution",
+                "TBC: file upload / attachments"
+            ],
+            impact: "Closes the parity gap with competitor chat experiences for multimodal interaction."
+        }
+    },
+    {
+        id: 30,
+        title: "WhatsApp & SMS Improvements",
+        description: "Phased rollout: April Beta supports inbound WhatsApp voice notes; June Beta adds outbound voice notes; roadmap includes SMS Long Message Support.",
+        category: "experiences",
+        status: "in-progress",
+        period: "June 2026",
+        quarter: "Q2 2026",
+        date: "About to Release — April Beta → June GA (safe harbor)",
+        details: {
+            overview: "Expands the WhatsApp and SMS channels with voice-note support and longer messages, supporting multi-language and accessibility scenarios.",
+            keyFeatures: [
+                "Inbound WhatsApp voice notes (April Beta)",
+                "Outbound WhatsApp voice notes (June Beta)",
+                "SMS Long Message Support (roadmap)"
+            ],
+            impact: "Reach more customers and support multi-language scenarios where text-only is a limiter."
+        }
+    },
+    {
+        id: 31,
+        title: "Agentforce Voice on Mobile",
+        description: "Customers can enable mobile customers and workforce with next-generation voice capabilities. Phased rollouts include CarPlay integration and voice-to-human chat escalation.",
+        category: "experiences",
+        status: "planned",
+        period: "July 2026",
+        quarter: "Q3 2026",
+        date: "On Track — May–June/July 2026 (safe harbor)",
+        details: {
+            overview: "Brings Agentforce Voice into the Mobile SDK so customers and employees can interact with voice agents on the go.",
+            keyFeatures: [
+                "Voice in mobile SDK",
+                "CarPlay integration (phased)",
+                "Voice-to-human chat escalation"
+            ],
+            impact: "Voice agents become viable for mobile-first audiences and field workforces."
+        }
+    },
+    {
+        id: 32,
+        title: "Enhanced Chat V2 — Agentic Client (Phase 3)",
+        description: "Phase-3 agentic client capabilities for Enhanced Chat V2: contextual chat, fallback, streaming voice transcript (June); custom context events, message-level feedback, conversation labels, invitations, PDF previews, conversational surveys, suggested replies (July); client actions (Sept).",
+        category: "experiences",
+        status: "planned",
+        period: "July 2026",
+        quarter: "Q3 2026",
+        date: "On Track — June (Phase 3a), July, Sept 2026 (safe harbor)",
+        details: {
+            overview: "Shifts Enhanced Chat from single-threaded chat into an agentic client with multimodal, contextual, and action-capable behavior.",
+            keyFeatures: [
+                "June: contextual chat, fallback support, streaming voice transcript",
+                "July: custom context events, message-level feedback, conversation labels, invitations + contextual chat invitations, PDF file previews, conversational surveys, suggested replies",
+                "September: client actions"
+            ],
+            impact: "Enables multimodal features and client-side actions that single-threaded chat cannot support."
+        }
+    }
+];
+
+// Wire V4 into the combined historical view as well
+roadmapDataV4.forEach((item, idx) => {
+    roadmapDataCombined.push({
+        ...item,
+        id: 1000 + idx + 1,
+        version: 'v4',
+    });
+});
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports.roadmapDataV4 = roadmapDataV4;
 }
 
 // Agentforce GUS Roadmap Data - Build 262
