@@ -1949,6 +1949,9 @@ const roadmapDataV4 = [
         pmm: "Samatha Kung",
         engLead: "Navin Ramineni",
         gusProgram: "17. Unmeter Data Cloud & Automatically Enable STDM, Analytics, and Observability",
+        docs: [
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE00000037WPYAY/view" }
+        ],
 
         title: "Unmeter Data Cloud, auto-enable STDM → Observability",
         description: "Removes Data Cloud metering for Agentforce-related telemetry and auto-enables Standard Data Model (STDM) flow into Observability so customers get session/agent telemetry out of the box.",
@@ -1972,6 +1975,18 @@ const roadmapDataV4 = [
         pmm: "Kaustubh Wadhone",
         engLead: "Lily Xiao",
         gusProgram: "10. Agentforce Data Library - Enhancements",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3c7d5f265c2_3_0#slide=id.g3c7d5f265c2_3_0" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Project__c/a1kEE00000TXdOTYA1/view" },
+            { label: "Intelligent Context internal canvas", category: "Slack Canvas", icon: "🧭", url: "https://salesforce.enterprise.slack.com/docs/T01G0063H29/F09N43DPVEG" },
+            { label: "Intelligent Context 102 High level deck", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/1LchvRLQLcmYPaYt2VUkzgbdKIvaoi1Uv9k1fG0Gcfxc/edit" },
+            { label: "103 product features deck", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/1gg-DUC9uofjYKob7AMatYgV9WL0KkjwemmibNVyDm0o/edit" },
+            { label: "Unstructured Roadmap deck [last updated Jul 25)", category: "Roadmap Deck", icon: "🗺", url: "https://docs.google.com/presentation/d/1nWiMGKCd-LUQm8gGCJm7jhp6eTmbTjdYoG_RiuZ2zvk/edit?slide=id.g36cfd48ab1c_0_8043#slide=id.g36cfd48ab1c_0_8043" },
+            { label: "Draft Intelligent Context Pilot/GA documentation", category: "Doc", icon: "📑", url: "https://docs.google.com/document/d/1jleHIzeeXCin4KirXrsxa7U6BYQYx-Wr5wdlHJCm89Y/edit?tab=t.vt9y6qikuq7d#heading=h.x5t431nt4gr5" },
+            { label: "Link your agent to multiple data types", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/1JLuqReoOxs0uidqRAHT6bxt2ZPsA0PWSQaUSAksZtTA/edit?slide=id.g3a116f5ebdc_0_6325#slide=id.g3a116f5ebdc_0_6325" },
+            { label: "Resource", category: "Resource", icon: "🔗", url: "https://docs.google.com/document/d/1IrOSOheZtjr38cGnbLkz6wY5XM6EgeTsW2GNRWQyD8s/edit?tab=t.0" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002koLYAQ/view" }
+        ],
 
         title: "Agentforce Data Library — Enhancements (ADL Async Architecture)",
         description: "ADL as a Retriever Action: enable grounding on multiple data sources by allowing multiple ADL retriever actions per agent. Future enhancements include real-time API integration (JIT index support).",
@@ -1996,6 +2011,11 @@ const roadmapDataV4 = [
         pmm: "Courtney Ewing",
         engLead: null,
         gusProgram: "12. Connection Inputs Support",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3c7d5f265c2_3_105#slide=id.g3c7d5f265c2_3_105" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/15ZLl_zVHYeRntr2ifjTYzIHhu86iCRaDt_q_HKpDlsE/edit?tab=t.0#heading=h.eboflap83y23" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002lajYAA/view" }
+        ],
 
         title: "Connection Variables Support (Surface-specific context variables)",
         description: "Introduces an object that automatically represents Surface context data of the Surface associated with the Agent Session at runtime — mirroring Flow's $Record. Provides scoped variables per Connection (Case → ASAEmail, Lead → SDREmail, Voice Call → Telephony).",
@@ -2020,6 +2040,13 @@ const roadmapDataV4 = [
         pmm: "Courtney Ewing",
         engLead: null,
         gusProgram: "11. Response Customization Support for Connections",
+        docs: [
+            { label: "Resource", category: "Resource", icon: "🔗", url: "https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_agentforce_custom_connections.htm&release=260&type=5" },
+            { label: "Resource", category: "Resource", icon: "🔗", url: "https://help.salesforce.com/s/articleView?id=ai.agent_parent_deploy.htm&type=5" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3c7d5f265c2_3_51#slide=id.g3c7d5f265c2_3_51" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1TNlhi0FI3GHiU2zoDyFM6P6sRp1SEl7uTuu_zhZcAqc/edit?tab=t.0#heading=h.2z3d4z5arhew" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002lZ7YAI/view" }
+        ],
 
         title: "Response Customization — Support for Surfaces / Connections",
         description: "Admin configurability to use custom connections, custom response actions, modify connection instructions, and add determinism to tailor the last-mile experience for Agents.",
@@ -2047,6 +2074,13 @@ const roadmapDataV4 = [
         pmm: null,
         engLead: "Dov Tendler",
         gusProgram: "Agentforce Custom Scorer - GA",
+        docs: [
+            { label: "Release notes", category: "Release Notes", icon: "📝", url: "https://help.salesforce.com/s/articleView?id=ai.generative_ai_optimize_scorers.htm&type=5" },
+            { label: "Docs", category: "Doc", icon: "📑", url: "https://docs.google.com/document/d/1bNARSybT9AYQ0CQ0s8rMjElyYlgmhpnbiW2diTWC9qA/edit?tab=t.0#heading=h.58wm7k71esy3" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3bef74a37f6_13_0#slide=id.g3bef74a37f6_13_0" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1SnMPX-vA1lMcs5S_pLxGkvDfLLNBAS8erZCDDn123Aw/edit?tab=t.wget4j10bie5" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000003k6LYAQ/view" }
+        ],
 
         title: "Custom Scorers (Beta)",
         description: "Define and manage scorers (view, create prompt/expression-based, edit, test, activate, clone) in Studio. Use scorers in testing UI, API, CLI, and Observability (abandonment, deflection, custom CSAT/quality).",
@@ -2071,6 +2105,11 @@ const roadmapDataV4 = [
         pmm: "Billie Greenhalgh",
         engLead: "Nikhil Bojja",
         gusProgram: "13. New testing experience in AF Studio & NGA - GA",
+        docs: [
+            { label: "Release notes beta", category: "Release Notes", icon: "📝", url: "https://help.salesforce.com/s/articleView?id=ai.agent_studio_testing_center_setup_tests.htm&type=5" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/edit?slide=id.g3bb5883b5b3_148_0#slide=id.g3bb5883b5b3_148_0" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002yHpYAI/view" }
+        ],
 
         title: "New Testing Center (Beta)",
         description: "Next-Gen Testing Center: metadata support for pro-code users, enhanced custom evals, create test cases from observability sessions, feature parity with Testing Center in Setup.",
@@ -2095,6 +2134,11 @@ const roadmapDataV4 = [
         pmm: "Tim Lawrence",
         engLead: "Aaron Chan",
         gusProgram: "08. Agentforce on Gemini + Model Provider Platform Enhancements",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3c7d5f265c2_1_0#slide=id.g3c7d5f265c2_1_0" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1Ylx_AO4JKV-pm2Wd3xh7aR9bmXVEtBi1xiYPOEZBElE/edit?tab=t.0" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE00000029wrYAA/view" }
+        ],
 
         title: "Agentforce on Gemini",
         description: "Switch to Google Gemini for Agentforce Reasoning Engine plus standard/custom actions. Initial launch supports NGA's Daisy Planner; Gemini 3 Flash is the primary target model. Live in Pilot now.",
@@ -2119,6 +2163,13 @@ const roadmapDataV4 = [
         pmm: "Billie Greenhalgh",
         engLead: "Nikhil Bojja",
         gusProgram: "05. Voice & Conversation Testing Experience",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3be79cf1077_27_191#slide=id.g3be79cf1077_27_191" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1TYqUQzrkuZigsWlgRf7KORHwkE7FMG5VXG3lnGvYtZ4/edit?tab=t.za5uubmnobzz" },
+            { label: "Design", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1gZiw1wgaXxXLUaPvK2EYVciCge2cRNLCRsqjXejL_RA/edit?tab=t.0#heading=h.4sbjozvdlbku" },
+            { label: "Figma", category: "Figma", icon: "🎨", url: "https://www.figma.com/design/Ai1MXsZYbbKffSz53XRhAX/Agent-Testing?node-id=3018-271872&t=PWqAMzd0TSf4FVRn-0" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002w6LYAQ/view" }
+        ],
 
         title: "Voice & Conversation Testing Experience (Beta)",
         description: "Multi-turn conversation simulation and testing for both text and voice agents. Simulate realistic user interactions, identify logic/voice behavioral issues, and evaluate intent resolution across full sessions.",
@@ -2143,6 +2194,13 @@ const roadmapDataV4 = [
         pmm: "Srikrishna Joshi",
         engLead: "Navin Ramineni",
         gusProgram: "21. Agent Health Monitoring - GA",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/edit?slide=id.g3823bac7788_12_109#slide=id.g3823bac7788_12_109" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/181Ii4NOG_TXvEUmm7A2nNPI2uWTdTlmufc5D3XqOsb8/edit?tab=t.gsoxkrk5kxpk#heading=h.gxt47qozq5k3" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002ldxYAA/view" },
+            { label: "Onboarding guide for beta", category: "Enablement Guide", icon: "🚀", url: "https://docs.google.com/document/d/1u3m9g241YZHBvzl0eR3zSdYTxnqBtSlSUrxJncfTPxw/edit?tab=t.0" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002zaTYAQ/view" }
+        ],
 
         title: "Agent Health Monitoring — GA",
         description: "Built as part of the Observability suite (using Tableau). Monitor agents' health KPIs and get alerted when metrics pass custom thresholds. Live in beta now; GA target June 2026.",
@@ -2166,6 +2224,12 @@ const roadmapDataV4 = [
         pmm: null,
         engLead: "Travis Stubbendeck",
         gusProgram: "04. Enhanced Customer Agent Security Options for SOQL Actions (Track 5)",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3be79cf1077_27_141#slide=id.g3be79cf1077_27_141" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1ta_u4sOqKNvBC7Dbm80-FNI7ft5hFcYn_vY-1Bhio4I/edit?tab=t.0#heading=h.2wlkbl684x05" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002rzVYAQ/view" },
+            { label: "Track 5", category: "Doc", icon: "📑", url: "https://docs.google.com/document/d/18Ee68AWv1_lj0FK-2SvskNCqewVcPDHrokt9Tq00gio/edit?tab=t.0#heading=h.1wqy96b178wq" }
+        ],
 
         title: "Enhanced Customer Agent Security Options for SOQL Actions (Track 5)",
         description: "More flexible, granular security controls when building customer-facing service agents (ASAs). Phased: external Org-Wide Defaults (OWDs), Contact ID Filtering, User Mode & Action-based Permission Sets.",
@@ -2191,6 +2255,14 @@ const roadmapDataV4 = [
         pmm: null,
         engLead: "Abhijit Bare",
         gusProgram: "04. AF Sandbox Orgs routing to premium tier + increase scale tier efficiency",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/edit?slide=id.g3a3f2a5e86a_29_45#slide=id.g3a3f2a5e86a_29_45" },
+            { label: "Building agents in sandbox and deploying to production", category: "Resource", icon: "🔗", url: "https://salesforce.enterprise.slack.com/files/U045UUMP4KE/F09UB2HDEAC/channel_expert_-_19_building_agents_in_sandbox___deploying_to_production.pdf" },
+            { label: "GUS sandbox orgs routing to premium tier", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Project__c/a1kEE00000TDX3uYAH/view" },
+            { label: "GUS scale tier effective utilization with dynamic routing to…", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Project__c/a1kEE00000TDyLpYAL/view" },
+            { label: "Sandbox orgs premium tier", category: "Resource", icon: "🔗", url: "https://docs.google.com/document/d/1ShighboIl-I_Vmr7Ir0DBhzoaRnRvVPnpsht47rROnk/edit?tab=t.0#heading=h.eya69aylnt3y" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002w4jYAA/view" }
+        ],
 
         title: "AF Sandbox Orgs Routing on Premium Tier",
         description: "All sandbox-org agents get the same model performance profile as production active orgs. Backend routing utilizes scale tiers more aggressively and intelligently routes back to priority tier when needed.",
@@ -2214,6 +2286,11 @@ const roadmapDataV4 = [
         pmm: "Billie Greenhalgh",
         engLead: "Siddharth Ray",
         gusProgram: "19. Agentforce Platform Error Architecture",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3c8cf60cbc6_66_58#slide=id.g3c8cf60cbc6_66_58" },
+            { label: "AI VAT Error Architecture", category: "Tech Spec", icon: "🛠", url: "https://docs.google.com/document/d/1xAQk8s2vb7C13Bk4zTcqfMS2puvOWtQK/edit#heading=h.i9dbtjhm9aus" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE00000030bNYAQ/view" }
+        ],
 
         title: "Agentforce Platform Error Architecture",
         description: "Comprehensive error-handling architecture that turns generic technical failures into transparent, actionable, user-centric events. Planner provides detailed error messages instead of \"something went wrong.\"",
@@ -2237,6 +2314,11 @@ const roadmapDataV4 = [
         pmm: "Billie Greenhalgh",
         engLead: "Rama Raman",
         gusProgram: "14. Online Experimentation",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3d1e608824c_49_580#slide=id.g3d1e608824c_49_580" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1cUgdUX2aaa710kKmUzss47_F1yf2qXfsaEMTtj-dn5M/edit?tab=t.4mbgcz28cyk7#heading=h.53ke8xvmtyyq" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000003Au5YAE/view" }
+        ],
 
         title: "Online Experimentation (Pilot)",
         description: "Split production traffic between agent versions (\"Challenger\" vs \"Champion\") to validate improvements across topic selection, action execution, and implicit signals (resolution, exit, escalation, sentiment).",
@@ -2263,6 +2345,13 @@ const roadmapDataV4 = [
         pmm: null,
         engLead: "Christopher Chiu",
         gusProgram: "23. Upgrade Legacy Agents to Agent Script + NGA",
+        docs: [
+            { label: "Release", category: "Release Notes", icon: "📝", url: "https://help.salesforce.com/s/articleView?id=release-notes.rn_agentforce_upgrade.htm&release=262&type=5" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1TqoJAnhGd_yf5xmiPTTwsLcm_VrbSTKYoOvuo-_uDBI/edit?tab=t.0#heading=h.jrxkb7127akg" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3d1e608824c_49_825#slide=id.g3d1e608824c_49_825" },
+            { label: "Figma", category: "Figma", icon: "🎨", url: "https://www.figma.com/design/9TYoncSrVFRsGwgI03Jr89/%E2%9E%A1%EF%B8%8F-2026--Agentforce-Builder?node-id=48852-374262&p=f&t=YzcmjBG62aPpJkDO-0" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000003Am1YAE/view" }
+        ],
 
         title: "Agent Upgrade to New Agent Builder & Script",
         description: "Migration tool that lets early-adopter customers move existing legacy-builder agents into Next-Gen Authoring (Agent Builder + Agent Script) without losing prior configuration.",
@@ -2286,6 +2375,13 @@ const roadmapDataV4 = [
         pmm: "Samatha Kung",
         engLead: "Vinitha Ravichandran",
         gusProgram: "07. Developer Easy Self Service",
+        docs: [
+            { label: "Launched at TDx -", category: "Resource", icon: "🔗", url: "https://labs.agentforce.com/" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3bee4948947_5_0#slide=id.g3bee4948947_5_0" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/ADM_Scrum_Team__c/a00EE00001j55pSYAQ/view" },
+            { label: "Doc", category: "Doc", icon: "📑", url: "https://docs.google.com/document/d/1W6PhBWlOaXZICbdGMSzVVjHNPi_Q22QULVVzzRqWuXY/edit?tab=t.krumi0sj5dup#heading=h.406o9u28z0x" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002zqbYAA/view" }
+        ],
 
         title: "Developer Easy Self-Service",
         description: "One-click setup for developers to build agents instantly using preferred tools like Claude Code. Quick-start experience, AI tooling, Builder → Complete and Claude Code paths, and \"Build your own org.\"",
@@ -2311,6 +2407,14 @@ const roadmapDataV4 = [
         pmm: null,
         engLead: "Kavya Murali",
         gusProgram: "24. [Prompt Builder] Embeddable Prompt Composer",
+        docs: [
+            { label: "Product Brief", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1pYOTM8eI2zey_vqnx61H9plLZbcNy-eJqicPRDtQg7Q/edit?tab=t.0" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/edit?slide=id.g3752c0b9134_19_13#slide=id.g3752c0b9134_19_13" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1pYOTM8eI2zey_vqnx61H9plLZbcNy-eJqicPRDtQg7Q/edit?tab=t.4trams6wzf5v#heading=h.kvxign2vxq6u" },
+            { label: "Solution 1 pgr", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/1H3q2ZHifYRQxr-frxMYAgwDIbTZPgT1_XkPHABMDw-w/edit?slide=id.g363cacc1356_3_0#slide=id.g363cacc1356_3_0" },
+            { label: "Figma", category: "Figma", icon: "🎨", url: "https://www.figma.com/proto/gp9enFexM9aAe5OovSYS2g/-PB--Prompt-Composer---V1?node-id=472-35130&p=f&t=1mERY2QQf63bGxUm-0&scaling=min-zoom&content-scaling=fixed&page-id=329%3A87304&starting-point-node-id=472%3A35130&show-proto-sidebar=1" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002SbJYAU/view" }
+        ],
 
         title: "Embeddable Prompt Composer",
         description: "Allow prompt templates to be used and authored anywhere — invoked by any application via existing/enhanced APIs, and authored from Grid, Test Center, Slack, etc.",
@@ -2335,6 +2439,10 @@ const roadmapDataV4 = [
         pmm: null,
         engLead: "Ashish Gite",
         gusProgram: "20. Prompt Builder Testing",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3be926d6027_7_201#slide=id.g3be926d6027_7_201" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002q2XYAQ/view" }
+        ],
 
         title: "Prompt Builder Testing",
         description: "Integrate unit-testing metrics directly into the Prompt Builder UI: token size, latency, evaluation API metrics, custom evaluations, and direct link to Testing Center for batch testing.",
@@ -2361,6 +2469,11 @@ const roadmapDataV4 = [
         pmm: "Nehal Padia",
         engLead: "Lily Xiao",
         gusProgram: "09.. MCP Client & Gateway GA",
+        docs: [
+            { label: "Release notes", category: "Release Notes", icon: "📝", url: "https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_platform.htm&release=262&type=5#:~:text=Unlock%20Agent%20Interoperability%20with%20MCP%20for%20Agentforce" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3c80078d218_1_262#slide=id.g3c80078d218_1_262" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002zk9YAA/view" }
+        ],
 
         title: "MCP Client & Gateway — GA",
         description: "Onboard Salesforce 1P MCP servers and deliver a usable, safe NGA integration experience. Experience spans NGA, API Catalog, External Services, and Platform Radio.",
@@ -2384,6 +2497,9 @@ const roadmapDataV4 = [
         pmm: "Nehal Padia",
         engLead: "Joe Wang",
         gusProgram: "07. MCP Client Support for External Tools as Custom Actions - Pilot",
+        docs: [
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002RQjYAM/view" }
+        ],
 
         title: "Agentforce Policies for External APIs and MCP Servers",
         description: "Policy controls governing how Agentforce agents interact with external APIs and MCP servers — including auth, rate, and trust boundaries.",
@@ -2406,6 +2522,9 @@ const roadmapDataV4 = [
         pmm: "Kaustubh Wadhone",
         engLead: "Malav Shah",
         gusProgram: "29. [Pilot] Agentic UI Automation",
+        docs: [
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002xvFYAQ/view" }
+        ],
 
         title: "Agentic UI Automation (Closed Pilot)",
         description: "Closed customer pilot for agentic UI automation — agents that drive UI surfaces directly to complete tasks.",
@@ -2428,6 +2547,12 @@ const roadmapDataV4 = [
         pmm: "Srikrishna Joshi",
         engLead: "Eleanor Ashkenazi",
         gusProgram: "11. Agentforce Analytics 2.0 Beta",
+        docs: [
+            { label: "Release note", category: "Release Notes", icon: "📝", url: "https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_analytics_new_experience.htm&release=262&type=5" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/edit?slide=id.g3b0bac30733_194_220#slide=id.g3b0bac30733_194_220" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1pyRMOV6soWcauUUXRyXcnTPBrwncr6dIfEzdwHIaQT0/edit?tab=t.sqky9lnmeh3n#heading=h.rhyl3zkjk55y" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002SEjYAM/view" }
+        ],
 
         title: "Agent Analytics — Revised Experience",
         description: "Improved analytics with optimization tied in. Integrated data models for feedback, RAG, DW, etc. Adds deflection/abandonment metrics and revised ASA + Employee Agent analytics.",
@@ -2452,6 +2577,9 @@ const roadmapDataV4 = [
         pmm: "Nehal Padia",
         engLead: "John Townsend",
         gusProgram: "09. SOMA Beta",
+        docs: [
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002znNYAQ/view" }
+        ],
 
         title: "SOMA — Single-Org Multi-Agent (Beta)",
         description: "Beta release of SOMA: multi-agent orchestration scoped to a single Salesforce org.",
@@ -2474,6 +2602,15 @@ const roadmapDataV4 = [
         pmm: "Nehal Padia",
         engLead: "John Townsend",
         gusProgram: "27. MOMA Customer Pilot",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/edit?slide=id.g3a020ed9d03_68_0#slide=id.g3a020ed9d03_68_0" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1wcw-gpIj72vWt70Fmt9HChV5a_0GpYhemS7cQ4PUNiA/edit?tab=t.fz4f3ethszmb#heading=h.otg5n11znyn" },
+            { label: "Interop FCD", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/14ugBi-z9q3yd4pRuCXRIkGi-lH1CRM-siUYz40k08KI/edit?slide=id.g36c1a82f6d9_0_3072#slide=id.g36c1a82f6d9_0_3072" },
+            { label: "Deepdive", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/1Ut0_LZyv7bsfhLzByhAUd9GwbRvCJPw7bfrLjgrqZuQ/edit" },
+            { label: "Internal Interop", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/1F8Sk6mFIqIj9HHyGjbE-I89ldZGSPbO7IWUbi4P_j1M/edit" },
+            { label: "MOMA Pilot enablement guide", category: "Enablement Guide", icon: "🚀", url: "https://docs.google.com/document/d/15s_ZrctxX03rgSdq6Wr09UH-smNgXUDpc9y7gItm9jw/edit?tab=t.0" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002qCDYAY/view" }
+        ],
 
         title: "MOMA — Multi-Org Multi-Agent (Pilot)",
         description: "Enterprise-grade interoperable orchestration layer making agent networks work in production. Agents across different Salesforce orgs discover, communicate, and collaborate via shared standards and trusted governance.",
@@ -2498,6 +2635,15 @@ const roadmapDataV4 = [
         pmm: "Nehal Padia",
         engLead: "Sarah Boaz-Shelley",
         gusProgram: "28. 3P A2A Customer Pilot (Inbound Only)",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1GCa3jwpz-GCmBFWNO9_Mxu4LkiTxj8WbLmt18jvc8YI/edit?slide=id.g3a20d5e1bd8_125_0#slide=id.g3a20d5e1bd8_125_0" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1wcw-gpIj72vWt70Fmt9HChV5a_0GpYhemS7cQ4PUNiA/edit?tab=t.fz4f3ethszmb#heading=h.otg5n11znyn" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002s17YAA/view" },
+            { label: "Interop FCD", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/14ugBi-z9q3yd4pRuCXRIkGi-lH1CRM-siUYz40k08KI/edit?slide=id.g36c1a82f6d9_0_3072#slide=id.g36c1a82f6d9_0_3072" },
+            { label: "Deepdive", category: "Resource", icon: "🔗", url: "https://docs.google.com/presentation/d/1Ut0_LZyv7bsfhLzByhAUd9GwbRvCJPw7bfrLjgrqZuQ/edit" },
+            { label: "A2A Inbound", category: "Resource", icon: "🔗", url: "https://salesforce-internal.slack.com/archives/C06RM25V2EP/p1772483595518299" },
+            { label: "A2A Inbound pilot enablement guide", category: "Enablement Guide", icon: "🚀", url: "https://docs.google.com/document/d/16qX0HS9YSXdTL3o4t2hcrb9RRITzP3DvxYsUzaZExl0/edit?tab=t.0#heading=h.tsmlgi19umts" }
+        ],
 
         title: "3P Agent (A2A) Customer Pilot",
         description: "Closed pilot enabling external (3P) agents to connect to Agentforce via the Agent-to-Agent (A2A) standard, with Agent Cards, universal handshake, and built-in security & observability.",
@@ -2523,6 +2669,11 @@ const roadmapDataV4 = [
         pmm: "Nehal Padia",
         engLead: "Sarah Boaz-Shelley",
         gusProgram: "06. Agent API v2",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3c80078d218_1_151#slide=id.g3c80078d218_1_151" },
+            { label: "REST Design", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1DvNYwzkzyNJVaELmutAOmGEtgv5qR6ExyNwOugAiccQ/edit?tab=t.0#heading=h.kjoezmt5v7jd" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002zllYAA/view" }
+        ],
 
         title: "Agent API 2.0",
         description: "Improved Agent API (v2) eliminating the high-latency, multi-hop legacy architecture of Einstein Bots (v1.x). Built on A2A, with Daisy++ engine integration, conversational endpoints streaming directly from start session / send message, and a Temporal-backed runtime for long-running async tasks.",
@@ -2550,6 +2701,9 @@ const roadmapDataV4 = [
         pmm: "Tim Lawrence",
         engLead: "Abhijit Bare",
         gusProgram: "33. Extensible API Platform (LLMG 2.0)",
+        docs: [
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002w9ZYAQ/view" }
+        ],
 
         title: "Extensible API Platform (LLGM 2.0)",
         description: "Next iteration of the LLM Gateway / language-model platform underpinning Agentforce — extensible APIs across providers, scoring, batching, and async processing.",
@@ -2575,6 +2729,9 @@ const roadmapDataV4 = [
         pmm: "Nicole Mejia",
         engLead: "Deepak Tundagura",
         gusProgram: "02. Voice + Daisy Planner Unification",
+        docs: [
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002w37YAA/view" }
+        ],
 
         title: "Voice in New Builder",
         description: "Voice agent authoring is now first-class inside the Next-Gen Agent Builder, unifying text and voice configuration.",
@@ -2597,6 +2754,9 @@ const roadmapDataV4 = [
         pmm: "Samatha Kung",
         engLead: "Jagadeesh Gajula",
         gusProgram: "02. Agentforce Voice TAM Expansion",
+        docs: [
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002iszYAA/view" }
+        ],
 
         title: "Global Language Support for Voice (Beta)",
         description: "Extends voice agent language coverage beyond the initial set; phased rollout including French, German, Spanish in March–April and additional languages on a rolling basis.",
@@ -2620,6 +2780,13 @@ const roadmapDataV4 = [
         pmm: "Courtney Ewing",
         engLead: "Andy Shah",
         gusProgram: "15. Enhanced Chat V2(ECv2) + Mobile SDK wave 2",
+        docs: [
+            { label: "Release note", category: "Release Notes", icon: "📝", url: "https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_agentforce_ecv2_pre_post_auth.htm&release=260&type=5" },
+            { label: "GUS", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000002moXYAQ/view" },
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3be926d6027_4_49#slide=id.g3be926d6027_4_49" },
+            { label: "CWC Architecture", category: "Tech Spec", icon: "🛠", url: "https://docs.google.com/document/d/1l-1z7od2RGESLjSp64Ewre_hRAe8nrJh7lxVn0CO4zg/edit?tab=t.0#heading=h.at22slxhzy9d" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/123o48IgHYqc3BWeY4yNBXMy3vghuNzM0iUGKw3fh-14/edit?tab=t.0#heading=h.78drc9nvd7rv" }
+        ],
 
         title: "Enhanced Chat V2 (Voice)",
         description: "ECv2 for web + Mobile SDK Wave 2: adds voice mode and Mobile SDK 1 to Enhanced Chat. File upload/attachments TBC.",
@@ -2643,6 +2810,13 @@ const roadmapDataV4 = [
         pmm: "Courtney Ewing",
         engLead: "Pavan Vadapalli",
         gusProgram: "25. WhatsApp + SMS Improvements",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3d1e608824c_49_776#slide=id.g3d1e608824c_49_776" },
+            { label: "PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1Bc5ehhKAw268p679NSMaO05ZK8CLomN506w71EPNqqY/edit?tab=t.0#heading=h.30k57kuxkxa9" },
+            { label: "Tech specs", category: "Tech Spec", icon: "🛠", url: "https://docs.google.com/document/d/1yORQJEpiS68JjC40EhA-S56nkclRL9LXvSX3yEGOXeM/edit?tab=t.0" },
+            { label: "Guesstimation voice estimations traffic, whatsapp", category: "Resource", icon: "🔗", url: "https://docs.google.com/document/d/1nxltxwogxM7MIfw6LIvnY2z0sJ_44_psO_RaGGInxVw/edit?tab=t.0" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE000000362TYAQ/view" }
+        ],
 
         title: "WhatsApp & SMS Improvements",
         description: "Phased rollout: April Beta supports inbound WhatsApp voice notes; June Beta adds outbound voice notes; roadmap includes SMS Long Message Support.",
@@ -2666,6 +2840,10 @@ const roadmapDataV4 = [
         pmm: "Diana Westnedge",
         engLead: "Eric Engelking",
         gusProgram: "22. Agentforce Voice on Mobile GA",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3d1e608824c_49_437#slide=id.g3d1e608824c_49_437" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000003AsTYAU/view" }
+        ],
 
         title: "Agentforce Voice on Mobile",
         description: "Customers can enable mobile customers and workforce with next-generation voice capabilities. Phased rollouts include CarPlay integration and voice-to-human chat escalation.",
@@ -2689,6 +2867,12 @@ const roadmapDataV4 = [
         pmm: "Courtney Ewing",
         engLead: "Andy Shah",
         gusProgram: "18. ECV2 for Web + Mobile SDK Ph 3: Agentic Client",
+        docs: [
+            { label: "Showcase", category: "Showcase Deck", icon: "🎬", url: "https://docs.google.com/presentation/d/1qh8pn3NldTdXUYTqQdiob-HRX09ZH1KY18GrcIEKoc4/edit?slide=id.g3d1e608824c_49_874#slide=id.g3d1e608824c_49_874" },
+            { label: "Suggested replies PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/1Wd0HhhoHhgzQa90obj_1j4pv4ibZVrOWbJXwj94CVVE/edit?tab=t.0#heading=h.q623zlg6r1oc" },
+            { label: "Client action PRD", category: "PRD", icon: "📄", url: "https://docs.google.com/document/d/19pxGw5qHUN2OtjpSwb_l4l3hFpUrHMYLsZdqO1aFzFM/edit?tab=t.0#heading=h.q623zlg6r1oc" },
+            { label: "GUS Program (PPM)", category: "GUS Program", icon: "📌", url: "https://gus.lightning.force.com/lightning/r/PPM_Program__c/a1fEE0000003AvhYAE/view" }
+        ],
 
         title: "Enhanced Chat V2 — Agentic Client (Phase 3)",
         description: "Phase-3 agentic client capabilities for Enhanced Chat V2: contextual chat, fallback, streaming voice transcript (June); custom context events, message-level feedback, conversation labels, invitations, PDF previews, conversational surveys, suggested replies (July); client actions (Sept).",

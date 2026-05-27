@@ -520,6 +520,56 @@ class RoadmapApp {
         return chips.join('');
     }
 
+    docsBadge(item) {
+        const n = (item.docs && item.docs.length) || 0;
+        if (n === 0) return '';
+        const label = n === 1 ? '1 doc' : `${n} docs`;
+        return `<span class="docs-badge" title="Click for resources">📚 ${label}</span>`;
+    }
+
+    renderDocsSection(docs) {
+        if (!docs || !docs.length) return '';
+        // Group by category, then sort categories by a known priority
+        const ORDER = ['Release Notes','Help Article','Showcase Deck','PRD','Tech Spec','Doc',
+                       'Enablement Guide','Figma','Roadmap Deck','Slack Canvas','GUS Program','Resource'];
+        const groups = {};
+        docs.forEach(d => {
+            const c = d.category || 'Resource';
+            (groups[c] = groups[c] || []).push(d);
+        });
+        const sortedCats = Object.keys(groups).sort((a,b) => {
+            const ai = ORDER.indexOf(a), bi = ORDER.indexOf(b);
+            if (ai !== -1 && bi !== -1) return ai - bi;
+            if (ai !== -1) return -1;
+            if (bi !== -1) return 1;
+            return a.localeCompare(b);
+        });
+        const safe = s => (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        const groupHtml = sortedCats.map(cat => {
+            const items = groups[cat];
+            const icon = items[0].icon || '🔗';
+            const links = items.map(d => `
+                <a class="doc-link" href="${d.url}" target="_blank" rel="noopener noreferrer">
+                    <span class="doc-link-label">${safe(d.label)}</span>
+                    <span class="doc-link-host">${(new URL(d.url)).hostname.replace(/^www\./,'')}</span>
+                </a>`).join('');
+            return `
+                <div class="doc-group">
+                    <div class="doc-group-header">
+                        <span class="doc-group-icon">${icon}</span>
+                        <span class="doc-group-title">${cat}</span>
+                        <span class="doc-group-count">${items.length}</span>
+                    </div>
+                    <div class="doc-group-links">${links}</div>
+                </div>`;
+        }).join('');
+        return `
+            <div class="modal-section docs-section">
+                <h3>📚 Resources & Documentation <span class="docs-section-count">${docs.length}</span></h3>
+                <div class="doc-groups">${groupHtml}</div>
+            </div>`;
+    }
+
     createTimelineItem(item) {
         const peopleHtml = this.ownerChips(item);
         const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
@@ -533,6 +583,7 @@ class RoadmapApp {
                 <div class="item-meta">
                     ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
                     <span class="meta-item"><span class="category-tag">${this.formatCategory(item.category)}</span></span>
+                    ${this.docsBadge(item)}
                 </div>
                 ${peopleHtml ? `<div class="item-people">${peopleHtml}</div>` : ''}
             </div>
@@ -593,6 +644,7 @@ class RoadmapApp {
                         <span class="category-tag">${this.formatCategory(item.category)}</span>
                         ${ownerHtml}
                         ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
+                        ${this.docsBadge(item)}
                     </div>
                 </div>
             `;
@@ -740,6 +792,7 @@ class RoadmapApp {
                 <p>${item.description}</p>
             </div>
             ${detailsHtml}
+            ${this.renderDocsSection(item.docs)}
         `;
 
         modal.classList.add('active');
