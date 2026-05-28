@@ -56,11 +56,10 @@ class RoadmapApp {
         if (this.currentVersion === 'customer') { el.innerHTML = ''; return; }
 
         const data = this.data;
+        const v = this.currentVersion;
         const counts = { total: data.length, completed: 0, 'in-progress': 0, planned: 0, future: 0, pilot: 0 };
         const owners = new Set();
         const ownerCounts = {};
-        const thisMonth = [];
-        const monthLabels = ['May 2026','June 2026'];
         const isMeta = name => !name || name.startsWith('—');
         data.forEach(i => {
             if (counts[i.status] !== undefined) counts[i.status]++;
@@ -68,9 +67,29 @@ class RoadmapApp {
                 owners.add(i.owner);
                 ownerCounts[i.owner] = (ownerCounts[i.owner] || 0) + 1;
             }
-            if (monthLabels.includes(i.period)) thisMonth.push(i);
         });
         const topOwners = Object.entries(ownerCounts).sort((a,b)=>b[1]-a[1]).slice(0,3);
+
+        // Version-specific callout
+        let calloutTitle = '', calloutNum = '', calloutSubtitle = '';
+        if (v === 'v4') {
+            const monthLabels = ['May 2026','June 2026'];
+            const inWindow = data.filter(i => monthLabels.includes(i.period)).length;
+            calloutTitle = '📅 This window (May–Jun ’26)';
+            calloutNum = `${inWindow} features`;
+        } else if (v === 'gus') {
+            const onTrack = data.filter(i => (i.health || '').toLowerCase().includes('on track')).length;
+            const blocked = data.filter(i => (i.health || '').toLowerCase().includes('blocked')).length;
+            calloutTitle = '🩺 Build 262 health';
+            calloutNum = `${onTrack} on track${blocked ? ` · ${blocked} blocked` : ''}`;
+        } else if (v === 'combined') {
+            calloutTitle = '🗂️ Historical roadmap';
+            calloutNum = `V1 + V2 + V3 + V4`;
+            calloutSubtitle = `Spanning Q4 2024 → August 2026+`;
+        } else {
+            calloutTitle = `📋 ${v.toUpperCase()} dataset`;
+            calloutNum = `${counts.total} items`;
+        }
 
         const stat = (n, label, klass) => `
             <div class="stat-card ${klass||''}">
@@ -85,9 +104,10 @@ class RoadmapApp {
             ${stat(counts.future, 'In Build', 'is-future')}
             ${stat(owners.size, 'Owners', 'is-owners')}
             <div class="stat-card stat-callout">
-                <div class="stat-callout-title">📅 This window (May–Jun ’26)</div>
-                <div class="stat-callout-num">${thisMonth.length} features</div>
-                ${topOwners.length ? `<div class="stat-callout-sub">Top owners: ${topOwners.map(([n,c])=>`<span class="owner-pill">${n} · ${c}</span>`).join(' ')}</div>` : ''}
+                <div class="stat-callout-title">${calloutTitle}</div>
+                <div class="stat-callout-num">${calloutNum}</div>
+                ${calloutSubtitle ? `<div class="stat-callout-sub">${calloutSubtitle}</div>` :
+                  (topOwners.length ? `<div class="stat-callout-sub">Top owners: ${topOwners.map(([n,c])=>`<span class="owner-pill">${n} · ${c}</span>`).join(' ')}</div>` : '')}
             </div>
         `;
     }
