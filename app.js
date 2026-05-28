@@ -12,6 +12,12 @@ class RoadmapApp {
             v3: roadmapDataV3,
             v4: roadmapDataV4,
         };
+        // Views that require an additional in-app password before showing data.
+        // Soft gate only — every user is already vibewareauth-authenticated.
+        this.viewLocks = {
+            combined: 'agentforce1!',
+            gus:      'agentforce1!',
+        };
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
         this.currentView = 'timeline';
@@ -19,6 +25,79 @@ class RoadmapApp {
         this.searchQuery = '';
         this.initTheme();
         this.init();
+    }
+
+    isViewUnlocked(version) {
+        if (!this.viewLocks[version]) return true;
+        return sessionStorage.getItem('vw_view_unlock_' + version) === '1';
+    }
+
+    markViewUnlocked(version) {
+        sessionStorage.setItem('vw_view_unlock_' + version, '1');
+    }
+
+    promptForViewPassword(version, label) {
+        return new Promise((resolve) => {
+            const expected = this.viewLocks[version];
+            // Lazy-create a single overlay element
+            let overlay = document.getElementById('viewLockOverlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = 'viewLockOverlay';
+                overlay.className = 'view-lock-overlay';
+                overlay.innerHTML = `
+                    <div class="view-lock-card">
+                        <h3>🔒 Restricted view</h3>
+                        <p class="view-lock-msg" id="viewLockMsg">Enter the access password to view this dataset.</p>
+                        <p class="view-lock-target" id="viewLockTarget"></p>
+                        <input type="password" id="viewLockInput" placeholder="Password" autocomplete="off" />
+                        <div class="view-lock-error" id="viewLockError"></div>
+                        <div class="view-lock-actions">
+                            <button class="view-lock-cancel" id="viewLockCancel" type="button">Cancel</button>
+                            <button class="view-lock-submit" id="viewLockSubmit" type="button">Unlock</button>
+                        </div>
+                    </div>`;
+                document.body.appendChild(overlay);
+            }
+            const target = overlay.querySelector('#viewLockTarget');
+            const input = overlay.querySelector('#viewLockInput');
+            const err = overlay.querySelector('#viewLockError');
+            const submit = overlay.querySelector('#viewLockSubmit');
+            const cancel = overlay.querySelector('#viewLockCancel');
+            target.textContent = label || version;
+            input.value = '';
+            err.textContent = '';
+            overlay.classList.add('is-open');
+            setTimeout(() => input.focus(), 30);
+
+            let attempts = 0;
+            const cleanup = (result) => {
+                overlay.classList.remove('is-open');
+                submit.removeEventListener('click', onSubmit);
+                cancel.removeEventListener('click', onCancel);
+                input.removeEventListener('keydown', onKey);
+                resolve(result);
+            };
+            const onSubmit = () => {
+                if (input.value === expected) {
+                    this.markViewUnlocked(version);
+                    cleanup(true);
+                } else {
+                    attempts++;
+                    err.textContent = attempts >= 3 ? 'Incorrect (3 attempts) — try again.' : 'Incorrect password.';
+                    input.value = '';
+                    input.focus();
+                }
+            };
+            const onCancel = () => cleanup(false);
+            const onKey = (e) => {
+                if (e.key === 'Enter') { e.preventDefault(); onSubmit(); }
+                if (e.key === 'Escape') { e.preventDefault(); onCancel(); }
+            };
+            submit.addEventListener('click', onSubmit);
+            cancel.addEventListener('click', onCancel);
+            input.addEventListener('keydown', onKey);
+        });
     }
     
     initTheme() {
@@ -205,9 +284,19 @@ class RoadmapApp {
             });
         }
 
-        // Version selector
-        document.getElementById('versionSelect').addEventListener('change', (e) => {
-            this.switchVersion(e.target.value);
+        // Version selector — gate locked views with a password prompt
+        const versionSelect = document.getElementById('versionSelect');
+        versionSelect.addEventListener('change', async (e) => {
+            const newV = e.target.value;
+            if (this.viewLocks[newV] && !this.isViewUnlocked(newV)) {
+                const label = e.target.options[e.target.selectedIndex].text;
+                const ok = await this.promptForViewPassword(newV, label);
+                if (!ok) {
+                    versionSelect.value = this.currentVersion; // revert dropdown
+                    return;
+                }
+            }
+            this.switchVersion(newV);
         });
 
         // View toggle

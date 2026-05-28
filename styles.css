@@ -2675,3 +2675,94 @@ body {
     }
     .user-email { max-width: 140px; font-size: 0.72rem; }
 }
+
+/* ===== View-level password gate (Historical / GUS Live) ===== */
+.view-lock-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(22, 50, 92, 0.55);
+    backdrop-filter: blur(6px);
+    z-index: 1100;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.18s ease;
+}
+.view-lock-overlay.is-open { display: flex; }
+.view-lock-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem 1.85rem;
+    width: 92%;
+    max-width: 420px;
+    box-shadow: var(--shadow-xl);
+    animation: slideUp 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.view-lock-card h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+.view-lock-msg {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0 0 0.25rem;
+}
+.view-lock-target {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+}
+.view-lock-card input {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+.view-lock-card input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0,112,210,0.18);
+}
+.view-lock-error {
+    color: var(--danger-color, #c23934);
+    font-size: 0.82rem;
+    margin: 0.5rem 0 0;
+    min-height: 1.1em;
+}
+.view-lock-actions {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+.view-lock-actions button {
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: filter 0.12s ease, transform 0.04s ease;
+}
+.view-lock-cancel {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+.view-lock-cancel:hover { background: var(--bg-secondary); }
+.view-lock-submit {
+    background: var(--primary-color);
+    color: white;
+    border: 0;
+}
+.view-lock-submit:hover { filter: brightness(1.05); }
+.view-lock-submit:active { transform: scale(0.98); }
