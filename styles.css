@@ -2590,3 +2590,30 @@ body {
     font-family: 'SF Mono','Menlo',Monaco,Consolas,monospace;
 }
 .doc-link:hover .doc-link-label { color: var(--primary-color); }
+
+/* ===== Fix: text inside modal sections was touching edges =====
+   The modal HTML uses id="modalBody" (not .modal-body), so inner
+   sections need their own horizontal padding to inset from edges. */
+#modalBody {
+    padding-bottom: 2rem;
+}
+#modalBody .modal-section {
+    padding-left: 2.25rem !important;
+    padding-right: 2.25rem !important;
+}
+#modalBody .modal-section.owner-prd-section {
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+@media (max-width: 720px) {
+    #modalBody .modal-section {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+    #modalBody .modal-section.owner-prd-section {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+}
