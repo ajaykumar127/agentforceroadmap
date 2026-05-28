@@ -1917,7 +1917,8 @@ const roadmapDataV3 = [
 roadmapDataV3.forEach((item, idx) => {
     roadmapDataCombined.push({
         ...item,
-        id: 40 + idx + 1,   // re-ID starting at 41
+        _origId: item.id,    // preserve original id for stable feature_key
+        id: 40 + idx + 1,    // re-ID starting at 41
         version: 'v3',
     });
 });
@@ -2897,6 +2898,7 @@ const roadmapDataV4 = [
 roadmapDataV4.forEach((item, idx) => {
     roadmapDataCombined.push({
         ...item,
+        _origId: item.id,
         id: 1000 + idx + 1,
         version: 'v4',
     });

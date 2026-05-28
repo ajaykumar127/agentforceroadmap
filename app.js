@@ -23,8 +23,34 @@ class RoadmapApp {
         this.currentView = 'timeline';
         this.activeFilters = { category: new Set(), status: new Set() };
         this.searchQuery = '';
+        this.feedbackSummary = {};   // { 'v4:7': { votes: 3, comments: 2, userVoted: true } }
         this.initTheme();
         this.init();
+    }
+
+    // Stable identifier for a feature across views.
+    // V4 view: 'v4:7'. Combined view: uses item.version + item._origId.
+    // GUS: 'gus:<id>'. Other historical: '<version>:<id>'.
+    featureKey(item) {
+        if (!item) return null;
+        const v = item.version || (this.currentVersion === 'gus' ? 'gus' : this.currentVersion);
+        const id = item._origId != null ? item._origId : item.id;
+        return `${v}:${id}`;
+    }
+
+    async loadFeedbackSummary() {
+        try {
+            const r = await fetch('/api/feedback/summary', { credentials: 'same-origin' });
+            if (!r.ok) return;
+            this.feedbackSummary = await r.json();
+            // Re-render to surface counts (no-op if data identical)
+            if (this.currentView !== 'customer') this.render();
+        } catch (e) { /* feedback is optional */ }
+    }
+
+    summaryFor(item) {
+        const key = this.featureKey(item);
+        return this.feedbackSummary[key] || { votes: 0, comments: 0, userVoted: false };
     }
 
     isViewUnlocked(version) {
@@ -126,6 +152,7 @@ class RoadmapApp {
         this.renderDashboard();
         this.renderFilterChips();
         this.render();
+        this.loadFeedbackSummary();
     }
 
     // ----- Dashboard -----
@@ -463,6 +490,81 @@ class RoadmapApp {
             case 'grid':     this.renderGrid();     break;
             case 'list':     this.renderList();     break;
             case 'owner':    this.renderOwnerView();break;
+            case 'top':      this.renderTopView();  break;
+        }
+    }
+
+    // ----- Top Requested view -----
+    async renderTopView() {
+        const container = document.getElementById('topContent');
+        if (!container) return;
+        container.innerHTML = '<div class="top-loading">Loading top-requested features…</div>';
+
+        // Build a map across ALL versions so we can resolve feature_key → item
+        const allItems = [
+            ...this.dataVersions.v4.map(i => ({ ...i, version: 'v4' })),
+            ...this.dataVersions.v3.map(i => ({ ...i, version: 'v3' })),
+            ...this.dataVersions.v2.map(i => ({ ...i, version: 'v2' })),
+            ...this.dataVersions.v1.map(i => ({ ...i, version: 'v1' })),
+            ...this.dataVersions.gus.map(i => ({ ...i, version: 'gus' })),
+        ];
+        const byKey = {};
+        allItems.forEach(it => {
+            const v = it.version;
+            const id = it._origId != null ? it._origId : it.id;
+            byKey[`${v}:${id}`] = it;
+        });
+
+        try {
+            const r = await fetch('/api/feedback/top?limit=100');
+            const { items = [] } = await r.json();
+            if (!items.length) {
+                container.innerHTML = `
+                    <div class="top-empty">
+                        <h3>No upvotes yet</h3>
+                        <p>When users upvote features from the modal, the most-requested ones will surface here.</p>
+                        <p class="muted">Open any feature card → 💬 Feedback &amp; Sentiment → 👍.</p>
+                    </div>`;
+                return;
+            }
+            const rows = items.map((row, idx) => {
+                const item = byKey[row.feature_key];
+                const title = item?.title || row.feature_title || row.feature_key;
+                const owner = item?.owner ? `<span class="people-chip people-owner">👤 ${item.owner}</span>` : '';
+                const period = item?.period || item?.date || '';
+                const status = item?.status ? `<span class="status-badge ${item.status}">${this.formatStatus(item.status)}</span>` : '';
+                const cat = item?.category ? `<span class="category-tag">${this.formatCategory(item.category)}</span>` : '';
+                return `
+                    <div class="top-row" data-key="${row.feature_key}" ${item ? `data-id="${item.id}" data-version="${item.version || ''}"` : ''}>
+                        <div class="top-rank">#${idx + 1}</div>
+                        <div class="top-stats">
+                            <div class="top-stat-votes">👍 ${row.votes}</div>
+                            <div class="top-stat-comments">💬 ${row.comments}</div>
+                        </div>
+                        <div class="top-main">
+                            <div class="top-title">${title}</div>
+                            <div class="top-meta">
+                                ${status}${cat}${owner}${period ? `<span class="meta-item">🗓️ ${period}</span>` : ''}
+                            </div>
+                        </div>
+                    </div>`;
+            }).join('');
+            container.innerHTML = `<div class="top-list">${rows}</div>`;
+            container.querySelectorAll('.top-row').forEach(el => {
+                el.addEventListener('click', () => {
+                    const id = parseInt(el.dataset.id, 10);
+                    if (!id) return;
+                    // Find item in current data (or fall back to any)
+                    let target = this.data.find(i => i.id === id);
+                    if (!target) {
+                        const v = el.dataset.version;
+                        target = (this.dataVersions[v] || []).find(i => i.id === id);
+                    }
+                    if (target) this.showItemDetails(target.id);
+                });
+            });
+        } catch (e) {
+            container.innerHTML = '<div class="top-empty"><p>Failed to load. Try again.</p></div>';
         }
     }
 
@@ -498,7 +600,13 @@ class RoadmapApp {
 
         const html = sorted.map(([owner, items]) => {
             const counts = {completed:0,'in-progress':0,planned:0,future:0,pilot:0};
-            items.forEach(i => { if (counts[i.status]!==undefined) counts[i.status]++; });
+            let totalVotes = 0, totalComments = 0;
+            items.forEach(i => {
+                if (counts[i.status]!==undefined) counts[i.status]++;
+                const s = this.summaryFor(i);
+                totalVotes += s.votes || 0;
+                totalComments += s.comments || 0;
+            });
             const pmmSet = new Set(items.map(i=>i.pmm).filter(Boolean));
             const engSet = new Set(items.map(i=>i.engLead).filter(Boolean));
 
@@ -534,6 +642,9 @@ class RoadmapApp {
                             <span class="owner-stat-mini status-in-progress">${counts['in-progress']} ▶</span>
                             <span class="owner-stat-mini status-planned">${counts.planned} ◐</span>
                             <span class="owner-stat-mini status-future">${counts.future} ○</span>
+                            ${(totalVotes || totalComments)
+                                ? `<span class="owner-stat-feedback" title="Total feedback received across this owner's features">👍 ${totalVotes} · 💬 ${totalComments}</span>`
+                                : ''}
                         </div>
                     </div>
                     <div class="owner-features">
@@ -636,6 +747,13 @@ class RoadmapApp {
         return `<span class="docs-badge" title="Click for resources">📚 ${label}</span>`;
     }
 
+    feedbackBadge(item) {
+        const s = this.summaryFor(item);
+        if (!s.votes && !s.comments) return '';
+        const voteCls = s.userVoted ? 'feedback-badge feedback-voted' : 'feedback-badge';
+        return `<span class="${voteCls}" title="${s.votes} upvotes · ${s.comments} comments">👍 ${s.votes} · 💬 ${s.comments}</span>`;
+    }
+
     renderDocsSection(docs) {
         if (!docs || !docs.length) return '';
         // Group by category, then sort categories by a known priority
@@ -679,6 +797,206 @@ class RoadmapApp {
             </div>`;
     }
 
+    // ----- Feedback (votes + comments) -----
+    renderFeedbackSectionShell(item) {
+        const key = this.featureKey(item);
+        if (!key) return '';
+        // Skeleton — populated by loadFeedbackForFeature() once data arrives
+        return `
+            <div class="modal-section feedback-section" data-feature-key="${key}">
+                <h3>💬 Feedback &amp; Sentiment</h3>
+                <div class="feedback-loading">Loading…</div>
+            </div>`;
+    }
+
+    async loadFeedbackForFeature(item) {
+        const key = this.featureKey(item);
+        if (!key) return;
+        const safeKey = key.replace(/"/g, '\\"');
+        const sectionEl = document.querySelector(`.feedback-section[data-feature-key="${safeKey}"]`);
+        if (!sectionEl) return;
+        try {
+            const r = await fetch('/api/feedback/feature/' + encodeURIComponent(key));
+            if (!r.ok) {
+                sectionEl.innerHTML = `<h3>💬 Feedback &amp; Sentiment</h3>
+                    <p class="feedback-error">Couldn't load feedback (${r.status}).</p>`;
+                return;
+            }
+            const data = await r.json();
+            this.renderFeedbackSection(sectionEl, item, data);
+        } catch (e) {
+            sectionEl.innerHTML = `<h3>💬 Feedback &amp; Sentiment</h3>
+                <p class="feedback-error">Network error loading feedback.</p>`;
+        }
+    }
+
+    renderFeedbackSection(sectionEl, item, data) {
+        const key = this.featureKey(item);
+        const fmtAgo = (iso) => {
+            const d = new Date(iso); const diff = (Date.now() - d.getTime()) / 1000;
+            if (diff < 60) return 'just now';
+            if (diff < 3600) return Math.floor(diff/60) + 'm ago';
+            if (diff < 86400) return Math.floor(diff/3600) + 'h ago';
+            if (diff < 86400*30) return Math.floor(diff/86400) + 'd ago';
+            return d.toLocaleDateString();
+        };
+        const safe = (s) => (s == null ? '' : String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])));
+
+        const commentsHtml = data.comments.map(c => `
+            <div class="fb-comment fb-priority-${c.priority || 'none'}">
+                <div class="fb-comment-head">
+                    <span class="fb-author">${safe(c.user_email)}</span>
+                    <span class="fb-when">${fmtAgo(c.created_at)}</span>
+                    ${c.priority ? `<span class="fb-prio fb-prio-${c.priority}">${c.priority}</span>` : ''}
+                    ${c.mine ? `<button class="fb-delete" data-id="${c.id}" title="Delete">✕</button>` : ''}
+                </div>
+                <div class="fb-body">${safe(c.body)}</div>
+                ${c.customer || c.pfr_link ? `
+                    <div class="fb-meta">
+                        ${c.customer ? `<span class="fb-cust">🏢 ${safe(c.customer)}</span>` : ''}
+                        ${c.pfr_link ? `<a class="fb-link" href="${safe(c.pfr_link)}" target="_blank" rel="noopener noreferrer">🔗 PFR / link</a>` : ''}
+                    </div>` : ''}
+            </div>`).join('');
+
+        sectionEl.innerHTML = `
+            <h3>💬 Feedback &amp; Sentiment <span class="docs-section-count">${data.votes} 👍 · ${data.comments.length} 💬</span></h3>
+
+            <div class="fb-vote-row">
+                <button class="fb-vote-btn ${data.userVoted ? 'is-voted' : ''}" type="button" data-key="${key}">
+                    <span class="fb-vote-icon">👍</span>
+                    <span class="fb-vote-text">${data.userVoted ? 'You upvoted' : 'Upvote this'}</span>
+                    <span class="fb-vote-count">${data.votes}</span>
+                </button>
+                <span class="fb-vote-hint">Tell PMs which features matter most to your customers.</span>
+            </div>
+
+            <details class="fb-form-wrap" ${data.comments.length ? '' : 'open'}>
+                <summary>Add a comment, customer signal, or PFR link</summary>
+                <form class="fb-form">
+                    <textarea class="fb-body-input" name="body" rows="3" maxlength="2000"
+                              placeholder="What's the context? Customer ask, regression, blocker, anything PMs should weigh." required></textarea>
+                    <div class="fb-form-row">
+                        <select class="fb-prio-input" name="priority">
+                            <option value="">No priority</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="critical">Critical</option>
+                        </select>
+                        <input class="fb-cust-input" name="customer" type="text" placeholder="Customer (optional)" maxlength="200">
+                        <input class="fb-link-input" name="pfr_link" type="url" placeholder="PFR / Slack / GUS link (optional)" maxlength="500">
+                    </div>
+                    <div class="fb-form-actions">
+                        <button class="fb-submit" type="submit">Post comment</button>
+                        <span class="fb-form-msg"></span>
+                    </div>
+                </form>
+            </details>
+
+            <div class="fb-comments">
+                ${data.comments.length ? commentsHtml : '<p class="fb-empty">No comments yet — be the first to add context.</p>'}
+            </div>
+        `;
+
+        // Wire interactions
+        const voteBtn = sectionEl.querySelector('.fb-vote-btn');
+        voteBtn.addEventListener('click', () => this.handleVoteClick(item, sectionEl));
+
+        const form = sectionEl.querySelector('.fb-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleCommentSubmit(item, sectionEl);
+        });
+
+        sectionEl.querySelectorAll('.fb-delete').forEach(btn => {
+            btn.addEventListener('click', () => this.handleCommentDelete(item, sectionEl, parseInt(btn.dataset.id, 10)));
+        });
+    }
+
+    async handleVoteClick(item, sectionEl) {
+        const key = this.featureKey(item);
+        const btn = sectionEl.querySelector('.fb-vote-btn');
+        btn.disabled = true;
+        try {
+            const r = await fetch('/api/feedback/vote', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                credentials: 'same-origin',
+                body: JSON.stringify({ feature_key: key, feature_title: item.title }),
+            });
+            if (!r.ok) throw new Error(await r.text());
+            const { voted } = await r.json();
+            // Update summary cache + this section
+            const cur = this.feedbackSummary[key] || { votes: 0, comments: 0, userVoted: false };
+            this.feedbackSummary[key] = {
+                ...cur,
+                votes: Math.max(0, cur.votes + (voted ? 1 : -1)),
+                userVoted: voted,
+            };
+            // Refresh just the modal feedback block
+            this.loadFeedbackForFeature(item);
+            // Re-render lists so badges update
+            this.render();
+        } catch (e) {
+            btn.disabled = false;
+            console.error('vote failed', e);
+        }
+    }
+
+    async handleCommentSubmit(item, sectionEl) {
+        const form = sectionEl.querySelector('.fb-form');
+        const msg = sectionEl.querySelector('.fb-form-msg');
+        const body = form.body.value.trim();
+        if (!body) return;
+        msg.textContent = 'Posting…';
+        try {
+            const r = await fetch('/api/feedback/comments', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                credentials: 'same-origin',
+                body: JSON.stringify({
+                    feature_key: this.featureKey(item),
+                    feature_title: item.title,
+                    body,
+                    priority: form.priority.value || null,
+                    customer: form.customer.value.trim() || null,
+                    pfr_link: form.pfr_link.value.trim() || null,
+                }),
+            });
+            if (!r.ok) {
+                const txt = await r.text();
+                msg.textContent = 'Failed: ' + txt;
+                return;
+            }
+            // Bump comment count in summary
+            const key = this.featureKey(item);
+            const cur = this.feedbackSummary[key] || { votes: 0, comments: 0, userVoted: false };
+            this.feedbackSummary[key] = { ...cur, comments: cur.comments + 1 };
+            form.reset();
+            msg.textContent = 'Posted ✓';
+            this.loadFeedbackForFeature(item);
+            this.render();
+        } catch (e) {
+            msg.textContent = 'Network error.';
+        }
+    }
+
+    async handleCommentDelete(item, sectionEl, id) {
+        if (!confirm('Delete this comment?')) return;
+        try {
+            const r = await fetch('/api/feedback/comments/' + id, {
+                method: 'DELETE',
+                credentials: 'same-origin',
+            });
+            if (!r.ok) return;
+            const key = this.featureKey(item);
+            const cur = this.feedbackSummary[key] || { votes: 0, comments: 0, userVoted: false };
+            this.feedbackSummary[key] = { ...cur, comments: Math.max(0, cur.comments - 1) };
+            this.loadFeedbackForFeature(item);
+            this.render();
+        } catch (e) { /* swallow */ }
+    }
+
     createTimelineItem(item) {
         const peopleHtml = this.ownerChips(item);
         const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
@@ -693,6 +1011,7 @@ class RoadmapApp {
                     ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
                     <span class="meta-item"><span class="category-tag">${this.formatCategory(item.category)}</span></span>
                     ${this.docsBadge(item)}
+                    ${this.feedbackBadge(item)}
                 </div>
                 ${peopleHtml ? `<div class="item-people">${peopleHtml}</div>` : ''}
             </div>
@@ -754,6 +1073,7 @@ class RoadmapApp {
                         ${ownerHtml}
                         ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
                         ${this.docsBadge(item)}
+                        ${this.feedbackBadge(item)}
                     </div>
                 </div>
             `;
@@ -902,7 +1222,11 @@ class RoadmapApp {
             </div>
             ${detailsHtml}
             ${this.renderDocsSection(item.docs)}
+            ${this.renderFeedbackSectionShell(item)}
         `;
+
+        // Hydrate the feedback section in the background once the modal is open
+        this.loadFeedbackForFeature(item);
 
         modal.classList.add('active');
     }

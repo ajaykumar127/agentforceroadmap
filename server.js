@@ -15,6 +15,7 @@ const { timingSafeEqual } = require('node:crypto');
 require('dotenv').config();
 
 const { generateAnswer, getChatHistory, searchSimilarContent } = require('./services/rag-service');
+const feedback = require('./services/feedback-service');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -593,6 +594,92 @@ app.get('/api/me', (req, res) => {
     });
 });
 
+// --- Feedback API (requires auth, set above) ------------------------
+app.post('/api/feedback/vote', async (req, res) => {
+    try {
+        const { feature_key, feature_title } = req.body || {};
+        if (!feature_key) return res.status(400).json({ error: 'feature_key_required' });
+        const r = await feedback.toggleVote({
+            featureKey: feature_key,
+            featureTitle: feature_title,
+            userEmail: req.user.email,
+            userId: req.user.user_id,
+        });
+        res.json(r);
+    } catch (err) {
+        console.error('vote error', err);
+        res.status(500).json({ error: err.message || 'vote_failed' });
+    }
+});
+
+app.post('/api/feedback/comments', async (req, res) => {
+    try {
+        const { feature_key, feature_title, body, priority, customer, pfr_link } = req.body || {};
+        const r = await feedback.addComment({
+            featureKey: feature_key,
+            featureTitle: feature_title,
+            userEmail: req.user.email,
+            userId: req.user.user_id,
+            body,
+            priority,
+            customer,
+            pfrLink: pfr_link,
+        });
+        res.json(r);
+    } catch (err) {
+        console.error('comment error', err);
+        const status = (err.message === 'empty_body' || err.message === 'missing_fields') ? 400 : 500;
+        res.status(status).json({ error: err.message || 'comment_failed' });
+    }
+});
+
+app.delete('/api/feedback/comments/:id', async (req, res) => {
+    try {
+        const id = parseInt(req.params.id, 10);
+        if (!id) return res.status(400).json({ error: 'invalid_id' });
+        const r = await feedback.deleteComment({ id, userEmail: req.user.email });
+        if (!r.deleted) return res.status(404).json({ error: 'not_found_or_not_yours' });
+        res.json(r);
+    } catch (err) {
+        console.error('delete comment error', err);
+        res.status(500).json({ error: 'delete_failed' });
+    }
+});
+
+app.get('/api/feedback/feature/:key', async (req, res) => {
+    try {
+        const r = await feedback.getFeatureFeedback({
+            featureKey: req.params.key,
+            userEmail: req.user.email,
+        });
+        res.json(r);
+    } catch (err) {
+        console.error('feature feedback error', err);
+        res.status(500).json({ error: 'fetch_failed' });
+    }
+});
+
+app.get('/api/feedback/summary', async (req, res) => {
+    try {
+        const r = await feedback.getFeedbackSummary({ userEmail: req.user.email });
+        res.json(r);
+    } catch (err) {
+        console.error('summary error', err);
+        res.status(500).json({ error: 'summary_failed' });
+    }
+});
+
+app.get('/api/feedback/top', async (req, res) => {
+    try {
+        const limit = Math.min(parseInt(req.query.limit, 10) || 50, 200);
+        const rows = await feedback.getTopRequested({ limit });
+        res.json({ items: rows });
+    } catch (err) {
+        console.error('top error', err);
+        res.status(500).json({ error: 'top_failed' });
+    }
+});
+
 // ---------------------------------------------------------------------
 // Protected app routes
 // ---------------------------------------------------------------------
@@ -661,10 +748,20 @@ app.use((err, _req, res, _next) => {
 });
 
 // ---------------------------------------------------------------------
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     console.log(`🚀 Agentforce Roadmap server running on port ${PORT}`);
     console.log(`📍 Access at: http://localhost:${PORT}`);
     console.log(`🔐 Auth: vibewareauth (app=${VW.appId ? VW.appId.slice(0,12) + '…' : 'NOT SET'})`);
     console.log(`💬 Chat API: http://localhost:${PORT}/api/chat`);
     console.log(`🔍 Search API: http://localhost:${PORT}/api/search`);
+    if (process.env.DATABASE_URL) {
+        try {
+            await feedback.ensureTables();
+            console.log('💬 Feedback tables ready');
+        } catch (e) {
+            console.warn('⚠️  Could not ensure feedback tables:', e.message);
+        }
+    } else {
+        console.warn('⚠️  DATABASE_URL not set — feedback API will fail at runtime');
+    }
 });
