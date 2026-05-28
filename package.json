@@ -24,13 +24,15 @@
   "author": "Ajay Kumar",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2",
-    "pg": "^8.11.3",
-    "pgvector": "^0.1.8",
-    "dotenv": "^16.3.1",
-    "openai": "^4.20.1",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
-    "body-parser": "^1.20.2"
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "helmet": "^8.2.0",
+    "openai": "^4.20.1",
+    "pg": "^8.11.3",
+    "pgvector": "^0.1.8"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
