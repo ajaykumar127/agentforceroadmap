@@ -40,6 +40,15 @@ if (!VW.appId || !VW.appSecret) {
     console.warn('⚠️  VIBEWAREAUTH_APP_ID / VIBEWAREAUTH_APP_SECRET not set — login will fail until configured');
 }
 
+// Restrict access to Salesforce employees only.
+// Defense-in-depth: enforced at the email-entry proxies, after every
+// session mint, and on every protected request via requireAuth.
+const ALLOWED_EMAIL_DOMAIN = 'salesforce.com';
+function isAllowedEmail(email) {
+    if (!email) return false;
+    return String(email).trim().toLowerCase().endsWith('@' + ALLOWED_EMAIL_DOMAIN);
+}
+
 async function vwCall(routePath, body) {
     const r = await fetch(`${VW.base}${routePath}`, {
         method: 'POST',
@@ -176,11 +185,14 @@ const layout = (title, body) => `<!doctype html><html lang="en"><head>
 
 app.get('/login', (req, res) => {
     const cancelled = req.query.cancelled === '1';
-    const errMsg = cancelled ? '<div class="err">Sign-in cancelled. Try again.</div>' : '';
+    const blocked = req.query.domain === 'blocked';
+    let errMsg = '';
+    if (cancelled) errMsg = '<div class="err">Sign-in cancelled. Try again.</div>';
+    if (blocked) errMsg = `<div class="err">Only <code>@${ALLOWED_EMAIL_DOMAIN}</code> emails can access this app.</div>`;
 
     res.send(layout('Sign in', `
         <h1 id="title">Sign in</h1>
-        <p id="subtitle" class="note">Use your <code>@salesforce.com</code> email.</p>
+        <p id="subtitle" class="note">Salesforce employees only — sign in with your <strong><code>@${ALLOWED_EMAIL_DOMAIN}</code></strong> email. Other domains are not permitted.</p>
         ${errMsg}
         <div id="status" style="display:none"></div>
 
@@ -197,10 +209,13 @@ app.get('/login', (req, res) => {
         <div id="mode-fresh" style="display:none">
             <form id="form-email">
                 <label>Salesforce email</label>
-                <input id="email-fresh" name="email" type="email" autocomplete="email" required placeholder="you@salesforce.com">
+                <input id="email-fresh" name="email" type="email" autocomplete="email" required
+                       pattern=".+@${ALLOWED_EMAIL_DOMAIN}$"
+                       title="Use your @${ALLOWED_EMAIL_DOMAIN} email"
+                       placeholder="you@${ALLOWED_EMAIL_DOMAIN}">
                 <button type="submit">Continue</button>
             </form>
-            <p class="note">Have a passkey or authenticator? You'll see those options on the next step.</p>
+            <p class="note">Only <code>@${ALLOWED_EMAIL_DOMAIN}</code> addresses are allowed. Have a passkey or authenticator? You'll see those options on the next step.</p>
         </div>
 
         <!-- MODE B: welcome-back -->
@@ -318,10 +333,17 @@ app.get('/login', (req, res) => {
                 showMode('known');
             }
 
+            const ALLOWED_DOMAIN = ${JSON.stringify(ALLOWED_EMAIL_DOMAIN)};
+            const isAllowedClientEmail = (e) => !!e && e.toLowerCase().endsWith('@' + ALLOWED_DOMAIN);
+
             $('form-email').addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const email = $('email-fresh').value.trim().toLowerCase();
                 if (!email) return;
+                if (!isAllowedClientEmail(email)) {
+                    setStatus('Only @' + ALLOWED_DOMAIN + ' emails can sign in.', 'err');
+                    return;
+                }
                 setBusy('Looking up your account…');
                 const methods = await fetchMethods(email);
                 setBusy('');
@@ -416,10 +438,26 @@ app.get('/login', (req, res) => {
     `));
 });
 
-// /login/methods — proxy
+// Verify the email tied to a freshly minted session token; reject non-SF.
+async function verifyAndCheckDomain(sessionToken) {
+    const verify = await vwCall('/v1/sessions/verify', { session_token: sessionToken });
+    if (verify.status !== 200 || !verify.json?.email) return { ok: false };
+    if (!isAllowedEmail(verify.json.email)) {
+        return { ok: false, badDomain: true, email: verify.json.email };
+    }
+    return { ok: true };
+}
+function domainBlockPage() {
+    return layout('Sign-in blocked', `
+        <div class="err">Only <code>@${ALLOWED_EMAIL_DOMAIN}</code> emails can access this app.</div>
+        <p><a href="/login">Try again</a></p>`);
+}
+
+// /login/methods — proxy. Reject non-SF emails before hitting the API.
 app.post('/login/methods', async (req, res) => {
     const email = String(req.body.email || '').trim().toLowerCase();
     if (!email) return res.status(400).json({ error: 'invalid_request' });
+    if (!isAllowedEmail(email)) return res.status(403).json({ error: 'domain_not_allowed' });
     const r = await vwCall('/v1/auth/methods', { email });
     res.status(r.status).json(r.json);
 });
@@ -428,6 +466,7 @@ app.post('/login/methods', async (req, res) => {
 app.post('/login/email/request', async (req, res) => {
     const email = String(req.body.email || '').trim().toLowerCase();
     if (!email) return res.status(400).json({ error: 'invalid_request' });
+    if (!isAllowedEmail(email)) return res.status(403).json({ error: 'domain_not_allowed' });
     const r = await vwCall('/v1/auth/email/request', { email });
     res.status(r.status).json(r.json);
 });
@@ -443,6 +482,11 @@ app.post('/login/verify', async (req, res) => {
             <div class="err">${(r.json && r.json.error) || 'failed'}</div>
             <p><a href="/login">Try again</a></p>`));
     }
+    const check = await verifyAndCheckDomain(r.json.session_token);
+    if (!check.ok) {
+        await vwCall('/v1/sessions/revoke', { session_token: r.json.session_token }).catch(() => {});
+        return res.status(403).send(domainBlockPage());
+    }
     setSessionCookie(res, r.json.session_token);
     res.redirect('/');
 });
@@ -452,11 +496,17 @@ app.post('/login/totp', async (req, res) => {
     const email = String(req.body.email || '').trim().toLowerCase();
     const code = String(req.body.code || '').trim();
     if (!email || !code) return res.redirect('/login');
+    if (!isAllowedEmail(email)) return res.status(403).send(domainBlockPage());
     const r = await vwCall('/v1/auth/totp/verify', { email, code });
     if (r.status !== 200 || !r.json?.session_token) {
         return res.status(401).send(layout('Sign-in failed', `
             <div class="err">${(r.json && r.json.error) || 'invalid code'}</div>
             <p><a href="/login">Try again</a></p>`));
+    }
+    const check = await verifyAndCheckDomain(r.json.session_token);
+    if (!check.ok) {
+        await vwCall('/v1/sessions/revoke', { session_token: r.json.session_token }).catch(() => {});
+        return res.status(403).send(domainBlockPage());
     }
     setSessionCookie(res, r.json.session_token);
     res.redirect('/');
@@ -503,6 +553,11 @@ app.get('/login/vibewareauth/callback', async (req, res) => {
         return res.status(401).send(layout('Sign-in failed', `
             <div class="err">sign-in failed: ${(r.json && r.json.error) || r.status}</div>
             <p><a href="/login">Try again</a></p>`));
+    }
+    const check = await verifyAndCheckDomain(r.json.session_token);
+    if (!check.ok) {
+        await vwCall('/v1/sessions/revoke', { session_token: r.json.session_token }).catch(() => {});
+        return res.status(403).send(domainBlockPage());
     }
     setSessionCookie(res, r.json.session_token);
     res.redirect('/');
@@ -564,6 +619,14 @@ async function requireAuth(req, res, next) {
         res.clearCookie('session');
         if (req.accepts('html')) return res.redirect('/login');
         return res.status(401).json({ error: 'session_expired' });
+    }
+    // Defense-in-depth: refuse every protected request whose verified email
+    // isn't on the allowed domain — even if the API issues a token for one.
+    if (!isAllowedEmail(r.json.email)) {
+        await vwCall('/v1/sessions/revoke', { session_token: token }).catch(() => {});
+        res.clearCookie('session');
+        if (req.accepts('html')) return res.redirect('/login?domain=blocked');
+        return res.status(403).json({ error: 'domain_not_allowed' });
     }
     req.user = r.json;
     next();
