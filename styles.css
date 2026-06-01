@@ -3110,3 +3110,160 @@ body {
     background: rgba(168, 110, 255, 0.18);
     color: #c4b5fd;
 }
+
+/* ===== Public Feedback Feed view ===== */
+.feed-container {
+    max-width: 880px;
+    margin: 0 auto;
+}
+.feed-loading, .feed-empty {
+    text-align: center;
+    color: var(--text-tertiary);
+    padding: 3rem 1rem;
+}
+.feed-empty h3 { margin: 0 0 0.5rem; color: var(--text-secondary); }
+.feed-header-block {
+    margin-bottom: 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--border-light);
+}
+.feed-header-block h2 {
+    font-size: 1.4rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+}
+.feed-header-block p { margin: 0; font-size: 0.88rem; color: var(--text-tertiary); }
+
+.feed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.feed-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 0.85rem 1rem;
+    border-left-width: 4px;
+    transition: box-shadow 0.12s ease;
+}
+.feed-card:hover { box-shadow: var(--shadow-md); }
+.feed-card-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.65rem;
+    margin-bottom: 0.5rem;
+    align-items: flex-start;
+}
+.feed-feature {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+    flex: 1;
+    min-width: 0;
+}
+.feed-feature-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    word-break: break-word;
+}
+.feed-feature-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.feed-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+}
+.feed-meta .fb-author { font-weight: 600; color: var(--text-secondary); }
+.feed-meta .fb-when   { color: var(--text-tertiary); }
+.feed-edit, .feed-delete {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    padding: 0.18rem 0.55rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.2;
+}
+.feed-edit:hover { border-color: var(--primary-color); color: var(--primary-color); }
+.feed-delete:hover { border-color: var(--danger-color, #c23934); color: var(--danger-color, #c23934); }
+.feed-body {
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-top: 0.25rem;
+}
+.feed-extras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+}
+
+/* ===== Inline edit form (used in modal + feed) ===== */
+.fb-edit-form {
+    margin-top: 0.6rem;
+    background: var(--bg-secondary);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.7rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.fb-edit-form textarea, .fb-edit-form input, .fb-edit-form select {
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.88rem;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+.fb-edit-form textarea:focus, .fb-edit-form input:focus, .fb-edit-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0,112,210,0.15);
+}
+.fb-cancel-edit {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+.fb-cancel-edit:hover { background: var(--bg-tertiary); }
+
+/* Edit button on modal comments matches Delete style */
+.fb-edit {
+    background: transparent;
+    border: 0;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    line-height: 1;
+}
+.fb-edit:hover { background: rgba(0,112,210,0.1); color: var(--primary-color); }

@@ -491,7 +491,303 @@ class RoadmapApp {
             case 'list':     this.renderList();     break;
             case 'owner':    this.renderOwnerView();break;
             case 'top':      this.renderTopView();  break;
+            case 'feed':     this.renderFeedView(); break;
         }
+    }
+
+    // ----- Public feedback feed view -----
+    // User-supplied content goes only through textContent / value / setAttribute,
+    // never through innerHTML, to keep this XSS-safe.
+    async renderFeedView() {
+        const container = document.getElementById('feedContent');
+        if (!container) return;
+        container.textContent = '';
+        const loading = document.createElement('div');
+        loading.className = 'feed-loading';
+        loading.textContent = 'Loading the team’s feedback…';
+        container.appendChild(loading);
+
+        const allItems = [
+            ...this.dataVersions.v4.map(i => ({ ...i, version: 'v4' })),
+            ...this.dataVersions.v3.map(i => ({ ...i, version: 'v3' })),
+            ...this.dataVersions.v2.map(i => ({ ...i, version: 'v2' })),
+            ...this.dataVersions.v1.map(i => ({ ...i, version: 'v1' })),
+            ...this.dataVersions.gus.map(i => ({ ...i, version: 'gus' })),
+        ];
+        const byKey = {};
+        allItems.forEach(it => {
+            const v = it.version;
+            const id = it._origId != null ? it._origId : it.id;
+            byKey[`${v}:${id}`] = it;
+        });
+
+        try {
+            const r = await fetch('/api/feedback/all?limit=200');
+            const { items = [] } = await r.json();
+            container.textContent = '';
+
+            if (!items.length) {
+                const empty = document.createElement('div');
+                empty.className = 'feed-empty';
+                const h3 = document.createElement('h3'); h3.textContent = 'No feedback yet';
+                const p1 = document.createElement('p'); p1.textContent = 'Be the first — open any feature card and share a customer signal.';
+                empty.append(h3, p1);
+                container.appendChild(empty);
+                return;
+            }
+
+            const headerBlock = document.createElement('div');
+            headerBlock.className = 'feed-header-block';
+            const h2 = document.createElement('h2'); h2.textContent = '💬 Feedback Feed';
+            const sub = document.createElement('p'); sub.className = 'muted';
+            sub.textContent = 'Latest customer signal from the whole team — click any feature title to jump into its detail.';
+            headerBlock.append(h2, sub);
+            container.appendChild(headerBlock);
+
+            const list = document.createElement('div');
+            list.className = 'feed-list';
+            items.forEach(c => list.appendChild(this._buildFeedCard(c, byKey)));
+            container.appendChild(list);
+
+            container._commentMap = Object.fromEntries(items.map(c => [c.id, c]));
+        } catch (e) {
+            container.textContent = '';
+            const empty = document.createElement('div');
+            empty.className = 'feed-empty';
+            const p = document.createElement('p'); p.textContent = 'Failed to load. Try again.';
+            empty.appendChild(p);
+            container.appendChild(empty);
+        }
+    }
+
+    _fmtAgo(iso) {
+        const d = new Date(iso); const diff = (Date.now() - d.getTime()) / 1000;
+        if (diff < 60) return 'just now';
+        if (diff < 3600) return Math.floor(diff/60) + 'm ago';
+        if (diff < 86400) return Math.floor(diff/3600) + 'h ago';
+        if (diff < 86400*30) return Math.floor(diff/86400) + 'd ago';
+        return d.toLocaleDateString();
+    }
+
+    _buildFeedCard(c, byKey) {
+        const item = byKey[c.feature_key];
+        const featureTitle = (item && item.title) || c.feature_title || c.feature_key;
+
+        const card = document.createElement('article');
+        card.className = `feed-card fb-priority-${c.priority || 'none'}`;
+        card.dataset.commentId = c.id;
+
+        const head = document.createElement('header');
+        head.className = 'feed-card-head';
+
+        const featureWrap = document.createElement('div');
+        featureWrap.className = 'feed-feature';
+        const link = document.createElement('a');
+        link.href = '#';
+        link.className = 'feed-feature-link';
+        link.dataset.key = c.feature_key;
+        link.textContent = '📌 ' + featureTitle;
+        link.addEventListener('click', (e) => { e.preventDefault(); this.openByFeatureKey(c.feature_key); });
+        featureWrap.appendChild(link);
+        if (item && item.owner) {
+            const owner = document.createElement('span');
+            owner.className = 'people-chip people-owner';
+            owner.textContent = '👤 ' + item.owner;
+            featureWrap.appendChild(owner);
+        }
+
+        const meta = document.createElement('div');
+        meta.className = 'feed-meta';
+        const author = document.createElement('span'); author.className = 'fb-author'; author.textContent = c.user_email;
+        const when = document.createElement('span'); when.className = 'fb-when'; when.textContent = this._fmtAgo(c.created_at);
+        meta.append(author, when);
+        if (c.priority) {
+            const prio = document.createElement('span');
+            prio.className = `fb-prio fb-prio-${c.priority}`;
+            prio.textContent = c.priority;
+            meta.appendChild(prio);
+        }
+        if (c.mine) {
+            const editBtn = document.createElement('button');
+            editBtn.type = 'button';
+            editBtn.className = 'feed-edit';
+            editBtn.title = 'Edit your comment';
+            editBtn.textContent = '✏️ Edit';
+            editBtn.addEventListener('click', () => this.openFeedEdit(c.id));
+            const delBtn = document.createElement('button');
+            delBtn.type = 'button';
+            delBtn.className = 'feed-delete';
+            delBtn.title = 'Delete your comment';
+            delBtn.textContent = '✕';
+            delBtn.addEventListener('click', () => this.handleFeedDelete(c.id));
+            meta.append(editBtn, delBtn);
+        }
+
+        head.append(featureWrap, meta);
+
+        const body = document.createElement('div');
+        body.className = 'feed-body';
+        body.dataset.commentBody = c.id;
+        body.textContent = c.body;
+
+        card.append(head, body);
+
+        if (c.customer || c.pfr_link) {
+            const extras = document.createElement('div');
+            extras.className = 'feed-extras';
+            if (c.customer) {
+                const cust = document.createElement('span');
+                cust.className = 'fb-cust';
+                cust.textContent = '🏢 ' + c.customer;
+                extras.appendChild(cust);
+            }
+            if (c.pfr_link) {
+                const a = document.createElement('a');
+                a.className = 'fb-link';
+                a.href = c.pfr_link;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.textContent = '🔗 PFR / link';
+                extras.appendChild(a);
+            }
+            card.appendChild(extras);
+        }
+
+        return card;
+    }
+
+    openByFeatureKey(key) {
+        for (const [v, arr] of Object.entries(this.dataVersions)) {
+            for (const it of arr) {
+                const k = `${it.version || v}:${it._origId != null ? it._origId : it.id}`;
+                if (k === key) {
+                    if (this.currentVersion !== v && !this.viewLocks[v]) {
+                        document.getElementById('versionSelect').value = v;
+                        this.switchVersion(v);
+                    }
+                    setTimeout(() => this.showItemDetails(it.id), 50);
+                    return;
+                }
+            }
+        }
+    }
+
+    // Build an inline edit form (used by both modal + feed) — text via textContent / value
+    _buildEditForm(c, onSubmit, onCancel) {
+        const form = document.createElement('form');
+        form.className = 'fb-edit-form';
+
+        const ta = document.createElement('textarea');
+        ta.className = 'fb-edit-body'; ta.rows = 3; ta.maxLength = 2000; ta.required = true;
+        ta.value = c.body || '';
+
+        const row = document.createElement('div');
+        row.className = 'fb-form-row';
+        const sel = document.createElement('select');
+        sel.className = 'fb-edit-prio';
+        ['', 'low', 'medium', 'high', 'critical'].forEach(p => {
+            const opt = document.createElement('option');
+            opt.value = p;
+            opt.textContent = p ? p[0].toUpperCase() + p.slice(1) : 'No priority';
+            if (p === (c.priority || '')) opt.selected = true;
+            sel.appendChild(opt);
+        });
+        const cust = document.createElement('input');
+        cust.className = 'fb-edit-cust'; cust.type = 'text'; cust.maxLength = 200;
+        cust.placeholder = 'Customer (optional)';
+        cust.value = c.customer || '';
+        const link = document.createElement('input');
+        link.className = 'fb-edit-link'; link.type = 'url'; link.maxLength = 500;
+        link.placeholder = 'PFR / Slack / GUS link (optional)';
+        link.value = c.pfr_link || '';
+        row.append(sel, cust, link);
+
+        const actions = document.createElement('div');
+        actions.className = 'fb-form-actions';
+        const submit = document.createElement('button'); submit.type = 'submit'; submit.className = 'fb-submit'; submit.textContent = 'Save';
+        const cancel = document.createElement('button'); cancel.type = 'button'; cancel.className = 'fb-cancel-edit'; cancel.textContent = 'Cancel';
+        const msg = document.createElement('span'); msg.className = 'fb-form-msg';
+        actions.append(submit, cancel, msg);
+
+        form.append(ta, row, actions);
+        cancel.addEventListener('click', () => onCancel && onCancel());
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const body = ta.value.trim();
+            if (!body) { msg.textContent = 'Comment body is required.'; return; }
+            msg.textContent = 'Saving…';
+            onSubmit({
+                body,
+                priority: sel.value || null,
+                customer: cust.value.trim() || null,
+                pfr_link: link.value.trim() || null,
+            }, msg);
+        });
+        setTimeout(() => ta.focus(), 0);
+        return form;
+    }
+
+    async _patchComment(id, payload) {
+        const r = await fetch('/api/feedback/comments/' + id, {
+            method: 'PATCH',
+            headers: { 'content-type': 'application/json' },
+            credentials: 'same-origin',
+            body: JSON.stringify(payload),
+        });
+        if (!r.ok) {
+            const txt = await r.text().catch(() => '');
+            throw new Error(txt || ('HTTP ' + r.status));
+        }
+        return r.json();
+    }
+
+    openCommentEdit(item, sectionEl, id) {
+        const wrap = sectionEl.querySelector(`.fb-comment[data-comment-id="${id}"]`);
+        if (!wrap) return;
+        const c = (sectionEl._commentMap || {})[id];
+        if (!c) return;
+        wrap.classList.add('fb-editing');
+        const bodyEl = wrap.querySelector('.fb-body'); if (bodyEl) bodyEl.style.display = 'none';
+        const meta = wrap.querySelector('.fb-meta'); if (meta) meta.style.display = 'none';
+        const form = this._buildEditForm(c,
+            async (payload, msg) => {
+                try { await this._patchComment(id, payload); this.loadFeedbackForFeature(item); }
+                catch (e) { msg.textContent = 'Failed: ' + e.message; }
+            },
+            () => this.loadFeedbackForFeature(item)
+        );
+        wrap.appendChild(form);
+    }
+
+    openFeedEdit(id) {
+        const container = document.getElementById('feedContent');
+        const card = container.querySelector(`.feed-card[data-comment-id="${id}"]`);
+        if (!card) return;
+        const c = (container._commentMap || {})[id];
+        if (!c) return;
+        const bodyEl = card.querySelector('.feed-body'); if (bodyEl) bodyEl.style.display = 'none';
+        const extras = card.querySelector('.feed-extras'); if (extras) extras.style.display = 'none';
+        const form = this._buildEditForm(c,
+            async (payload, msg) => {
+                try { await this._patchComment(id, payload); this.renderFeedView(); }
+                catch (e) { msg.textContent = 'Failed: ' + e.message; }
+            },
+            () => this.renderFeedView()
+        );
+        card.appendChild(form);
+    }
+
+    async handleFeedDelete(id) {
+        if (!confirm('Delete this comment?')) return;
+        try {
+            const r = await fetch('/api/feedback/comments/' + id, {
+                method: 'DELETE',
+                credentials: 'same-origin',
+            });
+            if (!r.ok) return;
+            this.loadFeedbackSummary();
+            this.renderFeedView();
+        } catch { /* noop */ }
     }
 
     // ----- Top Requested view -----
@@ -843,20 +1139,26 @@ class RoadmapApp {
         const safe = (s) => (s == null ? '' : String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])));
 
         const commentsHtml = data.comments.map(c => `
-            <div class="fb-comment fb-priority-${c.priority || 'none'}">
+            <div class="fb-comment fb-priority-${c.priority || 'none'}" data-comment-id="${c.id}">
                 <div class="fb-comment-head">
                     <span class="fb-author">${safe(c.user_email)}</span>
                     <span class="fb-when">${fmtAgo(c.created_at)}</span>
                     ${c.priority ? `<span class="fb-prio fb-prio-${c.priority}">${c.priority}</span>` : ''}
-                    ${c.mine ? `<button class="fb-delete" data-id="${c.id}" title="Delete">✕</button>` : ''}
+                    ${c.mine ? `
+                        <button class="fb-edit" data-id="${c.id}" title="Edit">✏️</button>
+                        <button class="fb-delete" data-id="${c.id}" title="Delete">✕</button>
+                    ` : ''}
                 </div>
-                <div class="fb-body">${safe(c.body)}</div>
+                <div class="fb-body" data-original="${safe(c.body)}">${safe(c.body)}</div>
                 ${c.customer || c.pfr_link ? `
                     <div class="fb-meta">
                         ${c.customer ? `<span class="fb-cust">🏢 ${safe(c.customer)}</span>` : ''}
                         ${c.pfr_link ? `<a class="fb-link" href="${safe(c.pfr_link)}" target="_blank" rel="noopener noreferrer">🔗 PFR / link</a>` : ''}
                     </div>` : ''}
             </div>`).join('');
+
+        // Stash comment payloads for the edit form to repopulate
+        sectionEl._commentMap = Object.fromEntries(data.comments.map(c => [c.id, c]));
 
         sectionEl.innerHTML = `
             <h3>💬 Feedback &amp; Sentiment <span class="docs-section-count">${data.votes} 👍 · ${data.comments.length} 💬</span></h3>
@@ -910,6 +1212,9 @@ class RoadmapApp {
 
         sectionEl.querySelectorAll('.fb-delete').forEach(btn => {
             btn.addEventListener('click', () => this.handleCommentDelete(item, sectionEl, parseInt(btn.dataset.id, 10)));
+        });
+        sectionEl.querySelectorAll('.fb-edit').forEach(btn => {
+            btn.addEventListener('click', () => this.openCommentEdit(item, sectionEl, parseInt(btn.dataset.id, 10)));
         });
     }
 

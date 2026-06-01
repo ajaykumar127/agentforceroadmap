@@ -96,6 +96,47 @@ async function deleteComment({ id, userEmail }) {
     return { deleted: r.rowCount > 0 };
 }
 
+// Updates only if the row's user_email matches — authorship enforced in SQL.
+async function updateComment({ id, userEmail, body, priority, customer, pfrLink }) {
+    if (!id || !userEmail) throw new Error('missing_fields');
+    const cleanBody = clean(body, MAX_BODY_LEN);
+    if (!cleanBody) throw new Error('empty_body');
+    const cleanPriority = priority && PRIORITIES.has(priority) ? priority : null;
+    const r = await query(
+        `UPDATE feature_comments
+            SET body = $1, priority = $2, customer = $3, pfr_link = $4
+          WHERE id = $5 AND user_email = $6
+          RETURNING id, body, priority, customer, pfr_link, created_at`,
+        [cleanBody, cleanPriority, clean(customer, 200), clean(pfrLink, 500), id, userEmail]
+    );
+    if (r.rowCount === 0) return { updated: false };
+    return { updated: true, comment: r.rows[0] };
+}
+
+// Global feed — every comment, newest-first, paginated.
+async function getAllComments({ limit = 100, offset = 0, userEmail }) {
+    const r = await query(
+        `SELECT id, feature_key, feature_title, user_email, body, priority,
+                customer, pfr_link, created_at
+           FROM feature_comments
+          ORDER BY created_at DESC
+          LIMIT $1 OFFSET $2`,
+        [Math.min(limit, 500), Math.max(offset, 0)]
+    );
+    return r.rows.map(c => ({
+        id: c.id,
+        feature_key: c.feature_key,
+        feature_title: c.feature_title,
+        user_email: c.user_email,
+        body: c.body,
+        priority: c.priority,
+        customer: c.customer,
+        pfr_link: c.pfr_link,
+        created_at: c.created_at,
+        mine: c.user_email === userEmail,
+    }));
+}
+
 // --- Reads ----------------------------------------------------------
 
 async function getFeatureFeedback({ featureKey, userEmail }) {
@@ -164,8 +205,10 @@ module.exports = {
     ensureTables,
     toggleVote,
     addComment,
+    updateComment,
     deleteComment,
     getFeatureFeedback,
     getFeedbackSummary,
     getTopRequested,
+    getAllComments,
 };

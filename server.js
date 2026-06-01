@@ -646,6 +646,41 @@ app.delete('/api/feedback/comments/:id', async (req, res) => {
     }
 });
 
+// Author-only edit. SQL guards on user_email so even a forged id fails.
+app.patch('/api/feedback/comments/:id', async (req, res) => {
+    try {
+        const id = parseInt(req.params.id, 10);
+        if (!id) return res.status(400).json({ error: 'invalid_id' });
+        const { body, priority, customer, pfr_link } = req.body || {};
+        const r = await feedback.updateComment({
+            id,
+            userEmail: req.user.email,
+            body,
+            priority,
+            customer,
+            pfrLink: pfr_link,
+        });
+        if (!r.updated) return res.status(403).json({ error: 'not_yours_or_not_found' });
+        res.json(r);
+    } catch (err) {
+        const status = (err.message === 'empty_body' || err.message === 'missing_fields') ? 400 : 500;
+        res.status(status).json({ error: err.message || 'update_failed' });
+    }
+});
+
+// Global public feed — every comment across every feature.
+app.get('/api/feedback/all', async (req, res) => {
+    try {
+        const limit  = Math.min(parseInt(req.query.limit, 10)  || 100, 500);
+        const offset = Math.max(parseInt(req.query.offset, 10) || 0,   0);
+        const items = await feedback.getAllComments({ limit, offset, userEmail: req.user.email });
+        res.json({ items });
+    } catch (err) {
+        console.error('all comments error', err);
+        res.status(500).json({ error: 'fetch_failed' });
+    }
+});
+
 app.get('/api/feedback/feature/:key', async (req, res) => {
     try {
         const r = await feedback.getFeatureFeedback({
