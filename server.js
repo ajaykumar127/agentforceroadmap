@@ -541,13 +541,21 @@ app.get('/login/vibewareauth/callback', async (req, res) => {
     res.clearCookie('vw_state');
     res.clearCookie('vw_pkce');
     if (req.query.error === 'access_denied') return res.redirect('/login?cancelled=1');
-    if (!expectedState || req.query.state !== expectedState) return res.status(400).send('state mismatch');
+
+    // IdP-initiated login from the vibewareauth App Catalogue: no PKCE was
+    // generated locally, and there's no state cookie to compare against.
+    // The admin app is the trusted initiator. Code is still single-use,
+    // 60s TTL, and bound to this app_id + redirect_uri at the API.
+    const idpInitiated = req.query.state === 'vibewareauth_idp_initiated';
+    if (!idpInitiated) {
+        if (!expectedState || req.query.state !== expectedState) return res.status(400).send('state mismatch');
+    }
     const code = String(req.query.code || '');
     if (!code) return res.status(400).send('missing code');
     const r = await vwCall('/v1/auth/exchange', {
         code,
         redirect_uri: REDIRECT_URI,
-        ...(verifier ? { code_verifier: verifier } : {}),
+        ...(idpInitiated ? {} : (verifier ? { code_verifier: verifier } : {})),
     });
     if (r.status !== 200 || !r.json?.session_token) {
         return res.status(401).send(layout('Sign-in failed', `
