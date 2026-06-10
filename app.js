@@ -215,7 +215,7 @@ class RoadmapApp {
                 <div class="stat-callout-title">${calloutTitle}</div>
                 <div class="stat-callout-num">${calloutNum}</div>
                 ${calloutSubtitle ? `<div class="stat-callout-sub">${calloutSubtitle}</div>` :
-                  (topOwners.length ? `<div class="stat-callout-sub">Top owners: ${topOwners.map(([n,c])=>`<span class="owner-pill">${n} · ${c}</span>`).join(' ')}</div>` : '')}
+                  (topOwners.length ? `<div class="stat-callout-sub">Top ${this.currentVersion === 'd360' ? 'record owners (eng leads)' : 'owners'}: ${topOwners.map(([n,c])=>`<span class="owner-pill">${n} · ${c}</span>`).join(' ')}</div>` : '')}
             </div>
         `;
     }
@@ -507,7 +507,7 @@ class RoadmapApp {
             if (!q) return true;
             const haystack = [
                 item.title, item.description, item.category, item.status,
-                item.owner, item.pmm, item.engLead, item.gusProgram, item.period,
+                item.owner, item.productOwner, item.pmm, item.engLead, item.gusProgram, item.period,
                 item.team, item.project, item.releaseStage
             ].filter(Boolean).join(' ').toLowerCase();
             return haystack.includes(q);
@@ -1093,7 +1093,16 @@ class RoadmapApp {
 
     ownerChips(item) {
         const chips = [];
-        if (item.owner) chips.push(`<span class="people-chip people-owner" title="Product Owner">👤 ${item.owner}</span>`);
+        // For d360 entries, item.owner is the GUS record owner (typically a team / eng lead)
+        // and item.productOwner is the actual PM. For other views, item.owner already
+        // happens to be the PM, so render it on the PM chip.
+        if (item.version === 'd360') {
+            if (item.productOwner) chips.push(`<span class="people-chip people-owner" title="Product Owner (PM) — Product_Owner__c">👤 ${item.productOwner}</span>`);
+            if (item.owner) chips.push(`<span class="people-chip people-eng" title="GUS record owner — typically the team or eng lead, not the PM">📦 ${item.owner}</span>`);
+        } else {
+            if (item.owner) chips.push(`<span class="people-chip people-owner" title="Product Owner">👤 ${item.owner}</span>`);
+            if (item.productOwner && item.productOwner !== item.owner) chips.push(`<span class="people-chip people-pmm" title="Product Owner (Product_Owner__c)">🎯 ${item.productOwner}</span>`);
+        }
         if (item.pmm)   chips.push(`<span class="people-chip people-pmm" title="PMM">🎯 ${item.pmm}</span>`);
         if (item.engLead) chips.push(`<span class="people-chip people-eng" title="Engineering Lead">⚙️ ${item.engLead}</span>`);
         return chips.join('');
@@ -1500,13 +1509,23 @@ class RoadmapApp {
                     </div>
                 `;
             }
-            if (item.owner) {
+            if (item.version === 'd360') {
+                if (item.productOwner) {
+                    ownerPrdHtml += `<div class="owner-info"><span class="owner-label">👤 PM (Product_Owner):</span><span class="owner-name">${item.productOwner}</span></div>`;
+                }
+                if (item.owner) {
+                    ownerPrdHtml += `<div class="owner-info"><span class="owner-label" title="GUS record owner — typically team or eng lead">📦 Record Owner:</span><span class="owner-name">${item.owner}</span></div>`;
+                }
+            } else if (item.owner) {
                 ownerPrdHtml += `
                     <div class="owner-info">
                         <span class="owner-label">👤 Product Owner:</span>
                         <span class="owner-name">${item.owner}</span>
                     </div>
                 `;
+                if (item.productOwner && item.productOwner !== item.owner) {
+                    ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🎯 PM (Product_Owner):</span><span class="owner-name">${item.productOwner}</span></div>`;
+                }
             }
             if (item.pmm) {
                 ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🎯 PMM:</span><span class="owner-name">${item.pmm}</span></div>`;
