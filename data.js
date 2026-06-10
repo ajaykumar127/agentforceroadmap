@@ -1136,7 +1136,7 @@ const roadmapDataD360 = [
     {
         id: 3,
         title: "[264] [CRM Connector] Support for Entities without SysModstamp",
-        description: "",
+        description: "(no description in GUS) — [264] [CRM Connector] Support for Entities without SysModstamp",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -1153,7 +1153,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [CRM Connector] Support for Entities without SysModstamp",
             keyFeatures: [],
             impact: ""
         },
@@ -1241,7 +1241,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Data Clean Rooms to support the following in the sandbox: Consumer has the ability to create collaborations. Provider has the ability to accept invitation. Consumer and provider have the ability to create mapping templates Consumer has the ability to run queries in the collaboration Consumer has the ability to see the results of the query in an output DMO and create reports The following needs to be supported for mergeback: Provider and consumer have the ability to create mapping templates (mergeback mapping templates they created in the sandbox org). Resources: Clean Rooms Sandbox Support User Story Goal: To successfully integrate new DataCleanRoom and Mapping configuration capabilities into the DataKit UI and ensure all related data entities and Apex logic are correctly managed during a Sandbox Copy process and deployment (mergeback). 1. Data Configuration Lifecycle: Sandbox Copy & Deployment This section ensures that the Clean Room, Collaboration, and Mapping configuration data is handled correctly across the entire development lifecycle, including initial Sandbox setup and final Mergeback/Deployment to Production. ID Criteria Details AC 1.1 New Entities Inclusion (Sandbox) The configuration entities ( DataCleanRoom__c , DataMapping__c , MappingField__c ), DataCollaboration__c , and CollaborationInvitation__c must be included in the Sandbox Copy template by default. AC 1.2 Existing Sensitive Data Exclusion (Sandbox) All existing production data stored in the related DMO must be explicitly excluded or anonymized during the Sandbox Copy process to maintain compliance and save copy time. AC 1.3 Data Integrity Verification (Sandbox) After a Sandbox Copy, the copied configuration records must successfully update all environment-specific references (e.g., URLs, environment IDs, and AWS configurations) to valid sandbox-based values. AC 1.4 Post-Copy Script Execution (Sandbox) A specific post-copy script must execute successfully to automatically update all Sandbox configuration settings (e.g., API endpoints, security keys) to their non-production values. AC 1.5 Deployment Tool Support (Mergeback) All configuration entities, including Collaboration and Mapping Templates , must be deployable from a Sandbox to Production using the standard, supported deployment mechanisms (e.g., Change Sets or Metadata API). AC 1.6 Atomic Deployment (Mergeback) The deployment of a Data Clean Room configuration must be atomic: if any linked record (e.g., a MappingField__c record) fails to deploy, the entire deployment (DCR and all Mappings) must roll back. AC 1.7 Handling Existing Records (Mergeback) The deployment mechanism must correctly support the update/upsert of existing DataCleanRoom__c and DataCollaboration__c records in the target environment when the ID is present, preventing duplicate creation or deployment failures. AC 1.8 Mapping Activation Control (Mergeback) Mapped configurations deployed as Draft in the Sandbox must remain Draft in Production, requiring an explicit user action via the UI (AC 4.4) to transition to Published . 2. Apex Classes and Backend Logic Changes This section covers the quality, coverage, and functionality of all modified or new Apex code required to support collaboration and query execution. ID Criteria Details AC 2.1 Apex Unit Test Coverage All new or modified Apex classes ( DataCleanRoomManager , MappingService , CollaborationService , etc.) must maintain a minimum of 90% cumulative code coverage. AC 2.2 Transaction Control (DML) All DML operations within the new Apex logic must be wrapped in appropriate try/catch blocks and utilize explicit transaction control (e.g., Savepoint ) to ensure data integrity upon failure. AC 2.3 Trigger Bypass Logic Any new Apex triggers must include configurable bypass logic (e.g., using Custom Settings or Platform Cache) to allow administrators to temporarily disable them during bulk operations or migration. AC 2.4 Input Validation All public Apex methods exposed for DataKit UI interaction must include robust input validation checks against Null, injection, and SOQL limits before processing data. AC 2.5 Governor Limit Adherence All new Apex logic must be written to be bulk-safe and execute successfully without hitting any Salesforce Governor Limits when processing up to 200 records simultaneously. 3. DataKit UI Changes - DataCleanRoom & Collaboration Scenarios This section ensures the front-end user experience for setting up a DCR and initiating/managing collaboration is complete and functional across different environment pairs. ID Criteria Details AC 3.1 DCR Creation Flow A user with the correct permissions can navigate to the DataKit UI and successfully create a new DataCleanRoom configuration. AC 3.2 Sandbox-to-Prod Invitation (Consumer) A Consumer user in a Sandbox can initiate a collaboration with a Provider in a Production org. The invitation must correctly flag the source environment type as 'Sandbox'. AC 3.3 Sandbox-to-Prod Acceptance (Provider) A Provider in their Production org can receive and successfully accept the Sandbox invitation (AC 3.2), and the backend logic must trigger the necessary DC2DC Data Share from the Provider's Production Org to the Consumer's Sandbox Org. AC 3.4 Peer-to-Peer Sandbox Collaboration A Consumer (Party A) can successfully establish a Peer-to-Peer collaboration against a Provider (Party B) in a different Sandbox using the Provider's Sandbox Org ID. AC 3.5 AWS Integration Verification In the Consumer's Sandbox, the collaboration workflow for AWS Provided Clean Rooms must follow identical steps and successfully link to the AWS Clean Room based on the Consumer's FD (Financial Domain). AC 3.6 Consumer - Query Execution The Consumer can successfully run a query in the active Collaboration (Sandbox-to-Production, P2P, or AWS), which utilizes the Sandbox-created data configuration. AC 3.7 Consumer - Result DMO & Reporting The results of a successful collaboration query are automatically and correctly stored in a designated output DMO, which is immediately available for the Consumer to create reports against in their Sandbox . AC 3.8 Error State Feedback If collaboration creation, invitation, acceptance, or query execution fails due to cross-org validation or backend errors, the user receives a clear, actionable, non-disruptive error message displayed in the UI. 4. DataKit UI Changes - Mapping Management & Templates This section ensures the front-end user experience for defining and managing collaborative mapping templates is efficient and effective. ID Criteria Details AC 4.1 Mapping Template Definition Within an existing DataCleanRoom configuration, the user can access a 'Mappings' sub-view that allows defining reusable Mapping Templates between entities. AC 4.2 Collaborative Template Creation Both the Consumer and the Provider roles must have the ability to create, save, and manage their own respective Mapping Templates within the context of the active collaboration in the Sandbox . AC 4.3 Field-to-Field Selection The interface must allow the user to select fields from the Source Entity and map them to fields in the Destination Entity using an intuitive drag-and-drop or two-column selection method. AC 4.4 Transformation Function Editor The UI must provide an interactive editor (including syntax highlighting and basic validation) for defining simple transformation functions (e.g., concatenation, masking) on mapped fields. AC 4.5 Draft and Publish States Mapping Templates can be saved as a Draft (not active in runtime) and explicitly Published (active in runtime). The UI must clearly indicate the current state of the mapping set. AC 4.6 Responsive Design The entire DataKit UI, including the DCR, Collaboration, and Mapping screens, must be fully responsive and functional on desktop and tablet resolutions down to 768px width. 5. Non-Functional Requirements & Documentation ID Criteria Details AC 5.1 Feature Documentation Comprehensive documentation (e.g., a README or internal wiki page) covering the new DataCleanRoom setup process, cross-environment collaboration workflow, and mapping template creation must be created and linked. AC 5.2 Data Load Performance A user must be able to load, view, and save an existing DataCleanRoom configuration containing up to 100 field mappings in under 2.5 seconds on a standard network connection. AC 5.3 Accessibility (A11y) All new UI elements (buttons, inputs, tables) must be navigable and usable via keyboard only (Tab key), and meet WCAG 2.1 Level AA standards for color contrast. AC 5.4 Code Review & Standards All committed code (Apex, UI components, configuration) must pass a formal peer code review and adhere to established internal coding standards (e.g., proper commenting, camelCase conventions). AC 5.5 Testing Artifacts All test cases executed by QA/Developer must be documented (including test data used), showing passing results for all functional flows, edge cases (e.g., no fields selected, invalid functions), and failure scenarios.",
+            overview: "Data Clean Rooms to support the following in the sandbox: Consumer has the ability to create collaborations. Provider has the ability to accept invitation. Consumer and provider have the ability to create mapping templates Consumer has the ability to run queries in the collaboration Consumer has the ability to see the results of the query in an output DMO and create reports The following needs to be supported for mergeback: Provider and consumer have the ability to create mapping templates (mergeback mapping templates they created in the sandbox org). Resources: Clean Rooms Sandbox Support User Story Goal: To successfully integrate new DataCleanRoom and Mapping configuration capabilities into the DataKit UI and ensure all related data entities and Apex logic are correctly managed during a Sandbox Copy process and deployment (mergeback). 1. Data Configuration Lifecycle: Sandbox Copy & Deployment This section ensures that the Clean Room, Collaboration, and Mapping configuration data is handled correctly across the entire development lifecycle, including initial Sandbox setup and final Mergeback/Deployment to Production. ID Criteria Details AC 1.1 New Entities Inclusion (Sandbox) The configuration entities (DataCleanRoom__c, DataMapping__c, MappingField__c), DataCollaboration__c, and CollaborationInvitation__c must be included in the Sandbox Copy template by default. AC 1.2 Existing Sensitive Data Exclusion (Sandbox) All existing production data stored in the related DMO must be…",
             keyFeatures: [],
             impact: ""
         },
@@ -1356,7 +1356,7 @@ const roadmapDataD360 = [
     {
         id: 8,
         title: "[264] [CRM Connector] EMR on EKS Migration / CTS Enhancements pt 2",
-        description: "",
+        description: "(no description in GUS) — [264] [CRM Connector] EMR on EKS Migration / CTS Enhancements pt 2",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -1373,7 +1373,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [CRM Connector] EMR on EKS Migration / CTS Enhancements pt 2",
             keyFeatures: [],
             impact: ""
         },
@@ -1444,7 +1444,7 @@ const roadmapDataD360 = [
     {
         id: 10,
         title: "[264] [UDS] [4b Sprint] - Item Spills into 4b only",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [4b Sprint] - Item Spills into 4b only",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -1461,7 +1461,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [4b Sprint] - Item Spills into 4b only",
             keyFeatures: [],
             impact: ""
         },
@@ -1488,7 +1488,7 @@ const roadmapDataD360 = [
     {
         id: 11,
         title: "[264] Query Service - AI Functions in DC SQL",
-        description: "",
+        description: "(no description in GUS) — [264] Query Service - AI Functions in DC SQL",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -1505,7 +1505,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] Query Service - AI Functions in DC SQL",
             keyFeatures: [],
             impact: ""
         },
@@ -1664,7 +1664,7 @@ const roadmapDataD360 = [
     {
         id: 15,
         title: "[264] Data Collaboration : Engineering Fundamentals",
-        description: "",
+        description: "(no description in GUS) — [264] Data Collaboration : Engineering Fundamentals",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -1681,7 +1681,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] Data Collaboration : Engineering Fundamentals",
             keyFeatures: [],
             impact: ""
         },
@@ -1708,7 +1708,7 @@ const roadmapDataD360 = [
     {
         id: 16,
         title: "[Flow User] Flow User Preferences and User Profiles",
-        description: "Description (The \"What\") This epic focuses on creating a more user-friendly Flow Builder interface tailored for different personas, specifically targeting non-technical users such as marketers. By introducing 'Flow Modes', we aim to simplify the user experience by adapting the UI…",
+        description: "This epic focuses on creating a more user-friendly Flow Builder interface tailored for different personas, specifically targeting non-technical users such as marketers. By introducing 'Flow Modes', we aim to simplify the user experience by adapting the UI and terminologies to mat…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -1725,7 +1725,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") This epic focuses on creating a more user-friendly Flow Builder interface tailored for different personas, specifically targeting non-technical users such as marketers. By introducing 'Flow Modes', we aim to simplify the user experience by adapting the UI and terminologies to match the user's role. Benefits/Goals (The \"Why\") Addresses the friction non-technical users face with the current Flow interface. Improves usability for marketers, enhancing their ability to create flows without feeling overwhelmed. Gives a competitive advantage by catering to a broader audience. Target Customer/Persona (The \"Who\") Primary target: Marketing users who find the current Flow Builder intimidating. Secondary target: Admins who require advanced functionalities. Customer Outcomes /High-Level Requirements User can toggle between Flow Modes based on their role. User can auto-generate labels and descriptions for elements. User can collapse element metadata for a cleaner interface. User Scenarios in Scope As a Marketing user, I can access a simplified Flow Builder that hides technical jargon. As an Admin, I can switch to a mode that provides all necessary functionalities for complex workflows. Out of Scope (i.e. Non Goals) Advanced features for API Name management and other complex configurations are not included in this epic. KPIs & Telemetry Success will be measured by the percentage of users who retain their preferences and the reduction in time taken to create flows. Testing We will conduct performance tests, integration tests, and end-to-end testing to ensure compliance with acceptance criteria. Team Dependencies Dependencies on core flow teams for testing and integration. Acceptance Criteria The user scenarios listed above have been delivered. Users can successfully toggle between Flow Modes. Auto-generation of labels and descriptions functions as intended. PRD Reference link",
+            overview: "This epic focuses on creating a more user-friendly Flow Builder interface tailored for different personas, specifically targeting non-technical users such as marketers. By introducing 'Flow Modes', we aim to simplify the user experience by adapting the UI and terminologies to match the user's role. Addresses the friction non-technical users face with the current Flow interface. Improves usability for marketers, enhancing their ability to create flows without feeling overwhelmed. Gives a competitive advantage by catering to a broader audience. Primary target: Marketing users who find the current Flow Builder intimidating. Secondary target: Admins who require advanced functionalities. User can toggle between Flow Modes based on their role. User can auto-generate labels and descriptions for elements. User can collapse element metadata for a cleaner interface. As a Marketing user, I can access a simplified Flow Builder that hides technical jargon. As an Admin, I can switch to a mode that provides all necessary functionalities for complex workflows. Advanced features for API Name management and other complex configurations are not included in this epic. Success will be measured by the percentage of users who retain their preferences and the reduction in time taken to create flows. We will conduct performance tests, integration tests, and end-to-end to ensure compliance with . Dependencies on core flow teams for and integration. The user scenarios listed above have been delivered.…",
             keyFeatures: [],
             impact: ""
         },
@@ -1752,7 +1752,7 @@ const roadmapDataD360 = [
     {
         id: 17,
         title: "[Add Element] New Add Element Experience",
-        description: "Description (The \"What\") This epic focuses on redesigning the Add Element experience for the Flow Builder, transitioning from a list-based discovery model to a scalable, intent-based interface. The goal is to enhance user experience by making it easier for users to find and selec…",
+        description: "This epic focuses on redesigning the Add Element experience for the Flow Builder, transitioning from a list-based discovery model to a scalable, intent-based interface. The goal is to enhance user experience by making it easier for users to find and select the appropriate element…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -1769,7 +1769,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") This epic focuses on redesigning the Add Element experience for the Flow Builder, transitioning from a list-based discovery model to a scalable, intent-based interface. The goal is to enhance user experience by making it easier for users to find and select the appropriate elements for building flows. Benefits/Goals (The \"Why\") What customer problem does this solve? Users struggle with the current scrolling menu, which makes it difficult to discover and select the right elements. What data, customer insight, or business trend makes this feature important and timely? Research indicates a 0% completion rate for users trying to select elements, highlighting a critical need for improvement. Would this give us a competitive advantage? Yes, by improving usability, we can position ourselves as a leader in automation tools. Target Customer/Persona (The \"Who\") Who are we building this feature for? Flow Builders including admins, marketers, and other business users. VOC records and IdeaExchange records will be referenced for insights. Customer Outcomes /High-Level Requirements I can find the right elements quickly using intuitive categories. User can search for elements using synonyms or natural language. User can receive suggestions for elements based on the context of their flow. User Scenarios in Scope As a Flow Builder, I can see clear categories and descriptions for elements. As a Flow Builder, I can search for elements using common terms. As a Flow Builder, I can view suggested elements based on my current flow. Out of Scope (i.e. Non Goals) Advanced AI recommendations beyond the scope of initial suggestions. KPIs & Telemetry We will track user engagement with the new Add Element experience, measuring adoption rates and feedback on usability. Testing Testing will include performance tests, integration tests, and end-to-end testing to ensure functionality meets user needs. Team Dependencies See related if applicable. Acceptance Criteria The redesigned Add Element experience is implemented and meets user scenarios. All acceptance criteria for user stories within the epic are met. PRD Reference ( link )",
+            overview: "This epic focuses on redesigning the Add Element experience for the Flow Builder, transitioning from a list-based discovery model to a scalable, intent-based interface. The goal is to enhance user experience by making it easier for users to find and select the appropriate elements for building flows. What customer problem does this solve? Users struggle with the current scrolling menu, which makes it difficult to discover and select the right elements. What data, customer insight, or business trend makes this feature important and timely? Research indicates a 0% completion rate for users trying to select elements, highlighting a critical need for improvement. Would this give us a competitive advantage? Yes, by improving usability, we can position ourselves as a leader in automation tools. Who are we building this feature for? Flow Builders including admins, marketers, and other business users. VOC records and IdeaExchange records will be referenced for insights. I can find the right elements quickly using intuitive categories. User can search for elements using synonyms or natural language. User can receive suggestions for elements based on the context of their flow. As a Flow Builder, I can see clear categories and descriptions for elements. As a Flow Builder, I can search for elements using common terms. As a Flow Builder, I can view suggested elements based on my current flow. Advanced AI recommendations beyond the scope of initial suggestions. We will track user engagemen…",
             keyFeatures: [],
             impact: ""
         },
@@ -1796,7 +1796,7 @@ const roadmapDataD360 = [
     {
         id: 18,
         title: "[Deep Copy] Deep Copy a Marketing Flow (Segments and Emails)",
-        description: "Description (The \"What\") This epic introduces a \"Deep Copy\" capability for Marketing Flows, allowing users to duplicate flows while creating independent copies of associated contents such as emails and segments. This ensures that modifications made to the new flow do not affect t…",
+        description: "This epic introduces a \"Deep Copy\" capability for Marketing Flows, allowing users to duplicate flows while creating independent copies of associated contents such as emails and segments. This ensures that modifications made to the new flow do not affect the original, thus prevent…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -1813,7 +1813,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") This epic introduces a \"Deep Copy\" capability for Marketing Flows, allowing users to duplicate flows while creating independent copies of associated contents such as emails and segments. This ensures that modifications made to the new flow do not affect the original, thus preventing unintended alterations to live campaigns. Benefits/Goals (The \"Why\") Solves the problem of accidental changes to original campaign assets when duplicating flows. Addresses competitive gaps against Marketo’s cloning functionality, which is critical for retaining mid-market and enterprise customers. Enhances user efficiency by allowing quick replication of recurring campaigns, saving time and resources. Target Customer/Persona (The \"Who\") Lifecycle marketers and campaign managers who frequently run similar marketing flows. Voice of Customer (VOC) records indicate a strong demand for improved flow duplication capabilities. IdeaExchange records highlight the need for this functionality among marketing professionals. Customer Outcomes /High-Level Requirements User can choose to link to existing assets or create new copies when duplicating flows. User can edit the newly created assets without affecting the originals. User can validate their organization’s limits before executing a deep copy. User Scenarios in Scope As a marketer, I can duplicate a flow and select whether to link existing assets or create new copies. As a marketer, I can edit the content of duplicated emails without impacting the original emails. As a marketer, I receive alerts if my organization has reached its limits for segments or emails during the duplication process. Out of Scope (i.e. Non Goals) Deep copying of CRM record and campaign member triggers. Duplicating flows that include unsupported content types. KPIs & Telemetry Success will be measured by tracking the adoption of the deep copy feature, including how often it is used and the feedback on user experience. Testing Testing will include performance tests, integration tests, and end-to-end testing to ensure the deep copy functionality works seamlessly across all scenarios. Team Dependencies Dependencies include coordination with the Content Authoring & Workspaces team to ensure proper asset handling. Acceptance Criteria All user scenarios listed above have been delivered. The system correctly validates organizational limits before executing a deep copy. Users can successfully edit duplicated assets without affecting the originals.",
+            overview: "This epic introduces a \"Deep Copy\" capability for Marketing Flows, allowing users to duplicate flows while creating independent copies of associated contents such as emails and segments. This ensures that modifications made to the new flow do not affect the original, thus preventing unintended alterations to live campaigns. Solves the problem of accidental changes to original campaign assets when duplicating flows. Addresses competitive gaps against Marketo’s cloning functionality, which is critical for retaining mid-market and enterprise customers. Enhances user efficiency by allowing quick replication of recurring campaigns, saving time and resources. Lifecycle marketers and campaign managers who frequently run similar marketing flows. Voice of Customer (VOC) records indicate a strong demand for improved flow duplication capabilities. IdeaExchange records highlight the need for this functionality among marketing professionals. User can choose to link to existing assets or create new copies when duplicating flows. User can edit the newly created assets without affecting the originals. User can validate their organization’s limits before executing a deep copy. As a marketer, I can duplicate a flow and select whether to link existing assets or create new copies. As a marketer, I can edit the content of duplicated emails without impacting the original emails. As a marketer, I receive alerts if my organization has reached its limits for segments or emails during the duplication…",
             keyFeatures: [],
             impact: ""
         },
@@ -1840,7 +1840,7 @@ const roadmapDataD360 = [
     {
         id: 19,
         title: "[Mobile Acceleration]Contact Point Setup",
-        description: "Description (The \"What\") Introduce new Automation Events specifically for Mobile App Messaging, including Device Registration, Device User Identified, and Engagement events. Benefits/Goals (The \"Why\") These new events will allow for more granular and targeted messaging strategies…",
+        description: "Introduce new Automation Events specifically for Mobile App Messaging, including Device Registration, Device User Identified, and Engagement events. These new events will allow for more granular and targeted messaging strategies, improving engagement and providing better insights…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -1857,7 +1857,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") Introduce new Automation Events specifically for Mobile App Messaging, including Device Registration, Device User Identified, and Engagement events. Benefits/Goals (The \"Why\") These new events will allow for more granular and targeted messaging strategies, improving engagement and providing better insights into user behavior. Target Customer/Persona (The \"Who\") Marketing teams and developers focused on enhancing customer engagement through mobile applications. Customer Outcomes /High-Level Requirements - Users can trigger automation events based on specific mobile app actions. - Users can track user registration and engagement metrics effectively. User Scenarios in Scope - As a marketer, I can send targeted messages when a user registers a new device. - As a developer, I can set up automation events to track user engagement within the app. Out of Scope (i.e. Non Goals) - Events unrelated to Mobile App Messaging or existing messaging channels. KPIs & Telemetry - Engagement metrics for new automation events. - Adoption rates of new Mobile App Messaging events. Testing - Functional and performance testing for each new event type. Team Dependencies - Collaboration with the Mobile App team for event definitions and requirements. Acceptance Criteria - Successful implementation and testing of new Automation Events for Mobile App Messaging.",
+            overview: "Introduce new Automation Events specifically for Mobile App Messaging, including Device Registration, Device User Identified, and Engagement events. These new events will allow for more granular and targeted messaging strategies, improving engagement and providing better insights into user behavior. Marketing teams and developers focused on enhancing customer engagement through mobile applications. - Users can trigger automation events based on specific mobile app actions. - Users can track user registration and engagement metrics effectively. - As a marketer, I can send targeted messages when a user registers a new device. - As a developer, I can set up automation events to track user engagement within the app. - Events unrelated to Mobile App Messaging or existing messaging channels. - Engagement metrics for new automation events. - Adoption rates of new Mobile App Messaging events. - Functional and performance for each new event type. - Collaboration with the Mobile App team for event definitions and requirements. - Successful implementation and of new Automation Events for Mobile App Messaging.",
             keyFeatures: [],
             impact: ""
         },
@@ -1884,7 +1884,7 @@ const roadmapDataD360 = [
     {
         id: 20,
         title: "[Mobile Acceleration]Automation Event Framework Enhancements",
-        description: "Description (The \"What\") Implement support for Mobile App Messaging across all Flow Types. This includes architectural enhancements to the Data Cloud Activation, Flow, and the Mobile App Messaging Service to integrate Mobile App Messaging with various Flow Types. Benefits/Goals (…",
+        description: "Implement support for Mobile App Messaging across all Flow Types. This includes architectural enhancements to the Data Cloud Activation, Flow, and the Mobile App Messaging Service to integrate Mobile App Messaging with various Flow Types. This feature addresses the limitation of…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -1901,7 +1901,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") Implement support for Mobile App Messaging across all Flow Types. This includes architectural enhancements to the Data Cloud Activation, Flow, and the Mobile App Messaging Service to integrate Mobile App Messaging with various Flow Types. Benefits/Goals (The \"Why\") This feature addresses the limitation of Mobile App Messaging currently supporting only Segment Flow for Unified Individual Segments. By expanding support to other Flow Types, we enhance the usability and effectiveness of Mobile App Messaging, allowing for more dynamic marketing campaigns and better customer engagement. Target Customer/Persona (The \"Who\") This feature is designed for marketing teams and developers who utilize Mobile App Messaging in their campaigns. Voice of Customer (VOC) insights indicate a strong demand for broader Flow Type support. Customer Outcomes /High-Level Requirements - Users can send Mobile App Messages through various Flow Types, including API and Event Triggered Flows. - Users can manage Mobile App Messaging actions seamlessly within their existing workflows. User Scenarios in Scope - As a marketer, I can trigger Mobile App Messages based on user actions in the app. - As a developer, I can integrate Mobile App Messaging with multiple Flow Types to optimize engagement strategies. Out of Scope (i.e. Non Goals) - Support for legacy messaging systems or any messaging types not related to Mobile App Messaging. KPIs & Telemetry - Adoption rates of Mobile App Messaging across different Flow Types. - Engagement metrics from campaigns utilizing the expanded Mobile App Messaging capabilities. Testing - Functional testing for each Flow Type integration. - Performance tests to ensure scalability and reliability. Team Dependencies - Coordination with the Data Cloud team for Activation support. Acceptance Criteria - Successful integration of Mobile App Messaging across all specified Flow Types. - User scenarios and acceptance criteria for each user story are met.",
+            overview: "Implement support for Mobile App Messaging across all Flow Types. This includes architectural enhancements to the Data Cloud Activation, Flow, and the Mobile App Messaging Service to integrate Mobile App Messaging with various Flow Types. This feature addresses the limitation of Mobile App Messaging currently supporting only Segment Flow for Unified Individual Segments. By expanding support to other Flow Types, we enhance the usability and effectiveness of Mobile App Messaging, allowing for more dynamic marketing campaigns and better customer engagement. This feature is designed for marketing teams and developers who utilize Mobile App Messaging in their campaigns. Voice of Customer (VOC) insights indicate a strong demand for broader Flow Type support. - Users can send Mobile App Messages through various Flow Types, including API and Event Triggered Flows. - Users can manage Mobile App Messaging actions seamlessly within their existing workflows. - As a marketer, I can trigger Mobile App Messages based on user actions in the app. - As a developer, I can integrate Mobile App Messaging with multiple Flow Types to optimize engagement strategies. - Support for legacy messaging systems or any messaging types not related to Mobile App Messaging. - Adoption rates of Mobile App Messaging across different Flow Types. - Engagement metrics from campaigns utilizing the expanded Mobile App Messaging capabilities. - Functional for each Flow Type integration. - Performance tests to ensure s…",
             keyFeatures: [],
             impact: ""
         },
@@ -1928,7 +1928,7 @@ const roadmapDataD360 = [
     {
         id: 21,
         title: "[OOTB Order Confirmation Event] Enhance AE Framework with API Interface Option",
-        description: "Description (The \"What\") Implement a new Out of the Box (OOTB) Event for Order Confirmation that allows users to trigger this event via a REST API call. This feature will enhance the existing event library and provide a seamless integration for transactional messages. Benefits/Go…",
+        description: "Implement a new Out of the Box (OOTB) Event for Order Confirmation that allows users to trigger this event via a REST API call. This feature will enhance the existing event library and provide a seamless integration for transactional messages. • This feature solves the customer p…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -1945,7 +1945,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") Implement a new Out of the Box (OOTB) Event for Order Confirmation that allows users to trigger this event via a REST API call. This feature will enhance the existing event library and provide a seamless integration for transactional messages. Benefits/Goals (The \"Why\") • This feature solves the customer problem of efficiently processing order confirmations in real-time, which is critical for customer satisfaction. • With the rise of e-commerce and the need for immediate communication, this feature is timely and necessary to keep pace with industry standards. • This will provide a competitive advantage by offering a faster and more reliable order confirmation process compared to competitors. This feature addresses the need for more structured data in event processing, allowing users to manage complex relationships efficiently. • As businesses grow, the complexity of their data increases, making this feature critical for accurate data representation. • By offering hierarchical data support, we can position Salesforce as a leader in event-driven architectures. This feature solves the problem of usability in the Flow Runtime, making it easier for users to implement and manage events. • A better user experience will lead to higher adoption rates and satisfaction among users, which is vital for maintaining a competitive edge. • By improving the user experience, we can reduce support requests and enhance overall product quality. Target Customer/Persona (The \"Who\") • We are building this feature for Salesforce Event Creators and businesses that rely on timely order confirmations. • VOC records indicate a demand for improved order processing capabilities. • IdeaExchange records suggest that users want more integration options for event-driven architectures. Customer Outcomes /High-Level Requirements • Users can trigger order confirmation events through a REST API. • Users can view the schema for the event to ensure correct implementation. • Users can access developer-friendly documentation for implementation. User Scenarios in Scope • As a Salesforce Event Creator, I can trigger an order confirmation event via a REST API call. • As a developer, I can view the schema of the order confirmation event to understand its structure. • As a user, I can access documentation to help me implement the order confirmation event without issues. Out of Scope (i.e. Non Goals) • Support for non-REST API triggering methods is not included in this epic. • Features related to other types of events beyond order confirmations are not addressed. KPIs & Telemetry • We will measure success by tracking the number of API calls made for order confirmations and the latency of these calls. Testing • We will conduct performance tests, integration tests, and end-to-end testing to ensure the feature works as intended. Team Dependencies • No known team dependencies at this point. Acceptance Criteria • The user scenarios listed above have been delivered. • The API for the order confirmation event is functional and documented. • Users can successfully trigger the event and receive confirmations in real-time. Project Branch Doc: https://docs.google.com/document/d/14tNSZnn3saSMY4_rJLbVHgPYaQdwd0zwa2uEIdxsBF0/edit?tab=t.0",
+            overview: "Implement a new Out of the Box (OOTB) Event for Order Confirmation that allows users to trigger this event via a REST API call. This feature will enhance the existing event library and provide a seamless integration for transactional messages. • This feature solves the customer problem of efficiently processing order confirmations in real-time, which is critical for customer satisfaction. • With the rise of e-commerce and the need for immediate communication, this feature is timely and necessary to keep pace with industry standards. • This will provide a competitive advantage by offering a faster and more reliable order confirmation process compared to competitors. This feature addresses the need for more structured data in event processing, allowing users to manage complex relationships efficiently. • As businesses grow, the complexity of their data increases, making this feature critical for accurate data representation. • By offering hierarchical data support, we can position Salesforce as a leader in event-driven architectures. This feature solves the problem of usability in the Flow Runtime, making it easier for users to implement and manage events. • A better user experience will lead to higher adoption rates and satisfaction among users, which is vital for maintaining a competitive edge. • By improving the user experience, we can reduce support requests and enhance overall product quality. • We are building this feature for Salesforce Event Creators and businesses that…",
             keyFeatures: [],
             impact: ""
         },
@@ -1972,7 +1972,7 @@ const roadmapDataD360 = [
     {
         id: 22,
         title: "[264] [UDS] [BYOK] - BYOK Support for SFDrive",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [BYOK] - BYOK Support for SFDrive",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -1989,7 +1989,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [BYOK] - BYOK Support for SFDrive",
             keyFeatures: [],
             impact: ""
         },
@@ -2016,7 +2016,7 @@ const roadmapDataD360 = [
     {
         id: 23,
         title: "[264] OSS for MCP Server Repo - Dev Preview",
-        description: "",
+        description: "(no description in GUS) — [264] OSS for MCP Server Repo - Dev Preview",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -2033,7 +2033,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] OSS for MCP Server Repo - Dev Preview",
             keyFeatures: [],
             impact: ""
         },
@@ -2280,7 +2280,7 @@ const roadmapDataD360 = [
     {
         id: 29,
         title: "[264] [UDS] [RT - NRT Unification]",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [RT - NRT Unification]",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2297,7 +2297,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [RT - NRT Unification]",
             keyFeatures: [],
             impact: ""
         },
@@ -2324,7 +2324,7 @@ const roadmapDataD360 = [
     {
         id: 30,
         title: "[264][RT][Consumption] Governance for Agentic Objects",
-        description: "",
+        description: "(no description in GUS) — [264][RT][Consumption] Governance for Agentic Objects",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2341,7 +2341,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264][RT][Consumption] Governance for Agentic Objects",
             keyFeatures: [],
             impact: ""
         },
@@ -2368,7 +2368,7 @@ const roadmapDataD360 = [
     {
         id: 31,
         title: "[264][Perf] BYOC Self Service Performance Testing",
-        description: "",
+        description: "(no description in GUS) — [264][Perf] BYOC Self Service Performance Testing",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -2385,7 +2385,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264][Perf] BYOC Self Service Performance Testing",
             keyFeatures: [],
             impact: ""
         },
@@ -2456,7 +2456,7 @@ const roadmapDataD360 = [
     {
         id: 33,
         title: "[264] [UDS] Namespace Org Support",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Namespace Org Support",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2473,7 +2473,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Namespace Org Support",
             keyFeatures: [],
             impact: ""
         },
@@ -2500,7 +2500,7 @@ const roadmapDataD360 = [
     {
         id: 34,
         title: "[264] [UDS] SI API changes to support Headless",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] SI API changes to support Headless",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2517,7 +2517,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] SI API changes to support Headless",
             keyFeatures: [],
             impact: ""
         },
@@ -2544,7 +2544,7 @@ const roadmapDataD360 = [
     {
         id: 35,
         title: "[264] [UDS] [Fileforce] LLM parsing, preprocessing, FF Day 0 support",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [Fileforce] LLM parsing, preprocessing, FF Day 0 support",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2561,7 +2561,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [Fileforce] LLM parsing, preprocessing, FF Day 0 support",
             keyFeatures: [],
             impact: ""
         },
@@ -2588,7 +2588,7 @@ const roadmapDataD360 = [
     {
         id: 36,
         title: "[264] [UDS] [Real time Indexing] ADL Integration & Enhancements",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [Real time Indexing] ADL Integration & Enhancements",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2605,7 +2605,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [Real time Indexing] ADL Integration & Enhancements",
             keyFeatures: [],
             impact: ""
         },
@@ -2632,7 +2632,7 @@ const roadmapDataD360 = [
     {
         id: 37,
         title: "[264] Direct Sending API - Email Channel",
-        description: "Description including Target Customer and Benefit or Goal (The \"Who, What and Why\") Deliver a public transactional email API (Direct Sending API) for MCN customers who need to send programmatic, ad hoc, and transactional emails without relying on Flow-based orchestration. Endpoin…",
+        description: "Description including Target Customer and or Goal (The \"Who, What and Why\") Deliver a public transactional email API (Direct Sending API) for MCN customers who need to send programmatic, ad hoc, and transactional emails without relying on Flow-based orchestration. Endpoint: autom…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2649,7 +2649,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description including Target Customer and Benefit or Goal (The \"Who, What and Why\") Deliver a public transactional email API (Direct Sending API) for MCN customers who need to send programmatic, ad hoc, and transactional emails without relying on Flow-based orchestration. Endpoint: automation/action360/email — an email-specific REST API built on the existing HSF invocable action infrastructure. Enables customers to send emails by referencing a pre-configured send definition (message purpose) and passing recipient, personalization, and optional content overrides. Supports monthly incremental releases — this epic covers the P0 (June) scope for the email channel only. P0 Scope (Email Channel) Send Definition Reference — Customers pass a send definition ID that encapsulates from address, reply-to, content template, business unit, and campaign tracking. Recipient — Single recipient email address (array support deferred). Personalization — Attributes object for dynamic template data substitution. Content Overrides — Customer-specified subject, text, and HTML body that override template content. Supports ad hoc / conversational email scenarios where content is supplied at send time. Individual Tracking ID — Unique identifier per recipient for engagement tracking. Explicitly Excluded from P0 CC / BCC (CC already implemented but deprioritized) Attachments Scheduled send Unified Individual / CDP resolution Connect API for send definition CRUD (requires separate stakeholder alignment with Bill) Multi-channel support (SMS, WhatsApp — future epics) Acceptance Criteria (What testable deliverables are required to complete this Epic, Including NFRs?) Email API endpoint accepts P0 payload and successfully delivers email via E360 email channel Send definition ID resolution works for pre-configured message purposes Subject/text/HTML override produces correctly rendered email without template Personalization attributes are substituted in template content API returns appropriate success/error responses with tracking correlation External API documentation published for P0 attributes Known Dependencies/Risks Send definition creation currently requires SOQL/Workbench — UX blocker for customers until Connect API is built Need alignment with Bill on invocable action strategy to ensure email API path doesn't conflict Security review required for Connect API if pursued Link to Relevant Documentation PRD: Enter link in Product Requirements field — https://git.soma.salesforce.com/jordan-emmert/mcn-direct-send-api-docs/blob/main/message-purpose-prd.md Prototype: https://git.soma.salesforce.com/pages/jordan-emmert/266-mission-control-prototype/ High-Level Design Doc:",
+            overview: "Description including Target Customer and or Goal (The \"Who, What and Why\") Deliver a public transactional email API (Direct Sending API) for MCN customers who need to send programmatic, ad hoc, and transactional emails without relying on Flow-based orchestration. Endpoint: automation/action360/email — an email-specific REST API built on the existing HSF invocable action infrastructure. Enables customers to send emails by referencing a pre-configured send definition (message purpose) and passing recipient, personalization, and optional content overrides. Supports monthly incremental releases — this epic covers the P0 (June) scope for the email channel only. P0 Scope (Email Channel) Send Definition Reference — Customers pass a send definition ID that encapsulates from address, reply-to, content template, business unit, and campaign tracking. Recipient — Single recipient email address (array support deferred). Personalization — Attributes object for dynamic template data substitution. Content Overrides — Customer-specified subject, text, and HTML body that override template content. Supports ad hoc / conversational email scenarios where content is supplied at send time. Individual Tracking ID — Unique identifier per recipient for engagement tracking. Explicitly Excluded from P0 CC / BCC (CC already implemented but deprioritized) Attachments Scheduled send Unified Individual / CDP resolution Connect API for send definition CRUD (requires separate stakeholder alignment with Bill)…",
             keyFeatures: [],
             impact: ""
         },
@@ -2676,7 +2676,7 @@ const roadmapDataD360 = [
     {
         id: 38,
         title: "[264] [UDS] [SI Enhancements] Problem Records DLO",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [SI Enhancements] Problem Records DLO",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2693,7 +2693,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [SI Enhancements] Problem Records DLO",
             keyFeatures: [],
             impact: ""
         },
@@ -2720,7 +2720,7 @@ const roadmapDataD360 = [
     {
         id: 39,
         title: "[264] [UDS] Chunk Inline in Index DMO",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Chunk Inline in Index DMO",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2737,7 +2737,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Chunk Inline in Index DMO",
             keyFeatures: [],
             impact: ""
         },
@@ -2764,7 +2764,7 @@ const roadmapDataD360 = [
     {
         id: 40,
         title: "[264] [UDS] [KG] Knowledge Graph GA Readiness",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [KG] Knowledge Graph GA Readiness",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2781,7 +2781,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [KG] Knowledge Graph GA Readiness",
             keyFeatures: [],
             impact: ""
         },
@@ -2808,7 +2808,7 @@ const roadmapDataD360 = [
     {
         id: 41,
         title: "[264] [UDS] Committed TDs EPIC",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Committed TDs EPIC",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2825,7 +2825,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Committed TDs EPIC",
             keyFeatures: [],
             impact: ""
         },
@@ -2852,7 +2852,7 @@ const roadmapDataD360 = [
     {
         id: 42,
         title: "[264] [UDS] [KG] Knowledge Graph Incremental Support - KG Mining, KG Constructio",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [KG] Knowledge Graph Incremental Support - KG Mining, KG Constructio",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2869,7 +2869,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [KG] Knowledge Graph Incremental Support - KG Mining, KG Constructio",
             keyFeatures: [],
             impact: ""
         },
@@ -2896,7 +2896,7 @@ const roadmapDataD360 = [
     {
         id: 43,
         title: "[264] [UDS] [KG] KG Playground Experience UI in Intelligent Context",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [KG] KG Playground Experience UI in Intelligent Context",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2913,7 +2913,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [KG] KG Playground Experience UI in Intelligent Context",
             keyFeatures: [],
             impact: ""
         },
@@ -2940,7 +2940,7 @@ const roadmapDataD360 = [
     {
         id: 44,
         title: "[264] [UDS] [KG] KG Playground APIs in UDS Real Time service",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [KG] KG Playground APIs in UDS Real Time service",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -2957,7 +2957,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [KG] KG Playground APIs in UDS Real Time service",
             keyFeatures: [],
             impact: ""
         },
@@ -2984,7 +2984,7 @@ const roadmapDataD360 = [
     {
         id: 45,
         title: "[264] Offcore MDS - BYO MDM",
-        description: "",
+        description: "(no description in GUS) — [264] Offcore MDS - BYO MDM",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -3001,7 +3001,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] Offcore MDS - BYO MDM",
             keyFeatures: [],
             impact: ""
         },
@@ -3072,7 +3072,7 @@ const roadmapDataD360 = [
     {
         id: 47,
         title: "[264] [UDS] Prompt Injection Handling in Ingestion",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Prompt Injection Handling in Ingestion",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -3089,7 +3089,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Prompt Injection Handling in Ingestion",
             keyFeatures: [],
             impact: ""
         },
@@ -3116,7 +3116,7 @@ const roadmapDataD360 = [
     {
         id: 48,
         title: "[264] [UDS] Q2 skill",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Q2 skill",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -3133,7 +3133,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Q2 skill",
             keyFeatures: [],
             impact: ""
         },
@@ -3336,7 +3336,7 @@ const roadmapDataD360 = [
     {
         id: 53,
         title: "[Trust]  262 Prioritized Feature Bugs and Refactoring Trust Items",
-        description: "Feature Overview This epic contains a set of prioritized features bugs that are P2-P4 bugs that are planned to be addressed in the 260 release. This epic also contains miscellaneous trust items related to adding additional automated testing and logging. Benefit Address feature bu…",
+        description: "This epic contains a set of prioritized features bugs that are P2-P4 bugs that are planned to be addressed in the 260 release. This epic also contains miscellaneous trust items related to adding additional automated and logging. Address feature bugs that will improve the customer…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -3353,7 +3353,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Feature Overview This epic contains a set of prioritized features bugs that are P2-P4 bugs that are planned to be addressed in the 260 release. This epic also contains miscellaneous trust items related to adding additional automated testing and logging. Benefit Address feature bugs that will improve the customer experience. Target Customer / Persona Marketing and Flow customers Customer Outcomes We can effectively support our customers using our products in production Acceptance Criteria Prioritized Tech enablement items tackled Customer investigations and bugs addressed On-call / operation support Dashboards, runbooks, and alerts maintained and updated. Definition of Done Documentation updated if necessary Integration tests reviewed, implemented and executed successfully (including upgrade testing) NFRs and Performance has been tested and accepted by Product Owner The DoD of each user story within the epic has been met Production monitoring, logging and alerting are in place as applicable",
+            overview: "This epic contains a set of prioritized features bugs that are P2-P4 bugs that are planned to be addressed in the 260 release. This epic also contains miscellaneous trust items related to adding additional automated and logging. Address feature bugs that will improve the customer experience. Marketing and Flow customers We can effectively support our customers using our products in production Prioritized Tech enablement items tackled Customer investigations and bugs addressed On-call / operation support Dashboards, runbooks, and alerts maintained and updated. Documentation updated if necessary Integration tests reviewed, implemented and executed successfully (including upgrade testing) NFRs and Performance has been tested and accepted by Product Owner The DoD of each user story within the epic has been met Production monitoring, logging and alerting are in place as applicable",
             keyFeatures: [],
             impact: ""
         },
@@ -3380,7 +3380,7 @@ const roadmapDataD360 = [
     {
         id: 54,
         title: "[260+] [UDS] [SIE] - Support Prepend fields from related DMO",
-        description: "",
+        description: "(no description in GUS) — [260+] [UDS] [SIE] - Support Prepend fields from related DMO",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -3397,7 +3397,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [260+] [UDS] [SIE] - Support Prepend fields from related DMO",
             keyFeatures: [],
             impact: ""
         },
@@ -3424,7 +3424,7 @@ const roadmapDataD360 = [
     {
         id: 55,
         title: "[262] Data Collaboration : Engineering Fundamentals",
-        description: "",
+        description: "(no description in GUS) — [262] Data Collaboration : Engineering Fundamentals",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -3441,7 +3441,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [262] Data Collaboration : Engineering Fundamentals",
             keyFeatures: [],
             impact: ""
         },
@@ -3529,7 +3529,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Support identity enrichment with a 3rd party provider such as Dentsu on Snowflake to boost the match rate. Data Cloud Clean Rooms supports the Identity enrichment from 3rd Party Identity Providers. To begin with Dentsu will be an Identity Provider on Snowflake that will be supported. Dentsu on Snowflake and an consumer/collaborator on Data Cloud Clean Rooms are able to join the Data cloud collaboration to securely enrich the consumer's data with identifiers from Dentsu. Dentsu on Snowflake is able to use the Data Cloud Clean Rooms template framework (packaging) to offer their configurations as an identity provider on Data Cloud Clean Rooms. Installed Identity provider (Dentsu) configuration to be available to define data mapping in data mapping template as an Identity mapping. Identity provider mappings to be an option to be enabled for each clean room data collaboration to be used as the match solution in a Clean Room collaboration, such as activation, conversion insights, etc. and they can be used across other Provider use case templates Definition of Done: Identity provider can publish identity configuration package Brand can create and manage identity mappings Brand can enable identity providers at collaboration creation Brand can enable/disable identity providers on existing collaborations Activation queries dynamically include identity enrichment when enabled",
+            overview: "Support identity enrichment with a 3rd party provider such as Dentsu on Snowflake to boost the match rate. Data Cloud Clean Rooms supports the Identity enrichment from 3rd Party Identity Providers. To begin with Dentsu will be an Identity Provider on Snowflake that will be supported. Dentsu on Snowflake and an consumer/collaborator on Data Cloud Clean Rooms are able to join the Data cloud collaboration to securely enrich the consumer's data with identifiers from Dentsu. Dentsu on Snowflake is able to use the Data Cloud Clean Rooms template framework (packaging) to offer their configurations as an identity provider on Data Cloud Clean Rooms. Installed Identity provider (Dentsu) configuration to be available to define data mapping in data mapping template as an Identity mapping. Identity provider mappings to be an option to be enabled for each clean room data collaboration to be used as the match solution in a Clean Room collaboration, such as activation, conversion insights, etc. and they can be used across other Provider use case templates : Identity provider can publish identity configuration package Brand can create and manage identity mappings Brand can enable identity providers at collaboration creation Brand can enable/disable identity providers on existing collaborations Activation queries dynamically include identity enrichment when enabled",
             keyFeatures: [],
             impact: ""
         },
@@ -3556,7 +3556,7 @@ const roadmapDataD360 = [
     {
         id: 58,
         title: "[CDP][Q4] Secondary index - Incremental Refresh",
-        description: "",
+        description: "(no description in GUS) — [CDP][Q4] Secondary index - Incremental Refresh",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -3573,7 +3573,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [CDP][Q4] Secondary index - Incremental Refresh",
             keyFeatures: [],
             impact: ""
         },
@@ -3644,7 +3644,7 @@ const roadmapDataD360 = [
     {
         id: 60,
         title: "SP - 262 Click to WhatsApp for Meta CAPI",
-        description: "Product one-pager: https://docs.google.com/document/d/1XxT7EHBHPdmJ47Dj0Iz7JrorWJVJZ0cmTef1raP44lE/edit?tab=t.0#heading=h.8c1x3robwa3p Eng Discovery doc: WIP ﻿",
+        description: "Product one-pager: https://docs.google.com/document/d/1XxT7EHBHPdmJ47Dj0Iz7JrorWJVJZ0cmTef1raP44lE/edit?tab=t.0#heading=h.8c1x3robwa3p Eng Discovery doc: WIP",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -3661,7 +3661,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Product one-pager: https://docs.google.com/document/d/1XxT7EHBHPdmJ47Dj0Iz7JrorWJVJZ0cmTef1raP44lE/edit?tab=t.0#heading=h.8c1x3robwa3p Eng Discovery doc: WIP ﻿",
+            overview: "Product one-pager: https://docs.google.com/document/d/1XxT7EHBHPdmJ47Dj0Iz7JrorWJVJZ0cmTef1raP44lE/edit?tab=t.0#heading=h.8c1x3robwa3p Eng Discovery doc: WIP",
             keyFeatures: [],
             impact: ""
         },
@@ -3732,7 +3732,7 @@ const roadmapDataD360 = [
     {
         id: 62,
         title: "[262] Flow Edit History",
-        description: "Description (The \"What\") Benefits/Goals (The \"Why\") Target Customer/Persona (The \"Who\") - **Who are we building this feature for?** This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - **VOC records** [Insert VOC records here] - **IdeaEx…",
+        description: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? See PRD",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -3749,7 +3749,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") Benefits/Goals (The \"Why\") Target Customer/Persona (The \"Who\") - **Who are we building this feature for?** This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - **VOC records** [Insert VOC records here] - **IdeaExchange records** [Insert IdeaExchange records here] Customer Outcomes /High-Level Requirements - **What are the new customer outcomes/user scenarios this feature will provide/enable?** User Scenarios in Scope Acceptance Criteria See PRD",
+            overview: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? See PRD",
             keyFeatures: [],
             impact: ""
         },
@@ -3776,7 +3776,7 @@ const roadmapDataD360 = [
     {
         id: 63,
         title: "[262] List triggered flows",
-        description: "Description (The \"What\") Benefits/Goals (The \"Why\") Target Customer/Persona (The \"Who\") - **Who are we building this feature for?** This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - **VOC records** [Insert VOC records here] - **IdeaEx…",
+        description: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? see PRD",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -3793,7 +3793,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") Benefits/Goals (The \"Why\") Target Customer/Persona (The \"Who\") - **Who are we building this feature for?** This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - **VOC records** [Insert VOC records here] - **IdeaExchange records** [Insert IdeaExchange records here] Customer Outcomes /High-Level Requirements - **What are the new customer outcomes/user scenarios this feature will provide/enable?** User Scenarios in Scope Acceptance Criteria see PRD",
+            overview: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? see PRD",
             keyFeatures: [],
             impact: ""
         },
@@ -3820,7 +3820,7 @@ const roadmapDataD360 = [
     {
         id: 64,
         title: "[262] [On Canvas Analytics] Date Range Filter",
-        description: "Description (The \"What\") Benefits/Goals (The \"Why\") Target Customer/Persona (The \"Who\") - **Who are we building this feature for?** This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - **VOC records** [Insert VOC records here] - **IdeaEx…",
+        description: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? See PRD",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -3837,7 +3837,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") Benefits/Goals (The \"Why\") Target Customer/Persona (The \"Who\") - **Who are we building this feature for?** This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - **VOC records** [Insert VOC records here] - **IdeaExchange records** [Insert IdeaExchange records here] Customer Outcomes /High-Level Requirements - **What are the new customer outcomes/user scenarios this feature will provide/enable?** User Scenarios in Scope Acceptance Criteria See PRD",
+            overview: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? See PRD",
             keyFeatures: [],
             impact: ""
         },
@@ -3864,7 +3864,7 @@ const roadmapDataD360 = [
     {
         id: 65,
         title: "[262]Singularity 262",
-        description: "",
+        description: "(no description in GUS) — [262]Singularity 262",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -3881,7 +3881,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [262]Singularity 262",
             keyFeatures: [],
             impact: ""
         },
@@ -3908,7 +3908,7 @@ const roadmapDataD360 = [
     {
         id: 66,
         title: "[264] Actions feature enhancements",
-        description: "",
+        description: "(no description in GUS) — [264] Actions feature enhancements",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -3925,7 +3925,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] Actions feature enhancements",
             keyFeatures: [],
             impact: ""
         },
@@ -4040,7 +4040,7 @@ const roadmapDataD360 = [
     {
         id: 69,
         title: "[262][Perf][IR] Performance and Regression Testing",
-        description: "",
+        description: "(no description in GUS) — [262][Perf][IR] Performance and Regression Testing",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -4057,7 +4057,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [262][Perf][IR] Performance and Regression Testing",
             keyFeatures: [],
             impact: ""
         },
@@ -4304,7 +4304,7 @@ const roadmapDataD360 = [
     {
         id: 75,
         title: "[262] Audience triggered flows",
-        description: "Description (The \"What\") Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc Benefits/Goals (The \"Why\") Target Customer/Persona (The \"Who\") - **Who are we building this feature for?** This feature is aimed at …",
+        description: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/en…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -4321,7 +4321,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc Benefits/Goals (The \"Why\") Target Customer/Persona (The \"Who\") - **Who are we building this feature for?** This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - **VOC records** [Insert VOC records here] - **IdeaExchange records** [Insert IdeaExchange records here] Customer Outcomes /High-Level Requirements - **What are the new customer outcomes/user scenarios this feature will provide/enable?** User Scenarios in Scope Acceptance Criteria see PRD",
+            overview: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? see PRD",
             keyFeatures: [],
             impact: ""
         },
@@ -4348,7 +4348,7 @@ const roadmapDataD360 = [
     {
         id: 76,
         title: "[262] [UDS] [EKG] - Graph RAG",
-        description: "",
+        description: "(no description in GUS) — [262] [UDS] [EKG] - Graph RAG",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -4365,7 +4365,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [262] [UDS] [EKG] - Graph RAG",
             keyFeatures: [],
             impact: ""
         },
@@ -4392,7 +4392,7 @@ const roadmapDataD360 = [
     {
         id: 77,
         title: "[262 Release] [CRM Connector] EMR on EKS Migration / CTS Enhancements",
-        description: "",
+        description: "(no description in GUS) — [262 Release] [CRM Connector] EMR on EKS Migration / CTS Enhancements",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -4409,7 +4409,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [262 Release] [CRM Connector] EMR on EKS Migration / CTS Enhancements",
             keyFeatures: [],
             impact: ""
         },
@@ -4436,7 +4436,7 @@ const roadmapDataD360 = [
     {
         id: 78,
         title: "[264] [CRM Connector] FKP Migration",
-        description: "",
+        description: "(no description in GUS) — [264] [CRM Connector] FKP Migration",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -4453,7 +4453,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [CRM Connector] FKP Migration",
             keyFeatures: [],
             impact: ""
         },
@@ -4480,7 +4480,7 @@ const roadmapDataD360 = [
     {
         id: 79,
         title: "[262] AES Permission Aware Search",
-        description: "",
+        description: "(no description in GUS) — [262] AES Permission Aware Search",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -4497,7 +4497,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [262] AES Permission Aware Search",
             keyFeatures: [],
             impact: ""
         },
@@ -4524,7 +4524,7 @@ const roadmapDataD360 = [
     {
         id: 80,
         title: "[262] Billing PFT Telemetry",
-        description: "",
+        description: "(no description in GUS) — [262] Billing PFT Telemetry",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -4541,7 +4541,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [262] Billing PFT Telemetry",
             keyFeatures: [],
             impact: ""
         },
@@ -4568,7 +4568,7 @@ const roadmapDataD360 = [
     {
         id: 81,
         title: "[262][Perf][IR] Household V2 Performance Testing",
-        description: "",
+        description: "(no description in GUS) — [262][Perf][IR] Household V2 Performance Testing",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -4585,7 +4585,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [262][Perf][IR] Household V2 Performance Testing",
             keyFeatures: [],
             impact: ""
         },
@@ -4612,7 +4612,7 @@ const roadmapDataD360 = [
     {
         id: 82,
         title: "[264] Physical KQ support",
-        description: "",
+        description: "(no description in GUS) — [264] Physical KQ support",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -4629,7 +4629,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] Physical KQ support",
             keyFeatures: [],
             impact: ""
         },
@@ -4656,7 +4656,7 @@ const roadmapDataD360 = [
     {
         id: 83,
         title: "[264] Calculated Insights: Real Time Implementation",
-        description: "",
+        description: "(no description in GUS) — [264] Calculated Insights: Real Time Implementation",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -4673,7 +4673,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] Calculated Insights: Real Time Implementation",
             keyFeatures: [],
             impact: ""
         },
@@ -4744,7 +4744,7 @@ const roadmapDataD360 = [
     {
         id: 85,
         title: "[Usability] Auto-Generation of Labels and Descriptions",
-        description: "Description (The \"What\") This epic introduces an auto-generation capability that creates meaningful labels and descriptions for elements added to a Flow, based on the user's configuration. It also includes a feature to de-emphasize the metadata section for users who prefer to foc…",
+        description: "This epic introduces an auto-generation capability that creates meaningful labels and descriptions for elements added to a Flow, based on the user's configuration. It also includes a feature to de-emphasize the metadata section for users who prefer to focus on the core aspects of…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -4761,7 +4761,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") This epic introduces an auto-generation capability that creates meaningful labels and descriptions for elements added to a Flow, based on the user's configuration. It also includes a feature to de-emphasize the metadata section for users who prefer to focus on the core aspects of building a flow. Benefits/Goals (The \"Why\") What customer problem does this solve? It reduces friction in the flow building process by automating metadata entry, allowing users to focus on building rather than manual configuration. What data, customer insight, or business trend makes this feature important and timely? Users have reported that manual entry of metadata slows down their workflow, leading to inconsistent documentation. Would this give us a competitive advantage? Yes, by providing a streamlined experience, we can enhance user satisfaction and reduce time to build, setting us apart from competitors. Target Customer/Persona (The \"Who\") Who are we building this feature for? This feature is designed for both Power Users (admins and pro developers) and Emerging Users (business users and new admins). VOC records IdeaExchange records Customer Outcomes /High-Level Requirements User can automatically generate meaningful labels and descriptions for Flow elements. User can collapse the metadata section to focus on building flows. User can opt in or out of auto-generation and metadata collapse features based on their preferences. User Scenarios in Scope As an Emerging User, I want to add elements quickly without configuring labels and descriptions so I can focus on building. As a Power User, I want to visualize the flow structure before finalizing metadata, allowing me to map out complex processes efficiently. As a user, I want my preferences for auto-generation and metadata visibility to be respected throughout my sessions. Out of Scope (i.e. Non Goals) Automatic generation of labels and descriptions for individual decision paths/outcomes is excluded from this epic. KPIs & Telemetry Success will be measured by tracking the reduction in time spent configuring elements, the manual override rate, and the opt-out rate for auto-generation features. Testing We will conduct performance tests, integration tests, and end-to-end testing to ensure compliance with acceptance criteria. Team Dependencies This epic depends on the Flow AI Core Flows for enabling and testing on core flows. Acceptance Criteria The user scenarios listed above have been delivered. The acceptance criteria for each user story within the epic have been met. Users can successfully toggle auto-generation and metadata visibility based on their preferences.",
+            overview: "This epic introduces an auto-generation capability that creates meaningful labels and descriptions for elements added to a Flow, based on the user's configuration. It also includes a feature to de-emphasize the metadata section for users who prefer to focus on the core aspects of building a flow. What customer problem does this solve? It reduces friction in the flow building process by automating metadata entry, allowing users to focus on building rather than manual configuration. What data, customer insight, or business trend makes this feature important and timely? Users have reported that manual entry of metadata slows down their workflow, leading to inconsistent documentation. Would this give us a competitive advantage? Yes, by providing a streamlined experience, we can enhance user satisfaction and reduce time to build, setting us apart from competitors. Who are we building this feature for? This feature is designed for both Power Users (admins and pro developers) and Emerging Users (business users and new admins). VOC records IdeaExchange records User can automatically generate meaningful labels and descriptions for Flow elements. User can collapse the metadata section to focus on building flows. User can opt in or out of auto-generation and metadata collapse features based on their preferences. As an Emerging User, I want to add elements quickly without configuring labels and descriptions so I can focus on building. As a Power User, I want to visualize the flow structu…",
             keyFeatures: [],
             impact: ""
         },
@@ -4788,7 +4788,7 @@ const roadmapDataD360 = [
     {
         id: 86,
         title: "[Mobile Acceleration]Contact Point Variable Enhancement",
-        description: "Description (The \"What\") Enhance the Automation Event framework to support extensible contact points, allowing for the introduction of new messaging channels such as Mobile App Messaging. Benefits/Goals (The \"Why\") This enhancement addresses the need for a flexible and scalable s…",
+        description: "Enhance the Automation Event framework to support extensible contact points, allowing for the introduction of new messaging channels such as Mobile App Messaging. This enhancement addresses the need for a flexible and scalable system that can adapt to new communication channels,…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -4805,7 +4805,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Description (The \"What\") Enhance the Automation Event framework to support extensible contact points, allowing for the introduction of new messaging channels such as Mobile App Messaging. Benefits/Goals (The \"Why\") This enhancement addresses the need for a flexible and scalable system that can adapt to new communication channels, thereby improving overall customer engagement and marketing effectiveness. Target Customer/Persona (The \"Who\") Marketing teams and developers who require a versatile framework to implement new contact point types for their messaging strategies. Customer Outcomes /High-Level Requirements - Users can define and utilize new contact point types within their automation events. - Users can integrate new messaging channels without significant architectural changes. User Scenarios in Scope - As a marketer, I can add new contact points for automation events to reach customers through various channels. - As a developer, I can create custom automation events that utilize these new contact points effectively. Out of Scope (i.e. Non Goals) - Support for existing contact point types that do not require extensibility. KPIs & Telemetry - Number of new contact point types successfully integrated and used in automation events. Testing - Integration tests to ensure new contact points work across existing automation events. Team Dependencies - Collaboration with the Automation Events team to align on integration strategies. Acceptance Criteria - Successful implementation of extensible contact points in the Automation Event framework.",
+            overview: "Enhance the Automation Event framework to support extensible contact points, allowing for the introduction of new messaging channels such as Mobile App Messaging. This enhancement addresses the need for a flexible and scalable system that can adapt to new communication channels, thereby improving overall customer engagement and marketing effectiveness. Marketing teams and developers who require a versatile framework to implement new contact point types for their messaging strategies. - Users can define and utilize new contact point types within their automation events. - Users can integrate new messaging channels without significant architectural changes. - As a marketer, I can add new contact points for automation events to reach customers through various channels. - As a developer, I can create custom automation events that utilize these new contact points effectively. - Support for existing contact point types that do not require extensibility. - Number of new contact point types successfully integrated and used in automation events. - Integration tests to ensure new contact points work across existing automation events. - Collaboration with the Automation Events team to align on integration strategies. - Successful implementation of extensible contact points in the Automation Event framework.",
             keyFeatures: [],
             impact: ""
         },
@@ -4832,7 +4832,7 @@ const roadmapDataD360 = [
     {
         id: 87,
         title: "[Trust] [ADL] 264 Prioritized Feature Bugs and Refactoring Trust Items",
-        description: "Feature Overview This epic contains a set of prioritized features bugs that are P2-P4 bugs that are planned to be addressed in the 264 release. This epic also contains miscellaneous trust items related to adding additional automated testing and logging. Benefit Address feature bu…",
+        description: "This epic contains a set of prioritized features bugs that are P2-P4 bugs that are planned to be addressed in the 264 release. This epic also contains miscellaneous trust items related to adding additional automated and logging. Address feature bugs that will improve the customer…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -4849,7 +4849,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Feature Overview This epic contains a set of prioritized features bugs that are P2-P4 bugs that are planned to be addressed in the 264 release. This epic also contains miscellaneous trust items related to adding additional automated testing and logging. Benefit Address feature bugs that will improve the customer experience. Target Customer / Persona Marketing and Flow customers Customer Outcomes We can effectively support our customers using our products in production Acceptance Criteria Prioritized Tech enablement items tackled Customer investigations and bugs addressed On-call / operation support Dashboards, runbooks, and alerts maintained and updated. Definition of Done Documentation updated if necessary Integration tests reviewed, implemented and executed successfully (including upgrade testing) NFRs and Performance has been tested and accepted by Product Owner The DoD of each user story within the epic has been met Production monitoring, logging and alerting are in place as applicable",
+            overview: "This epic contains a set of prioritized features bugs that are P2-P4 bugs that are planned to be addressed in the 264 release. This epic also contains miscellaneous trust items related to adding additional automated and logging. Address feature bugs that will improve the customer experience. Marketing and Flow customers We can effectively support our customers using our products in production Prioritized Tech enablement items tackled Customer investigations and bugs addressed On-call / operation support Dashboards, runbooks, and alerts maintained and updated. Documentation updated if necessary Integration tests reviewed, implemented and executed successfully (including upgrade testing) NFRs and Performance has been tested and accepted by Product Owner The DoD of each user story within the epic has been met Production monitoring, logging and alerting are in place as applicable",
             keyFeatures: [],
             impact: ""
         },
@@ -4876,7 +4876,7 @@ const roadmapDataD360 = [
     {
         id: 88,
         title: "PDLC (Closed Inner Loop) Expert",
-        description: "POC: https://git.soma.salesforce.com/c360-ai-tooling/pdlc-expert Demo: https://drive.google.com/file/d/1TR-PozLQRYxNnao07g6fg9HWvExaJ2KI/view?usp=sharing The PDLC InnerLoop Expert is an autonomous agent designed to handle the \"inner loop\" of software development. It transforms a …",
+        description: "POC: https://git.soma.salesforce.com/c360-ai-tooling/pdlc-expert Demo: https://drive.google.com/file/d/1TR-PozLQRYxNnao07g6fg9HWvExaJ2KI/view?usp=sharing The PDLC InnerLoop Expert is an autonomous agent designed to handle the \"inner loop\" of software development. It transforms a…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -4964,7 +4964,7 @@ const roadmapDataD360 = [
     {
         id: 90,
         title: "[264][RT][Consumption] Agentic Memory Management APIs",
-        description: "",
+        description: "(no description in GUS) — [264][RT][Consumption] Agentic Memory Management APIs",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -4981,7 +4981,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264][RT][Consumption] Agentic Memory Management APIs",
             keyFeatures: [],
             impact: ""
         },
@@ -5069,7 +5069,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Support identity enrichment with a 3rd party provider such as Dentsu on Snowflake to boost the match rate. Data Cloud Clean Rooms supports the Identity enrichment from 3rd Party Identity Providers. To begin with Dentsu will be an Identity Provider on Snowflake that will be supported. Dentsu on Snowflake and an consumer/collaborator on Data Cloud Clean Rooms are able to join the Data cloud collaboration to securely enrich the consumer's data with identifiers from Dentsu. Dentsu on Snowflake is able to use the Data Cloud Clean Rooms template framework (packaging) to offer their configurations as an identity provider on Data Cloud Clean Rooms. Installed Identity provider (Dentsu) configuration to be available to define data mapping in data mapping template as an Identity mapping. Identity provider mappings to be an option to be enabled for each clean room data collaboration to be used as the match solution in a Clean Room collaboration, such as activation, conversion insights, etc. and they can be used across other Provider use case templates Definition of Done: Identity provider can publish identity configuration package Brand can create and manage identity mappings Brand can enable identity providers at collaboration creation Brand can enable/disable identity providers on existing collaborations Activation queries dynamically include identity enrichment when enabled",
+            overview: "Support identity enrichment with a 3rd party provider such as Dentsu on Snowflake to boost the match rate. Data Cloud Clean Rooms supports the Identity enrichment from 3rd Party Identity Providers. To begin with Dentsu will be an Identity Provider on Snowflake that will be supported. Dentsu on Snowflake and an consumer/collaborator on Data Cloud Clean Rooms are able to join the Data cloud collaboration to securely enrich the consumer's data with identifiers from Dentsu. Dentsu on Snowflake is able to use the Data Cloud Clean Rooms template framework (packaging) to offer their configurations as an identity provider on Data Cloud Clean Rooms. Installed Identity provider (Dentsu) configuration to be available to define data mapping in data mapping template as an Identity mapping. Identity provider mappings to be an option to be enabled for each clean room data collaboration to be used as the match solution in a Clean Room collaboration, such as activation, conversion insights, etc. and they can be used across other Provider use case templates : Identity provider can publish identity configuration package Brand can create and manage identity mappings Brand can enable identity providers at collaboration creation Brand can enable/disable identity providers on existing collaborations Activation queries dynamically include identity enrichment when enabled",
             keyFeatures: [],
             impact: ""
         },
@@ -5096,7 +5096,7 @@ const roadmapDataD360 = [
     {
         id: 93,
         title: "[264] CDP  Data Collaboration -  Unified Governance on Shared Objects",
-        description: "Objective : Define and align on a unified governance model for enforcing privacy-preserving policies on data shared to external platforms via the DaaS endpoint. 264 Scope: Finalize the @governance schema for the getTables DaaS response (projection, mandatory_filters, aggregation_…",
+        description: "Objective: Define and align on a unified governance model for enforcing privacy-preserving policies on data shared to external platforms via the DaaS endpoint. 264 Scope: Finalize the @governance schema for the getTables DaaS response (projection, mandatory_filters, aggregation_p…",
         category: "feature",
         status: "in-progress",
         period: "Winter '27 (266)",
@@ -5113,7 +5113,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Objective : Define and align on a unified governance model for enforcing privacy-preserving policies on data shared to external platforms via the DaaS endpoint. 264 Scope: Finalize the @governance schema for the getTables DaaS response (projection, mandatory_filters, aggregation_policy, masking) Align with external partners (Snowflake, BigQuery, Databricks) on the endpoint structure and contract Audit capability of the policy enforcement Validate that the proposed @governance format can be translated to each partner's native policy enforcement (Snowflake DDL, BigQuery analysisrules, etc.) Define the conversion chain: CleanRoom Template → Cedar Policy → @governance in API → Partner-native enforcement Out of Scope (264): - Implementation of policy generation or enforcement - Consumer override UX - Audit/reconciliation - User-level (role-based) policies",
+            overview: "Objective: Define and align on a unified governance model for enforcing privacy-preserving policies on data shared to external platforms via the DaaS endpoint. 264 Scope: Finalize the @governance schema for the getTables DaaS response (projection, mandatory_filters, aggregation_policy, masking) Align with external partners (Snowflake, BigQuery, Databricks) on the endpoint structure and contract Audit capability of the policy enforcement Validate that the proposed @governance format can be translated to each partner's native policy enforcement (Snowflake DDL, BigQuery analysisrules, etc.) Define the conversion chain: CleanRoom Template → Cedar Policy → @governance in API → Partner-native enforcement Out of Scope (264): - Implementation of policy generation or enforcement - Consumer override UX - Audit/reconciliation - User-level (role-based) policies",
             keyFeatures: [],
             impact: ""
         },
@@ -5140,7 +5140,7 @@ const roadmapDataD360 = [
     {
         id: 94,
         title: "[264] [UDS] Per Tenant",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Per Tenant",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -5157,7 +5157,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Per Tenant",
             keyFeatures: [],
             impact: ""
         },
@@ -5184,7 +5184,7 @@ const roadmapDataD360 = [
     {
         id: 95,
         title: "[264] [UDS] Paddle OCR Replacement",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Paddle OCR Replacement",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -5201,7 +5201,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Paddle OCR Replacement",
             keyFeatures: [],
             impact: ""
         },
@@ -5228,7 +5228,7 @@ const roadmapDataD360 = [
     {
         id: 96,
         title: "[264] [UDS] Editing existing SIs",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Editing existing SIs",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -5245,7 +5245,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Editing existing SIs",
             keyFeatures: [],
             impact: ""
         },
@@ -5272,7 +5272,7 @@ const roadmapDataD360 = [
     {
         id: 97,
         title: "[264] [UDS] Fileforce connector - Rich Text Area (RTA)",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Fileforce connector - Rich Text Area (RTA)",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -5289,7 +5289,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Fileforce connector - Rich Text Area (RTA)",
             keyFeatures: [],
             impact: ""
         },
@@ -5316,7 +5316,7 @@ const roadmapDataD360 = [
     {
         id: 98,
         title: "[264] [UDS] [AI] - Inner Loop",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] [AI] - Inner Loop",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -5333,7 +5333,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] [AI] - Inner Loop",
             keyFeatures: [],
             impact: ""
         },
@@ -5360,7 +5360,7 @@ const roadmapDataD360 = [
     {
         id: 99,
         title: "[264] [UDS]  Governance Work - Lineage, Masking",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS]  Governance Work - Lineage, Masking",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -5377,7 +5377,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS]  Governance Work - Lineage, Masking",
             keyFeatures: [],
             impact: ""
         },
@@ -5404,7 +5404,7 @@ const roadmapDataD360 = [
     {
         id: 100,
         title: "[264] [UDS] Stagewise Checkpointing",
-        description: "",
+        description: "(no description in GUS) — [264] [UDS] Stagewise Checkpointing",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -5421,7 +5421,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "",
+            overview: "(no description in GUS) — [264] [UDS] Stagewise Checkpointing",
             keyFeatures: [],
             impact: ""
         },
