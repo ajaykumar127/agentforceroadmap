@@ -7,6 +7,7 @@ class RoadmapApp {
         this.dataVersions = {
             combined: roadmapDataCombined,
             gus: roadmapDataGUS,
+            d360: roadmapDataD360,
             v1: roadmapDataV1,
             v2: roadmapDataV2,
             v3: roadmapDataV3,
@@ -17,6 +18,7 @@ class RoadmapApp {
         this.viewLocks = {
             combined: 'agentforce1!',
             gus:      'agentforce1!',
+            d360:     'agentforce1!',
         };
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
@@ -33,7 +35,7 @@ class RoadmapApp {
     // GUS: 'gus:<id>'. Other historical: '<version>:<id>'.
     featureKey(item) {
         if (!item) return null;
-        const v = item.version || (this.currentVersion === 'gus' ? 'gus' : this.currentVersion);
+        const v = item.version || (this.currentVersion === 'gus' || this.currentVersion === 'd360' ? this.currentVersion : this.currentVersion);
         const id = item._origId != null ? item._origId : item.id;
         return `${v}:${id}`;
     }
@@ -253,7 +255,7 @@ class RoadmapApp {
         // Release-stage chips: only show the row if any tagged epic exists OR we're on the GUS view.
         const stageOrder = ['GA', 'GA with Limited Availability', 'Beta', 'Pilot', 'Not Deployed', 'Retired', 'Unspecified'];
         const stagesPresent = stageOrder.filter(s => stageCounts[s] > 0);
-        const showStages = this.currentVersion === 'gus' && stagesPresent.length > 0;
+        const showStages = (this.currentVersion === 'gus' || this.currentVersion === 'd360') && stagesPresent.length > 0;
         const stageChips = showStages
             ? stagesPresent.map(s => chipHtml('releaseStage', s, this.formatReleaseStage(s), stageCounts[s] || 0)).join('')
             : '';
@@ -310,14 +312,19 @@ class RoadmapApp {
             const versionNames = {
                 'combined': 'Historical Roadmap (V1 + V2 + V3 + V4 combined)',
                 'gus': 'GUS Live · Agentforce / SFAi Epics',
+                'd360': 'GUS Live · Data 360 / Data Cloud Epics',
                 'v1': 'V1 - Core Roadmap',
                 'v2': 'V2 - Extended Roadmap',
                 'v3': 'V3 - Q1-Q2 2026 Roadmap (Updated March 2026)',
                 'v4': 'Latest View May-June 2026',
             };
             versionName = versionNames[this.currentVersion] || 'V1 - Core Roadmap';
-            const refreshStamp = (this.currentVersion === 'gus' && typeof LAST_GUS_REFRESH !== 'undefined')
-                ? ` <span class="refresh-stamp" title="Last refreshed from GUS ADM_Epic__c">· Refreshed ${LAST_GUS_REFRESH}</span>` : '';
+            let refreshStamp = '';
+            if (this.currentVersion === 'gus' && typeof LAST_GUS_REFRESH !== 'undefined') {
+                refreshStamp = ` <span class="refresh-stamp" title="Last refreshed from GUS ADM_Epic__c">· Refreshed ${LAST_GUS_REFRESH}</span>`;
+            } else if (this.currentVersion === 'd360' && typeof LAST_GUS_REFRESH_D360 !== 'undefined') {
+                refreshStamp = ` <span class="refresh-stamp" title="Last refreshed from GUS ADM_Epic__c">· Refreshed ${LAST_GUS_REFRESH_D360}</span>`;
+            }
             itemCount = `${this.data.length} items${refreshStamp}`;
         }
 
@@ -1473,7 +1480,7 @@ class RoadmapApp {
 
         // Owner, PRD, and GUS metadata section
         let ownerPrdHtml = '';
-        const hasGUSFields = item.version === 'gus' && (item.scheduledBuild || item.devLead || item.designLead || item.qualityLead || item.team || item.health);
+        const hasGUSFields = (item.version === 'gus' || item.version === 'd360') && (item.scheduledBuild || item.devLead || item.designLead || item.qualityLead || item.team || item.health);
         if (item.owner || item.pmm || item.engLead || item.gusProgram || item.prdLink || hasGUSFields) {
             ownerPrdHtml = '<div class="modal-section owner-prd-section">';
             if (buildLabel) {

@@ -3274,3 +3274,18 @@ body {
     line-height: 1;
 }
 .fb-edit:hover { background: rgba(0,112,210,0.1); color: var(--primary-color); }
+
+/* Site footer attribution */
+.site-footer {
+    text-align: center;
+    padding: 1.5rem 1rem 2rem;
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+.site-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.site-footer a:hover { text-decoration: underline; }
