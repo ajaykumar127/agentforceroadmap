@@ -2920,7 +2920,7 @@ const roadmapDataGUS = [
         title: "262 Trust: AP Sriracha",
         description: "Placeholder Epic to account for all trust items for the team in 262.",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -2928,7 +2928,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Manu Mehrotra",
         designLead: "-",
         qualityLead: "William Hackett",
@@ -2938,14 +2938,15 @@ const roadmapDataGUS = [
             overview: "Placeholder Epic to account for all trust items for the team in 262.",
             keyFeatures: [],
             impact: "1/6 - supporting customer queries in eci support channels. Work on trust work items (ref. related work items) not started as team is wrapping up testing og GenECI feature currently and is running on 50% capacity due to planned PTOs"
-        }
+        },
+        gusEpicId: "a3QEE000001xWg1"
     },
     {
         id: 2,
         title: "262 Trust: ECI Experience",
         description: "Placeholder Epic to account for all trust items for the team in 262. -Telemetry -A11y -Skip Processing video transcription if FVT is enabled( IsLegacyProcessingSkipped )",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -2953,7 +2954,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Manu Mehrotra",
         designLead: "-",
         qualityLead: "William Hackett",
@@ -2963,14 +2964,15 @@ const roadmapDataGUS = [
             overview: "Placeholder Epic to account for all trust items for the team in 262. -Telemetry -A11y -Skip Processing video transcription if FVT is enabled( IsLegacyProcessingSkipped )",
             keyFeatures: [],
             impact: "1/6 - starting to look into accessibility bugs that came in before vacations. Made good progress on P1's."
-        }
+        },
+        gusEpicId: "a3QEE000001xWhd"
     },
     {
         id: 3,
         title: "262 Trust: ECI Foundation",
         description: "Placeholder Epic to account for all trust items for the team in 262.",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -2978,7 +2980,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Neeraj Agicha",
         designLead: "-",
         qualityLead: "William Hackett",
@@ -2987,8 +2989,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Placeholder Epic to account for all trust items for the team in 262.",
             keyFeatures: [],
-            impact: "4/7 Update:\nChanges for MS Teams Pagination QA’d and closed. Will ship with JDK ms teams connector changes.\n\nMS Teams Logging changes are in QA. Due by EOW. Prod push after JDK 17 prod push\n4/1 Update\nMS Teams Pagination QA was blocked due to JDK 17..."
-        }
+            impact: "4/7 Update:\r\nChanges for MS Teams Pagination QA’d and closed. Will ship with JDK ms teams connector changes.\r\n\r\nMS Teams Logging changes are in QA. Due by EOW. Prod push after JDK 17 prod push\r\n4/1 Update\r\nMS Teams Pagination QA was blocked due to JDK 17 issues last week, prod push still TBD\r\n\r\nMS Teams logging bug QA was blocked due to JDK 17 issues last week, ETA 4/10."
+        },
+        gusEpicId: "a3QEE000001xWjF"
     },
     {
         id: 4,
@@ -3011,16 +3014,19 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Research customers and prep for meetings conversationally -New OOTB \"skill\" for the Sales Agent, used in Sales Workspace, Agentforce chat panel, mobile and Slack",
-            keyFeatures: ["Open gate for all instances"],
-            impact: "2/23/26: Gates open on all instances\n1/28/26\n- Feature gate to be lifted by Monday, 2/2."
-        }
+            keyFeatures: [
+                "Open gate for all instances"
+            ],
+            impact: "2/23/26: Gates open on all instances\r\n1/28/26\r\n- Feature gate to be lifted by Monday, 2/2."
+        },
+        gusEpicId: "a3QEE0000024rRB"
     },
     {
         id: 5,
         title: "Activities: Safe deletion strategy of Dangling rows",
         description: "Epic for Morgan Stanley work in collaboration with Platform teams for safe deletion strategy of Dangling rows. More details here: https://docs.google.com/document/d/1SwwRnMBk3IeChS3UDMqGNKWOh9uZpDMf6z1dOx2xUfk/edit?tab=t.0 Background",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3028,24 +3034,29 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1SwwRnMBk3IeChS3UDMqGNKWOh9uZpDMf6z1dOx2xUfk/edit?tab=t.0#heading=h.ox5ehfmh7ah6",
         team: "Activities",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "Epic for Morgan Stanley work in collaboration with Platform teams for safe deletion strategy of Dangling rows. More details here: https://docs.google.com/document/d/1SwwRnMBk3IeChS3UDMqGNKWOh9uZpDMf6z1dOx2xUfk/edit?tab=t.0 Background",
-            keyFeatures: ["Q3: Completed", "Q4: NA", "Rollout: with 262"],
-            impact: "- 4/14:\n- No development left, we will rollout to few customer when 262 goes to customer env. \n\n3/27:\n- Q3 testing is completed and we got the sign-off. \n- Created a tracking WI for 264, to enable required permission in customer env when 262 deploye..."
-        }
+            keyFeatures: [
+                "Q3: Completed",
+                "Q4: NA",
+                "Rollout: with 262"
+            ],
+            impact: "- 4/14:\r\n- No development left, we will rollout to few customer when 262 goes to customer env. \r\n\r\n3/27:\r\n- Q3 testing is completed and we got the sign-off. \r\n- Created a tracking WI for 264, to enable required permission in customer env when 262 deployed to production env."
+        },
+        gusEpicId: "a3QEE000001xhd3"
     },
     {
         id: 6,
         title: "Add soft-cutoff for EAC and Inbox customers",
         description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3053,24 +3064,31 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "S2X Scrum Team",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Manish Sombansh",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Rounak Singh",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
-            keyFeatures: ["Dev Handoff: ✅ 03/16", "Q3 Handover:  ✅ 04/01", "Q3 Sign off: ✅ Signed off(Nishkam)", "Q4 Sign off: N/A UI work only.", "CX Sign off: Complete"],
-            impact: "04/10: Epic complete\n04/03: Q3 sign off complete. CX Signoff pending.\n3/31: Q3 hand off meeting scheduled for April 01\n03/25: Q3 handoff scheduled.\n03/16: Dev work for 262 is complete.\n02/19: Dev Complete. Majority work complete. 262 is up to date w..."
-        }
+            keyFeatures: [
+                "Dev Handoff: ✅ 03/16",
+                "Q3 Handover:  ✅ 04/01",
+                "Q3 Sign off: ✅ Signed off(Nishkam)",
+                "Q4 Sign off: N/A UI work only.",
+                "CX Sign off: Complete"
+            ],
+            impact: "04/10: Epic complete\r\n04/03: Q3 sign off complete. CX Signoff pending."
+        },
+        gusEpicId: "a3QEE000001yHF7"
     },
     {
         id: 7,
         title: "Agentic Pipeline Inspection & Forecasting",
         description: "Problem statement: Customers view forecasting as a critical part of the selling journey. It is a process that is very much integrated in the flow of their work. Forecasting is very manual and time taking",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -3078,24 +3096,31 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud Perseus",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Anurag Mudgal",
-        designLead: "",
-        qualityLead: "",
+        designLead: "Dave Fernandez",
+        qualityLead: "Sandeep Karnawat",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "Problem statement: Customers view forecasting as a critical part of the selling journey. It is a process that is very much integrated in the flow of their work. Forecasting is very manual and time taking",
-            keyFeatures: ["Dev Done: 07/23 (264 FF)", "Q3 HandOff: 07/25", "Q3 Sign-Off:", "Q4 Hand-Off: 07/25", "Q4 Sign-Off:"],
-            impact: "5/19/26\n- On track, entity finalisation in progress. \n- Slack integration spike in progress.\n\n5/12/26\n- On track\n- HLD and entity finalisation in progress. \n\n5/5/26\n- On track, initial spikes underway.\n- Spikes are in progress and working on interim/mont..."
-        }
+            keyFeatures: [
+                "Dev Done: 07/23 (264 FF)",
+                "Q3 HandOff: 07/25",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: 07/25",
+                "Q4 Sign-Off:"
+            ],
+            impact: "6/9/26\r\n- Slack based utterances work in progress.\r\n- Admin setup in progress, some recent changes in UX for the setup experience which we have accommodated in the current sprint.\r\n- Adding data sources (item, fact and adjustment) for invocable action.\r\n\r\n6/2/26\r\n - On track, discussion with DM team in progress for entity.\r\n- Adding forecasting context to selected utterance from Ask-Agent dropdown work is complete."
+        },
+        gusEpicId: "a3QEE000001uMjd2AE"
     },
     {
         id: 8,
         title: "Bring new opportunity columns to the Forecasting list",
         description: "We need to update the synthetic columns list of forecasting to bring parity with PI Contact insights Activity heatmap Deal risk alerts Sales methodologies",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -3103,17 +3128,24 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud Centaurus",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Manish Singh (Sales Cloud)",
-        designLead: "",
-        qualityLead: "",
+        designLead: "Dave Fernandez",
+        qualityLead: "Sandeep Karnawat",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "We need to update the synthetic columns list of forecasting to bring parity with PI Contact insights Activity heatmap Deal risk alerts Sales methodologies",
-            keyFeatures: ["Dev Done: 07/09 (GTM 262.13)", "Q3 HandOff: 07/11", "Q3 Sign-Off:", "Q4 Hand-Off: 07/11", "Q4 Sign-Off:"],
-            impact: "5/19/26\n- On track\n- Metadata layer changes complete.\n- Column pref persistence spike in progress.\n\n5/12/26\n- On track\n\n5/5/26\n- On track, dev work in progress.\n- Spikes are in progress and working on interim/monthly milestones. ETA by 5/8\n\n4/28/26\n- Pla..."
-        }
+            keyFeatures: [
+                "Dev Done: 07/09 (GTM 262.13)",
+                "Q3 HandOff: 07/11",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: 07/11",
+                "Q4 Sign-Off:"
+            ],
+            impact: "6/9/26\r\n- On track\r\n- Persistence logic implementation for column preference.\r\n- Side panel styling change in progress.\r\n\r\n6/2/26\r\n- On track\r\n- UI work and integration in progress"
+        },
+        gusEpicId: "a3QEE000002BlAX2A0"
     },
     {
         id: 9,
@@ -3128,7 +3160,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1VVYTHi-zNm-SFF6T1VAMR_OxUDEZ16hMGaN-zFF8Ae8/edit?tab=t.0#heading=h.z0a2cx7wklkx",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Not Started",
         devLead: "Shan-cheng Ho",
         designLead: "-",
         qualityLead: "",
@@ -3137,15 +3169,16 @@ const roadmapDataGUS = [
         details: {
             overview: "Capacity: Add Airflow to FBOT introduces a scalable orchestration layer to manage complex, long-running workflows reliably. It improves operational resilience, enables automation at scale, and reduces manual intervention and fa",
             keyFeatures: [],
-            impact: "This was eventually marked below the line for 262 but it would appear as though migration will now be above the line for 264. It's not clear to me exactly when the effort will start but we will be in touch with migration team to be sure this is not a blo..."
-        }
+            impact: "This was eventually marked below the line for 262 but it would appear as though migration will now be above the line for 264. It's not clear to me exactly when the effort will start but we will be in touch with migration team to be sure this is not a blocker for them"
+        },
+        gusEpicId: "a3QEE000001znXt"
     },
     {
         id: 10,
         title: "Capacity: Cell Level Migration Readiness",
         description: "Cell-Level Migration Readiness ensures each cell has the capacity, isolation, and operational readiness to migrate workloads safely at scale. It reduces migration risk, prevents customer impact during transitions, and enables faster,",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3153,24 +3186,25 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1VVYTHi-zNm-SFF6T1VAMR_OxUDEZ16hMGaN-zFF8Ae8/edit?tab=t.0#heading=h.z0a2cx7wklkx",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Shan-cheng Ho",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "Cell-Level Migration Readiness ensures each cell has the capacity, isolation, and operational readiness to migrate workloads safely at scale. It reduces migration risk, prevents customer impact during transitions, and enables faster,",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001xTob"
     },
     {
         id: 11,
         title: "Capacity: Prod5 - New Cell Readiness  - Deploy Services (SRE)",
         description: "Phase 1: “The POC and Spiking phase is finished” Test deployment in dev fi new cell for 1 service of each type Phase 2: “Finish individual epics + Start Integration testing” Test deployment in dev fi new ce",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3178,24 +3212,25 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "Phase 1: “The POC and Spiking phase is finished” Test deployment in dev fi new cell for 1 service of each type Phase 2: “Finish individual epics + Start Integration testing” Test deployment in dev fi new ce",
             keyFeatures: [],
-            impact: "4/3: Decision made to launch a few customers without waiting for events-to-core. We will start that process today\n3/27: Final Q3 signoff done. The Events-to-Core incident/rollback has altered the rollout plan though. Tentatively the rollout gates will n..."
-        }
+            impact: "4/3: Decision made to launch a few customers without waiting for events-to-core. We will start that process today\r\n3/27: Final Q3 signoff done. The Events-to-Core incident/rollback has altered the rollout plan though. Tentatively the rollout gates will now follow the events-to-core rollout gates and proceed to completion over the next 2 weeks or so"
+        },
+        gusEpicId: "a3QEE000001qkar"
     },
     {
         id: 12,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus]",
         description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers \n Epics for all 3 teams:",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3203,24 +3238,25 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1VVYTHi-zNm-SFF6T1VAMR_OxUDEZ16hMGaN-zFF8Ae8/edit?tab=t.0#heading=h.z0a2cx7wklkx",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Shan-cheng Ho",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers \n Epics for all 3 teams:",
             keyFeatures: [],
-            impact: "3/27 - Complete.\n3/20 - Will finish configuring alerts for new cell today. Going live next week.\n3/13 - Nexus continuing to provide testing support in production. No known issues in Nexus charter.\n3/6 - Nexus providing Q3 support in production. Verify..."
-        }
+            impact: "3/27 - Complete.\r\n3/20 - Will finish configuring alerts for new cell today. Going live next week."
+        },
+        gusEpicId: "a3QEE0000022mdh"
     },
     {
         id: 13,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate]",
         description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers \n Epics for all 3 teams:",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3228,24 +3264,25 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1VVYTHi-zNm-SFF6T1VAMR_OxUDEZ16hMGaN-zFF8Ae8/edit?tab=t.0#heading=h.z0a2cx7wklkx",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Shan-cheng Ho",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers \n Epics for all 3 teams:",
             keyFeatures: [],
-            impact: "4/10 - Started onboarding customers to new cell with no known issue for Stargate services so far\n4/2 - Q3 signed off, waiting for customer onboarding\n3/27 - Q3 signed off for EAC services, ready for onboarding customers\n3/20 - Finished setting up aler..."
-        }
+            impact: "4/10 - Started onboarding customers to new cell with no known issue for Stargate services so far\r\n4/2 - Q3 signed off, waiting for customer onboarding"
+        },
+        gusEpicId: "a3QEE0000022mfJ"
     },
     {
         id: 14,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [EAC Foundation]",
         description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers \n Epics for all 3 teams:",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3253,24 +3290,25 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1VVYTHi-zNm-SFF6T1VAMR_OxUDEZ16hMGaN-zFF8Ae8/edit?tab=t.0#heading=h.z0a2cx7wklkx",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Shan-cheng Ho",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers \n Epics for all 3 teams:",
             keyFeatures: [],
-            impact: "2/6 - A few small bugs/blockers remain, after which we can deploy our new cell to prod, eta 2/10. We decided to postpone the new cell deployment to stage, pending resolution with Vault access.\n1/20 - Some of the production promotion tasks are taking lon..."
-        }
+            impact: "2/6 - A few small bugs/blockers remain, after which we can deploy our new cell to prod, eta 2/10. We decided to postpone the new cell deployment to stage, pending resolution with Vault access.\r\n1/20 - Some of the production promotion tasks are taking longer than expected, and still working through Q3/Q4 bugs."
+        },
+        gusEpicId: "a3QEE000001zcXd"
     },
     {
         id: 15,
         title: "Deal Risk Alerts from conversations and C360",
         description: "Overview Synthesizes signals from interactions (calls, emails, meetings) and opportunity changes to generate explainable business judgments. Categorizes insights into Peril (Friction & Risk), Process (Velocity), and People (En",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -3278,17 +3316,24 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud Centaurus",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Himanshu Kapoor",
-        designLead: "",
+        designLead: "Huong Le",
         qualityLead: "",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "Overview Synthesizes signals from interactions (calls, emails, meetings) and opportunity changes to generate explainable business judgments. Categorizes insights into Peril (Friction & Risk), Process (Velocity), and People (En",
-            keyFeatures: ["Dev Done: 07/23 (264 FF)", "Q3 HandOff: 07/25", "Q3 Sign-Off:", "Q4 Hand-Off: 07/25", "Q4 Sign-Off:"],
-            impact: "5/19/26\n- On track , DM finalization in progress.\n- RC framework integration spike is completed.\n- Interlock plan finalized with Nova team, 1 incoming TD for persistence.\n- Discussions underway on T1 insights delivery timelines and TD commitment.\n\n5/12/2..."
-        }
+            keyFeatures: [
+                "Dev Done: 07/23 (264 FF)",
+                "Q3 HandOff: 07/25",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: 07/25",
+                "Q4 Sign-Off:"
+            ],
+            impact: "6/9/26\r\n - On track, prompt template creation in progress.\r\n- Record companion faculty implementation in progress.\r\n- Go setup page implementation in progress.\r\n- BPO checkin in progress.\r\n- DMO approval process for methodology DMOs underway as part of TD inner sourcing.\r\n\r\n\r\n6/2/26\r\n- On track, DM approval underway\r\n- Work split between Centaurus and Nova for methodology DMOs in progress."
+        },
+        gusEpicId: "a3QEE0000020Hfd2AE"
     },
     {
         id: 16,
@@ -3303,24 +3348,25 @@ const roadmapDataGUS = [
         prdLink: "http://n/a (support customer issues as we rollout)",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Not Started",
         devLead: "Yogesh Patel",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Rounak Singh",
         v2momMethod: "Gong",
         version: "gus",
         details: {
             overview: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Support Email to Core Mi",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE0000022mYr"
     },
     {
         id: 17,
         title: "EAC: Config-driven capture for all",
         description: "Legacy cleanup: to ensure all Email and Event data can be safely moved to Core, further unlocking Agentic and Data cloud use cases for customers. \n AP to enf",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3328,7 +3374,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1KjO-l1XqQBiQrXxxfB2dWnK5ORLZ2p42gXs3iIrIv4I/edit?tab=t.0#heading=h.h22o9t7fold",
         team: "AP Galaxy",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Johannes Kienzle",
         designLead: "-",
         qualityLead: "",
@@ -3336,16 +3382,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Legacy cleanup: to ensure all Email and Event data can be safely moved to Core, further unlocking Agentic and Data cloud use cases for customers. \n AP to enf",
-            keyFeatures: ["260 DoR No Feature", "CX Handoff to Dev: ✅ 3/25 (CA)", "M1 DS Dev Done: 4/14 ✅", "Q3/Q4 Handover: 4/14 ✅", "Q3 Sign off: Sourav 04/08 ✅"],
-            impact: "5/11:\nOn track. Staggered rollout is in progress.\n* Configless orgs rollout has reached 100% of production orgs (extra small), and auto-configuration has been successfully created for 88% of total configless orgs.\n* Hybrid orgs rollout has reached 80% of..."
-        }
+            keyFeatures: [
+                "260 DoR No Feature",
+                "CX Handoff to Dev: ✅ 3/25 (CA)",
+                "M1 DS Dev Done: 4/14 ✅",
+                "Q3/Q4 Handover: 4/14 ✅",
+                "Q3 Sign off: Sourav 04/08 ✅"
+            ],
+            impact: "5/11:\nOn track. Staggered rollout is in progress.\n* Configless orgs rollout has reached 100% of production orgs (extra small), and auto-configuration has been successfully created for 88% of total configless orgs.\n* Hybrid orgs rollout has reached 80% of active orgs.\n\n\n5/05:\nOn track. Stagger roll out in progress.\nConfigless orgs have been rollout to 100% of sandbox orgs and 10% of active prod orgs.\nHybrid orgs have been rollout to 5% of sandbox orgs."
+        },
+        gusEpicId: "a3QEE000001fjdJ"
     },
     {
         id: 18,
         title: "EAC: Performance Monitoring of Contact Sync",
         description: "Help monitor and evaluate Contact sync health on a ongoing basis. Currently this prod feature has no monitoring established and often customers like IBM express interest enabling",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3353,24 +3406,31 @@ const roadmapDataGUS = [
         prdLink: "http://n/a",
         team: "S2X Scrum Team",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Danyal Ahmad",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Rounak Singh",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "Help monitor and evaluate Contact sync health on a ongoing basis. Currently this prod feature has no monitoring established and often customers like IBM express interest enabling",
-            keyFeatures: ["CX Handoff to Dev: ✅  3/25 (CA)", "Dev Done: ✅ 3/27 (in 262)", "Q3 Sign off: N/A", "Q4 Sign off: TBD (Mike)", "PRD: SLA Definitions to monitor?"],
-            impact: "04/14 - Q4 has received dashboard and incorporated sync into theirs. Pending SLA definition (if applicable).\n3/31 - Dashboard complete, code in 262 and will not be back ported\n03/24 - Data will be released as part of 262 deliverable. Q4 hand off this w..."
-        }
+            keyFeatures: [
+                "CX Handoff to Dev: ✅  3/25 (CA)",
+                "Dev Done: ✅ 3/27 (in 262)",
+                "Q3 Sign off: N/A",
+                "Q4 Sign off: TBD (Mike)",
+                "PRD: SLA Definitions to monitor?"
+            ],
+            impact: "04/14 - Q4 has received dashboard and incorporated sync into theirs. Pending SLA definition (if applicable).\r\n3/31 - Dashboard complete, code in 262 and will not be back ported"
+        },
+        gusEpicId: "a3QEE000001xTYT"
     },
     {
         id: 19,
         title: "ECI In (Starter & Pro) - Phase 1",
         description: "TLDR Phase 1 – Feb '26 | Transcriptions (GA) Enable  ECI Transcriptions for existing voice/video providers",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3378,7 +3438,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Anthony Desportes",
         designLead: "-",
         qualityLead: "Deepmala Mehta",
@@ -3386,16 +3446,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "TLDR Phase 1 – Feb '26 | Transcriptions (GA) Enable  ECI Transcriptions for existing voice/video providers",
-            keyFeatures: ["Dev Handoff: 1/20 (delayed by 2 days)", "Q3 hoff: 1/22 (complete)", "Q3 Sign Off: 2/5 (10 days)", "Q4 S-Off: 2/5 (Ongoing)", "Target Patch: 260.7 (customer release 2/11)"],
-            impact: "2/10:\nOne bug to patch in 260.8 : W-21229786 (completed)\nPhase 2: we are going to create a new developers patch branch for the continuation of Easy ECI in Phase 2 (LLM based features)\n\n2/9:\nOff-core prod push done, FVT gate on\n\n2/3: \n(update) eci..."
-        }
+            keyFeatures: [
+                "Dev Handoff: 1/20 (delayed by 2 days)",
+                "Q3 hoff: 1/22 (complete)",
+                "Q3 Sign Off: 2/5 (10 days)",
+                "Q4 S-Off: 2/5 (Ongoing)",
+                "Target Patch: 260.7 (customer release 2/11)"
+            ],
+            impact: "2/10:\r\nOne bug to patch in 260.8 : W-21229786 (completed)\r\nPhase 2: we are going to create a new developers patch branch for the continuation of Easy ECI in Phase 2 (LLM based features)\r\n\r\n2/9:\r\nOff-core prod push done, FVT gate on"
+        },
+        gusEpicId: "a3QEE000001uhuX"
     },
     {
         id: 20,
         title: "ECI In (Starter & Pro) - Phase 2",
         description: "PRD https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0#heading=h.i4np6zxvfga7 \n Phase 2 is the support of some ECI LLM features Starter editions: Ca",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3403,7 +3470,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Watch",
         devLead: "Anthony Desportes",
         designLead: "-",
         qualityLead: "Deepmala Mehta",
@@ -3411,16 +3478,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "PRD https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0#heading=h.i4np6zxvfga7 \n Phase 2 is the support of some ECI LLM features Starter editions: Ca",
-            keyFeatures: ["Phase2 - LLM", "feature set frozen: 2/24", "stories created with test plan 2/27", "Dev Done: 4/10", "Q3/4 Handoff - 4/23"],
-            impact: "4/28: synced up with Q3 to present the list of features to test. This might end up being tested once the Suites Connect implements the auto-enablement and auto-assignment in the 262 development branch, and the code is ported to 262/patch.\nFeature is cur..."
-        }
+            keyFeatures: [
+                "Phase2 - LLM",
+                "feature set frozen: 2/24",
+                "stories created with test plan 2/27",
+                "Dev Done: 4/10",
+                "Q3/4 Handoff - 4/23"
+            ],
+            impact: "5/19: All code committed. A bit of delay regarding protecting the ECI Experience code behind a gate. The code works locally, but tests are giving us troubles. We need to get back to it as soon as Anthony's current work on the BlueBirds project (Prospecting agent) is committed. Then we will be able to close the Epic\r\n\r\n4/28: synced up with Q3 to present the list of features to test. This might end up being tested once the Suites Connect implements the auto-enablement and auto-assignment in the 262 development branch, and the code is ported to 262/patch.\r\nFeature is currently not behind gates. That is last the pending work. ETA : 05/04, Monday"
+        },
+        gusEpicId: "a3QEE000002ALA5"
     },
     {
         id: 21,
         title: "ECI In Core - OOTB Reporting/Analytics documentation",
         description: "In 262, existing ECI customers will move to Core. Current ECI customers have OOB Reporting and Analytics, which no longer will work with CRMA and AP sunsetting. These existing reports/analytics will freeze in time on migration to Core. We",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3428,7 +3502,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1zWNyKpkvdbZGZqT8v8oL5VFCYngS1F8AUtBCz92hgEY/edit?tab=t.0",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Narun Shridhar Mohan",
         designLead: "-",
         qualityLead: "",
@@ -3437,8 +3511,9 @@ const roadmapDataGUS = [
         details: {
             overview: "In 262, existing ECI customers will move to Core. Current ECI customers have OOB Reporting and Analytics, which no longer will work with CRMA and AP sunsetting. These existing reports/analytics will freeze in time on migration to Core. We",
             keyFeatures: [],
-            impact: "04/28\n- I'm currently working with Michael Hoban (writer for ECI) on the Data Residency document. This document will have information related to ECI to Core and new entities introduced for the migration. I'd want to keep our documentation epic open unti..."
-        }
+            impact: "04/28\r\n- I'm currently working with Michael Hoban (writer for ECI) on the Data Residency document. This document will have information related to ECI to Core and new entities introduced for the migration. I'd want to keep our documentation epic open until this information is published (I'll update the ETA for this after discussing with Michael).\r\n\r\n04/21\r\n- Help and RN are published (still in preview until R0 - https://help.salesforce.com/s/articleView?id=release-notes.rn_sales_eci_summer_migration.htm&release=262&type=5)"
+        },
+        gusEpicId: "a3QEE000001uhxl"
     },
     {
         id: 22,
@@ -3453,7 +3528,7 @@ const roadmapDataGUS = [
         prdLink: "https://salesforce.quip.com/zLRHAqLJePUq",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Canceled",
         devLead: "Mugdha Choudhari",
         designLead: "-",
         qualityLead: "Deepmala Mehta",
@@ -3461,16 +3536,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "262 Milestones: MS Recrawl \n Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors :",
-            keyFeatures: ["Dev Handoff: Complete", "Q3 Sign Off: 2/4 -BLOCKED", "Q4 Sign Off:  N/A - Manually triggered tool", "Target Patch: N/A, Off-Core - ETA: 2/5 (Blocked)", "260 DoR No Feature"],
-            impact: "3/12: \nDecision: No go due to CTS concerns and architecture alignment required for Momentum integration \n3/3: \nStill no decision on this.\n\n2/25: \nStill waiting on decision.\n\n2/17:\nMeeting scheduled for Wed Feb 18 with jong to make a decision on ..."
-        }
+            keyFeatures: [
+                "Dev Handoff: Complete",
+                "Q3 Sign Off: 2/4 -BLOCKED",
+                "Q4 Sign Off:  N/A - Manually triggered tool",
+                "Target Patch: N/A, Off-Core - ETA: 2/5 (Blocked)",
+                "260 DoR No Feature"
+            ],
+            impact: "3/12: \r\nDecision: No go due to CTS concerns and architecture alignment required for Momentum integration \r\n3/3: \r\nStill no decision on this."
+        },
+        gusEpicId: "a3QEE000001qg0z"
     },
     {
         id: 23,
         title: "ECI to Core - Migrate Existing Customers (Full GA)",
         description: "TLDR: In 260, we will have new ECI customers on Core. In 262, existing ECI customers will move to Core.",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3478,7 +3560,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1zWNyKpkvdbZGZqT8v8oL5VFCYngS1F8AUtBCz92hgEY/edit?tab=t.0",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Watch",
         devLead: "R Siddarth",
         designLead: "-",
         qualityLead: "Sumit Pahwa",
@@ -3486,16 +3568,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "TLDR: In 260, we will have new ECI customers on Core. In 262, existing ECI customers will move to Core.",
-            keyFeatures: ["Milestone 1", "Q3/4 Handoff - 3/2 (done)", "Milestone 2  - Voice call migration, DC sync and post migration enablement or READ(Core) / reporting etc", "Q3/4 Handoff - 3/24", "Q3 Sign off - 5/15 Q4 Sign off - 5/15 (S,M Orgs)"],
-            impact: "5/13\nDev - 1 open bug on Gen Insights for Voice Call - ETA 5/14\nBOM hydration is complete for all services. Deployment for the new services is facing issue - working with HDPS and SIP US team to sort it out. Expected ETA - 5/18\n\n5/6\n- Marked the epi..."
-        }
+            keyFeatures: [
+                "Milestone 1",
+                "Q3/4 Handoff - 3/2 (done)",
+                "Milestone 2  - Voice call migration, DC sync and post migration enablement or READ(Core) / reporting etc",
+                "Q3/4 Handoff - 3/24",
+                "Q3 Sign off - 5/15 Q4 Sign off - 5/15 (S,M Orgs)"
+            ],
+            impact: "5/13\r\nDev - 1 open bug on Gen Insights for Voice Call - ETA 5/14\r\nBOM hydration is complete for all services. Deployment for the new services is facing issue - working with HDPS and SIP US team to sort it out. Expected ETA - 5/18\r\n\r\n5/6\r\n- Marked the epic as 'At Risk' because of the following issues\r\n- Off core service deployments to stage and higher envs are having issues. Raised ticket with HDPS (Hyperforce platform team ). Also requested help from NIkhil Jain's team\r\n- Issue with Artemis API recently, raised this in the #on-call channel\r\n- 4 open bugs \r\n W-22180096 Ready for Review ETA 7th May\r\n W-22209039, W-22286500 ETA 7th May \r\n W-22366603,  - ETA 8th May"
+        },
+        gusEpicId: "a3QEE000001uhWL"
     },
     {
         id: 24,
         title: "ECI to Core - Migrate Existing Customers (Full GA) - OffCore development",
         description: "TLDR: In 260, we will have new ECI customers on Core. In 262, existing ECI customers will move to Core. This epic will cover all the work done by Auriga team towards the Migration tool",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3503,7 +3592,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1zWNyKpkvdbZGZqT8v8oL5VFCYngS1F8AUtBCz92hgEY/edit?tab=t.0",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Fanish Chhibber",
         designLead: "-",
         qualityLead: "Sumit Pahwa",
@@ -3511,16 +3600,22 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "TLDR: In 260, we will have new ECI customers on Core. In 262, existing ECI customers will move to Core. This epic will cover all the work done by Auriga team towards the Migration tool",
-            keyFeatures: ["Milestone 1 Basic E2E migration steel thread for Video Calls(Q3/Q4) - Complete on 2nd March", "Milestone 2 - Voice call migration, DC sync and post migration enablement or READ(Core) / reporting etc", "Q3 Handoff - 3/24", "Q4 Handoff - 3/24"],
-            impact: "3/24 - Complete\n3/18 - On track. All planned work is complete, preparing orgs for internal blitz testing\n3/11 - On track\n3/4 - On track, Disabling setup entity via tooling API, analytics page disablement, dual write for recordings, email notification ..."
-        }
+            keyFeatures: [
+                "Milestone 1 Basic E2E migration steel thread for Video Calls(Q3/Q4) - Complete on 2nd March",
+                "Milestone 2 - Voice call migration, DC sync and post migration enablement or READ(Core) / reporting etc",
+                "Q3 Handoff - 3/24",
+                "Q4 Handoff - 3/24"
+            ],
+            impact: "3/24 - Complete\r\n3/18 - On track. All planned work is complete, preparing orgs for internal blitz testing"
+        },
+        gusEpicId: "a3QEE0000026GaP"
     },
     {
         id: 25,
         title: "ECI to Core Migration Communication Plan",
         description: "Creating this epic to track the progress on communication to customers. \n Communication and Migration Plans Milestones: 3/15/2026: Create a draft communication plan, review and align with stakeholders",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3528,7 +3623,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Asal Elleuch",
         designLead: "-",
         qualityLead: "",
@@ -3537,15 +3632,16 @@ const roadmapDataGUS = [
         details: {
             overview: "Creating this epic to track the progress on communication to customers. \n Communication and Migration Plans Milestones: 3/15/2026: Create a draft communication plan, review and align with stakeholders",
             keyFeatures: [],
-            impact: "4/22 - Initial email is out, KA already published\n4/1 - Email 1 to now go out on 4/16 due to time required for translations by the tcr team. Email 2 to be tied to the migration rollout. KA already out.\n3/25 - KA published, Asal to create a workflow tic..."
-        }
+            impact: "4/22 - Initial email is out, KA already published\r\n4/1 - Email 1 to now go out on 4/16 due to time required for translations by the tcr team. Email 2 to be tied to the migration rollout. KA already out."
+        },
+        gusEpicId: "a3QEE0000029xZB"
     },
     {
         id: 26,
         title: "Email to Core Migrations:  Tool Support",
         description: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Supporting migration t",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3553,7 +3649,7 @@ const roadmapDataGUS = [
         prdLink: "http://n/a (support customer issues as we rollout)",
         team: "AP Galaxy",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Yogesh Patel",
         designLead: "-",
         qualityLead: "",
@@ -3561,16 +3657,19 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Supporting migration t",
-            keyFeatures: ["Continuous support"],
-            impact: "4/14:\n- Adoption Almost reached 8.1K\n- Successfully migrated 11 XL and 15 L orgs\n\n3/27:\n- Adoption almost reached to 7.3K orgs. \n- Successfully migrated 7 XL and 11 L orgs\n\n3/20:\n- Migration tool is Gaed Completely and few L, XL orgs successfull..."
-        }
+            keyFeatures: [
+                "Continuous support"
+            ],
+            impact: "4/14:\r\n- Adoption Almost reached 8.1K\r\n- Successfully migrated 11 XL and 15 L orgs\r\n\r\n3/27:\r\n- Adoption almost reached to 7.3K orgs. \r\n- Successfully migrated 7 XL and 11 L orgs"
+        },
+        gusEpicId: "a3QEE0000022377"
     },
     {
         id: 27,
         title: "Email to Core Migrations: Low Risk Orgs",
         description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3578,7 +3677,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1nWEeW_49Lu5r5YclR_nuxmg1MMUqVrAxErhUmu3UPOU/edit?tab=t.0",
         team: "AP Galaxy",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Yogesh Patel",
         designLead: "-",
         qualityLead: "",
@@ -3586,16 +3685,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
-            keyFeatures: ["CX Handoff to Dev: NA (no UI text)", "Dev Done: ✅ 3/31", "Q3/Q4 Handover: ✅ 3/31", "Q3 Sign off: ✅ 3/31 (Sourav)", "Q4 Sign off: N/A"],
-            impact: "5/11:\n- Staggered rollout is in progress. Rolled out to 5% of production pods.  Till now 7.6k(demo/free/trial) org and 1 Active org is enabled to E2C. \n\n4/28:\n- Staggered rollout started with sandbox pods, its been rolled-out to 40% of sandbox orgs. ..."
-        }
+            keyFeatures: [
+                "CX Handoff to Dev: NA (no UI text)",
+                "Dev Done: ✅ 3/31",
+                "Q3/Q4 Handover: ✅ 3/31",
+                "Q3 Sign off: ✅ 3/31 (Sourav)",
+                "Q4 Sign off: N/A"
+            ],
+            impact: "5/11:\r\n- Staggered rollout is in progress. Rolled out to 5% of production pods.  Till now 7.6k(demo/free/trial) org and 1 Active org is enabled to E2C. \r\n\r\n4/28:\r\n- Staggered rollout started with sandbox pods, its been rolled-out to 40% of sandbox orgs.  And E2C Enablement done for 2.37K (demo/free/trial) org and 1 Active org."
+        },
+        gusEpicId: "a3QEE000001xTi9"
     },
     {
         id: 28,
         title: "Email to Core Migrations: Orgs NOT using EOL features",
         description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3603,7 +3709,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1nWEeW_49Lu5r5YclR_nuxmg1MMUqVrAxErhUmu3UPOU/edit?tab=t.0",
         team: "AP Galaxy",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Yogesh Patel",
         designLead: "-",
         qualityLead: "",
@@ -3611,16 +3717,19 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
-            keyFeatures: ["CX Handoff to Dev: Na (no UI text)Dev Done: 4/28Q3/Q4 Handover: 4/28Q3 Sign off: Sourav/RonakQ4 Sign off: Amarendu/AshvinTentative roll out start: May endTentative roll out end: July end"],
-            impact: "5/11:\n- Handover to Q3 for testing, based on the testing result we will start initial test rollout next week. \n\n4/28:\n- Q2 testing is completed and scheduled call with Q3 for handover \n\n4/21:\n- Q2 testing started for auto migration orgs which has ..."
-        }
+            keyFeatures: [
+                "CX Handoff to Dev: Na (no UI text)Dev Done: 4/28Q3/Q4 Handover: 4/28Q3 Sign off: Sourav/RonakQ4 Sign off: Amarendu/AshvinTentative roll out start: May endTentative roll out end: July end"
+            ],
+            impact: "5/11:\r\n- Handover to Q3 for testing, based on the testing result we will start initial test rollout next week. \r\n\r\n4/28:\r\n- Q2 testing is completed and scheduled call with Q3 for handover"
+        },
+        gusEpicId: "a3QEE000002Cdyv"
     },
     {
         id: 29,
         title: "Email to Core Migrations: Orgs using EOL features",
         description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3628,7 +3737,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1nWEeW_49Lu5r5YclR_nuxmg1MMUqVrAxErhUmu3UPOU/edit?tab=t.0",
         team: "AP Galaxy",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Yogesh Patel",
         designLead: "-",
         qualityLead: "",
@@ -3636,16 +3745,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
-            keyFeatures: ["CX Handoff to Dev: ✅ 3/25(CA)", "Dev Done: 4/28 ✅", "Q3/Q4 Handover: 4/28 ✅", "Q3 Sign off: Sourav/Ronak", "Q4 Sign off: Amarendu/Ashvin"],
-            impact: "5/11 - Handover to Q3 for testing\n\n4/28:\n- Q2 testing is in progress.  Hopefully we will complete the testing this week and schedule a handover to Q3 next week. \n\n4/21:\n- Tooling work is in also completed and we are for now excluding orgs which has..."
-        }
+            keyFeatures: [
+                "CX Handoff to Dev: ✅ 3/25(CA)",
+                "Dev Done: 4/28 ✅",
+                "Q3/Q4 Handover: 4/28 ✅",
+                "Q3 Sign off: Sourav/Ronak",
+                "Q4 Sign off: Amarendu/Ashvin"
+            ],
+            impact: "5/11 - Handover to Q3 for testing\r\n\r\n4/28:\r\n- Q2 testing is in progress.  Hopefully we will complete the testing this week and schedule a handover to Q3 next week."
+        },
+        gusEpicId: "a3QEE000002Ce0X"
     },
     {
         id: 30,
         title: "Embedded AI Fast Follow- March",
         description: "2/18\ndev complete for 260.10\n[Q3] test plan WIP\n2/3\n- Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade.\n- Otherwise, on track for GTM #2 (260.10).\n\n1/20\n  On tra...",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "TBD",
         quarter: "TBD",
         date: "-",
@@ -3653,24 +3769,25 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "-",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "Nicole McGovern",
-        qualityLead: "",
+        qualityLead: "Shipra Jain",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "2/18\ndev complete for 260.10\n[Q3] test plan WIP\n2/3\n- Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade.\n- Otherwise, on track for GTM #2 (260.10).\n\n1/20\n  On tra...",
             keyFeatures: [],
-            impact: "2/18\ndev complete for 260.10\n[Q3] test plan WIP\n2/3\n- Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade.\n- Otherwise, on track for GTM #2 (260.10).\n\n1/20\n  On tra..."
-        }
+            impact: "2/18\r\ndev complete for 260.10\r\n[Q3] test plan WIP\r\n2/3\r\n- Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade.\r\n- Otherwise, on track for GTM #2 (260.10)."
+        },
+        gusEpicId: "a3QEE000002BW0D2AW"
     },
     {
         id: 31,
         title: "Embedded AI in Free - Simplified Agent Setup, record summarization & email draft",
         description: "Deliver easy setup of embedded ai functionality in Free Suite Includes:",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 (260)",
         quarter: "Winter '26 (260)",
         date: "260.10",
@@ -3678,24 +3795,27 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1ZuLkcKI5I0Xs1XGMurHOM9vLNgelI2fIg_9Jm7P1ISM/edit?tab=t.0#heading=h.c7lv2tt0ly0",
         team: "",
         scheduledBuild: "260.10",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "Nicole McGovern",
-        qualityLead: "",
+        qualityLead: "Shipra Jain",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "Deliver easy setup of embedded ai functionality in Free Suite Includes:",
-            keyFeatures: ["Users save time and boost productivity, and with AI-powered summaries and drafting personalized, in-context emails in the flow of work. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."],
-            impact: "2/18\ndev complete for 260.10\n[Q3] test plan WIP\n2/3\n- Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade.\n- Otherwise, on track for GTM #2 (260.10).\n\n1/20\n  On tra..."
-        }
+            keyFeatures: [
+                "Users save time and boost productivity, and with AI-powered summaries and drafting personalized, in-context emails in the flow of work. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."
+            ],
+            impact: "2/18\r\ndev complete for 260.10\r\n[Q3] test plan WIP\r\n2/3\r\n- Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade.\r\n- Otherwise, on track for GTM #2 (260.10)."
+        },
+        gusEpicId: "a3QEE0000021udJ"
     },
     {
         id: 32,
         title: "Embedded AI in Starter & Pro -SMB",
         description: "Support Embedded AI/record summarization component OOTB for Starter & Pro \n Figma - https://www.figma.com/design/SZHl25nuoyFB4s4cYHLh3Y/Agentforce-for-Do",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 (260)",
         quarter: "Winter '26 (260)",
         date: "260.7",
@@ -3703,17 +3823,20 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/13e5SlBAMzrX44gH5VKYZi3CpJywYR_AuQdB_lxQVRfE/edit?tab=t.0#heading=h.c7lv2tt0ly0",
         team: "",
         scheduledBuild: "260.7",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "Nicole McGovern",
-        qualityLead: "",
+        qualityLead: "Shipra Jain",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "Support Embedded AI/record summarization component OOTB for Starter & Pro \n Figma - https://www.figma.com/design/SZHl25nuoyFB4s4cYHLh3Y/Agentforce-for-Do",
-            keyFeatures: ["Users save time and boost productivity, and with AI-powered summaries and drafting personalized, in-context emails in the flow of work. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."],
-            impact: "2/3:\n- Increased page render time with the file-based Flexipage change was reported by Q4. Investigating with Q4 and flexipage framework team. \n[Q3] E2E testing complete. Automation in progress\n1/20\n  On track for GTM #1 260.7. Ready to test in sdb12..."
-        }
+            keyFeatures: [
+                "Users save time and boost productivity, and with AI-powered summaries and drafting personalized, in-context emails in the flow of work. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."
+            ],
+            impact: "2/3:\r\n- Increased page render time with the file-based Flexipage change was reported by Q4. Investigating with Q4 and flexipage framework team. \r\n[Q3] E2E testing complete. Automation in progress\r\n1/20\r\n  On track for GTM #1 260.7. Ready to test in sdb12.\r\n  [Q3] Testing is in progress. 50% complete"
+        },
+        gusEpicId: "a3QEE000001rFy1"
     },
     {
         id: 33,
@@ -3736,16 +3859,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Unblock ability to work with notes in Slack",
-            keyFeatures: ["Dev Done: 1/30", "Q3 HandOff: 3/5", "Q3 Sign-Off: 3/15", "Q4 Hand-Off: N/A", "Q4 Sign-Off: N/A"],
-            impact: "3/11: Blitz done, no issues found\n3/3: Blitz is scheduled for 3a sprint\n2/10: Dev done and closed user story in 1a sprint. Blitz for E2E/Regression testing will happen in the 3a sprint"
-        }
+            keyFeatures: [
+                "Dev Done: 1/30",
+                "Q3 HandOff: 3/5",
+                "Q3 Sign-Off: 3/15",
+                "Q4 Hand-Off: N/A",
+                "Q4 Sign-Off: N/A"
+            ],
+            impact: "3/11: Blitz done, no issues found\r\n3/3: Blitz is scheduled for 3a sprint"
+        },
+        gusEpicId: "a3QEE000001jWKv"
     },
     {
         id: 34,
         title: "Enhance & Improve Graph API",
         description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3753,24 +3883,27 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "S2X Scrum Team",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Johannes Kienzle",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
-            keyFeatures: ["Continuous support"],
-            impact: "- Moved to S2X Trust\n- Ongoing support epic"
-        }
+            keyFeatures: [
+                "Continuous support"
+            ],
+            impact: "- Moved to S2X Trust\r\n- Ongoing support epic"
+        },
+        gusEpicId: "a3QEE000001xTdJ"
     },
     {
         id: 35,
         title: "Events to Core for all",
         description: "Security feature unlocking Agents via new and existing EAC customer, by d iscontinue Event storage on offcore to address security concerns from prospecting Finservs customers like",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3778,24 +3911,30 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1zAo5iqLeCaFhtOxCOxR4PwQ-tBzLe_t9HR0LjWjVVWk/edit?tab=t.0#heading=h.rrkg89m9gna8",
         team: "A360 Nexus",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Johannes Kienzle",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Rounak Singh",
         v2momMethod: "Gong",
         version: "gus",
         details: {
             overview: "Security feature unlocking Agents via new and existing EAC customer, by d iscontinue Event storage on offcore to address security concerns from prospecting Finservs customers like",
-            keyFeatures: ["Custom Rollout Strategy: ✅ 04/06", "Rollout Initiated: 04/06", "End Rollout: 5/15 (previously 04/30)", "Proceeding towards gradual re-enablement starting 04/06"],
-            impact: "05/12 - Stage 8 of 11 Rollout. On-Target for 05/15 completion.\n05/11 - Stage 7 of 11 Rollout. On-Target for 05/15 completion.\n05/08 - Stage 6 of 11 Rollout. On-Target for 05/15 completion.\n\n04/28 - Duplicate Invite Email issue fixed in Main and slott..."
-        }
+            keyFeatures: [
+                "Custom Rollout Strategy: ✅ 04/06",
+                "Rollout Initiated: 04/06",
+                "End Rollout: 5/15 (previously 04/30)",
+                "Proceeding towards gradual re-enablement starting 04/06"
+            ],
+            impact: "05/12 - Stage 8 of 11 Rollout. On-Target for 05/15 completion.\r\n05/11 - Stage 7 of 11 Rollout. On-Target for 05/15 completion."
+        },
+        gusEpicId: "a3QEE000001xTgX"
     },
     {
         id: 36,
         title: "GA Graph API for Starter/Pro",
         description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 Patch (260.patch)",
         quarter: "Winter '26 Patch (260.patch)",
         date: "260.patch",
@@ -3803,17 +3942,20 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud CX",
         scheduledBuild: "260.patch",
-        health: "",
+        health: "Completed",
         devLead: "Johannes Kienzle",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
-            keyFeatures: ["CX Only"],
+            keyFeatures: [
+                "CX Only"
+            ],
             impact: "3/24 - No dev work required from SIP, inner sourced by Starter/pro teams. Converting this to a non engineering epic to track CX effort"
-        }
+        },
+        gusEpicId: "a3QEE000001xTbh"
     },
     {
         id: 37,
@@ -3828,7 +3970,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1C4GQQTd6tveh3Xpr_v3pAH610E64UWv1Kd_ovqGJBBk/edit?tab=t.0#heading=h.7posinch7t7q",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Canceled",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -3837,15 +3979,16 @@ const roadmapDataGUS = [
         details: {
             overview: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided co",
             keyFeatures: [],
-            impact: "3/16\n- Decision to pause the epic due to low adoption and effort required to GA\n\n3/10\n1. Following up for index creation on Email message Relation table.\n2. VAT is completed on 4th March. \n3. Basic Draft PR is ready \n\n3/03:\n1. Query perf review ..."
-        }
+            impact: "3/16\r\n- Decision to pause the epic due to low adoption and effort required to GA\r\n\r\n3/10\r\n1. Following up for index creation on Email message Relation table.\r\n2. VAT is completed on 4th March. \r\n3. Basic Draft PR is ready"
+        },
+        gusEpicId: "a3QEE000001xfkv"
     },
     {
         id: 38,
         title: "Gen ECI - Enhanced Gen AI Intelligence (DS)",
         description: "HLD: https://docs.google.com/document/d/1oLuQXrZSzbNT3y08rJGiQb230BrXPmnykZNrFg_NdmA/edit?usp=sharing \n Enhance intelligence with generative AI pipeline for ECI, instead of bifurcated experience today. Admin setup",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 Patch (260.patch)",
         quarter: "Winter '26 Patch (260.patch)",
         date: "260.patch",
@@ -3853,24 +3996,31 @@ const roadmapDataGUS = [
         prdLink: "https://salesforce.quip.com/5urWA8OHv2vo",
         team: "",
         scheduledBuild: "260.patch",
-        health: "",
+        health: "Completed",
         devLead: "Parin Kenia",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Deepmala Mehta",
         v2momMethod: "Gong",
         version: "gus",
         details: {
             overview: "HLD: https://docs.google.com/document/d/1oLuQXrZSzbNT3y08rJGiQb230BrXPmnykZNrFg_NdmA/edit?usp=sharing \n Enhance intelligence with generative AI pipeline for ECI, instead of bifurcated experience today. Admin setup",
-            keyFeatures: ["Dev Handoff: Completed on 1/12", "Q3 Project branch : DONE 02/02", "Q3 on Patch GTM Releas: 02/04- 2/10", "Q3 on Patch : 02/16, Monday Week", "Release to prod. Week of 3/9, as the scheduled patch is 260.10"],
-            impact: "3/25/2026:\n8 customers did not get the feature, Dustin reaching out to each of these customers/AEs to turn it on instead of the team running the releasable action again.\n3/17/2026:\n260.10 production release in progress. There have been two rollbacks d..."
-        }
+            keyFeatures: [
+                "Dev Handoff: Completed on 1/12",
+                "Q3 Project branch : DONE 02/02",
+                "Q3 on Patch GTM Releas: 02/04- 2/10",
+                "Q3 on Patch : 02/16, Monday Week",
+                "Release to prod. Week of 3/9, as the scheduled patch is 260.10"
+            ],
+            impact: "3/25/2026:\r\n8 customers did not get the feature, Dustin reaching out to each of these customers/AEs to turn it on instead of the team running the releasable action again.\r\n3/17/2026:\r\n260.10 production release in progress. There have been two rollbacks due to sev1 issues. Now back on track.\r\nGenECI production gate standard rollout in progress. (Only step 6 remaining to open to all production)\r\nOnce all the prod instances are on 260.10 (currently: 603 out of 973), we will execute step 6."
+        },
+        gusEpicId: "a3QEE000001hyI5"
     },
     {
         id: 39,
         title: "Gong Transcript Backfill",
         description: "The primary goal of the Transcript Backfill feature is to allow customers to leverage the existing Gong Managed Package to quickly popul",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3878,7 +4028,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1EnmCWB643Vrg8s9YRjd5pPMF5iZuYWMdclRKL6F13FU/edit?tab=t.0#heading=h.1n3qnijwes3",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Alicia Ong",
         designLead: "Mauricio Dumet",
         qualityLead: "Deepmala Mehta",
@@ -3886,16 +4036,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "The primary goal of the Transcript Backfill feature is to allow customers to leverage the existing Gong Managed Package to quickly popul",
-            keyFeatures: ["Dev Handoff: ETA 1/26", "Q3 Sign Off: ETA 2/7 (10 days)", "Q4 Sign Off: 2/7", "Target Patch: 260.7 (w/ conditional Q4 sign off - no L orgs); 260.8 (w/ Q4 sign off)", "Production Release:  260.8 (gates still off)"],
-            impact: "4/29:\n@Preethi Mali Mahalingam To gate the implementation for Legacy ECI orgs (Non eci to core orgs) asynchronously generate insight when the transcripts for Gong calls are uploaded. This will be done in 262.patch\n@Gil Cardenas is looking into why RegE..."
-        }
+            keyFeatures: [
+                "Dev Handoff: ETA 1/26",
+                "Q3 Sign Off: ETA 2/7 (10 days)",
+                "Q4 Sign Off: 2/7",
+                "Target Patch: 260.7 (w/ conditional Q4 sign off - no L orgs); 260.8 (w/ Q4 sign off)",
+                "Production Release:  260.8 (gates still off)"
+            ],
+            impact: "5/19 : \r\n@Preethi Mali Mahalingam W-22278916 (Closed) - Gater to enable async flow\r\n@Gil Cardenas  W-22214866 RegEx matching  (Closed). \r\nGate enablement in production pending. \r\n\r\n4/29:\r\n@Preethi Mali Mahalingam To gate the implementation for Legacy ECI orgs (Non eci to core orgs) asynchronously generate insight when the transcripts for Gong calls are uploaded. This will be done in 262.patch\r\n@Gil Cardenas is looking into why RegEx matching is taking this long for some transcripts.\r\nAfter we do #1 above call may sync but Insight generation (which is async now) may still fail. \r\n@Cole Bennett Need to understand from you what is plan for these roughly 2000 calls that didn't get synced. Do we reach out to Intuit ? Was it their test org ? Any comms that needs to be done? Do we need to try to sync these calls again? \r\n@Cole Bennett Any chance we can get some of these call transcripts from customer for debugging purposes? \r\n@PJ Pokhrel for Analysis shows ~1,936 transcripts failed can you please run splunk queries to see across how many users these sync failures are?"
+        },
+        gusEpicId: "a3QEE0000022Cwn"
     },
     {
         id: 40,
         title: "In-Person Meeting Ingestion",
         description: "In-person meetings supported as a channel of ingestion Setup UI updates to setup in-person meetings as a channel and settings Integration with SF mobile app for how they create these and pass in data Ingest in-person meeting",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 Patch (260.patch)",
         quarter: "Winter '26 Patch (260.patch)",
         date: "260.patch",
@@ -3903,7 +4060,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1c4nTcDoKHKKkwcEif4gqXirEpUapBu9w1sB7k1ntaOg/edit?tab=t.0",
         team: "",
         scheduledBuild: "260.patch",
-        health: "",
+        health: "Completed",
         devLead: "Alex Mous",
         designLead: "-",
         qualityLead: "Mohammad Suhaib Tariq",
@@ -3911,16 +4068,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "In-person meetings supported as a channel of ingestion Setup UI updates to setup in-person meetings as a channel and settings Integration with SF mobile app for how they create these and pass in data Ingest in-person meeting",
-            keyFeatures: ["ECI API Dev Hand off: Complete", "E2E Dev Handoff: Complete. 2/20 (handoff moved to 2/20 from 2/6 )", "Q3 Sign Off: Owned by Mobile team, Cole to review E2E UX, Deepmala to ensure sanity test", "Q4 Sign Off: Complete", "GA Date: March 23rd"],
-            impact: "3/21:\n- GA completed - gate is open and customers are able to enable the feature!\n- Next steps for ECI: none\n- Next steps for Mobile team: deploy app to iOS and Android\n\n3/18:\n- VAT completed\n\n3/17:\n- Bugs discussed with product, and none are GA..."
-        }
+            keyFeatures: [
+                "ECI API Dev Hand off: Complete",
+                "E2E Dev Handoff: Complete. 2/20 (handoff moved to 2/20 from 2/6 )",
+                "Q3 Sign Off: Owned by Mobile team, Cole to review E2E UX, Deepmala to ensure sanity test",
+                "Q4 Sign Off: Complete",
+                "GA Date: March 23rd"
+            ],
+            impact: "3/21:\r\n- GA completed - gate is open and customers are able to enable the feature!\r\n- Next steps for ECI: none\r\n- Next steps for Mobile team: deploy app to iOS and Android\r\n\r\n3/18:\r\n- VAT completed"
+        },
+        gusEpicId: "a3QEE000001hyJh"
     },
     {
         id: 41,
         title: "Increasing Seats for ECI in EE+",
         description: "As part of ECI P&P update, Increase the ECI seat limit from 10 to a higher number to enable broader ECI usage across EE+",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3928,7 +4092,7 @@ const roadmapDataGUS = [
         prdLink: "http://Details in W-20029754",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
         qualityLead: "Deepmala Mehta",
@@ -3936,16 +4100,22 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "As part of ECI P&P update, Increase the ECI seat limit from 10 to a higher number to enable broader ECI usage across EE+",
-            keyFeatures: ["Dev Done: 2/22", "Q3 Sign Off: not required", "Q4 Sign Off: Completed on 1/16", "Target Patch: 260.5 (completed)"],
-            impact: "01/27: \nChanges rolled out to production with 260.5 patch in the week of Jan 26\n\n1/20 W-20029754 (seat increase) - patch approval doc. sent for 1/22. W-20405190 (IsLegacyProcessingSkipped field in video call) - in QA\n\n1/14\nQ3 may not needed as no E..."
-        }
+            keyFeatures: [
+                "Dev Done: 2/22",
+                "Q3 Sign Off: not required",
+                "Q4 Sign Off: Completed on 1/16",
+                "Target Patch: 260.5 (completed)"
+            ],
+            impact: "01/27: \r\nChanges rolled out to production with 260.5 patch in the week of Jan 26\r\n\r\n1/20 W-20029754 (seat increase) - patch approval doc. sent for 1/22. W-20405190 (IsLegacyProcessingSkipped field in video call) - in QA"
+        },
+        gusEpicId: "a3QEE00000268Zd"
     },
     {
         id: 42,
         title: "Lightning Sync Migration tool to include Graph API options",
         description: "Once EOL is announced, we need to upgrade the LS to EAC migration tool to reflect Graph API changes else >60% of LS base will not be able to use LS.",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3953,24 +4123,31 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1ks4hBlmzelou0_1dqynWEeLganIxfyRmaejyHyvvdh4/edit?tab=t.0#heading=h.ubkwo8g5umma",
         team: "S2X Scrum Team",
         scheduledBuild: "262",
-        health: "",
+        health: "Watch",
         devLead: "Dhaval Gada",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "Once EOL is announced, we need to upgrade the LS to EAC migration tool to reflect Graph API changes else >60% of LS base will not be able to use LS.",
-            keyFeatures: ["CX Handoff to Dev: ✅ 3/25 (CA)", "Dev Done: ✅ 262 FF", "Q3/Q4 Handover: ✅ 4/6", "Q3 Sign off: ✅ 05/14", "Q4 Sign off: N/A (no perf impact)"],
-            impact: "05/12 - Fix in Main. Verified. Pivoted to new Epic.\n\n4/28 - Dependency solution found, under testing. \nPivoting to Monthly delivery for this Epic. End May.\n\n4/21 - Had to roll back graph on Lighting sync due to unrelated dependency, working on a new..."
-        }
+            keyFeatures: [
+                "CX Handoff to Dev: ✅ 3/25 (CA)",
+                "Dev Done: ✅ 262 FF",
+                "Q3/Q4 Handover: ✅ 4/6",
+                "Q3 Sign off: ✅ 05/14",
+                "Q4 Sign off: N/A (no perf impact)"
+            ],
+            impact: "05/12 - Fix in Main. Verified. Pivoted to new Epic.\r\n\r\n4/28 - Dependency solution found, under testing. \r\nPivoting to Monthly delivery for this Epic. End May."
+        },
+        gusEpicId: "a3QEE000001xTa5"
     },
     {
         id: 43,
         title: "Lightning Sync: Retirement, parity and automigration to EAC",
         description: "If no EOL, additional expense to maintain a legacy product used across FinServ and PubSec customers with 6k MAO and 500k MAU",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -3978,7 +4155,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1ks4hBlmzelou0_1dqynWEeLganIxfyRmaejyHyvvdh4/edit?tab=t.0#heading=h.ubkwo8g5umma",
         team: "S2X Scrum Team",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Dhaval Gada",
         designLead: "-",
         qualityLead: "",
@@ -3986,16 +4163,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "If no EOL, additional expense to maintain a legacy product used across FinServ and PubSec customers with 6k MAO and 500k MAU",
-            keyFeatures: ["CX Handoff to Dev: ✅ 3/25 (CA)", "Dev Done:  ✅", "Q3/Q4 Handover:  ✅ 4/6", "Q3 Sign off: Signed off(Rounak)", "Q4 Sign off: TBD (Mike)"],
-            impact: "5 /17 : PRs out for new UI asks, gate check-ins will go in this week to block new banners and notifications from orgs that cannot migrate to EAC.\n4/28 - Pr out for the blocker q3 identified\nDependency solution found, under testing. \n4/21 - 260 Live - ..."
-        }
+            keyFeatures: [
+                "CX Handoff to Dev: ✅ 3/25 (CA)",
+                "Dev Done:  ✅",
+                "Q3/Q4 Handover:  ✅ 4/6",
+                "Q3 Sign off: Signed off(Rounak)",
+                "Q4 Sign off: TBD (Mike)"
+            ],
+            impact: "5 /17 : PRs out for new UI asks, gate check-ins will go in this week to block new banners and notifications from orgs that cannot migrate to EAC.\r\n4/28 - Pr out for the blocker q3 identified\r\nDependency solution found, under testing."
+        },
+        gusEpicId: "a3QEE000001xTWs"
     },
     {
         id: 44,
         title: "Momentum",
         description: "Integrate with Momentum \n https://docs.google.com/spreadsheets/d/1sfngYDGp8Kip2ktMdBwcikRXnfEKnpZZJldbuiTiCpg/edit?gid=0#gid=0 \n https://docs.google.com/spreadsheets/d/1L8FB6YgG4LrlyF-yT8a2fe5Y0vq1fmFtQMXo0eby_JE/edit?gid",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4003,7 +4187,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1EnmCWB643Vrg8s9YRjd5pPMF5iZuYWMdclRKL6F13FU/edit?tab=t.0#heading=h.1n3qnijwes3",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Alicia Ong",
         designLead: "Mauricio Dumet",
         qualityLead: "Deepmala Mehta",
@@ -4013,7 +4197,8 @@ const roadmapDataGUS = [
             overview: "Integrate with Momentum \n https://docs.google.com/spreadsheets/d/1sfngYDGp8Kip2ktMdBwcikRXnfEKnpZZJldbuiTiCpg/edit?gid=0#gid=0 \n https://docs.google.com/spreadsheets/d/1L8FB6YgG4LrlyF-yT8a2fe5Y0vq1fmFtQMXo0eby_JE/edit?gid",
             keyFeatures: [],
             impact: "4/21: Phase One sync up with Deepmala and PJ.  Phase Two cron needs numbers from PJ."
-        }
+        },
+        gusEpicId: "a3QEE000002JCxB"
     },
     {
         id: 45,
@@ -4036,9 +4221,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "See number of engaged contacts as a column in the opportunity list",
-            keyFeatures: ["Dev Done: 4/09", "Q3 HandOff: 4/10", "Q3 Sign-Off: 4/27", "Q4 Hand-Off: 4/10", "Q4 Sign-Off: 4/24"],
-            impact: "4/28/16\n- Complete, all sign off in place. \n\n4/14/26\n- QA in progress, an internal blitz was done today during IST hours.\n\n4/07/26\n- Dev complete, changes merged to hush-base and will be subsequently merged to GTM release by 04/09.\n\n3/31/26\n- D..."
-        }
+            keyFeatures: [
+                "Dev Done: 4/09",
+                "Q3 HandOff: 4/10",
+                "Q3 Sign-Off: 4/27",
+                "Q4 Hand-Off: 4/10",
+                "Q4 Sign-Off: 4/24"
+            ],
+            impact: "4/28/16\r\n- Complete, all sign off in place. \r\n\r\n4/14/26\r\n- QA in progress, an internal blitz was done today during IST hours."
+        },
+        gusEpicId: "a3QEE0000021zEn"
     },
     {
         id: 46,
@@ -4061,9 +4253,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "See which contacts have had recent activities, their role in the deal and level of engagement. (In the Pipeline Inspection and Forecasting side panels)",
-            keyFeatures: ["Dev Done: 4/09", "Q3 HandOff: 4/10", "Q3 Sign-Off: 4/28", "Q4 Hand-Off: 4/10", "Q4 Sign-Off: 4/24"],
-            impact: "4/28/16\n- Complete, all sign off in place. Gate rollout process underway.\n\n4/14/26\n- QA in progress, an internal blitz was done today during IST hours.\n\n4/07/26\n- Dev complete, changes merged to hush-base and will be subsequently merged to GTM rel..."
-        }
+            keyFeatures: [
+                "Dev Done: 4/09",
+                "Q3 HandOff: 4/10",
+                "Q3 Sign-Off: 4/28",
+                "Q4 Hand-Off: 4/10",
+                "Q4 Sign-Off: 4/24"
+            ],
+            impact: "4/28/16\r\n- Complete, all sign off in place. Gate rollout process underway.\r\n\r\n4/14/26\r\n- QA in progress, an internal blitz was done today during IST hours."
+        },
+        gusEpicId: "a3QEE0000020He1"
     },
     {
         id: 47,
@@ -4086,9 +4285,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Activity Heatmap column in the Pipeline Inspection list view",
-            keyFeatures: ["Dev Done: 3/12", "Q3 HandOff: 3/13", "Q3 Sign-Off: 04/14", "Q4 Hand-Off: 3/13", "Q4 Sign-Off: 4/13"],
-            impact: "5/5: Gate rollout completed 100%\n\nBug report: https://gus.lightning.force.com/lightning/r/Report/00OEE000002tBOH2A2/view?queryScope=userFolders\n\n4/28:\nGate rollout pending instance upgrade to .13 (ETA for .13 deployment is 4/28. Start gate rollout E..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/12",
+                "Q3 HandOff: 3/13",
+                "Q3 Sign-Off: 04/14",
+                "Q4 Hand-Off: 3/13",
+                "Q4 Sign-Off: 4/13"
+            ],
+            impact: "5/5: Gate rollout completed 100%\r\n\r\nBug report: https://gus.lightning.force.com/lightning/r/Report/00OEE000002tBOH2A2/view?queryScope=userFolders\r\n\r\n4/28:\r\nGate rollout pending instance upgrade to .13 (ETA for .13 deployment is 4/28. Start gate rollout EOD)"
+        },
+        gusEpicId: "a3QEE0000020HcP"
     },
     {
         id: 48,
@@ -4111,16 +4317,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities",
-            keyFeatures: ["Dev Done: 3/12", "Q3 HandOff: Old : 3/13, New : 3/16", "Q3 Sign-Off: 04/02", "Q4 Hand-Off: Old : 3/13, New : 3/16", "Q4 Sign-Off:"],
-            impact: "4/14/26\n- Complete, changes promoted from GTM release to patch ; gates will be enabled in 262.13\n\n4/07/26\n- Complete, changes promoted from GTM release to patch\n\n3/31/26\n- Changes merged to 260.12 patch over the weekend.\n\n3/24/26\n- QA in progress, couple..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/12",
+                "Q3 HandOff: Old : 3/13, New : 3/16",
+                "Q3 Sign-Off: 04/02",
+                "Q4 Hand-Off: Old : 3/13, New : 3/16",
+                "Q4 Sign-Off:"
+            ],
+            impact: "4/14/26\n- Complete, changes promoted from GTM release to patch ; gates will be enabled in 262.13\n\n4/07/26\n- Complete, changes promoted from GTM release to patch"
+        },
+        gusEpicId: "a3QEE0000023QXt"
     },
     {
         id: 49,
         title: "Pipeline Inspection: AI Summarization - Topics and Actions",
         description: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities",
         category: "feature",
-        status: "in-progress",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4128,7 +4341,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1zlN_u1DIobBiA55j6eZm63QbsHdCvKGDAt2gt0Liv48/edit?tab=t.0#heading=h.lhw4q6c650i2",
         team: "Katmai",
         scheduledBuild: "262",
-        health: "On Track",
+        health: "Completed",
         devLead: "Jason Mar",
         designLead: "Matthew O'Rourke",
         qualityLead: "Meharjot Kals",
@@ -4136,9 +4349,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities",
-            keyFeatures: ["Dev Done: 3/12", "Q3 HandOff: 3/13", "Q3 Sign-Off: 3/27", "Q4 Hand-Off: 3/13", "Q4 Sign-Off:"],
-            impact: "5/11: Gates rolling out\n5/5: Blocking bug fixed in .14. All Stakeholders signed off. Gate rollout May 11-15.\n\n4/14/26:\n- Final instruction updates ready (includes 2 bug fixes). \n- Q4 team to do few more runs to evaluate consistency and then work on a con..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/12",
+                "Q3 HandOff: 3/13",
+                "Q3 Sign-Off: 3/27",
+                "Q4 Hand-Off: 3/13",
+                "Q4 Sign-Off:"
+            ],
+            impact: "5/27: gate rollout completed\r\n5/19: Rollout to happen this week due to .14 prod rollout delays."
+        },
+        gusEpicId: "a3QEE0000020HpJ"
     },
     {
         id: 50,
@@ -4161,9 +4381,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Allow users to add/remove/reorder synthetic columns, so they can add them to their custom lists views",
-            keyFeatures: ["Dev Done: 3/12", "Q3 HandOff: 3/13", "Q3 Sign-Off:", "Q4 Hand-Off: 3/13", "Q4 Sign-Off:"],
-            impact: "5/5: Gate rollout completed 100%\n4/28:\nGate rollout pending instance upgrade to .13 (ETA for .13 deployment is 4/28. Start gate rollout EOD)\n4/7/26 \n- As Heatmap GA is deferred till EOM, include gate rollout for this epic along with Sales methodology..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/12",
+                "Q3 HandOff: 3/13",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: 3/13",
+                "Q4 Sign-Off:"
+            ],
+            impact: "5/5: Gate rollout completed 100%\r\n4/28:\r\nGate rollout pending instance upgrade to .13 (ETA for .13 deployment is 4/28. Start gate rollout EOD)"
+        },
+        gusEpicId: "a3QEE0000023Zsv"
     },
     {
         id: 51,
@@ -4186,9 +4413,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "5/5: Gate rollout completed 100%\n\n3/3/26: QA complete\n2/23/26: Dev complete.\n2/17/26: Main concern brought up was code from Framework and Activities branch being needed for work in Contacts branch.  Teams are connecting.\n2/9/26:\nQA complete.",
-            keyFeatures: ["Dev Done: 3/12", "Q3 HandOff: N/A", "Q3 Sign-Off: N/A", "Q4 Hand-Off: 3/13", "Q4 Sign-Off:"],
-            impact: "5/5: Gate rollout completed 100%\n\n3/3/26: QA complete\n2/23/26: Dev complete.\n2/17/26: Main concern brought up was code from Framework and Activities branch being needed for work in Contacts branch.  Teams are connecting.\n2/9/26:\nQA complete."
-        }
+            keyFeatures: [
+                "Dev Done: 3/12",
+                "Q3 HandOff: N/A",
+                "Q3 Sign-Off: N/A",
+                "Q4 Hand-Off: 3/13",
+                "Q4 Sign-Off:"
+            ],
+            impact: "5/5: Gate rollout completed 100%\r\n\r\n3/3/26: QA complete"
+        },
+        gusEpicId: "a3QEE0000027aqP"
     },
     {
         id: 52,
@@ -4211,9 +4445,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "syntheticCols-defaultWidths.png",
-            keyFeatures: ["Dev Done: 3/12", "Q3 HandOff: 3/13", "Q3 Sign-Off:", "Q4 Hand-Off: 3/13", "Q4 Sign-Off:"],
-            impact: "5/5: Gate rollout completed 100%\n\n4/28:\nGate rollout pending instance upgrade to .13 (ETA for .13 deployment is 4/28. Start gate rollout EOD)\n\n3/24\nQ3 - Testing complete. \n\n3/11: QA complete.\n3/11/26 (Harsha): Q3 Test plan complete. Review with ..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/12",
+                "Q3 HandOff: 3/13",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: 3/13",
+                "Q4 Sign-Off:"
+            ],
+            impact: "5/5: Gate rollout completed 100%\r\n\r\n4/28:\r\nGate rollout pending instance upgrade to .13 (ETA for .13 deployment is 4/28. Start gate rollout EOD)"
+        },
+        gusEpicId: "a3QEE0000027atd"
     },
     {
         id: 53,
@@ -4236,9 +4477,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Address the top usability blockers on our GA scope:  Figma Add a section in our Go",
-            keyFeatures: ["Dev Done: 2/12", "Q3 HandOff: 2/13", "Q3 Sign-Off: 2/17", "Q4 Hand-Off: 2/13", "Q4 Sign-Off: N/A"],
-            impact: "3/10: Complete and reviewed by UX/CX/CDX\n3/3: Double checking on UX/CX/CDX review\n2/23: Q3 complete\n2/17: Q3 sign-off still needed.\n2/10: Scrum team work complete and ready for 260.10 / Release 2.  Q3 Sign-off still needed."
-        }
+            keyFeatures: [
+                "Dev Done: 2/12",
+                "Q3 HandOff: 2/13",
+                "Q3 Sign-Off: 2/17",
+                "Q4 Hand-Off: 2/13",
+                "Q4 Sign-Off: N/A"
+            ],
+            impact: "3/10: Complete and reviewed by UX/CX/CDX\r\n3/3: Double checking on UX/CX/CDX review"
+        },
+        gusEpicId: "a3QEE00000220Iv"
     },
     {
         id: 54,
@@ -4261,9 +4509,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Today, autonomous mode for pipeline management is all or nothing. We believe our customers will be able to get into autonomous mode much faster if we allow for field level control.",
-            keyFeatures: ["Dev Done: 3/12", "Q3 HandOff: 3/13", "Q3 Sign-Off:", "Q4 Hand-Off: 3/13", "Q4 Sign-Off:"],
-            impact: "3/16: Q3 testing in progress\n3/10: Promotion to release branch for extensive Q3 testing 3/12.\n3/2: Completed with testing.  Q3 will do more extensive test pass starting 3/12 when promoted to GTM release env.\n2/23: On track.  Need to fix bug around cus..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/12",
+                "Q3 HandOff: 3/13",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: 3/13",
+                "Q4 Sign-Off:"
+            ],
+            impact: "3/16: Q3 testing in progress\r\n3/10: Promotion to release branch for extensive Q3 testing 3/12."
+        },
+        gusEpicId: "a3QEE00000291DR"
     },
     {
         id: 55,
@@ -4286,16 +4541,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Improve EPT Phase 1  [Cron Job] Creation of Sales deal agent Cron Job to delete the Expire",
-            keyFeatures: ["Dev Done: 2/12", "Q3 HandOff: 2/13", "Q3 Sign-Off: 2/27", "Q4 Hand-Off: 2/13", "Q4 Sign-Off: 3/2"],
-            impact: "3/10: Changing scope of this Epic to include just Date Range.  Working on re-implementing Deletion Cron Job as async.  Moving that work into the main EPT Epic.\n3/2: Date range changes are Q3/Q4 complete.  However AIGenActionItem Deletion Cron Job is del..."
-        }
+            keyFeatures: [
+                "Dev Done: 2/12",
+                "Q3 HandOff: 2/13",
+                "Q3 Sign-Off: 2/27",
+                "Q4 Hand-Off: 2/13",
+                "Q4 Sign-Off: 3/2"
+            ],
+            impact: "3/10: Changing scope of this Epic to include just Date Range.  Working on re-implementing Deletion Cron Job as async.  Moving that work into the main EPT Epic.\r\n3/2: Date range changes are Q3/Q4 complete.  However AIGenActionItem Deletion Cron Job is delayed due to perf impact (CPU spike) at 1 million records.  After discussion and given the 6th month threshold for deletion providing little benefit to releasing in March, it is best to re-implement as async job instead of synchronous.  Need to do this either late in 262 major release or early 262/patch."
+        },
+        gusEpicId: "a3QEE0000027cYr"
     },
     {
         id: 56,
         title: "Platform: AP Split to Harness Migration",
         description: "Platform: AP Split to Harness Migration modernizes the deployment pipeline by moving to a scalable, standardized delivery platform. It reduces release risk, improves deployment velocity, and establishes a consistent foundation",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4303,24 +4565,25 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Rounak Singh",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "Platform: AP Split to Harness Migration modernizes the deployment pipeline by moving to a scalable, standardized delivery platform. It reduces release risk, improves deployment velocity, and establishes a consistent foundation",
             keyFeatures: [],
             impact: "Completed with no issues"
-        }
+        },
+        gusEpicId: "a3QEE000001c2eX"
     },
     {
         id: 57,
         title: "Q1 2026 CX Sales EAC | EAC Doc Refactor",
         description: "Work relating to the EAC doc refactor project. Targeting ToC restructure, Intro and Security sections rewrite during the 260 release timeframe (due mid-Feb 2026) \n Harini's progres tracker: https://docs.google.com/presentation",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 Patch (260.patch)",
         quarter: "Winter '26 Patch (260.patch)",
         date: "260.patch",
@@ -4328,7 +4591,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud CX",
         scheduledBuild: "260.patch",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -4338,14 +4601,15 @@ const roadmapDataGUS = [
             overview: "Work relating to the EAC doc refactor project. Targeting ToC restructure, Intro and Security sections rewrite during the 260 release timeframe (due mid-Feb 2026) \n Harini's progres tracker: https://docs.google.com/presentation",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE0000024pNl"
     },
     {
         id: 58,
         title: "RIQ releases + Build and Release get well",
         description: "Trust: RIQ Releases + Build and Release Get-Well stabilizes and hardens the release pipeline to reduce defects and deployment risk. It improves release predictability, shortens recovery time, and strengthens overall platform re",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4353,7 +4617,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -4362,15 +4626,16 @@ const roadmapDataGUS = [
         details: {
             overview: "Trust: RIQ Releases + Build and Release Get-Well stabilizes and hardens the release pipeline to reduce defects and deployment risk. It improves release predictability, shortens recovery time, and strengthens overall platform re",
             keyFeatures: [],
-            impact: "4/3: Riq, exchange, google have all been completed in some form in the previous weeks. RIQ is underway now with a both a normal change set and also an offline effort to redeploy any services which have not been deployed in a long time. Current main focus..."
-        }
+            impact: "4/3: Riq, exchange, google have all been completed in some form in the previous weeks. RIQ is underway now with a both a normal change set and also an offline effort to redeploy any services which have not been deployed in a long time. Current main focus of RIQ is on jdk17 deployments. Tech discussions around future of riq release ongoing\r\n2/13: Google release underway but waiting on one service with a deploy bug (probably in fit test). As usual see #prodpush for real time updates"
+        },
+        gusEpicId: "a3QEE000001R0Y1"
     },
     {
         id: 59,
         title: "Recall.ai Calendar Integration POC + spiking + approval + prod launch",
         description: "This is partly a placeholder and will have more detail later. Recall efforts are underway in December, so roughly \n spiking done January pre-prod Feb prod March \n More detail to come",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4378,7 +4643,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -4386,9 +4651,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "This is partly a placeholder and will have more detail later. Recall efforts are underway in December, so roughly \n spiking done January pre-prod Feb prod March \n More detail to come",
-            keyFeatures: ["POC: 2/4", "Security approval: Ongoing, Rachna to update on 2/4", "Q3 Sign Off: TBD", "Q4 Sign Off: TBD", "Target Patch: TBD"],
-            impact: "02/10 Update :\nWe finished creating the Parent ECA and on track to complete work to create associated (child) ECA to authenticate with Recall. Validation and E2E Testing for ECA on track to start next week. Outbound Bot APIs for bot scheduling in review..."
-        }
+            keyFeatures: [
+                "POC: 2/4",
+                "Security approval: Ongoing, Rachna to update on 2/4",
+                "Q3 Sign Off: TBD",
+                "Q4 Sign Off: TBD",
+                "Target Patch: TBD"
+            ],
+            impact: "02/10 Update :\r\nWe finished creating the Parent ECA and on track to complete work to create associated (child) ECA to authenticate with Recall. Validation and E2E Testing for ECA on track to start next week. Outbound Bot APIs for bot scheduling in review and on track for completion by EOW. New Entity to store bot mapping is in review but is still waiting on data modelers.\r\n\r\n02/04 Update :\r\nWe finished our POCs for EAC and Recall Integration. Attaching it here(https://salesforce-internal.slack.com/archives/C09MVDG03QC/p1770249888463589?thread_ts=1770168611.604339&cid=C09MVDG03QC) . Security has signed off as well (https://salesforce-internal.slack.com/archives/C09MVDG03QC/p1770255373975099)\r\n We added POC code to the Kepler Connect API (on a local dev box) that extracts the meeting URL from the meeting body and calls the Recall API to request a bot to join. When the meeting starts, the bot successfully joins the call. We then log into Recall’s test account and verified that the recording was present.Through this POC, we validated two important capabilities:We can integrate with EAC.We can successfully make outbound calls to Recall from Core."
+        },
+        gusEpicId: "a3QEE0000022PIv"
     },
     {
         id: 60,
@@ -4403,7 +4675,7 @@ const roadmapDataGUS = [
         prdLink: "https://salesforce.quip.com/xqKxAKhRfJXg",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Canceled",
         devLead: "Kris Fox",
         designLead: "-",
         qualityLead: "Deepmala Mehta",
@@ -4411,16 +4683,22 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "TLDR Transition our (related record) matching service from toggle to be re-built in flow Admins can customize Possibly to include how participants are matched Bonus - aligning with EAC matching as we",
-            keyFeatures: ["Dev Handoff: 3/12", "Q3 Sign Off: 3/20 (delayed on blocker bug) (Sign off done for validating regression as we are not going GA with this epic)", "Q4 Sign Off: 3/20", "Target Patch:  260.12 (week of 4/6/2026)"],
-            impact: "4/1\n- Feature put behind a gate and will not made available to customers, will be revisited post architecture alignment w/ Momentum\n- Team to fast follow a patch change to hide flows that would still be visible\n3/25 - Q3 blocker and Kris reported bein..."
-        }
+            keyFeatures: [
+                "Dev Handoff: 3/12",
+                "Q3 Sign Off: 3/20 (delayed on blocker bug) (Sign off done for validating regression as we are not going GA with this epic)",
+                "Q4 Sign Off: 3/20",
+                "Target Patch:  260.12 (week of 4/6/2026)"
+            ],
+            impact: "4/1\r\n- Feature put behind a gate and will not made available to customers, will be revisited post architecture alignment w/ Momentum\r\n- Team to fast follow a patch change to hide flows that would still be visible\r\n3/25 - Q3 blocker and Kris reported being blocked yesterday night on seeing an “escalate privileges” error on a flow invocation from the event consumer in staging. Awaiting more updates from him today morning. \r\nNeeds follow up on \r\n--> integration plan w/ Momentum - Cole, Alicia, Rachna, Percy\r\n--> promotion to patch pending blocker bug resolution"
+        },
+        gusEpicId: "a3QEE000001uhbC"
     },
     {
         id: 61,
         title: "SCV Transcript Ingestion",
         description: "TLDR For orgs using SCV, admins can add this in setup, and it shows up whenever set up, regardless of which vendor they're using for SCV ECI should calls for (ECI users) + (any SCV calls), regardless of vendor.",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4428,7 +4706,7 @@ const roadmapDataGUS = [
         prdLink: "https://salesforce.quip.com/w96QARHDQ86W",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Parin Kenia",
         designLead: "-",
         qualityLead: "Mohammad Suhaib Tariq",
@@ -4436,16 +4714,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "TLDR For orgs using SCV, admins can add this in setup, and it shows up whenever set up, regardless of which vendor they're using for SCV ECI should calls for (ECI users) + (any SCV calls), regardless of vendor.",
-            keyFeatures: ["M1 April - E2E Steel thread in UI", "M2 May - Data Cloud DataKit", "M3 June - Conversation Search, Sales Signals", "Dev Handoff: 7/23 FF", "Q3 Sign Off: TBD"],
-            impact: "04/29 - \nQA to start on W-20893340 - Ensure Call Structure and Transcript fetch can resolve ConversationParticipant -> CRM Ids \nand W-22201283 - Revert releasable task and pref check in setup - RFR. Needs to be resolved as it will expose the regression..."
-        }
+            keyFeatures: [
+                "M1 April - E2E Steel thread in UI",
+                "M2 May - Data Cloud DataKit",
+                "M3 June - Conversation Search, Sales Signals",
+                "Dev Handoff: 7/23 FF",
+                "Q3 Sign Off: TBD"
+            ],
+            impact: "04/29 - \r\nQA to start on W-20893340 - Ensure Call Structure and Transcript fetch can resolve ConversationParticipant -> CRM Ids \r\nand W-22201283 - Revert releasable task and pref check in setup - RFR. Needs to be resolved as it will expose the regression in SB1 and SB2 next week.\r\n\r\nboth on track for wrapping up before 5/4\r\n\r\n\r\n04/22: \r\nWrap up steel thread by end of Apr. Pause on SCV after steel thread.\r\nColumn A has updates - https://docs.google.com/spreadsheets/d/1fUjMIMaqBCm-EZaRn0Y9YXN9gXLugKlYrk2hVyghZkc/edit?gid=939018030#gid=939018030"
+        },
+        gusEpicId: "a3QEE000001uho5"
     },
     {
         id: 62,
         title: "SRE Run The Business including support and security requests",
         description: "Description including Target Customer and Benefit or Goal (The “Who, What and Why”) Run the business requests include infra releases onboarding offboarding troubleshooting access",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4453,7 +4738,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -4462,8 +4747,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Description including Target Customer and Benefit or Goal (The “Who, What and Why”) Run the business requests include infra releases onboarding offboarding troubleshooting access",
             keyFeatures: [],
-            impact: "4/3: In addition to previously managed efforts around AL2023 bash code coverage, this week vault updates have been front and center. Terramon changes are done\n3/20: So many things have been added here: AL2023 updates, terramon, bash code coverage. We wi..."
-        }
+            impact: "4/3: In addition to previously managed efforts around AL2023 bash code coverage, this week vault updates have been front and center. Terramon changes are done\r\n3/20: So many things have been added here: AL2023 updates, terramon, bash code coverage. We will have an effort soon to decide of some of these need their own epics"
+        },
+        gusEpicId: "a3QEE000001ZFJl"
     },
     {
         id: 63,
@@ -4486,9 +4772,12 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Enable sellers to work with their Sales Agent in Slack",
-            keyFeatures: ["Open gate for all instances"],
-            impact: "2/23/26: Gates open on all instances\n2/17/26: Gates rolling out through last weekend.  Should be complete by Wednesday.\n2/9/26:\nERR to fix blocker completed today. Gate rollout to start on 2/11.\n\n1/28/26\n- New intermittent bug in prod that was not ..."
-        }
+            keyFeatures: [
+                "Open gate for all instances"
+            ],
+            impact: "2/23/26: Gates open on all instances\r\n2/17/26: Gates rolling out through last weekend.  Should be complete by Wednesday."
+        },
+        gusEpicId: "a3QEE0000024rPZ"
     },
     {
         id: 64,
@@ -4511,9 +4800,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Add user-level metering of 15 Pipeline Management notifications per day so that we don't overwhelm users with too many notifications, and control cost to serve.",
-            keyFeatures: ["Dev Done: 3/23", "Q3 HandOff: 4/1", "Q3 Sign-Off:", "Q4 Hand-Off: 4/1", "Q4 Sign-Off: 4/15"],
-            impact: "5/12: Done and in production\n4/28: Validate on 260.Patch and sign off.\n3/31: Backport to GTM release 4 develop branch\n3/24: QA complete\n3/16: Dev complete. QA in progress\n3/11: Out for review. On track\n3/3: Implementation to start this sprint, on track\n2..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/23",
+                "Q3 HandOff: 4/1",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: 4/1",
+                "Q4 Sign-Off: 4/15"
+            ],
+            impact: "5/12: Done and in production\n4/28: Validate on 260.Patch and sign off."
+        },
+        gusEpicId: "a3QEE0000027bWL"
     },
     {
         id: 65,
@@ -4528,7 +4824,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1ndQtWN386xtZBzDXivieWwtP48AP5ReIQ1DEHUECgbo/edit?tab=t.ebnqt88n8qkt",
         team: "",
         scheduledBuild: "266",
-        health: "",
+        health: "On Hold",
         devLead: "Prateek Sharma (Sales Cloud)",
         designLead: "Nirjhar Ray",
         qualityLead: "",
@@ -4538,7 +4834,8 @@ const roadmapDataGUS = [
             overview: "Allow KPI Center to draw off of extended or modified SDMs. GUI for admins to configure custom recommended actions association to KPIs. Decouple KPI Center from Magic Feed in terms of setup pre-reqs.",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001u0ZR2AY"
     },
     {
         id: 66,
@@ -4553,7 +4850,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1ndQtWN386xtZBzDXivieWwtP48AP5ReIQ1DEHUECgbo/edit?tab=t.ebnqt88n8qkt",
         team: "",
         scheduledBuild: "266",
-        health: "",
+        health: "On Hold",
         devLead: "Prateek Sharma (Sales Cloud)",
         designLead: "Nirjhar Ray",
         qualityLead: "",
@@ -4563,7 +4860,8 @@ const roadmapDataGUS = [
             overview: "Meet DC1 compliance requirements for the metrics provided by Sales Workspace in Lightning and Slack.",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000002CIRR2A4"
     },
     {
         id: 67,
@@ -4611,7 +4909,13 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Phase 3: Customizable Methodologies",
-            keyFeatures: ["Dev Done: 4/09", "Q3 HandOff: 4/10", "Q3 Sign-Off:", "Q4 Hand-Off: 4/10", "Q4 Sign-Off:"],
+            keyFeatures: [
+                "Dev Done: 4/09",
+                "Q3 HandOff: 4/10",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: 4/10",
+                "Q4 Sign-Off:"
+            ],
             impact: "-"
         }
     },
@@ -4636,16 +4940,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Phase 1: Out-of-the-Box (OOTB) MEDDIC Methodology Implementation Pipeline Inspection List View UI updates Pipeline Inspection Detail View UI updates Admin selector to select from standard set of methodologie",
-            keyFeatures: ["Dev Done: 03/12", "GTM Release Branch Merge: 3/17", "Q3 HandOff: Old : 4/10, New : 3/17", "Q3 Sign-Off: 04/02", "Q4 Hand-Off: Old : 4/10, New : 3/17"],
-            impact: "4/28/26\n- Gate enablement planned this week.\n\n4/14/26\n- Complete, changes promoted to patch.\n- Gates will be enabled post 16th April because of ongoing moratorium from gater team.\n\n04/07/26\n- Complete, changes promoted from GTM release to patch\n..."
-        }
+            keyFeatures: [
+                "Dev Done: 03/12",
+                "GTM Release Branch Merge: 3/17",
+                "Q3 HandOff: Old : 4/10, New : 3/17",
+                "Q3 Sign-Off: 04/02",
+                "Q4 Hand-Off: Old : 4/10, New : 3/17"
+            ],
+            impact: "4/28/26\r\n- Gate enablement planned this week.\r\n\r\n4/14/26\r\n- Complete, changes promoted to patch.\r\n- Gates will be enabled post 16th April because of ongoing moratorium from gater team."
+        },
+        gusEpicId: "a3QEE0000021zGP"
     },
     {
         id: 70,
         title: "Sales Methodologies: Pipeline Management Agent - Autonomous",
         description: "Phase 3: Sales Methodologies: Pipeline Management Agent - Autonomous",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -4653,17 +4964,20 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud Centaurus",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Manish Singh (Sales Cloud)",
-        designLead: "",
-        qualityLead: "",
+        designLead: "Dave Fernandez",
+        qualityLead: "Aniruddhsinh Solanki",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "Phase 3: Sales Methodologies: Pipeline Management Agent - Autonomous",
-            keyFeatures: ["Dev Done: Old: 5/15, New: 5/8Q3 HandOff: Old : 5/18, New: 5/19Q3 Sign-Off:Q4 Hand-Off: Old : 5/18, New: 5/13Q4 Sign-Off:UX/CX Hand-Off: Old : 5/18, New: 5/13UX/CX Sign-Off"],
-            impact: "5/19/26\n- Handed over for testing.\n\n5/12/26\n- Final PR merge from feature brach to GTM release is in progress, will be handed over to Q3/Q4 by 05/13.\n\n5/5/26\n- On track for 05/07 Dev deadline for GTM 262.8 release.\n\n4/28/26\n- On track for Dev completion ..."
-        }
+            keyFeatures: [
+                "Dev Done: Old: 5/15, New: 5/8Q3 HandOff: Old : 5/18, New: 5/19Q3 Sign-Off:Q4 Hand-Off: Old : 5/18, New: 5/13Q4 Sign-Off:UX/CX Hand-Off: Old : 5/18, New: 5/13UX/CX Sign-Off"
+            ],
+            impact: "5/27/26\n- Few bugs were identified in internal blitz, team is working on the fix and also working on the patch approval doc to push the fix in patch branch.\n- ETA to fix all bugs : 05/28\n\n5/19/26\n- Handed over for testing."
+        },
+        gusEpicId: "a3QEE000002GqPh2AK"
     },
     {
         id: 71,
@@ -4686,9 +5000,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Phase 2: Pipeline Management Agent with OOTB MEDDIC Methodology Pre-populated OOTB PROMPTS/FLOWS for MEDDIC within the Pipeline Agent Potential updates to the AIGenActionItem UI to align with playbook changes",
-            keyFeatures: ["Dev Done: Old: 5/15, New: 4/9", "Q3 HandOff: 5/18, New: 4/9", "Q3 Sign-Off: 4/30", "Q4 Hand-Off: 5/18, New: 4/9", "Q4 Sign-Off:"],
-            impact: "4/28/26\n- Team fixed fewP2 bugs and working on patch approval doc and approvals from all stakeholders.\n\n4/14/26\n- QA in progress, blitz scheduled for 04/15.\n\n04/07/26\n- Final mocks not yet delivered, team is moving ahead with POC UI that was done ..."
-        }
+            keyFeatures: [
+                "Dev Done: Old: 5/15, New: 4/9",
+                "Q3 HandOff: 5/18, New: 4/9",
+                "Q3 Sign-Off: 4/30",
+                "Q4 Hand-Off: 5/18, New: 4/9",
+                "Q4 Sign-Off:"
+            ],
+            impact: "4/28/26\r\n- Team fixed fewP2 bugs and working on patch approval doc and approvals from all stakeholders.\r\n\r\n4/14/26\r\n- QA in progress, blitz scheduled for 04/15."
+        },
+        gusEpicId: "a3QEE000002B7Y5"
     },
     {
         id: 72,
@@ -4711,9 +5032,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Relax hard requirement on ECI and EAC (in end user onboarding)",
-            keyFeatures: ["Dev Done: 2/16", "Q3 HandOff: 2/17", "Q3 Sign-Off: 2/27", "Q4 Hand-Off: N/A", "Q4 Sign-Off: N/A"],
-            impact: "3/3: All Done\n2/24: Q3 Testing in Patch GTM Release branch  completed\n2/27: Q3 Testing in 260/Patch branch  completed\n2/17: Dev Done, Q3 Testing in progress\n2/10: On track, no blockers"
-        }
+            keyFeatures: [
+                "Dev Done: 2/16",
+                "Q3 HandOff: 2/17",
+                "Q3 Sign-Off: 2/27",
+                "Q4 Hand-Off: N/A",
+                "Q4 Sign-Off: N/A"
+            ],
+            impact: "3/3: All Done\r\n2/24: Q3 Testing in Patch GTM Release branch  completed"
+        },
+        gusEpicId: "a3QEE0000023EoT"
     },
     {
         id: 73,
@@ -4728,7 +5056,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "266",
-        health: "",
+        health: "Not Started",
         devLead: "James Yuan",
         designLead: "-",
         qualityLead: "",
@@ -4738,7 +5066,8 @@ const roadmapDataGUS = [
             overview: "Prioritize feed items based on AI scoring, surfacing them based on a combination of urgency and priority",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001uCdp2AE"
     },
     {
         id: 74,
@@ -4761,9 +5090,12 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Single pane of glass for sellers to collaborate with agents",
-            keyFeatures: ["Open gate in all instances"],
-            impact: "2/10: Gate rollout will finish today\n1/28/26\n- Feature gate delayed due to two new blocking bugs found in prod (one issue with KPIs not loading, the other with data streams not refreshing). Team is determining root cause."
-        }
+            keyFeatures: [
+                "Open gate in all instances"
+            ],
+            impact: "2/10: Gate rollout will finish today\r\n1/28/26\r\n- Feature gate delayed due to two new blocking bugs found in prod (one issue with KPIs not loading, the other with data streams not refreshing). Team is determining root cause."
+        },
+        gusEpicId: "a3QEE0000024rML"
     },
     {
         id: 75,
@@ -4786,9 +5118,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "New insight: Nudge to reply to ignored email",
-            keyFeatures: ["Dev Done: 4/9", "Q3 HandOff: 4/10", "Q3 Sign-Off: 4/24", "Q4 Hand-Off: 4/10", "Q4 Sign-Off: 4/24"],
-            impact: "4/28: Q4,UX,CX and PM signed off. Q3 testing in progress\n4/14: Q3 testing is in progress on the Patch GTM Release branch\n4/7: Handed off to Q3. Team is working on adding automation to meet the code coverage target of 80%\n3/31: Will fix all bugs this w..."
-        }
+            keyFeatures: [
+                "Dev Done: 4/9",
+                "Q3 HandOff: 4/10",
+                "Q3 Sign-Off: 4/24",
+                "Q4 Hand-Off: 4/10",
+                "Q4 Sign-Off: 4/24"
+            ],
+            impact: "4/28: Q4,UX,CX and PM signed off. Q3 testing in progress\r\n4/14: Q3 testing is in progress on the Patch GTM Release branch"
+        },
+        gusEpicId: "a3QEE00000220PN"
     },
     {
         id: 76,
@@ -4811,16 +5150,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "New insight: Update oppty next steps",
-            keyFeatures: ["Dev Done: 3/31", "Q3 HandOff: 4/1", "Q3 Sign-Off: 4/17", "Q4 Hand-Off: 4/1", "Q4 Sign-Off: 4/15"],
-            impact: "4/28: Q4,UX,CX and PM signed off. Q3 testing in progress\n4/14: Q3 testing is in progress on the Patch GTM Release branch\n4/7: Handed off to Q3. Q3 testing in progress\n3/31: Last user story is QA in progress, and then we will hand off to Q3\n3/24: On t..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/31",
+                "Q3 HandOff: 4/1",
+                "Q3 Sign-Off: 4/17",
+                "Q4 Hand-Off: 4/1",
+                "Q4 Sign-Off: 4/15"
+            ],
+            impact: "4/28: Q4,UX,CX and PM signed off. Q3 testing in progress\r\n4/14: Q3 testing is in progress on the Patch GTM Release branch"
+        },
+        gusEpicId: "a3QEE000001u0eH"
     },
     {
         id: 77,
         title: "Sales Workspace KPI Trust (Data Governance Tech Debt & Caching for EPT)",
         description: "KPI Trust (Data Governance Tech Debt & Caching for EPT) \n Active workstreams that will get covered as part of this epic are as follows - \n Data Governance onboar",
         category: "feature",
-        status: "in-progress",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4828,7 +5174,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1Xci5-hicDztqTdje4R6GmYc6NVEWKbgXXRc-h6wy6eI/edit?tab=t.0#heading=h.imwul2t4s0ew",
         team: "Sales Cloud Taurus",
         scheduledBuild: "262",
-        health: "On Track",
+        health: "Completed",
         devLead: "Prateek Sharma (Sales Cloud)",
         designLead: "Huong Le",
         qualityLead: "William Hackett",
@@ -4836,9 +5182,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "KPI Trust (Data Governance Tech Debt & Caching for EPT) \n Active workstreams that will get covered as part of this epic are as follows - \n Data Governance onboar",
-            keyFeatures: ["Dev Done: Old : 4/9, New : 5/7", "Q3 HandOff: Old : 4/10, New : 5/13", "Q3 Sign-Off:", "Q4 Hand-Off: Old : 4/10, New : 5/13", "Q4 Sign-Off:"],
-            impact: "5/19/26\n- Handed over to Q3 for testing, blocked by P1 (W-22559233) from Revintel team\n\n5/12/26\n- Changes merged to GTM release and ready for Q3/Q4 handover.\n\n5/5/26\n- On track for 05/07 Dev deadline for GTM 262.8 release.\n\n4/28/16\n- On track for 262.8 G..."
-        }
+            keyFeatures: [
+                "Dev Done: Old : 4/9, New : 5/7",
+                "Q3 HandOff: Old : 4/10, New : 5/13",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: Old : 4/10, New : 5/13",
+                "Q4 Sign-Off:"
+            ],
+            impact: "5/19/26\n- Handed over to Q3 for testing, blocked by P1 (W-22559233) from Revintel team\n\n5/12/26\n- Changes merged to GTM release and ready for Q3/Q4 handover."
+        },
+        gusEpicId: "a3QEE0000021V8f"
     },
     {
         id: 78,
@@ -4861,9 +5214,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Continue to work with DC/Semantic Layer teams to reduce cost and EPT. \n Active workstreams that will get covered as part of this epic are as follows - \n Number forma",
-            keyFeatures: ["Dev Done: 3/12", "Q3 HandOff: Old :3/13 , New : 3/17", "Q3 Sign-Off:", "Q4 Hand-Off: Old :3/13 , New : 3/17", "Q4 Sign-Off: 3/27"],
-            impact: "4/14/26\n- Branching work to ensure backward compatibility is complete, testing complete\n\n4/07/26\n- Active account : No Q3/Q4 issues; branching work in progress to ensure backward compatibility.\n\n3/31/26\n- Active account revised definition : No Q3/..."
-        }
+            keyFeatures: [
+                "Dev Done: 3/12",
+                "Q3 HandOff: Old :3/13 , New : 3/17",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: Old :3/13 , New : 3/17",
+                "Q4 Sign-Off: 3/27"
+            ],
+            impact: "4/14/26\r\n- Branching work to ensure backward compatibility is complete, testing complete\r\n\r\n4/07/26\r\n- Active account : No Q3/Q4 issues; branching work in progress to ensure backward compatibility."
+        },
+        gusEpicId: "a3QEE0000024rSn"
     },
     {
         id: 79,
@@ -4878,7 +5238,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "266",
-        health: "",
+        health: "Not Started",
         devLead: "Prateek Sharma (Sales Cloud)",
         designLead: "Nirjhar Ray",
         qualityLead: "",
@@ -4888,12 +5248,13 @@ const roadmapDataGUS = [
             overview: "Add new KPIs to KPI Center and allow sales reps to configure which KPIs display by default. \n Scope limited to 260 KPIs listed in",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001u0hV2AQ"
     },
     {
         id: 80,
         title: "Sales Workspace Simplified Setup",
-        description: "Reduce the complexity and number of steps in the Go Sales Workspace feature page to simplify the setup experience for customers \n Milestones: M1: Merge Intelligence view in one step	 - March (Internal demo) M2: Orchestrate",
+        description: "Reduce the complexity and number of steps in the Go Sales Workspace feature page to simplify the setup experience for customers \n Milestones: M1: Merge Intelligence view in one step\t - March (Internal demo) M2: Orchestrate",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -4910,10 +5271,17 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Reduce the complexity and number of steps in the Go Sales Workspace feature page to simplify the setup experience for customers \n Milestones: M1: Merge Intelligence view in one step	 - March (Internal demo) M2: Orchestrate",
-            keyFeatures: ["Dev Done: 4/09", "Q3 HandOff: 4/10", "Q3 Sign-Off: 4/30", "Q4 Hand-Off: 4/10", "Q4 Sign-Off:"],
-            impact: "5/5/26\n- Complete, sign received from all stakeholders.\n\n4/28/26\n- QA in progress, Q3 faced a blocker with C360 SDM deployment delaying sign-off.\n- Fix is pushed by Revintel team in .14; waiting for SDB to pick up the change for Q3  \n   to continue..."
-        }
+            overview: "Reduce the complexity and number of steps in the Go Sales Workspace feature page to simplify the setup experience for customers \n Milestones: M1: Merge Intelligence view in one step\t - March (Internal demo) M2: Orchestrate",
+            keyFeatures: [
+                "Dev Done: 4/09",
+                "Q3 HandOff: 4/10",
+                "Q3 Sign-Off: 4/30",
+                "Q4 Hand-Off: 4/10",
+                "Q4 Sign-Off:"
+            ],
+            impact: "5/5/26\r\n- Complete, sign received from all stakeholders.\r\n\r\n4/28/26\r\n- QA in progress, Q3 faced a blocker with C360 SDM deployment delaying sign-off.\r\n- Fix is pushed by Revintel team in .14; waiting for SDB to pick up the change for Q3  \r\n   to continue testing and sign off."
+        },
+        gusEpicId: "a3QEE0000021DZx"
     },
     {
         id: 81,
@@ -4928,7 +5296,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1WrZ7pXLKBqXEPFW8Q8oF7derUTjgAGXnyx3AOWWHipk/edit?tab=t.0#heading=h.7posinch7t7q",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Canceled",
         devLead: "Yogesh Patel",
         designLead: "-",
         qualityLead: "",
@@ -4937,15 +5305,16 @@ const roadmapDataGUS = [
         details: {
             overview: "Frequent enterprise security ask to adoption EAC Email sync. Lacking this we are losing deal that could potentially lead to Agentforce customers like Amazon etc.",
             keyFeatures: [],
-            impact: "1/20:\nEpic Nevered by the product\n1/13: \nNot started. Stretch item.\n1/7:\nNot started. Stretch item."
-        }
+            impact: "1/20:\r\nEpic Nevered by the product\r\n1/13: \r\nNot started. Stretch item."
+        },
+        gusEpicId: "a3QEE000001xhht"
     },
     {
         id: 82,
         title: "Storm Right Sizing plus Graviton",
         description: "This is a structural cost lever that lowers infra run-rate, protects margins at scale, and future-proofs our platform without impacting reliability or velocity. Storm Right Sizing + Graviton together optimize both how much co",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4953,7 +5322,7 @@ const roadmapDataGUS = [
         prdLink: "http://n/a",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -4962,15 +5331,16 @@ const roadmapDataGUS = [
         details: {
             overview: "This is a structural cost lever that lowers infra run-rate, protects margins at scale, and future-proofs our platform without impacting reliability or velocity. Storm Right Sizing + Graviton together optimize both how much co",
             keyFeatures: [],
-            impact: "3/27: The graviton portion will be finished with the jdk17 upgrades. The memory portion will only happen after the jdk17 upgrades (approx the end of the 262 release)\n2/13: This has been co-mingled with the turnkey/new cell efforts. Right now this config..."
-        }
+            impact: "3/27: The graviton portion will be finished with the jdk17 upgrades. The memory portion will only happen after the jdk17 upgrades (approx the end of the 262 release)\r\n2/13: This has been co-mingled with the turnkey/new cell efforts. Right now this config is live in all the new turnkey cells...Q4 will sign off on it there and it will first be live in prod in the new cell. Shortly thereafter it will also go live on new jdk17 storm clusters in prod"
+        },
+        gusEpicId: "a3QEE000001ZFDJ"
     },
     {
         id: 83,
         title: "Test Epic",
         description: "This is a test placeholder epic",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -4978,7 +5348,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Bani Kalra",
         designLead: "-",
         qualityLead: "Bani Kalra",
@@ -4986,16 +5356,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "This is a test placeholder epic",
-            keyFeatures: ["Dev Handoff: 1/20 (delayed by 2 days)", "Q3 hoff: 1/22 (complete)", "Q3 Sign Off: 2/5 (10 days)", "Q4 S-Off: 2/5 (Ongoing)", "Target Patch: 260.7 (customer release 2/11)"],
-            impact: "2/10:\nOne bug to patch in 260.8 : W-21229786 (completed)\nPhase 2: we are going to create a new developers patch branch for the continuation of Easy ECI in Phase 2 (LLM based features)\n\n2/9:\nOff-core prod push done, FVT gate on\n\n2/3: \n(update) eci..."
-        }
+            keyFeatures: [
+                "Dev Handoff: 1/20 (delayed by 2 days)",
+                "Q3 hoff: 1/22 (complete)",
+                "Q3 Sign Off: 2/5 (10 days)",
+                "Q4 S-Off: 2/5 (Ongoing)",
+                "Target Patch: 260.7 (customer release 2/11)"
+            ],
+            impact: "2/10:\r\nOne bug to patch in 260.8 : W-21229786 (completed)\r\nPhase 2: we are going to create a new developers patch branch for the continuation of Easy ECI in Phase 2 (LLM based features)\r\n\r\n2/9:\r\nOff-core prod push done, FVT gate on"
+        },
+        gusEpicId: "a3QEE000002MdBF"
     },
     {
         id: 84,
         title: "Unified Agent Action Feed with Prioritization (Slack/Lightning)",
         description: "As a sales rep, I can accept or reject prioritized Agent recommendations easily across Lightning, Slack and mobile",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Winter '27 (266)",
         quarter: "Winter '27 (266)",
         date: "266",
@@ -5003,7 +5380,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "266",
-        health: "",
+        health: "On Track",
         devLead: "Lu Ping Chen ☢",
         designLead: "Chris Sellinger",
         qualityLead: "",
@@ -5013,14 +5390,15 @@ const roadmapDataGUS = [
             overview: "As a sales rep, I can accept or reject prioritized Agent recommendations easily across Lightning, Slack and mobile",
             keyFeatures: [],
             impact: "5/1: Started this sprint"
-        }
+        },
+        gusEpicId: "a3QEE000002B6nJ2AS"
     },
     {
         id: 85,
         title: "Unified Agent Action Feed: Escalated case",
         description: "New insight: Escalated case related to opportunity/account",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -5028,7 +5406,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1ndQtWN386xtZBzDXivieWwtP48AP5ReIQ1DEHUECgbo/edit?tab=t.5rfz8zf2dscg",
         team: "",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Jason Lu",
         designLead: "Nirjhar Ray",
         qualityLead: "",
@@ -5037,15 +5415,16 @@ const roadmapDataGUS = [
         details: {
             overview: "New insight: Escalated case related to opportunity/account",
             keyFeatures: [],
-            impact: "5/19: Intern started this week, he will start on it from next week"
-        }
+            impact: "6/9: Spike is done, readout is scheduled for today. Implementation will start now\r\n6/2: Intern is working on spike"
+        },
+        gusEpicId: "a3QEE00000220Qz2AI"
     },
     {
         id: 86,
         title: "Unified Agent Action Feed: Filtering",
         description: "Sales reps can filter the agent feed by categories",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -5053,8 +5432,8 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1Yt-urLpIk5_KIh0PliQ-O6whB9-M0II9UM4amN1JYyk/edit?tab=t.exa750a18a6w",
         team: "",
         scheduledBuild: "264",
-        health: "",
-        devLead: "-",
+        health: "On Track",
+        devLead: "Aakash Therani",
         designLead: "Nirjhar Ray",
         qualityLead: "",
         v2momMethod: "",
@@ -5062,8 +5441,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Sales reps can filter the agent feed by categories",
             keyFeatures: [],
-            impact: "5/19: Spike will be started this week"
-        }
+            impact: "6/9: The data model review is still not complete, but the team has started implementation in parallel. No blockers to call out for now\r\n6/2: Implementation started, working with data modelers on the new entities"
+        },
+        gusEpicId: "a3QEE000002Okwb2AC"
     },
     {
         id: 87,
@@ -5078,8 +5458,8 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1Yt-urLpIk5_KIh0PliQ-O6whB9-M0II9UM4amN1JYyk/edit?tab=t.exa750a18a6w",
         team: "",
         scheduledBuild: "264",
-        health: "",
-        devLead: "-",
+        health: "On Hold",
+        devLead: "Akhilesh Sharma",
         designLead: "Nirjhar Ray",
         qualityLead: "",
         v2momMethod: "",
@@ -5087,8 +5467,9 @@ const roadmapDataGUS = [
         details: {
             overview: "From their Agent Action feed, Sales Reps can update meeting settings such as recording and privacy for upcoming meetings",
             keyFeatures: [],
-            impact: "-"
-        }
+            impact: "6/9: On hold, waiting on the alignment on the PM side\r\n6/2: Spike started this week"
+        },
+        gusEpicId: "a3QEE000002Ol1R2AS"
     },
     {
         id: 88,
@@ -5103,7 +5484,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "-",
-        health: "",
+        health: "Not Started",
         devLead: "Akhilesh Sharma",
         designLead: "Nirjhar Ray",
         qualityLead: "",
@@ -5113,14 +5494,15 @@ const roadmapDataGUS = [
             overview: "As an admin, I can report on how recommendations were handled by sales reps- how many had no interation, were dismissed, or where the action button was clicked.",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000002B7Zh2AK"
     },
     {
         id: 89,
         title: "Unified Agent Action Feed: Onboard More Agents",
         description: "Onboard new internal teams so their features are available in Magic Feed",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -5128,24 +5510,31 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Wenying Yang",
         designLead: "Nirjhar Ray",
-        qualityLead: "",
+        qualityLead: "Orville Pinto",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "Onboard new internal teams so their features are available in Magic Feed",
-            keyFeatures: ["Dev Done: 5/7", "Q3 HandOff: 5/13", "Q3 Sign-Off:", "Q4 Hand-Off: N/A", "Q4 Sign-Off: N/A"],
-            impact: "5/19: Q3 testing is in progress\n5/12: Promoted to Patch GTM. Q3 handoff this week\n5/5: Will merge to Release1 of PatchGTM this week\n4/28: Started this sprint"
-        }
+            keyFeatures: [
+                "Dev Done: 5/7",
+                "Q3 HandOff: 5/13",
+                "Q3 Sign-Off:",
+                "Q4 Hand-Off: N/A",
+                "Q4 Sign-Off: N/A"
+            ],
+            impact: "6/9: Gate rollout happening this week\r\n6/2: Patch rollout happening this week"
+        },
+        gusEpicId: "a3QEE000001u0ft2AA"
     },
     {
         id: 90,
         title: "Upgrade Cassandra major version",
         description: "Feature Overview (The “What”) Upgrading Cassandra to version 4+ across our services to enhance performance, reliability, and scalability while aligning with long-term tech enablement goals. This epic includes the necessary ste",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5153,24 +5542,25 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "Feature Overview (The “What”) Upgrading Cassandra to version 4+ across our services to enhance performance, reliability, and scalability while aligning with long-term tech enablement goals. This epic includes the necessary ste",
             keyFeatures: [],
-            impact: "5/1: Stage will start on Monday. Full schedule presented to Nikhil\n4/3: after feedback we have decided we must do this rollout 1-AZ at a time. We have finished a new MO to do that (tested in pre-prod). Other feedback was to test the process first on a r..."
-        }
+            impact: "5/1: Stage will start on Monday. Full schedule presented to Nikhil\r\n4/3: after feedback we have decided we must do this rollout 1-AZ at a time. We have finished a new MO to do that (tested in pre-prod). Other feedback was to test the process first on a real copy of the production data (not just pre-prod data). This required an update to our DR tools. That update is in the process of being tested in pre-prod. When we proceed we will first upgrade the 'fake' (restored from backup) copy first as a test. Jeff is on PTO next week though so he will start that when he is back on 4/13"
+        },
+        gusEpicId: "a3QEE000001HLFZ"
     },
     {
         id: 91,
         title: "Upgrade Java on ES to jdk17",
         description: "must be done by April to be compliant with central team requests Else, Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5178,7 +5568,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -5187,15 +5577,16 @@ const roadmapDataGUS = [
         details: {
             overview: "must be done by April to be compliant with central team requests Else, Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update",
             keyFeatures: [],
-            impact: "3/6: This is all done\n2/13: Errors have been overcome in pre-prod and change has been deployed to 1 prod cluster....assuming no issues will likely be deployed to the rest next week\n2/6: Initial attempt on pre-prod has led to some unexplained errors. Th..."
-        }
+            impact: "3/6: This is all done\r\n2/13: Errors have been overcome in pre-prod and change has been deployed to 1 prod cluster....assuming no issues will likely be deployed to the rest next week"
+        },
+        gusEpicId: "a3QEE0000022PKX"
     },
     {
         id: 92,
         title: "Upgrade Postgresql to 14.X",
         description: "Background We are preparing for an upcoming Amazon RDS PostgreSQL upgrade from Postgres 13 → Postgres 14 . As part of this effort, we need to ensure our platform JDBC driver is aligned with the supported and recommended",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5203,7 +5594,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -5212,15 +5603,16 @@ const roadmapDataGUS = [
         details: {
             overview: "Background We are preparing for an upcoming Amazon RDS PostgreSQL upgrade from Postgres 13 → Postgres 14 . As part of this effort, we need to ensure our platform JDBC driver is aligned with the supported and recommended",
             keyFeatures: [],
-            impact: "4/3: Christina has taken this over from Xing. We now have a TD to do it by 4/30. We have not strictly committed to this date but we will attempt to hit it. The change has been in pre-prod for a while and Christina is attempting to get all stakeholders on..."
-        }
+            impact: "4/3: Christina has taken this over from Xing. We now have a TD to do it by 4/30. We have not strictly committed to this date but we will attempt to hit it. The change has been in pre-prod for a while and Christina is attempting to get all stakeholders onboard to verify that it has not caused any issues in pre-prod before writing a change doc\r\n3/27: This is live on pre-prod but was not promoted by Xing before he left on parental leave. We will assign to someone else on the team in April"
+        },
+        gusEpicId: "a3QEE00000278m5"
     },
     {
         id: 93,
         title: "Upgrade zookeeper",
         description: "Trust: Upgrade ZooKeeper (v3.7) modernizes core infrastructure to supported, secure versions. It reduces security and stability risk, ensures vendor supportability, and protects platform reliability at scale.",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5228,24 +5620,25 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "Trust: Upgrade ZooKeeper (v3.7) modernizes core infrastructure to supported, secure versions. It reduces security and stability risk, ensures vendor supportability, and protects platform reliability at scale.",
             keyFeatures: [],
             impact: "1/30: This is complete and working in prod"
-        }
+        },
+        gusEpicId: "a3QEE000001HHOr"
     },
     {
         id: 94,
         title: "[258.Patch] New Simple Email Builder Experience in Starter & Pro Suite",
         description: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. \n Link to PRD:",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Summer '25 Patch (258.patch)",
         quarter: "Summer '25 Patch (258.patch)",
         date: "258.patch",
@@ -5253,24 +5646,27 @@ const roadmapDataGUS = [
         prdLink: "http://Email Solution in Free Edition",
         team: "",
         scheduledBuild: "258.patch",
-        health: "",
+        health: "Completed",
         devLead: "Snowvee Gonsalves",
         designLead: "Antonio Flamenco",
-        qualityLead: "",
+        qualityLead: "Amol Lolage",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. \n Link to PRD:",
-            keyFeatures: ["Streamlined builder makes it easier for users to create emails with more template designs and a simplified experience. The better time-to-value enhances the onboarding and adoption, leading to more engagement and retention for marketing-focused users."],
+            keyFeatures: [
+                "Streamlined builder makes it easier for users to create emails with more template designs and a simplified experience. The better time-to-value enhances the onboarding and adoption, leading to more engagement and retention for marketing-focused users."
+            ],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001mZpJ2AU"
     },
     {
         id: 95,
         title: "[260] AI for SMB - Agentforce platform in Starter/Pro",
         description: "Deliver cloud-managed Agent to support MVP agentic use cases in SlackCRM and LEX. Enable Agentforce Platform in Starter/Pro with constraints to control CTS.",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 (260)",
         quarter: "Winter '26 (260)",
         date: "260.10",
@@ -5278,24 +5674,27 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1vBCLScy5hP-k-VAGFJ4DqORhPwG-TF7ohBTGNLhfWLM/edit?tab=t.0#heading=h.nwqbr7wo5qyc",
         team: "",
         scheduledBuild: "260.10",
-        health: "",
+        health: "Completed",
         devLead: "Juilee Patankar",
         designLead: "Nicole McGovern",
-        qualityLead: "",
+        qualityLead: "Amol Lolage",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "Deliver cloud-managed Agent to support MVP agentic use cases in SlackCRM and LEX. Enable Agentforce Platform in Starter/Pro with constraints to control CTS.",
-            keyFeatures: ["Built-in, employee-facing agent that acts as a personalized assistant & saves time for users via conversational inputs and secure AI. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."],
-            impact: "03/17-\nComplete- Agentforce in SMB is GA on 03/17\n02/18\n[Q3] Retesting agent for  instructions update. We are also working on automating the actions tests for file and database based agents to compare behavioral differences, with a mid week ETA. 22 bu..."
-        }
+            keyFeatures: [
+                "Built-in, employee-facing agent that acts as a personalized assistant & saves time for users via conversational inputs and secure AI. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."
+            ],
+            impact: "03/17-\r\nComplete- Agentforce in SMB is GA on 03/17\r\n02/18\r\n[Q3] Retesting agent for  instructions update. We are also working on automating the actions tests for file and database based agents to compare behavioral differences, with a mid week ETA. 22 bugs open. A lot of retesting effort required as team navigates between choice of file vs template based agents"
+        },
+        gusEpicId: "a3QEE000001rGKb"
     },
     {
         id: 96,
         title: "[260][Demand] Restricted UMA in Free Edition",
         description: "260] UMA Rest",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 (260)",
         quarter: "Winter '26 (260)",
         date: "260",
@@ -5303,7 +5702,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1oRc-mT-TqsJKe_rbpYShgLzYDrPDBLYHJ8g6uyuragw/edit?usp=sharing",
         team: "",
         scheduledBuild: "260",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -5311,9 +5710,12 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "260] UMA Rest",
-            keyFeatures: ["Users build, manage, and send single-email campaigns via limited marketing automation, rounding out a full suite of OOTB sales, service, and marketing tools. A more robust experience accelerates our New Logo acquisition."],
-            impact: "11/4: On track for 260 Soft Feature freeze. However, we have \"API enabled\" blocker which have  a path forward for 260 release and have ongling discussion with SA team\n10/28: On track for 260 Soft Feature freeze 11/7.However, we have \"API enabled\" blocke..."
-        }
+            keyFeatures: [
+                "Users build, manage, and send single-email campaigns via limited marketing automation, rounding out a full suite of OOTB sales, service, and marketing tools. A more robust experience accelerates our New Logo acquisition."
+            ],
+            impact: "11/4: On track for 260 Soft Feature freeze. However, we have \"API enabled\" blocker which have  a path forward for 260 release and have ongling discussion with SA team\r\n10/28: On track for 260 Soft Feature freeze 11/7.However, we have \"API enabled\" blocker which we are actively working for path forward with Foundation and Security team"
+        },
+        gusEpicId: "a3QEE000001khhJ2AQ"
     },
     {
         id: 97,
@@ -5336,16 +5738,20 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Spillover work from 260. This allows teams to build custom UI on top of the Task entity, including surfacing tasks in Slack.",
-            keyFeatures: ["Open gate for all Sandbox instances: 2/10", "Open gate for all prod instances: 4/6"],
-            impact: "4/28/26:\nRollout steps 3/6 completed. Gates enabled for 15+ orgs reached out for early enablement.\n\n4/14/26:\n- Prod rollout started this week. 1 week buffer between steps. Target end date is 5/8.\n\n4/7/26:\n- Bug fix rolled out with 260.12\n- begin ..."
-        }
+            keyFeatures: [
+                "Open gate for all Sandbox instances: 2/10",
+                "Open gate for all prod instances: 4/6"
+            ],
+            impact: "4/28/26:\r\nRollout steps 3/6 completed. Gates enabled for 15+ orgs reached out for early enablement.\r\n\r\n4/14/26:\r\n- Prod rollout started this week. 1 week buffer between steps. Target end date is 5/8."
+        },
+        gusEpicId: "a3QEE000001xadB"
     },
     {
         id: 98,
         title: "[262] - General Trust S2X",
         description: "General trust to maintain, EAC on Core, and other legacy products on Core like Lightning Sync, SFO, CAlendar and Mail Merge. Addressing on-call, support investigations and customer issues.",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5353,7 +5759,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Dhaval Gada",
         designLead: "-",
         qualityLead: "",
@@ -5361,16 +5767,19 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "General trust to maintain, EAC on Core, and other legacy products on Core like Lightning Sync, SFO, CAlendar and Mail Merge. Addressing on-call, support investigations and customer issues.",
-            keyFeatures: ["256 DoR No"],
+            keyFeatures: [
+                "256 DoR No"
+            ],
             impact: "1/7: TDs for Jan Delivery.\n- TD: Supporting AP New Cell Prod5\n- TD: AP2.0 Stop Crawling"
-        }
+        },
+        gusEpicId: "a3QEE0000022mgv"
     },
     {
         id: 99,
         title: "[262] - General Trust Tabasco",
         description: "Justification:",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5378,7 +5787,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -5386,16 +5795,19 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Justification:",
-            keyFeatures: ["256 DoR No"],
+            keyFeatures: [
+                "256 DoR No"
+            ],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE0000022miX"
     },
     {
         id: 100,
         title: "[262] Consistent Recurring Event Edit experience (API and UI)",
         description: "Red Account, enhancement/fix promise: Wolter Kluvers agreed to renew w/ us based on this fix. Gap in behavior between UX and API for Event CRUD. \n There is a",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5403,7 +5815,7 @@ const roadmapDataGUS = [
         prdLink: "https://salesforce.quip.com/XkPxAQlVxgTB",
         team: "Tabasco",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -5411,9 +5823,16 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Red Account, enhancement/fix promise: Wolter Kluvers agreed to renew w/ us based on this fix. Gap in behavior between UX and API for Event CRUD. \n There is a",
-            keyFeatures: ["CX Handoff to Dev: NA (no UI text)", "Dev Done: ✅ 1/25", "Q3/Q4 Handover: ✅ 3/16", "Q3 Sign off: ✅ Complete 3/31 (Rounak)", "Q4 Sign off: ✅ Complete 3/31 (Jasmin)"],
-            impact: "04/13 - Q3/Q4 signoff received. Pending release in 262. Epic Complete.\n\n3/31 - Handed over to Q3, no Q4 impact\n- 2026.01a sprint - Implement the fix (W-20618316, W-20618303) to make IsRecurrence2Exception editable in API and add a runtime versioning c..."
-        }
+            keyFeatures: [
+                "CX Handoff to Dev: NA (no UI text)",
+                "Dev Done: ✅ 1/25",
+                "Q3/Q4 Handover: ✅ 3/16",
+                "Q3 Sign off: ✅ Complete 3/31 (Rounak)",
+                "Q4 Sign off: ✅ Complete 3/31 (Jasmin)"
+            ],
+            impact: "04/13 - Q3/Q4 signoff received. Pending release in 262. Epic Complete.\r\n\r\n3/31 - Handed over to Q3, no Q4 impact\r\n- 2026.01a sprint - Implement the fix (W-20618316, W-20618303) to make IsRecurrence2Exception editable in API and add a runtime versioning check in Event Object Save Hook\r\n- 2026.01b sprint - QA and tested\r\n- 3/16 Began engagement with Q3/Q4 for review/signoff\r\n- 3/31 Confirmed with Catherine that API doc and Release Notes are covered.\r\n- 3/31 Q3/Q4 signoff"
+        },
+        gusEpicId: "a3QEE000001xhZp"
     },
     {
         id: 101,
@@ -5437,15 +5856,16 @@ const roadmapDataGUS = [
         details: {
             overview: "We plan to create an OOTB permission set for Account Plans. Currently in setup, we ask admins to create a custom permission set to give users access to the Account Plan, Account Plan Objective, and Account Plan Objective Measure objects. We will now c",
             keyFeatures: [],
-            impact: "3/10: QA Complete\n3/3: On track. QA in progress\nSome of the work has been picked up for 262, remaining will move out to 264 based on available capacity.\n\nPicked up Context Translation feature, changes done from our end but gated for testing until con..."
-        }
+            impact: "3/10: QA Complete\r\n3/3: On track. QA in progress\r\nSome of the work has been picked up for 262, remaining will move out to 264 based on available capacity.\r\n\r\nPicked up Context Translation feature, changes done from our end but gated for testing until context provides full support. Should get in end of 2a or by early 2b.\r\n\r\n2b - Handover for translations next week, Q2 testing in progress."
+        },
+        gusEpicId: "a3QEE000002BA1J"
     },
     {
         id: 102,
         title: "[262] Data Compliance: Stop Crawling when AP Features are Off",
         description: "Freeing up capacity blocked with the EAC users who have turned off EAC but we still continue to capture their data. This will help us free up capacity before the new cell is up and running in 262.",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5453,7 +5873,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1VVYTHi-zNm-SFF6T1VAMR_OxUDEZ16hMGaN-zFF8Ae8/edit?tab=t.0#heading=h.z0a2cx7wklkx",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Siddartha Thota",
         designLead: "-",
         qualityLead: "",
@@ -5462,8 +5882,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Freeing up capacity blocked with the EAC users who have turned off EAC but we still continue to capture their data. This will help us free up capacity before the new cell is up and running in 262.",
             keyFeatures: [],
-            impact: "4/24: Running into few issues here and there in the testFi for Spark Job. But hand-off for Q3/Q4 is done and we are working closely with our partnering teams for the sign-offs\n4/10: Wrapped-up everything, Waiting for spark job to be deployed and tested...."
-        }
+            impact: "4/24: Running into few issues here and there in the testFi for Spark Job. But hand-off for Q3/Q4 is done and we are working closely with our partnering teams for the sign-offs\r\n4/10: Wrapped-up everything, Waiting for spark job to be deployed and tested. C2C issue is also resolved. Target deployment is 4/24 (after Q3/Q4 sign-off)"
+        },
+        gusEpicId: "a3QEE000001zcZF"
     },
     {
         id: 103,
@@ -5488,7 +5909,8 @@ const roadmapDataGUS = [
             overview: "Trust hero rotation / one-off non Kondo / non A11y (unless smaller bugs here and there) / non GO",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001uuuz"
     },
     {
         id: 104,
@@ -5512,8 +5934,9 @@ const roadmapDataGUS = [
         details: {
             overview: "[262] General Trust - Centaurus",
             keyFeatures: [],
-            impact: "4/14/26\n- On track, no blockers\n\n4/07/26\n- On track, no blockers\n\n04/07/26\n- On track ,no blockers\n\n3/31/26\n- On track ,no blockers\n\n3/24/26\n- On track,no blockers\n\n3/16/26\n- On track, no blockers\n3/11/26\n- On track, no blockers\n3/2/26\nOn t..."
-        }
+            impact: "4/14/26\n- On track, no blockers\n\n4/07/26\n- On track, no blockers"
+        },
+        gusEpicId: "a3QEE000001uspx"
     },
     {
         id: 105,
@@ -5538,7 +5961,8 @@ const roadmapDataGUS = [
             overview: "Trust Rotation + Misc General Reactive Trust Items (includes TDs and other small requests that don’t fit into any other epics) MDAPI to add setup Pref, MDAPI Supp",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001ucur"
     },
     {
         id: 106,
@@ -5563,7 +5987,8 @@ const roadmapDataGUS = [
             overview: "Trust hero rotation / one-off non Kondo / non A11y (unless smaller bugs here and there) / non GO",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001uuwb"
     },
     {
         id: 107,
@@ -5588,7 +6013,8 @@ const roadmapDataGUS = [
             overview: "Trust Rotation + Misc General Reactive Trust Items (includes TDs and other small requests that don’t fit into any other epics)",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001ucq1"
     },
     {
         id: 108,
@@ -5612,8 +6038,9 @@ const roadmapDataGUS = [
         details: {
             overview: "[262] General Trust - Perseus",
             keyFeatures: [],
-            impact: "4/14/26\n- On track, no blockers\n\n4/07/26\n- On track, no blockers\n\n3/31/26\n- On track, no blockers\n\n3/24/26\n- On track,no blockers\n\n3/16/26\n- On track, no blockers\n3/11/26\n- On track, no blockers\n3/2/26\nOn track, no blockers\n2/24/26\nOn track, no bl..."
-        }
+            impact: "4/14/26\n- On track, no blockers\n\n4/07/26\n- On track, no blockers"
+        },
+        gusEpicId: "a3QEE000001uswP"
     },
     {
         id: 109,
@@ -5638,7 +6065,8 @@ const roadmapDataGUS = [
             overview: "Trust hero rotation / one-off non Kondo / non A11y (unless smaller bugs here and there) / non GO",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001uoWD"
     },
     {
         id: 110,
@@ -5662,15 +6090,16 @@ const roadmapDataGUS = [
         details: {
             overview: "[262] General Trust - Taurus",
             keyFeatures: [],
-            impact: "4/14/26\n- On track, no blockers\n\n4/07/26\n- On track, no blockers\n\n4/01/26\n- on track\n\n3/31/26\n- On track,no blockers\n\n3/24/26\n- On track,no blockers\n\n3/16/26 - On track, no blockers\n3/11/26 - On track, no blockers\n3/2/26 - On track, no bloc..."
-        }
+            impact: "4/14/26\n- On track, no blockers\n\n4/07/26\r\n- On track, no blockers"
+        },
+        gusEpicId: "a3QEE000001usrZ"
     },
     {
         id: 111,
         title: "[262] General Trust A360 Nexus",
         description: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving &g",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5678,7 +6107,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -5688,14 +6117,15 @@ const roadmapDataGUS = [
             overview: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving &g",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE0000022fCP"
     },
     {
         id: 112,
         title: "[262] General Trust A360 Stargate",
         description: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving &g",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5703,7 +6133,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -5713,7 +6143,8 @@ const roadmapDataGUS = [
             overview: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving &g",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE0000022fE1"
     },
     {
         id: 113,
@@ -5737,8 +6168,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Instrumentation TDs Phase 1 and Phase 2",
             keyFeatures: [],
-            impact: "3/3: Work completed from eng side. PMs need to clean up old features \n2/24: On track\n2/17: Meeting with eng/PMs Tuesday to discuss next steps/plan for Phase 2.\n2/10: Phase 1 Deploying with 260.7.  Phase 2 plan needs discussion with PMs.  On track for ..."
-        }
+            impact: "3/3: Work completed from eng side. PMs need to clean up old features \r\n2/24: On track"
+        },
+        gusEpicId: "a3QEE0000027kPx"
     },
     {
         id: 114,
@@ -5763,7 +6195,8 @@ const roadmapDataGUS = [
             overview: "Handle all the TDs logged for Product Feature Taxonomy (PFT) Telemetry",
             keyFeatures: [],
             impact: "2/10: Phase 1 done, started Phase 2"
-        }
+        },
+        gusEpicId: "a3QEE0000027jth"
     },
     {
         id: 115,
@@ -5788,7 +6221,8 @@ const roadmapDataGUS = [
             overview: "Instrumentation TDs Phase 1 and Phase 2",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE0000027kTB"
     },
     {
         id: 116,
@@ -5812,8 +6246,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Instrumentation TDs Phase 1 and Phase 2",
             keyFeatures: [],
-            impact: "3/3: On track for FF\n2/17: Meeting with eng/PMs Tuesday to discuss next steps/plan for Phase 2.\n2/10: Phase 1 Deploying with 260.7.  Phase 2 plan needs discussion with PMs.  On track for 262 FF."
-        }
+            impact: "3/3: On track for FF\r\n2/17: Meeting with eng/PMs Tuesday to discuss next steps/plan for Phase 2."
+        },
+        gusEpicId: "a3QEE0000027kOL"
     },
     {
         id: 117,
@@ -5837,8 +6272,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Handle all the TDs logged for Product Feature Taxonomy (PFT) Telemetry",
             keyFeatures: [],
-            impact: "3/16: Last User Story is closed \n3/11: Last User Story is fixed, will be closed by EOW\n3/3: Just Lead CRUD left, slotted for 3a sprint\n2/10: Phase 1 done, started Phase 2"
-        }
+            impact: "3/16: Last User Story is closed \r\n3/11: Last User Story is fixed, will be closed by EOW"
+        },
+        gusEpicId: "a3QEE0000027jvJ"
     },
     {
         id: 118,
@@ -5862,8 +6298,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Plan and start Knowledge Transfer of Pipeline Forecasting to new owners",
             keyFeatures: [],
-            impact: "4/14: Last session happened today\n4/7: Last session is scheduled for today\n3/31: Left with 3 KT sessions\n3/24: Left with 4 KT sessions\n3/16: UI related sessions will be starting from this week\n3/11: Left with UI related KT sessions that will be star..."
-        }
+            impact: "4/14: Last session happened today\r\n4/7: Last session is scheduled for today"
+        },
+        gusEpicId: "a3QEE000001qDzt"
     },
     {
         id: 119,
@@ -5887,15 +6324,16 @@ const roadmapDataGUS = [
         details: {
             overview: "[262] Pipeline Forecasting Onboarding",
             keyFeatures: [],
-            impact: "4/14/26\n- On track, KTs underway from pipeline forecasting team\n\n4/07/26\n- On track, KTs underway from pipeline forecasting team\n\n3/31/26\n- On track, KTs underway from pipeline forecasting team\n\n3/24/26\n- On track, KTs underway from pipeline forecasting ..."
-        }
+            impact: "4/14/26\n- On track, KTs underway from pipeline forecasting team\n\n4/07/26\n- On track, KTs underway from pipeline forecasting team"
+        },
+        gusEpicId: "a3QEE000001qIBZ"
     },
     {
         id: 120,
         title: "[262] Retroactive Matching: Oppty and Contacts/Leads via apex and Lex",
         description: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided context even with historic activities (emails",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5903,17 +6341,24 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/11UzDmHyc2vyD4ivf4baN3VXkN-i67grjg15rrgc-4yA/edit?tab=t.0",
         team: "Tabasco",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Akanksha Chandre",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Rounak Singh",
         v2momMethod: "Gong",
         version: "gus",
         details: {
             overview: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided context even with historic activities (emails",
-            keyFeatures: ["CX Handoff to Dev:  ✅ NA (no UI text)", "Dev Done: ✅ 3/26", "Q3/Q4 Handover: ✅ 3/26", "Q3 : Signoff Complete  ✅ 4/13", "Q4 Sign off: 5/8 (Renuka/Amarendu)"],
-            impact: "04/14 - Awaiting Q4 sign off, on track for sign off for 5/8.\n\n04/06 - In Q4 resource queue for allocation on 5/15 \n\n03/31 - Waiting for Q34 Sign off. \n\n03/24 - Dev Complete. Q3 handoff scheduled this week (@Rounak S). Q4 to begin testing shortly (@..."
-        }
+            keyFeatures: [
+                "CX Handoff to Dev:  ✅ NA (no UI text)",
+                "Dev Done: ✅ 3/26",
+                "Q3/Q4 Handover: ✅ 3/26",
+                "Q3 : Signoff Complete  ✅ 4/13",
+                "Q4 Sign off: 5/8 (Renuka/Amarendu)"
+            ],
+            impact: "04/14 - Awaiting Q4 sign off, on track for sign off for 5/8.\r\n\r\n04/06 - In Q4 resource queue for allocation on 5/15"
+        },
+        gusEpicId: "a3QEE000001xenF"
     },
     {
         id: 121,
@@ -5937,15 +6382,16 @@ const roadmapDataGUS = [
         details: {
             overview: "KPI -> FC Team (for chase the sun coverage and support)",
             keyFeatures: [],
-            impact: "3/24: All KT sessions delivered\n3/16: KT sessions progress, 2/4 sessions delivered\n3/11: KT sessions progress, 1/4 sessions delivered"
-        }
+            impact: "3/24: All KT sessions delivered\r\n3/16: KT sessions progress, 2/4 sessions delivered"
+        },
+        gusEpicId: "a3QEE0000021UxN"
     },
     {
         id: 122,
         title: "[262] Trust: Exchange Crawler Stabilization",
         description: "3/6: On Track",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5953,7 +6399,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Jeff Wang",
         designLead: "-",
         qualityLead: "",
@@ -5963,14 +6409,15 @@ const roadmapDataGUS = [
             overview: "3/6: On Track",
             keyFeatures: [],
             impact: "3/6: On Track"
-        }
+        },
+        gusEpicId: "a3QEE000002BTOv"
     },
     {
         id: 123,
         title: "[262] Trust: MongoDb Stabilization",
         description: "DataSource is the most write-intensive collection. In the past, excessive MongoDB write volume has resulted in multi-second write latencies, causing significant backlogs in the ingestion pipeline. MongoDB serves as a metadata store for the ingestion p",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -5978,7 +6425,7 @@ const roadmapDataGUS = [
         prdLink: "https://salesforce.quip.com/VUQkAwYgaQH3",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Jeff Wang",
         designLead: "-",
         qualityLead: "",
@@ -5988,14 +6435,15 @@ const roadmapDataGUS = [
             overview: "DataSource is the most write-intensive collection. In the past, excessive MongoDB write volume has resulted in multi-second write latencies, causing significant backlogs in the ingestion pipeline. MongoDB serves as a metadata store for the ingestion p",
             keyFeatures: [],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE0000027yeD"
     },
     {
         id: 124,
         title: "[262] [Internal Epic for PI handoff/Not customer facing ] Activity Heatmap",
         description: "Show Activity Heatmap for last 30 days ac",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6003,24 +6451,31 @@ const roadmapDataGUS = [
         prdLink: "http://P1 items",
         team: "Tabasco",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Shreyans Jain",
         designLead: "Dave Fernandez",
-        qualityLead: "",
+        qualityLead: "Rounak Singh",
         v2momMethod: "Gong",
         version: "gus",
         details: {
             overview: "Show Activity Heatmap for last 30 days ac",
-            keyFeatures: ["Dev Handoff: ✅ 03/12", "Dev Complete: ✅ 03/25", "Q3 Signoff on Patch :  ✅ 04/14 a3QEE0000020HcP2AU", "Q4 Signoff: ✅ 04/13", "Release to prod. Week of 04/20, as the scheduled patch is 260.13. Pending PI enablement"],
-            impact: "04/20\n- Epic is complete.\n\n04/13\n- Received Q4 signoff on 04/13\n- Final Blitz complete on 04/13. Expecting Q3 signoff soon (no open P1/P2/P3)\n- Awaiting rollout with 260.13 (Week of 04/20)\n- Completed feature request for maintaining max-width when..."
-        }
+            keyFeatures: [
+                "Dev Handoff: ✅ 03/12",
+                "Dev Complete: ✅ 03/25",
+                "Q3 Signoff on Patch :  ✅ 04/14 a3QEE0000020HcP2AU",
+                "Q4 Signoff: ✅ 04/13",
+                "Release to prod. Week of 04/20, as the scheduled patch is 260.13. Pending PI enablement"
+            ],
+            impact: "04/20\r\n- Epic is complete.\r\n\r\n04/13\r\n- Received Q4 signoff on 04/13\r\n- Final Blitz complete on 04/13. Expecting Q3 signoff soon (no open P1/P2/P3)\r\n- Awaiting rollout with 260.13 (Week of 04/20)\r\n- Completed feature request for maintaining max-width when container is resized."
+        },
+        gusEpicId: "a3QEE0000026Jur"
     },
     {
         id: 125,
         title: "[264] General Trust - Centaurus",
         description: "[264] General Trust - Centaurus",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -6028,7 +6483,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud Centaurus",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Himanshu Kapoor",
         designLead: "",
         qualityLead: "",
@@ -6037,15 +6492,16 @@ const roadmapDataGUS = [
         details: {
             overview: "[264] General Trust - Centaurus",
             keyFeatures: [],
-            impact: "5/19/26\n- On track, no blockers\n\n5/12/26\n- On track, no blockers\n\n5/5/26\n- On track, no blockers"
-        }
+            impact: "6/9/26\r\n- On track, no blockers\r\n\r\n6/2/26\r\n- On track, no blockers"
+        },
+        gusEpicId: "a3QEE000002LcHF2A0"
     },
     {
         id: 126,
         title: "[264] General Trust - Perseus",
         description: "[264] General Trust - Perseus",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -6053,7 +6509,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud Perseus",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Anurag Mudgal",
         designLead: "",
         qualityLead: "",
@@ -6062,15 +6518,16 @@ const roadmapDataGUS = [
         details: {
             overview: "[264] General Trust - Perseus",
             keyFeatures: [],
-            impact: "5/19/26\n- On track, no blockers\n\n5/12/26\n- On track, no blockers\n\n5/5/26\n- On track, no blockers"
-        }
+            impact: "6/9/26\r\n- On track, no blockers\r\n\r\n6/2/26\r\n- On track, no blockers"
+        },
+        gusEpicId: "a3QEE000002LcU92AK"
     },
     {
         id: 127,
         title: "[264] General Trust - Taurus",
         description: "[264] General Trust - Taurus",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -6078,7 +6535,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud Taurus",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Prateek Sharma (Sales Cloud)",
         designLead: "",
         qualityLead: "",
@@ -6087,15 +6544,16 @@ const roadmapDataGUS = [
         details: {
             overview: "[264] General Trust - Taurus",
             keyFeatures: [],
-            impact: "5/19/26\n- On track, no blockers\n\n5/12/26\n- On track, no blockers\n\n5/5/26\n- On track, no blockers"
-        }
+            impact: "6/9/26\r\n- On track, no blockers\r\n\r\n6/2/26\r\n- On track, no blockers"
+        },
+        gusEpicId: "a3QEE000002LcYz2AK"
     },
     {
         id: 128,
         title: "[264] Pipeline Forecasting Onboarding",
         description: "[264] Pipeline Forecasting Onboarding",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -6103,7 +6561,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "Sales Cloud Perseus",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "Anurag Mudgal",
         designLead: "",
         qualityLead: "",
@@ -6112,15 +6570,16 @@ const roadmapDataGUS = [
         details: {
             overview: "[264] Pipeline Forecasting Onboarding",
             keyFeatures: [],
-            impact: "5/19/26\n- On track, KTs underway\n\n5/12/26\n- On track, KTs planned for coming weeks.\n\n5/5/26\n- On track, KTs planned for coming weeks."
-        }
+            impact: "6/9/26\r\n- On track, KTs underway\r\n\r\n6/2/26\r\n- On track, KTs underway"
+        },
+        gusEpicId: "a3QEE000002Lcab2AC"
     },
     {
         id: 129,
         title: "[A360 Nexus] Graph API GA Migration Support (data capture, performance and SLA)",
         description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6128,24 +6587,25 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Johannes Kienzle",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
             keyFeatures: [],
-            impact: "4/10 - Supporting as needed. No work pending.\n3/27 - Supporting as needed. No work pending.\n3/20 - Supporting as needed. No work pending.\n3/13 - Supporting as needed. No work pending.\n3/6 - No changes. Supporting as needed.\n2/6 - Budget requests sub..."
-        }
+            impact: "4/10 - Supporting as needed. No work pending.\r\n3/27 - Supporting as needed. No work pending."
+        },
+        gusEpicId: "a3QEE0000022mVd"
     },
     {
         id: 130,
         title: "[A360 Nexus] JDK Upgrade",
         description: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6153,7 +6613,7 @@ const roadmapDataGUS = [
         prdLink: "http://n/a",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Watch",
         devLead: "Shan-cheng Ho",
         designLead: "-",
         qualityLead: "",
@@ -6162,15 +6622,16 @@ const roadmapDataGUS = [
         details: {
             overview: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be",
             keyFeatures: [],
-            impact: "4/10 - Production deployments halted due to snappy compression bug on graviton hardware. RCA in progress. Will resume deployments following bug fix and verification.\n3/27 - Production deployments in progress, including new cell. Vault-Mesh TD-0300769 is..."
-        }
+            impact: "4/10 - Production deployments halted due to snappy compression bug on graviton hardware. RCA in progress. Will resume deployments following bug fix and verification.\r\n3/27 - Production deployments in progress, including new cell. Vault-Mesh TD-0300769 is not ready to be included in these pushes."
+        },
+        gusEpicId: "a3QEE000001xTWr"
     },
     {
         id: 131,
         title: "[A360 Stargate] Graph API GA Migration Support (data capture, perf and SLA)",
         description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6178,24 +6639,25 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Johannes Kienzle",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Nishkam Agrawal",
         v2momMethod: "Trust",
         version: "gus",
         details: {
             overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
             keyFeatures: [],
             impact: "3/6: Onoging support on track"
-        }
+        },
+        gusEpicId: "a3QEE0000022maT"
     },
     {
         id: 132,
         title: "[A360 Stargate] JDK Upgrade",
         description: "Out of Compliance, Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6203,7 +6665,7 @@ const roadmapDataGUS = [
         prdLink: "http://n/a",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "On Track",
         devLead: "Shan-cheng Ho",
         designLead: "-",
         qualityLead: "",
@@ -6212,8 +6674,9 @@ const roadmapDataGUS = [
         details: {
             overview: "Out of Compliance, Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc",
             keyFeatures: [],
-            impact: "5/1: all services should finish prodpush today.\n4/10: resolved SNAPPY issue, resuming prod push.\n3/27: Prod push are being processed.\n3/20: Prod push are being processed.\n3/13: Prod push are being prepared.\n3/6: All services are deployed in test FI...."
-        }
+            impact: "5/1: all services should finish prodpush today.\r\n4/10: resolved SNAPPY issue, resuming prod push."
+        },
+        gusEpicId: "a3QEE0000022mc5"
     },
     {
         id: 133,
@@ -6228,24 +6691,27 @@ const roadmapDataGUS = [
         prdLink: "https://salesforce.quip.com/w96QARHDQ86W",
         team: "",
         scheduledBuild: "260.btl",
-        health: "",
+        health: "Not Started",
         devLead: "Anthony Desportes",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Deepmala Mehta",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "SCV alignment Leverage SCV transcripts directly - SCV gets transcripts directly from Vendors \n UX Admin setup for how we showcase SCV as a provider, link to their",
-            keyFeatures: ["260 DoR No Feature"],
+            keyFeatures: [
+                "260 DoR No Feature"
+            ],
             impact: "-"
-        }
+        },
+        gusEpicId: "a3QEE000001k72j2AA"
     },
     {
         id: 134,
         title: "[EAC Foundation] JDK Upgrade",
         description: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6253,7 +6719,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Alex Oscherov",
         designLead: "-",
         qualityLead: "",
@@ -6261,16 +6727,19 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be",
-            keyFeatures: ["260 DoR No Feature"],
-            impact: "--- no further updates on this epic, see below ---\n2/6 - Engineers are finishing the upgrades for EAC Foundation services in pre-prod environments. Will still need to deploy to prod in future  sprint. Future updates will come in A360 Nexus and A360 Star..."
-        }
+            keyFeatures: [
+                "260 DoR No Feature"
+            ],
+            impact: "--- no further updates on this epic, see below ---\r\n2/6 - Engineers are finishing the upgrades for EAC Foundation services in pre-prod environments. Will still need to deploy to prod in future  sprint. Future updates will come in A360 Nexus and A360 Stargate epics, as we are merging the team."
+        },
+        gusEpicId: "a3QEE000001wNLR"
     },
     {
         id: 135,
         title: "[GTM Rel 2] Allow admin to hide \"my pipeline\" list view",
         description: "Update pipeline inspection setup to allow admin to disable \"My Pipeline\" list view. When \"My Pipeline\" is disabled, users accessing \"My Pipeline\" are redirected to the first public list view in alphabetical order.",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -6278,7 +6747,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1ZcVymWDOYbVVdUHr0gEftDDY2iKMqEMR0V9pCKhJCOw/edit?tab=t.0",
         team: "",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "Huong Le",
         qualityLead: "",
@@ -6286,16 +6755,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Update pipeline inspection setup to allow admin to disable \"My Pipeline\" list view. When \"My Pipeline\" is disabled, users accessing \"My Pipeline\" are redirected to the first public list view in alphabetical order.",
-            keyFeatures: ["Dev Done:", "Q3 HandOff: N/A", "Q3 Sign-Off: N/A", "Q4 Hand-Off:", "Q4 Sign-Off:"],
-            impact: "5/11: On track for now, but risk of slipping due to bandwidth concerns and work to release Deal Alerts"
-        }
+            keyFeatures: [
+                "Dev Done:",
+                "Q3 HandOff: N/A",
+                "Q3 Sign-Off: N/A",
+                "Q4 Hand-Off:",
+                "Q4 Sign-Off:"
+            ],
+            impact: "6/9: Merged to GTM rel. Testing/ Blitz this week.\n\n6/2: On track for 6/4. 2 pending stories - 1 in QA and another in progress"
+        },
+        gusEpicId: "a3QEE000002Fz5F2AS"
     },
     {
         id: 136,
         title: "[GTM Rel 2] Columns in OOTB list experience",
         description: "Allow sales ops to set the default layout for all sellers, and add new calculated columns to custom lists Make synthetic columns default added on specific list views This is when all new columns are complete and added to the p",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -6303,7 +6779,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1ZcVymWDOYbVVdUHr0gEftDDY2iKMqEMR0V9pCKhJCOw/edit?tab=t.0",
         team: "",
         scheduledBuild: "264",
-        health: "",
+        health: "On Track",
         devLead: "-",
         designLead: "Huong Le",
         qualityLead: "",
@@ -6311,16 +6787,23 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Allow sales ops to set the default layout for all sellers, and add new calculated columns to custom lists Make synthetic columns default added on specific list views This is when all new columns are complete and added to the p",
-            keyFeatures: ["Dev Done:", "Q3 HandOff: N/A", "Q3 Sign-Off: N/A", "Q4 Hand-Off:", "Q4 Sign-Off:"],
-            impact: "5/11: 5/11: On track for now, but risk of slipping due to bandwidth concerns and work to release Deal Alerts\n5/5: On track"
-        }
+            keyFeatures: [
+                "Dev Done:",
+                "Q3 HandOff: N/A",
+                "Q3 Sign-Off: N/A",
+                "Q4 Hand-Off:",
+                "Q4 Sign-Off:"
+            ],
+            impact: "6/9: GTM merge blocked due to 1 platform TF. Fix out for review. \n6/2: On track for 6/4 - 1 story pending QA (delayed due to CI instance issues)"
+        },
+        gusEpicId: "a3QEE0000021z6j2AA"
     },
     {
         id: 137,
         title: "[Insights] Core to DC sync - CSI onboarding",
         description: "Ability to sync insights onto CSI - engagement DMOs in data Cloud \n Design : https://docs.google.com/document/d/1qKDjkgfoSccJHbRcgfLyrkXD30ylrPOzLkC1uobD1HI/edit?tab=t.0#heading=h.tgf4u4f2u64g",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6328,7 +6811,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/1zWNyKpkvdbZGZqT8v8oL5VFCYngS1F8AUtBCz92hgEY/edit?tab=t.0#heading=h.i4np6zxvfga7",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Divyanshu Bajpai",
         designLead: "-",
         qualityLead: "Sumit Pahwa",
@@ -6336,16 +6819,21 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "Ability to sync insights onto CSI - engagement DMOs in data Cloud \n Design : https://docs.google.com/document/d/1qKDjkgfoSccJHbRcgfLyrkXD30ylrPOzLkC1uobD1HI/edit?tab=t.0#heading=h.tgf4u4f2u64g",
-            keyFeatures: ["Handover to Q3 in 262 - 03/16", "Q3 Completion in 262 - 3/27", "Target Patch - 262"],
-            impact: "4/21 - All complete. Approval doc circulated with Jong & Parul to start the Gater rollout for Sales Signal\n4/07\n- CSI Onboarding testing completed and bugs verified.\nThere are few bugs open on Sales Signals which are not related to CSI(W-21759218 and ..."
-        }
+            keyFeatures: [
+                "Handover to Q3 in 262 - 03/16",
+                "Q3 Completion in 262 - 3/27",
+                "Target Patch - 262"
+            ],
+            impact: "4/21 - All complete. Approval doc circulated with Jong & Parul to start the Gater rollout for Sales Signal\r\n4/07\r\n- CSI Onboarding testing completed and bugs verified.\r\nThere are few bugs open on Sales Signals which are not related to CSI(W-21759218 and W-21839414)\r\nTagged Asal to the open discussion on CSI datakit upgrade, waiting on their response"
+        },
+        gusEpicId: "a3QEE0000026Ns1"
     },
     {
         id: 138,
         title: "[M1] [AP Galaxy] 262 - Planned/Unplanned Trust",
         description: "A360 FY25 V2MOM : https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6353,7 +6841,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -6361,16 +6849,19 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "A360 FY25 V2MOM : https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit",
-            keyFeatures: ["262 DoR No Trust"],
-            impact: "4/14:\nOn track\n3/27:\nOn track\n3/20:\nOn track\n3/16: \nOn track\n3/10:\nOn track\n3/03:\nOn track\n2/24:\nOn track\n2/17:\nOn track\n2/10:\nOn track\n2/03: \nOn track\n1/27:\nOn track\n1/13:\nOn track\n1/7:\nOn track"
-        }
+            keyFeatures: [
+                "262 DoR No Trust"
+            ],
+            impact: "4/14:\r\nOn track\r\n3/27:\r\nOn track"
+        },
+        gusEpicId: "a3QEE0000022xqr"
     },
     {
         id: 139,
         title: "[M1] [Activities] 262 - Planned/Unplanned Trust",
         description: "A360 FY25 V2MOM : https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6378,7 +6869,7 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
         qualityLead: "",
@@ -6386,16 +6877,19 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "A360 FY25 V2MOM : https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit",
-            keyFeatures: ["262 DoR No Trust"],
-            impact: "4/14:\nOn track\n3/27:\nOn track\n3/20:\nOn track\n3/16: \nOn track\n3/10:\nOn track\n3/03:\nOn track\n2/24:\nOn track\n2/17:\nOn track\n2/10:\nOn track\n2/03:\nOn track\n1/27:\nOn track\n1/13: \nEpic is on track\n1/7:\nEpic is on track"
-        }
+            keyFeatures: [
+                "262 DoR No Trust"
+            ],
+            impact: "4/14:\r\nOn track\r\n3/27:\r\nOn track"
+        },
+        gusEpicId: "a3QEE0000022xsT"
     },
     {
         id: 140,
         title: "[Not customer facing release] Recall (Teams, Meet, Zoom)",
         description: "TLDR Recall used to allow user authentication to calendar/provider Bot should auto-join call OR user can manually add/remove Captures meeting details, participant details, calendar details, transcript/record",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Spring '26 (262)",
         quarter: "Spring '26 (262)",
         date: "262",
@@ -6403,7 +6897,7 @@ const roadmapDataGUS = [
         prdLink: "https://docs.google.com/document/d/131DphjUONhcn1UMhksKByzHdmr9i1A1RLNBGwDZbM1U/edit?usp=sharing",
         team: "",
         scheduledBuild: "262",
-        health: "",
+        health: "Completed",
         devLead: "Aleksey Kolesnik",
         designLead: "-",
         qualityLead: "Deepmala Mehta",
@@ -6411,16 +6905,22 @@ const roadmapDataGUS = [
         version: "gus",
         details: {
             overview: "TLDR Recall used to allow user authentication to calendar/provider Bot should auto-join call OR user can manually add/remove Captures meeting details, participant details, calendar details, transcript/record",
-            keyFeatures: ["Dev Handoff: Milestone 2 due 3/13", "Q3 Sign Off: n/a (to be picked up with integration work in 264)", "Q4 Sign Off: n/a (to be picked up with integration work in 264)", "Target Patch: n/a"],
-            impact: "3/25 Update:\nEpic Milestone 2 complete, closing epic as Recall is not moving forward currently. Anything continuing this work will require a new epic\n\n3/17 Update\nTeam has wrapped up work and testing. Some dangling stories to be cleaned up 3/18 EOD a..."
-        }
+            keyFeatures: [
+                "Dev Handoff: Milestone 2 due 3/13",
+                "Q3 Sign Off: n/a (to be picked up with integration work in 264)",
+                "Q4 Sign Off: n/a (to be picked up with integration work in 264)",
+                "Target Patch: n/a"
+            ],
+            impact: "3/25 Update:\r\nEpic Milestone 2 complete, closing epic as Recall is not moving forward currently. Anything continuing this work will require a new epic\r\n\r\n3/17 Update\r\nTeam has wrapped up work and testing. Some dangling stories to be cleaned up 3/18 EOD after automerge issues are resolved."
+        },
+        gusEpicId: "a3QEE000001uhbB"
     },
     {
         id: 141,
         title: "[SlackCRM] Web to Lead Notification - March",
         description: "work to support leads for SlackCRM org recycle - changing the number of days record ownership change",
         category: "feature",
-        status: "planned",
+        status: "completed",
         period: "Winter '26 (260)",
         quarter: "Winter '26 (260)",
         date: "260.10",
@@ -6428,18 +6928,21 @@ const roadmapDataGUS = [
         prdLink: "",
         team: "",
         scheduledBuild: "260.10",
-        health: "",
+        health: "Completed",
         devLead: "-",
         designLead: "-",
-        qualityLead: "",
+        qualityLead: "Amol Lolage",
         v2momMethod: "",
         version: "gus",
         details: {
             overview: "work to support leads for SlackCRM org recycle - changing the number of days record ownership change",
-            keyFeatures: ["Native, conversational, and agentic CRM can be quickly set up & used inside Slack, bringing Salesforce’s trusted foundation directly into Slack's flow of work. This is a new entry point for Slack users & NLs to join the ecosystem and grow with Salesforce."],
-            impact: "2/18\nDev complete for 260.10\n2/3\n - Spike done and had readout with Slack team. \n - Implementation kicked off. \n - Tight timeline to meet the Feb 12 dev-complete deadline."
-        }
-    },
+            keyFeatures: [
+                "Native, conversational, and agentic CRM can be quickly set up & used inside Slack, bringing Salesforce’s trusted foundation directly into Slack's flow of work. This is a new entry point for Slack users & NLs to join the ecosystem and grow with Salesforce."
+            ],
+            impact: "2/18\r\nDev complete for 260.10\r\n2/3\r\n - Spike done and had readout with Slack team. \r\n - Implementation kicked off. \r\n - Tight timeline to meet the Feb 12 dev-complete deadline."
+        },
+        gusEpicId: "a3QEE0000024xl7"
+    }
 ];
 
 if (typeof module !== 'undefined' && module.exports) {
