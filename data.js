@@ -1085,7 +1085,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 2,
@@ -1127,7 +1129,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 3,
@@ -1169,7 +1173,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Connectors & Integration",
+        customerFacing: true
     },
     {
         id: 4,
@@ -1211,7 +1217,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 5,
@@ -1250,10 +1258,12 @@ const roadmapDataD360 = [
         source: null,
         epicCategory: "Feature",
         gusLastModified: "2026-06-10T15:43:09.000+0000",
-        releaseStage: null,
+        releaseStage: "GA",
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 6,
@@ -1295,7 +1305,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 7,
@@ -1337,7 +1349,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 8,
@@ -1379,7 +1393,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Connectors & Integration",
+        customerFacing: true
     },
     {
         id: 9,
@@ -1421,7 +1437,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 10,
@@ -1463,7 +1481,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 11,
@@ -1505,7 +1525,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Query & Federation",
+        customerFacing: true
     },
     {
         id: 12,
@@ -1547,7 +1569,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 13,
@@ -1589,7 +1613,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 14,
@@ -1631,7 +1657,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Query & Federation",
+        customerFacing: true
     },
     {
         id: 15,
@@ -1673,7 +1701,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 16,
@@ -1715,7 +1745,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 17,
@@ -1757,7 +1789,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 18,
@@ -1799,7 +1833,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 19,
@@ -1841,7 +1877,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 20,
@@ -1883,7 +1921,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 21,
@@ -1925,7 +1965,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 22,
@@ -1967,7 +2009,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 23,
@@ -2009,7 +2053,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 24,
@@ -2051,7 +2097,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Connectors & Integration",
+        customerFacing: true
     },
     {
         id: 25,
@@ -2093,7 +2141,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 26,
@@ -2135,7 +2185,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 27,
@@ -2177,7 +2229,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 28,
@@ -2219,7 +2273,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 29,
@@ -2261,7 +2317,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 30,
@@ -2303,7 +2361,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Real-Time & Insights",
+        customerFacing: true
     },
     {
         id: 31,
@@ -2345,7 +2405,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 32,
@@ -2387,7 +2449,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: "Priyanka Kshirsagar"
+        productOwner: "Priyanka Kshirsagar",
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 33,
@@ -2429,7 +2493,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 34,
@@ -2471,7 +2537,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 35,
@@ -2513,7 +2581,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 36,
@@ -2555,7 +2625,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 37,
@@ -2597,7 +2669,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 38,
@@ -2639,7 +2713,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 39,
@@ -2681,7 +2757,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 40,
@@ -2723,7 +2801,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 41,
@@ -2765,7 +2845,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 42,
@@ -2807,7 +2889,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 43,
@@ -2849,7 +2933,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 44,
@@ -2891,7 +2977,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 45,
@@ -2933,7 +3021,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 46,
@@ -2975,7 +3065,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Query & Federation",
+        customerFacing: false
     },
     {
         id: 47,
@@ -3017,7 +3109,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 48,
@@ -3059,7 +3153,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 49,
@@ -3101,7 +3197,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "AI & Agents on Data Cloud",
+        customerFacing: true
     },
     {
         id: 50,
@@ -3143,7 +3241,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 51,
@@ -3185,7 +3285,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Connectors & Integration",
+        customerFacing: true
     },
     {
         id: 52,
@@ -3227,7 +3329,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 53,
@@ -3269,7 +3373,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: false
     },
     {
         id: 54,
@@ -3311,7 +3417,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 55,
@@ -3353,7 +3461,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 56,
@@ -3395,7 +3505,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Query & Federation",
+        customerFacing: true
     },
     {
         id: 57,
@@ -3437,7 +3549,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 58,
@@ -3479,7 +3593,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 59,
@@ -3521,7 +3637,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 60,
@@ -3563,7 +3681,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Partner & Activations",
+        customerFacing: true
     },
     {
         id: 61,
@@ -3605,7 +3725,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 62,
@@ -3647,7 +3769,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 63,
@@ -3689,7 +3813,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 64,
@@ -3731,7 +3857,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 65,
@@ -3773,7 +3901,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 66,
@@ -3815,7 +3945,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 67,
@@ -3857,7 +3989,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 68,
@@ -3899,7 +4033,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 69,
@@ -3941,7 +4077,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 70,
@@ -3983,7 +4121,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Real-Time & Insights",
+        customerFacing: true
     },
     {
         id: 71,
@@ -4025,7 +4165,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 72,
@@ -4067,7 +4209,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 73,
@@ -4109,7 +4253,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 74,
@@ -4151,7 +4297,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Connectors & Integration",
+        customerFacing: true
     },
     {
         id: 75,
@@ -4193,7 +4341,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 76,
@@ -4235,7 +4385,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 77,
@@ -4277,7 +4429,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Connectors & Integration",
+        customerFacing: true
     },
     {
         id: 78,
@@ -4319,7 +4473,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Connectors & Integration",
+        customerFacing: true
     },
     {
         id: 79,
@@ -4361,7 +4517,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 80,
@@ -4403,7 +4561,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 81,
@@ -4445,7 +4605,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 82,
@@ -4487,7 +4649,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 83,
@@ -4529,7 +4693,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Real-Time & Insights",
+        customerFacing: true
     },
     {
         id: 84,
@@ -4571,7 +4737,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Trust & Platform",
+        customerFacing: false
     },
     {
         id: 85,
@@ -4613,7 +4781,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: true
     },
     {
         id: 86,
@@ -4655,7 +4825,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Other",
+        customerFacing: true
     },
     {
         id: 87,
@@ -4697,7 +4869,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Builder Experience",
+        customerFacing: false
     },
     {
         id: 88,
@@ -4739,7 +4913,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "AI & Agents on Data Cloud",
+        customerFacing: true
     },
     {
         id: 89,
@@ -4781,7 +4957,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "AI & Agents on Data Cloud",
+        customerFacing: true
     },
     {
         id: 90,
@@ -4823,7 +5001,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Real-Time & Insights",
+        customerFacing: true
     },
     {
         id: 91,
@@ -4865,7 +5045,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 92,
@@ -4907,7 +5089,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 93,
@@ -4949,7 +5133,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Data Clean Room & Collaboration",
+        customerFacing: true
     },
     {
         id: 94,
@@ -4991,7 +5177,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: "Praveen Gonugunta"
+        productOwner: "Praveen Gonugunta",
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 95,
@@ -5033,7 +5221,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 96,
@@ -5075,7 +5265,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 97,
@@ -5117,7 +5309,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Connectors & Integration",
+        customerFacing: true
     },
     {
         id: 98,
@@ -5159,7 +5353,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 99,
@@ -5201,7 +5397,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     },
     {
         id: 100,
@@ -5243,7 +5441,9 @@ const roadmapDataD360 = [
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
-        productOwner: null
+        productOwner: null,
+        featureCluster: "Unstructured Data",
+        customerFacing: true
     }
 ];
 

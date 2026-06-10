@@ -23,7 +23,7 @@ class RoadmapApp {
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
         this.currentView = 'timeline';
-        this.activeFilters = { category: new Set(), status: new Set(), releaseStage: new Set() };
+        this.activeFilters = { category: new Set(), status: new Set(), releaseStage: new Set(), cluster: new Set(), customerFacing: new Set() };
         this.searchQuery = '';
         this.feedbackSummary = {};   // { 'v4:7': { votes: 3, comments: 2, userVoted: true } }
         this.initTheme();
@@ -242,11 +242,18 @@ class RoadmapApp {
         const statusCounts = {};
         const catCounts = {};
         const stageCounts = {};
+        const clusterCounts = {};
+        const cfCounts = {};
         this.data.forEach(i => {
             statusCounts[i.status] = (statusCounts[i.status] || 0) + 1;
             catCounts[i.category] = (catCounts[i.category] || 0) + 1;
             const sk = i.releaseStage || 'Unspecified';
             stageCounts[sk] = (stageCounts[sk] || 0) + 1;
+            if (i.featureCluster) clusterCounts[i.featureCluster] = (clusterCounts[i.featureCluster] || 0) + 1;
+            if (typeof i.customerFacing === 'boolean') {
+                const cfk = i.customerFacing ? 'Customer-facing' : 'Internal eng';
+                cfCounts[cfk] = (cfCounts[cfk] || 0) + 1;
+            }
         });
 
         const statusChips = statuses.map(s => chipHtml('status', s, this.formatStatus(s), statusCounts[s] || 0)).join('');
@@ -261,12 +268,30 @@ class RoadmapApp {
             : '';
         const stageGroup = showStages
             ? `<div class="chip-group">
-                   <span class="chip-group-label" title="Source: ADM_Epic__c.Product_Feature__r.Feature_Availability_Status__c">Release stage</span>
+                   <span class="chip-group-label" title="Source: ADM_Epic__c.Product_Feature__r.Feature_Availability_Status__c, plus inline title tags ([GA], [Pilot], [Beta]) where present">Release stage</span>
                    ${stageChips}
                </div>`
             : '';
 
-        const totalActive = this.activeFilters.category.size + this.activeFilters.status.size + this.activeFilters.releaseStage.size;
+        // Cluster + customer-facing chips — D360 only (the only view where we have these fields).
+        const clusterKeys = Object.keys(clusterCounts).sort((a,b) => clusterCounts[b] - clusterCounts[a]);
+        const showClusters = this.currentVersion === 'd360' && clusterKeys.length > 0;
+        const clusterGroup = showClusters
+            ? `<div class="chip-group">
+                   <span class="chip-group-label" title="Heuristic cluster derived from epic title / team / project">Cluster</span>
+                   ${clusterKeys.map(c => chipHtml('cluster', c, c, clusterCounts[c])).join('')}
+               </div>`
+            : '';
+        const showCF = this.currentVersion === 'd360' && (cfCounts['Customer-facing'] || cfCounts['Internal eng']);
+        const cfGroup = showCF
+            ? `<div class="chip-group">
+                   <span class="chip-group-label" title="Customer-facing flag: false for control-plane / capacity / OORDR / tech-debt epics">Type</span>
+                   ${['Customer-facing','Internal eng'].filter(k => cfCounts[k]).map(k => chipHtml('customerFacing', k, k, cfCounts[k])).join('')}
+               </div>`
+            : '';
+
+        const totalActive = this.activeFilters.category.size + this.activeFilters.status.size +
+            this.activeFilters.releaseStage.size + this.activeFilters.cluster.size + this.activeFilters.customerFacing.size;
         const clearBtn = totalActive > 0
             ? `<button class="chip chip-clear" id="chipClear">Clear all ✕</button>` : '';
 
@@ -280,6 +305,8 @@ class RoadmapApp {
                 ${catChips}
             </div>
             ${stageGroup}
+            ${clusterGroup}
+            ${cfGroup}
             ${clearBtn}
         `;
 
@@ -288,6 +315,8 @@ class RoadmapApp {
             this.activeFilters.category.clear();
             this.activeFilters.status.clear();
             this.activeFilters.releaseStage.clear();
+            this.activeFilters.cluster.clear();
+            this.activeFilters.customerFacing.clear();
             this.renderFilterChips();
             this.applyFilters();
         });
@@ -454,6 +483,10 @@ class RoadmapApp {
         this.activeFilters.category.clear();
         this.activeFilters.status.clear();
         this.activeFilters.releaseStage.clear();
+        this.activeFilters.cluster.clear();
+        this.activeFilters.customerFacing.clear();
+        // On D360, default-hide the internal eng work so CSMs see customer-facing only.
+        if (version === 'd360') this.activeFilters.customerFacing.add('Customer-facing');
         this.searchQuery = '';
         this.filteredData = [...this.data];
 
@@ -498,17 +531,22 @@ class RoadmapApp {
         const cats = this.activeFilters.category;
         const sts = this.activeFilters.status;
         const stages = this.activeFilters.releaseStage;
+        const clusters = this.activeFilters.cluster;
+        const cfs = this.activeFilters.customerFacing;
 
         this.filteredData = this.data.filter(item => {
             const catMatch = cats.size === 0 || cats.has(item.category);
             const stMatch = sts.size === 0 || sts.has(item.status);
             const stageMatch = stages.size === 0 || stages.has(item.releaseStage || 'Unspecified');
-            if (!catMatch || !stMatch || !stageMatch) return false;
+            const clusterMatch = clusters.size === 0 || (item.featureCluster && clusters.has(item.featureCluster));
+            const cfKey = (typeof item.customerFacing === 'boolean') ? (item.customerFacing ? 'Customer-facing' : 'Internal eng') : null;
+            const cfMatch = cfs.size === 0 || (cfKey && cfs.has(cfKey));
+            if (!catMatch || !stMatch || !stageMatch || !clusterMatch || !cfMatch) return false;
             if (!q) return true;
             const haystack = [
                 item.title, item.description, item.category, item.status,
                 item.owner, item.productOwner, item.pmm, item.engLead, item.gusProgram, item.period,
-                item.team, item.project, item.releaseStage
+                item.team, item.project, item.releaseStage, item.featureCluster
             ].filter(Boolean).join(' ').toLowerCase();
             return haystack.includes(q);
         });
@@ -1083,6 +1121,11 @@ class RoadmapApp {
         return `<span class="meta-item" title="Target Roll Out Date (GUS)">🎯 Rollout: ${this.fmtDate(item.targetRollOutDate)}</span>`;
     }
 
+    clusterBadge(item) {
+        if (!item.featureCluster) return '';
+        return `<span class="meta-item cluster-badge" title="Feature cluster (heuristic)">🧩 ${item.featureCluster}</span>`;
+    }
+
     // Release-stage chip (Pilot / Open Beta / GA / Unspecified) used in filters & cards.
     formatReleaseStage(stage) {
         if (!stage) return 'Unspecified';
@@ -1387,6 +1430,7 @@ class RoadmapApp {
                 <div class="item-meta">
                     ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
                     ${this.rolloutBadge(item)}
+                    ${this.clusterBadge(item)}
                     <span class="meta-item"><span class="category-tag">${this.formatCategory(item.category)}</span></span>
                     ${this.docsBadge(item)}
                     ${this.feedbackBadge(item)}
@@ -1452,6 +1496,7 @@ class RoadmapApp {
                         ${ownerHtml}
                         ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
                         ${this.rolloutBadge(item)}
+                        ${this.clusterBadge(item)}
                         ${this.docsBadge(item)}
                         ${this.feedbackBadge(item)}
                     </div>
