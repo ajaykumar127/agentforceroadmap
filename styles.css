@@ -1618,6 +1618,13 @@ body {
     font-weight: 600;
 }
 
+.refresh-stamp {
+    opacity: 0.85;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 1.5rem 1rem;

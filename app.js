@@ -21,7 +21,7 @@ class RoadmapApp {
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
         this.currentView = 'timeline';
-        this.activeFilters = { category: new Set(), status: new Set() };
+        this.activeFilters = { category: new Set(), status: new Set(), releaseStage: new Set() };
         this.searchQuery = '';
         this.feedbackSummary = {};   // { 'v4:7': { votes: 3, comments: 2, userVoted: true } }
         this.initTheme();
@@ -239,15 +239,33 @@ class RoadmapApp {
 
         const statusCounts = {};
         const catCounts = {};
+        const stageCounts = {};
         this.data.forEach(i => {
             statusCounts[i.status] = (statusCounts[i.status] || 0) + 1;
             catCounts[i.category] = (catCounts[i.category] || 0) + 1;
+            const sk = i.releaseStage || 'Unspecified';
+            stageCounts[sk] = (stageCounts[sk] || 0) + 1;
         });
 
         const statusChips = statuses.map(s => chipHtml('status', s, this.formatStatus(s), statusCounts[s] || 0)).join('');
         const catChips = cats.map(c => chipHtml('category', c, this.formatCategory(c), catCounts[c] || 0)).join('');
 
-        const clearBtn = (this.activeFilters.category.size + this.activeFilters.status.size) > 0
+        // Release-stage chips: only show the row if any tagged epic exists OR we're on the GUS view.
+        const stageOrder = ['GA', 'GA with Limited Availability', 'Beta', 'Pilot', 'Not Deployed', 'Retired', 'Unspecified'];
+        const stagesPresent = stageOrder.filter(s => stageCounts[s] > 0);
+        const showStages = this.currentVersion === 'gus' && stagesPresent.length > 0;
+        const stageChips = showStages
+            ? stagesPresent.map(s => chipHtml('releaseStage', s, this.formatReleaseStage(s), stageCounts[s] || 0)).join('')
+            : '';
+        const stageGroup = showStages
+            ? `<div class="chip-group">
+                   <span class="chip-group-label" title="Source: ADM_Epic__c.Product_Feature__r.Feature_Availability_Status__c">Release stage</span>
+                   ${stageChips}
+               </div>`
+            : '';
+
+        const totalActive = this.activeFilters.category.size + this.activeFilters.status.size + this.activeFilters.releaseStage.size;
+        const clearBtn = totalActive > 0
             ? `<button class="chip chip-clear" id="chipClear">Clear all ✕</button>` : '';
 
         bar.innerHTML = `
@@ -259,6 +277,7 @@ class RoadmapApp {
                 <span class="chip-group-label">Category</span>
                 ${catChips}
             </div>
+            ${stageGroup}
             ${clearBtn}
         `;
 
@@ -266,6 +285,7 @@ class RoadmapApp {
         if (clear) clear.addEventListener('click', () => {
             this.activeFilters.category.clear();
             this.activeFilters.status.clear();
+            this.activeFilters.releaseStage.clear();
             this.renderFilterChips();
             this.applyFilters();
         });
@@ -289,14 +309,16 @@ class RoadmapApp {
         } else {
             const versionNames = {
                 'combined': 'Historical Roadmap (V1 + V2 + V3 + V4 combined)',
-                'gus': 'GUS Live - Build 262 Epics (Pulled May 2026)',
+                'gus': 'GUS Live · Agentforce / SFAi Epics',
                 'v1': 'V1 - Core Roadmap',
                 'v2': 'V2 - Extended Roadmap',
                 'v3': 'V3 - Q1-Q2 2026 Roadmap (Updated March 2026)',
                 'v4': 'Latest View May-June 2026',
             };
             versionName = versionNames[this.currentVersion] || 'V1 - Core Roadmap';
-            itemCount = `${this.data.length} items`;
+            const refreshStamp = (this.currentVersion === 'gus' && typeof LAST_GUS_REFRESH !== 'undefined')
+                ? ` <span class="refresh-stamp" title="Last refreshed from GUS ADM_Epic__c">· Refreshed ${LAST_GUS_REFRESH}</span>` : '';
+            itemCount = `${this.data.length} items${refreshStamp}`;
         }
 
         versionInfo.innerHTML = `<strong>${versionName}</strong> • ${itemCount}`;
@@ -424,6 +446,7 @@ class RoadmapApp {
         this.data = this.dataVersions[version];
         this.activeFilters.category.clear();
         this.activeFilters.status.clear();
+        this.activeFilters.releaseStage.clear();
         this.searchQuery = '';
         this.filteredData = [...this.data];
 
@@ -467,15 +490,18 @@ class RoadmapApp {
         const q = this.searchQuery;
         const cats = this.activeFilters.category;
         const sts = this.activeFilters.status;
+        const stages = this.activeFilters.releaseStage;
 
         this.filteredData = this.data.filter(item => {
             const catMatch = cats.size === 0 || cats.has(item.category);
             const stMatch = sts.size === 0 || sts.has(item.status);
-            if (!catMatch || !stMatch) return false;
+            const stageMatch = stages.size === 0 || stages.has(item.releaseStage || 'Unspecified');
+            if (!catMatch || !stMatch || !stageMatch) return false;
             if (!q) return true;
             const haystack = [
                 item.title, item.description, item.category, item.status,
-                item.owner, item.pmm, item.engLead, item.gusProgram, item.period
+                item.owner, item.pmm, item.engLead, item.gusProgram, item.period,
+                item.team, item.project, item.releaseStage
             ].filter(Boolean).join(' ').toLowerCase();
             return haystack.includes(q);
         });
@@ -1028,6 +1054,36 @@ class RoadmapApp {
         return item.scheduledBuild ? 'Build ' + item.scheduledBuild : (item.period || '');
     }
 
+    // Release label with GA date appended when SALESFORCE_BUILDS knows the build.
+    getReleaseLabel(item) {
+        const base = this.getBuildLabel(item) || item.period || item.date || '';
+        if (!base) return '';
+        const meta = item.scheduledBuild && typeof SALESFORCE_BUILDS !== 'undefined'
+            ? SALESFORCE_BUILDS[item.scheduledBuild] : null;
+        return meta && meta.gaDate ? `${base} · GA ${meta.gaDate}` : base;
+    }
+
+    // ISO datetime → "YYYY-MM-DD"
+    fmtDate(iso) {
+        if (!iso) return '';
+        const m = String(iso).match(/^(\d{4}-\d{2}-\d{2})/);
+        return m ? m[1] : iso;
+    }
+
+    // Inline rollout chip for cards/lists when the epic has Target_Roll_Out_Date.
+    rolloutBadge(item) {
+        if (!item.targetRollOutDate) return '';
+        return `<span class="meta-item" title="Target Roll Out Date (GUS)">🎯 Rollout: ${this.fmtDate(item.targetRollOutDate)}</span>`;
+    }
+
+    // Release-stage chip (Pilot / Open Beta / GA / Unspecified) used in filters & cards.
+    formatReleaseStage(stage) {
+        if (!stage) return 'Unspecified';
+        if (stage === 'GA') return 'GA';
+        if (stage === 'GA with Limited Availability') return 'GA (Limited)';
+        return stage;
+    }
+
     ownerChips(item) {
         const chips = [];
         if (item.owner) chips.push(`<span class="people-chip people-owner" title="Product Owner">👤 ${item.owner}</span>`);
@@ -1304,7 +1360,7 @@ class RoadmapApp {
 
     createTimelineItem(item) {
         const peopleHtml = this.ownerChips(item);
-        const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
+        const releaseLabel = this.getReleaseLabel(item);
         return `
             <div class="timeline-item status-${item.status}" data-id="${item.id}">
                 <div class="item-header">
@@ -1314,6 +1370,7 @@ class RoadmapApp {
                 <p class="item-description">${item.description}</p>
                 <div class="item-meta">
                     ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
+                    ${this.rolloutBadge(item)}
                     <span class="meta-item"><span class="category-tag">${this.formatCategory(item.category)}</span></span>
                     ${this.docsBadge(item)}
                     ${this.feedbackBadge(item)}
@@ -1333,7 +1390,7 @@ class RoadmapApp {
 
         const html = this.filteredData.map(item => {
             const peopleHtml = this.ownerChips(item);
-            const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
+            const releaseLabel = this.getReleaseLabel(item);
             return `
                 <div class="grid-item status-${item.status}" data-id="${item.id}">
                     <div class="item-header">
@@ -1343,6 +1400,7 @@ class RoadmapApp {
                     <p class="item-description">${item.description}</p>
                     <div class="item-meta">
                         ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
+                        ${this.rolloutBadge(item)}
                         <span class="meta-item"><span class="category-tag">${this.formatCategory(item.category)}</span></span>
                     </div>
                     ${peopleHtml ? `<div class="item-people">${peopleHtml}</div>` : ''}
@@ -1364,7 +1422,7 @@ class RoadmapApp {
 
         const html = this.filteredData.map(item => {
             const ownerHtml = item.owner ? `<span class="meta-item">👤 ${item.owner}</span>` : '';
-            const releaseLabel = this.getBuildLabel(item) || item.period || item.date || '';
+            const releaseLabel = this.getReleaseLabel(item);
             return `
                 <div class="list-item" data-id="${item.id}">
                     <div class="list-item-status ${item.status}"></div>
@@ -1377,6 +1435,7 @@ class RoadmapApp {
                         <span class="category-tag">${this.formatCategory(item.category)}</span>
                         ${ownerHtml}
                         ${releaseLabel ? `<span class="meta-item">🗓️ ${releaseLabel}</span>` : ''}
+                        ${this.rolloutBadge(item)}
                         ${this.docsBadge(item)}
                         ${this.feedbackBadge(item)}
                     </div>
@@ -1459,6 +1518,27 @@ class RoadmapApp {
             }
             if (item.team && item.team !== '-') {
                 ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🏢 Team:</span><span class="owner-name">${item.team}</span></div>`;
+            }
+            if (item.project) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">📁 Project:</span><span class="owner-name">${item.project}</span></div>`;
+            }
+            if (item.targetRollOutDate) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🎯 Target Roll Out:</span><span class="owner-name">${this.fmtDate(item.targetRollOutDate)}</span></div>`;
+            }
+            if (item.releaseStage) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🚀 Release Stage:</span><span class="owner-name">${this.formatReleaseStage(item.releaseStage)}</span></div>`;
+            }
+            if (typeof item.percentComplete === 'number') {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">📈 Work Complete:</span><span class="owner-name">${item.percentComplete}%</span></div>`;
+            }
+            if (item.readinessStatus) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🟦 Readiness:</span><span class="owner-name">${item.readinessStatus}</span></div>`;
+            }
+            if (item.tShirtSize) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">📏 T-Shirt:</span><span class="owner-name">${item.tShirtSize}</span></div>`;
+            }
+            if (item.gusEpicId) {
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🔗 GUS Epic:</span><span class="owner-name"><a href="https://gus.my.salesforce.com/lightning/r/ADM_Epic__c/${item.gusEpicId}/view" target="_blank" rel="noopener noreferrer">${item.gusEpicId}</a></span></div>`;
             }
             if (item.gusProgram) {
                 ownerPrdHtml += `
