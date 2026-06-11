@@ -337,9 +337,9 @@ const releaseNotesData = {
         name: 'Winter \'26',
         icon: '❄️',
         status: 'previous',
-        releaseDate: 'October 13, 2025',
-        gaDate: '2025-10-13',
-        previewDate: '2025-10-06',
+        releaseDate: 'January 17, 2026',
+        gaDate: '2026-01-17',
+        previewDate: '2026-01-10',
         mainUrl: 'https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=260&type=5',
         summary: 'Winter \'26 expands Agentforce across every cloud with IT service management, guided commerce shopping, data clean rooms, Agentforce Grid for bulk operations, and comprehensive observability.',
         categories: [
@@ -696,14 +696,14 @@ const releaseNotesData = {
     },
 
     'summer-25': {
-        version: '256',
+        version: '258',
         name: 'Summer \'25',
         icon: '☀️',
         status: 'archived',
-        releaseDate: 'May 16, 2025',
-        gaDate: '2025-05-16',
-        previewDate: '2025-05-09',
-        mainUrl: 'https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=256&type=5',
+        releaseDate: 'September 20, 2025',
+        gaDate: '2025-09-20',
+        previewDate: '2025-09-06',
+        mainUrl: 'https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=258&type=5',
         summary: 'Summer \'25 introduces multimodal agents, web search capabilities, RAG 2.0, Agentforce for every employee, and instruction adherence governance — a major leap in agent intelligence and reach.',
         categories: [
             {
@@ -981,14 +981,14 @@ const releaseNotesData = {
     },
 
     'winter-25': {
-        version: '252',
+        version: '254',
         name: 'Winter \'25',
         icon: '❄️',
         status: 'archived',
-        releaseDate: 'October 14, 2024',
-        gaDate: '2024-10-14',
-        previewDate: '2024-10-07',
-        mainUrl: 'https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=252&type=5',
+        releaseDate: 'January 11, 2025',
+        gaDate: '2025-01-11',
+        previewDate: '2025-01-04',
+        mainUrl: 'https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein.htm&release=254&type=5',
         summary: 'Winter \'25 is the landmark launch of the Agentforce platform — introducing the Service Agent, SDR Agent, 200+ Data Cloud connectors, and the sub-second real-time data layer.',
         categories: [
             {

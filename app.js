@@ -419,11 +419,6 @@ class RoadmapApp {
             });
         }
 
-        // Export button
-        document.getElementById('exportBtn').addEventListener('click', () => {
-            this.exportData();
-        });
-
         // Modal close
         const modal = document.getElementById('itemModal');
         const closeBtn = document.querySelector('.close-modal');
