@@ -1009,7 +1009,7 @@ class RoadmapApp {
                         <div class="owner-card-meta">
                             <h3 class="owner-name-title">${owner}</h3>
                             <div class="owner-sub">
-                                ${pmmSet.size ? `<span class="owner-sub-item">PMM: ${[...pmmSet].join(', ')}</span>` : ''}
+                                ${pmmSet.size ? `<span class="owner-sub-item">TPM: ${[...pmmSet].join(', ')}</span>` : ''}
                                 ${engSet.size ? `<span class="owner-sub-item">Eng: ${[...engSet].join(', ')}</span>` : ''}
                             </div>
                         </div>
@@ -1156,7 +1156,7 @@ class RoadmapApp {
             if (item.owner) chips.push(`<span class="people-chip people-owner" title="Product Owner">👤 ${item.owner}</span>`);
             if (item.productOwner && item.productOwner !== item.owner) chips.push(`<span class="people-chip people-pmm" title="Product Owner (Product_Owner__c)">🎯 ${item.productOwner}</span>`);
         }
-        if (item.pmm)   chips.push(`<span class="people-chip people-pmm" title="PMM">🎯 ${item.pmm}</span>`);
+        if (item.pmm)   chips.push(`<span class="people-chip people-pmm" title="TPM">🎯 ${item.pmm}</span>`);
         if (item.engLead) chips.push(`<span class="people-chip people-eng" title="Engineering Lead">⚙️ ${item.engLead}</span>`);
         return chips.join('');
     }
@@ -1583,7 +1583,7 @@ class RoadmapApp {
                 }
             }
             if (item.pmm) {
-                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🎯 PMM:</span><span class="owner-name">${item.pmm}</span></div>`;
+                ownerPrdHtml += `<div class="owner-info"><span class="owner-label">🎯 TPM:</span><span class="owner-name">${item.pmm}</span></div>`;
             }
             if (item.engLead) {
                 ownerPrdHtml += `<div class="owner-info"><span class="owner-label">⚙️ Engineering Lead:</span><span class="owner-name">${item.engLead}</span></div>`;
