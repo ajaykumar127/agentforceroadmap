@@ -8,6 +8,7 @@ class RoadmapApp {
             combined: roadmapDataCombined,
             gus: roadmapDataGUS,
             d360: roadmapDataD360,
+            service: roadmapDataServiceCloud,
             v1: roadmapDataV1,
             v2: roadmapDataV2,
             v3: roadmapDataV3,
@@ -19,6 +20,7 @@ class RoadmapApp {
             combined: 'agentforce1!',
             gus:      'agentforce1!',
             d360:     'agentforce1!',
+            service:  'agentforce1!',
         };
         this.data = this.dataVersions[this.currentVersion];
         this.filteredData = [...this.data];
@@ -215,7 +217,7 @@ class RoadmapApp {
                 <div class="stat-callout-title">${calloutTitle}</div>
                 <div class="stat-callout-num">${calloutNum}</div>
                 ${calloutSubtitle ? `<div class="stat-callout-sub">${calloutSubtitle}</div>` :
-                  (topOwners.length ? `<div class="stat-callout-sub">Top ${this.currentVersion === 'd360' ? 'record owners (eng leads)' : 'owners'}: ${topOwners.map(([n,c])=>`<span class="owner-pill">${n} · ${c}</span>`).join(' ')}</div>` : '')}
+                  (topOwners.length ? `<div class="stat-callout-sub">Top ${(this.currentVersion === 'd360' || this.currentVersion === 'service') ? 'record owners (eng leads)' : 'owners'}: ${topOwners.map(([n,c])=>`<span class="owner-pill">${n} · ${c}</span>`).join(' ')}</div>` : '')}
             </div>
         `;
     }
@@ -262,7 +264,7 @@ class RoadmapApp {
         // Release-stage chips: only show the row if any tagged epic exists OR we're on the GUS view.
         const stageOrder = ['GA', 'GA with Limited Availability', 'Beta', 'Pilot', 'Not Deployed', 'Retired', 'Unspecified'];
         const stagesPresent = stageOrder.filter(s => stageCounts[s] > 0);
-        const showStages = (this.currentVersion === 'gus' || this.currentVersion === 'd360') && stagesPresent.length > 0;
+        const showStages = (this.currentVersion === 'gus' || this.currentVersion === 'd360' || this.currentVersion === 'service') && stagesPresent.length > 0;
         const stageChips = showStages
             ? stagesPresent.map(s => chipHtml('releaseStage', s, this.formatReleaseStage(s), stageCounts[s] || 0)).join('')
             : '';
@@ -275,14 +277,14 @@ class RoadmapApp {
 
         // Cluster + customer-facing chips — D360 only (the only view where we have these fields).
         const clusterKeys = Object.keys(clusterCounts).sort((a,b) => clusterCounts[b] - clusterCounts[a]);
-        const showClusters = this.currentVersion === 'd360' && clusterKeys.length > 0;
+        const showClusters = (this.currentVersion === 'd360' || this.currentVersion === 'service') && clusterKeys.length > 0;
         const clusterGroup = showClusters
             ? `<div class="chip-group">
                    <span class="chip-group-label" title="Heuristic cluster derived from epic title / team / project">Cluster</span>
                    ${clusterKeys.map(c => chipHtml('cluster', c, c, clusterCounts[c])).join('')}
                </div>`
             : '';
-        const showCF = this.currentVersion === 'd360' && (cfCounts['Customer-facing'] || cfCounts['Internal eng']);
+        const showCF = (this.currentVersion === 'd360' || this.currentVersion === 'service') && (cfCounts['Customer-facing'] || cfCounts['Internal eng']);
         const cfGroup = showCF
             ? `<div class="chip-group">
                    <span class="chip-group-label" title="Customer-facing flag: false for control-plane / capacity / OORDR / tech-debt epics">Type</span>
@@ -342,6 +344,7 @@ class RoadmapApp {
                 'combined': 'Historical Roadmap (V1 + V2 + V3 + V4 combined)',
                 'gus': 'GUS Live · Agentforce / SFAi Epics',
                 'd360': 'GUS Live · Data 360 / Data Cloud Epics',
+                'service': 'GUS Live · Service Cloud Epics',
                 'v1': 'V1 - Core Roadmap',
                 'v2': 'V2 - Extended Roadmap',
                 'v3': 'V3 - Q1-Q2 2026 Roadmap (Updated March 2026)',
@@ -353,6 +356,8 @@ class RoadmapApp {
                 refreshStamp = ` <span class="refresh-stamp" title="Last refreshed from GUS ADM_Epic__c">· Refreshed ${LAST_GUS_REFRESH}</span>`;
             } else if (this.currentVersion === 'd360' && typeof LAST_GUS_REFRESH_D360 !== 'undefined') {
                 refreshStamp = ` <span class="refresh-stamp" title="Last refreshed from GUS ADM_Epic__c">· Refreshed ${LAST_GUS_REFRESH_D360}</span>`;
+            } else if (this.currentVersion === 'service' && typeof LAST_GUS_REFRESH_SC !== 'undefined') {
+                refreshStamp = ` <span class="refresh-stamp" title="Last refreshed from GUS ADM_Epic__c">· Refreshed ${LAST_GUS_REFRESH_SC}</span>`;
             }
             itemCount = `${this.data.length} items${refreshStamp}`;
         }
@@ -486,7 +491,7 @@ class RoadmapApp {
         this.activeFilters.cluster.clear();
         this.activeFilters.customerFacing.clear();
         // On D360, default-hide the internal eng work so CSMs see customer-facing only.
-        if (version === 'd360') this.activeFilters.customerFacing.add('Customer-facing');
+        if (version === 'd360' || version === 'service') this.activeFilters.customerFacing.add('Customer-facing');
         this.searchQuery = '';
         this.filteredData = [...this.data];
 
@@ -1139,7 +1144,7 @@ class RoadmapApp {
         // For d360 entries, item.owner is the GUS record owner (typically a team / eng lead)
         // and item.productOwner is the actual PM. For other views, item.owner already
         // happens to be the PM, so render it on the PM chip.
-        if (item.version === 'd360') {
+        if (item.version === 'd360' || item.version === 'service') {
             if (item.productOwner) chips.push(`<span class="people-chip people-owner" title="Product Owner (PM) — Product_Owner__c">👤 ${item.productOwner}</span>`);
             if (item.owner) chips.push(`<span class="people-chip people-eng" title="GUS record owner — typically the team or eng lead, not the PM">📦 ${item.owner}</span>`);
         } else {
@@ -1534,7 +1539,7 @@ class RoadmapApp {
 
         // Owner, PRD, and GUS metadata section
         let ownerPrdHtml = '';
-        const hasGUSFields = (item.version === 'gus' || item.version === 'd360') && (item.scheduledBuild || item.devLead || item.designLead || item.qualityLead || item.team || item.health);
+        const hasGUSFields = (item.version === 'gus' || item.version === 'd360' || item.version === 'service') && (item.scheduledBuild || item.devLead || item.designLead || item.qualityLead || item.team || item.health);
         if (item.owner || item.pmm || item.engLead || item.gusProgram || item.prdLink || hasGUSFields) {
             ownerPrdHtml = '<div class="modal-section owner-prd-section">';
             if (buildLabel) {
@@ -1554,7 +1559,7 @@ class RoadmapApp {
                     </div>
                 `;
             }
-            if (item.version === 'd360') {
+            if (item.version === 'd360' || item.version === 'service') {
                 if (item.productOwner) {
                     ownerPrdHtml += `<div class="owner-info"><span class="owner-label">👤 PM (Product_Owner):</span><span class="owner-name">${item.productOwner}</span></div>`;
                 }
