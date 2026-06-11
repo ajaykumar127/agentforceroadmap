@@ -2,11 +2,42 @@
 // Official Salesforce release feature data sourced from salesforce.com/news/stories/
 
 const releaseNotesData = {
+    'summer-26': {
+        version: '264',
+        name: 'Summer \'26',
+        icon: '☀️',
+        status: 'upcoming',
+        releaseDate: 'September 5, 2026',
+        gaDate: '2026-09-05',
+        previewDate: '2026-08-29',
+        mainUrl: 'https://help.salesforce.com/s/articleView?id=release-notes.salesforce_release_notes.htm&release=264&type=5',
+        summary: 'Summer \'26 (Build 264) is the next Salesforce major release. Detailed feature list will be linked from the official release notes — see the GUS Live views for the in-flight epic-level breakdown.',
+        categories: [
+            {
+                id: 'pending',
+                name: 'Release notes pending',
+                icon: '📝',
+                features: [
+                    {
+                        id: 'su26-stub',
+                        title: 'Official release notes',
+                        status: 'Upcoming',
+                        description: 'Summer \'26 GA is scheduled for September 5, 2026. The polished customer-facing release notes will populate here when published. For the in-flight epic list, switch to the GUS Live views.',
+                        details: {
+                            overview: 'This view will be replaced with the curated Summer \'26 release-note features once Salesforce publishes them at help.salesforce.com.',
+                            capabilities: [],
+                            link: 'https://help.salesforce.com/s/articleView?id=release-notes.salesforce_release_notes.htm&release=264&type=5'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     'spring-26': {
         version: '262',
         name: 'Spring \'26',
         icon: '🌱',
-        status: 'upcoming',
+        status: 'current',
         releaseDate: 'May 16, 2026',
         gaDate: '2026-05-16',
         previewDate: '2026-05-09',
@@ -305,7 +336,7 @@ const releaseNotesData = {
         version: '260',
         name: 'Winter \'26',
         icon: '❄️',
-        status: 'current',
+        status: 'previous',
         releaseDate: 'October 13, 2025',
         gaDate: '2025-10-13',
         previewDate: '2025-10-06',
@@ -668,7 +699,7 @@ const releaseNotesData = {
         version: '256',
         name: 'Summer \'25',
         icon: '☀️',
-        status: 'previous',
+        status: 'archived',
         releaseDate: 'May 16, 2025',
         gaDate: '2025-05-16',
         previewDate: '2025-05-09',
