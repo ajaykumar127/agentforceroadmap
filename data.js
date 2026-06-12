@@ -3732,7 +3732,7 @@ const roadmapDataD360 = [
     {
         id: 62,
         title: "[262] Flow Edit History",
-        description: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? See PRD",
+        description: "(no description in GUS) — [262] Flow Edit History",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -3749,7 +3749,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? See PRD",
+            overview: "(no description in GUS) — [262] Flow Edit History",
             keyFeatures: [],
             impact: ""
         },
@@ -3776,7 +3776,7 @@ const roadmapDataD360 = [
     {
         id: 63,
         title: "[262] List triggered flows",
-        description: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? see PRD",
+        description: "(no description in GUS) — [262] List triggered flows",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -3793,7 +3793,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? see PRD",
+            overview: "(no description in GUS) — [262] List triggered flows",
             keyFeatures: [],
             impact: ""
         },
@@ -3820,7 +3820,7 @@ const roadmapDataD360 = [
     {
         id: 64,
         title: "[262] [On Canvas Analytics] Date Range Filter",
-        description: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? See PRD",
+        description: "(no description in GUS) — [262] [On Canvas Analytics] Date Range Filter",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -3837,7 +3837,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? See PRD",
+            overview: "(no description in GUS) — [262] [On Canvas Analytics] Date Range Filter",
             keyFeatures: [],
             impact: ""
         },
@@ -4304,7 +4304,7 @@ const roadmapDataD360 = [
     {
         id: 75,
         title: "[262] Audience triggered flows",
-        description: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/en…",
+        description: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -4321,7 +4321,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc This feature is aimed at Marketing and Campaign Managers running experiments in Flow Builder. - What are the new /user scenarios this feature will provide/enable? see PRD",
+            overview: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc",
             keyFeatures: [],
             impact: ""
         },
@@ -7800,7 +7800,7 @@ const roadmapDataGUS = [
     {
         id: 12,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus]",
-        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams:",
+        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7817,7 +7817,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams:",
+            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
             keyFeatures: [],
             impact: "3/27 - Complete.\r\n3/20 - Will finish configuring alerts for new cell today. Going live next week."
         },
@@ -7841,7 +7841,7 @@ const roadmapDataGUS = [
     {
         id: 13,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate]",
-        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams:",
+        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7858,7 +7858,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams:",
+            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
             keyFeatures: [],
             impact: "4/10 - Started onboarding customers to new cell with no known issue for Stargate services so far\r\n4/2 - Q3 signed off, waiting for customer onboarding"
         },
@@ -7882,7 +7882,7 @@ const roadmapDataGUS = [
     {
         id: 14,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [EAC Foundation]",
-        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams:",
+        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7899,7 +7899,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams:",
+            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
             keyFeatures: [],
             impact: "2/6 - A few small bugs/blockers remain, after which we can deploy our new cell to prod, eta 2/10. We decided to postpone the new cell deployment to stage, pending resolution with Vault access.\r\n1/20 - Some of the production promotion tasks are taking longer than expected, and still working through Q3/Q4 bugs."
         },
@@ -8240,7 +8240,7 @@ const roadmapDataGUS = [
     {
         id: 22,
         title: "ECI Ingestion Recrawl",
-        description: "262 Milestones: MS Recrawl Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors :",
+        description: "262 Milestones: MS Recrawl Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -8257,7 +8257,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "262 Milestones: MS Recrawl Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors :",
+            overview: "262 Milestones: MS Recrawl Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors",
             keyFeatures: [
                 "Dev Handoff: Complete",
                 "Q3 Sign Off: 2/4 -BLOCKED",
@@ -8601,7 +8601,7 @@ const roadmapDataGUS = [
     {
         id: 30,
         title: "Embedded AI Fast Follow- March",
-        description: "2/18 dev complete for 260.10 [Q3] test plan WIP 2/3 - Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade. - Otherwise, on track for GTM #2 (260.10). 1/20 On tra...",
+        description: "2/18 dev complete for 260.10 [Q3] test plan WIP 2/3 - Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade. - Otherwise, on track for GTM #2 (260.10). 1/20 On tra. ",
         category: "feature",
         status: "completed",
         period: "TBD",
@@ -8618,7 +8618,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "2/18 dev complete for 260.10 [Q3] test plan WIP 2/3 - Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade. - Otherwise, on track for GTM #2 (260.10). 1/20 On tra...",
+            overview: "2/18 dev complete for 260.10 [Q3] test plan WIP 2/3 - Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade. - Otherwise, on track for GTM #2 (260.10). 1/20 On tra. ",
             keyFeatures: [],
             impact: "2/18\r\ndev complete for 260.10\r\n[Q3] test plan WIP\r\n2/3\r\n- Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade.\r\n- Otherwise, on track for GTM #2 (260.10)."
         },
@@ -8642,7 +8642,7 @@ const roadmapDataGUS = [
     {
         id: 31,
         title: "Embedded AI in Free - Simplified Agent Setup, record summarization & email draft",
-        description: "Deliver easy setup of embedded ai functionality in Free Suite Includes:",
+        description: "Deliver easy setup of embedded ai functionality in Free Suite Includes",
         category: "feature",
         status: "completed",
         period: "260.10",
@@ -8659,7 +8659,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Deliver easy setup of embedded ai functionality in Free Suite Includes:",
+            overview: "Deliver easy setup of embedded ai functionality in Free Suite Includes",
             keyFeatures: [
                 "Users save time and boost productivity, and with AI-powered summaries and drafting personalized, in-context emails in the flow of work. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."
             ],
@@ -11409,7 +11409,7 @@ const roadmapDataGUS = [
     {
         id: 94,
         title: "[258.Patch] New Simple Email Builder Experience in Starter & Pro Suite",
-        description: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. Link to PRD:",
+        description: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. Link to PRD",
         category: "feature",
         status: "completed",
         period: "258.patch",
@@ -11426,7 +11426,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. Link to PRD:",
+            overview: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. Link to PRD",
             keyFeatures: [
                 "Streamlined builder makes it easier for users to create emails with more template designs and a simplified experience. The better time-to-value enhances the onboarding and adoption, leading to more engagement and retention for marketing-focused users."
             ],
@@ -11625,7 +11625,7 @@ const roadmapDataGUS = [
     {
         id: 99,
         title: "[262] - General Trust Tabasco",
-        description: "Justification:",
+        description: "Justification",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -11642,7 +11642,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Justification:",
+            overview: "Justification",
             keyFeatures: [
                 "256 DoR No"
             ],
