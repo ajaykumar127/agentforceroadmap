@@ -1043,7 +1043,7 @@ const roadmapData = roadmapDataV1;
 
 // Export for use in app.js
 
-const LAST_GUS_REFRESH_D360 = "2026-06-10";
+const LAST_GUS_REFRESH_D360 = "2026-06-13";
 const roadmapDataD360 = [
     {
         id: 1,
@@ -1081,7 +1081,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:28:23.000+0000",
+        gusLastModified: "2026-06-10T19:21:00.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1092,7 +1092,7 @@ const roadmapDataD360 = [
     {
         id: 2,
         title: "[264] Datakit support for Deterministic naming for Managed Package",
-        description: "(no description in GUS) — [264] Datakit support for Deterministic naming for Managed Package",
+        description: "Datakit support for Deterministic naming for Managed Package Spec: Deterministic naming for DataKit components",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -1109,7 +1109,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "(no description in GUS) — [264] Datakit support for Deterministic naming for Managed Package",
+            overview: "Datakit support for Deterministic naming for Managed Package Spec: Deterministic naming for DataKit components",
             keyFeatures: [],
             impact: ""
         },
@@ -1164,12 +1164,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 54,
+        percentComplete: 50,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:08:34.000+0000",
+        gusLastModified: "2026-06-15T20:17:50.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1213,7 +1213,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T13:47:09.000+0000",
+        gusLastModified: "2026-06-15T13:45:43.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1252,13 +1252,13 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: 14,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:43:09.000+0000",
-        releaseStage: "GA",
+        gusLastModified: "2026-06-16T05:15:42.000+0000",
+        releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
         productOwner: null,
@@ -1296,12 +1296,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 81,
+        percentComplete: 79,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:08:04.000+0000",
+        gusLastModified: "2026-06-16T07:19:01.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1340,12 +1340,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 58,
+        percentComplete: 69,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:28:57.000+0000",
+        gusLastModified: "2026-06-16T04:03:58.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1384,12 +1384,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 46,
+        percentComplete: 57,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:41:08.000+0000",
+        gusLastModified: "2026-06-15T19:11:59.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1428,12 +1428,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 22,
+        percentComplete: 21,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T16:03:09.000+0000",
+        gusLastModified: "2026-06-15T22:43:48.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1472,12 +1472,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 75,
+        percentComplete: 73,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:35:47.000+0000",
+        gusLastModified: "2026-06-15T22:21:01.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1521,7 +1521,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:33:44.000+0000",
+        gusLastModified: "2026-06-16T06:13:23.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1560,12 +1560,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Large",
-        percentComplete: 59,
+        percentComplete: 56,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:18:25.000+0000",
+        gusLastModified: "2026-06-15T15:23:45.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1604,12 +1604,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Large",
-        percentComplete: 44,
+        percentComplete: 42,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:11:07.000+0000",
+        gusLastModified: "2026-06-15T19:16:02.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1653,7 +1653,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:12:01.000+0000",
+        gusLastModified: "2026-06-15T14:15:38.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1692,12 +1692,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 67,
+        percentComplete: 75,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:39:02.000+0000",
+        gusLastModified: "2026-06-16T08:38:44.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1736,12 +1736,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 44,
+        percentComplete: 50,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:30:19.000+0000",
+        gusLastModified: "2026-06-15T14:42:12.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1769,7 +1769,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "This epic focuses on redesigning the Add Element experience for the Flow Builder, transitioning from a list-based discovery model to a scalable, intent-based interface. The goal is to enhance user experience by making it easier for users to find and select the appropriate elements for building flows. What customer problem does this solve? Users struggle with the current scrolling menu, which makes it difficult to discover and select the right elements. What data, customer insight, or business trend makes this feature important and timely? Research indicates a 0% completion rate for users trying to select elements, highlighting a critical need for improvement. Would this give us a competitive advantage? Yes, by improving usability, we can position ourselves as a leader in automation tools. Who are we building this feature for? Flow Builders including admins, marketers, and other business users. VOC records and IdeaExchange records will be referenced for insights. I can find the right elements quickly using intuitive categories. User can search for elements using synonyms or natural language. User can receive suggestions for elements based on the context of their flow. As a Flow Builder, I can see clear categories and descriptions for elements. As a Flow Builder, I can search for elements using common terms. As a Flow Builder, I can view suggested elements based on my current flow. Advanced AI recommendations beyond the scope of initial suggestions. We will track user engagemen…",
+            overview: "This epic focuses on redesigning the Add Element experience for the Flow Builder, transitioning from a list-based discovery model to a scalable, intent-based interface. The goal is to enhance user experience by making it easier for users to find and select the appropriate elements for building flows. What customer problem does this solve? Users struggle with the current scrolling menu, which makes it difficult to discover and select the right elements. What data, customer insight, or business trend makes this feature important and timely? Research indicates a 0% completion rate for users trying to select elements, highlighting a critical need for improvement. Would this give us a competitive advantage? Yes, by improving usability, we can position ourselves as a leader in automation tools.Flow Builders including admins, marketers, and other business users. VOC records and IdeaExchange records will be referenced for insights. I can find the right elements quickly using intuitive categories. User can search for elements using synonyms or natural language. User can receive suggestions for elements based on the context of their flow. As a Flow Builder, I can see clear categories and descriptions for elements. As a Flow Builder, I can search for elements using common terms. As a Flow Builder, I can view suggested elements based on my current flow. Advanced AI recommendations beyond the scope of initial suggestions. We will track user engagement with the new Add Element experience,…",
             keyFeatures: [],
             impact: ""
         },
@@ -1780,12 +1780,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 40,
+        percentComplete: 48,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T16:13:01.000+0000",
+        gusLastModified: "2026-06-15T19:17:12.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1824,12 +1824,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 35,
+        percentComplete: 39,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:19:08.000+0000",
+        gusLastModified: "2026-06-15T14:25:15.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1873,7 +1873,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:34:59.000+0000",
+        gusLastModified: "2026-06-15T21:07:40.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1917,7 +1917,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:29:45.000+0000",
+        gusLastModified: "2026-06-15T21:07:30.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -1956,12 +1956,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 68,
+        percentComplete: 78,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:55:18.000+0000",
+        gusLastModified: "2026-06-16T06:19:15.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2000,12 +2000,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 82,
+        percentComplete: 88,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:35:45.000+0000",
+        gusLastModified: "2026-06-15T14:49:27.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2044,12 +2044,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 73,
+        percentComplete: 83,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:31:40.000+0000",
+        gusLastModified: "2026-06-16T05:42:52.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2088,12 +2088,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Medium",
-        percentComplete: 58,
+        percentComplete: 67,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:32:36.000+0000",
+        gusLastModified: "2026-06-15T14:45:24.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2132,12 +2132,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 33,
+        percentComplete: 43,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:45:32.000+0000",
+        gusLastModified: "2026-06-16T05:59:26.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2176,12 +2176,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 5,
+        percentComplete: 18,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:47:12.000+0000",
+        gusLastModified: "2026-06-15T20:29:13.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2220,12 +2220,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 25,
+        percentComplete: 36,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:45:32.000+0000",
+        gusLastModified: "2026-06-16T04:56:39.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2264,12 +2264,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 25,
+        percentComplete: 31,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:13:29.000+0000",
+        gusLastModified: "2026-06-16T04:28:45.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2308,12 +2308,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 58,
+        percentComplete: 60,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:56:12.000+0000",
+        gusLastModified: "2026-06-16T06:44:43.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2352,12 +2352,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Large",
-        percentComplete: 31,
+        percentComplete: 38,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:41:15.000+0000",
+        gusLastModified: "2026-06-16T06:19:56.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2401,7 +2401,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:31:34.000+0000",
+        gusLastModified: "2026-06-15T15:39:42.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2440,12 +2440,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: 25,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:33:44.000+0000",
+        gusLastModified: "2026-06-15T10:12:57.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2489,7 +2489,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:19:55.000+0000",
+        gusLastModified: "2026-06-15T15:26:10.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2528,12 +2528,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 50,
+        percentComplete: 71,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:22:22.000+0000",
+        gusLastModified: "2026-06-15T19:19:01.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2572,12 +2572,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 40,
+        percentComplete: 60,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:19:55.000+0000",
+        gusLastModified: "2026-06-16T06:13:15.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2616,12 +2616,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: 52,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:43:15.000+0000",
+        gusLastModified: "2026-06-16T07:31:23.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2660,12 +2660,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 64,
+        percentComplete: 82,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:32:54.000+0000",
+        gusLastModified: "2026-06-15T19:35:39.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2704,12 +2704,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 33,
+        percentComplete: 8,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:40:07.000+0000",
+        gusLastModified: "2026-06-16T06:40:29.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2748,12 +2748,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: 17,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:42:33.000+0000",
+        gusLastModified: "2026-06-15T15:55:03.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2797,7 +2797,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:31:17.000+0000",
+        gusLastModified: "2026-06-10T19:11:37.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2841,7 +2841,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:33:52.000+0000",
+        gusLastModified: "2026-06-15T15:55:40.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2880,12 +2880,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 100,
+        percentComplete: 71,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:43:15.000+0000",
+        gusLastModified: "2026-06-15T15:49:22.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2929,7 +2929,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:13:05.000+0000",
+        gusLastModified: "2026-06-10T19:11:37.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -2973,7 +2973,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:37:28.000+0000",
+        gusLastModified: "2026-06-15T15:49:22.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3012,12 +3012,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 11,
+        percentComplete: 33,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:26:10.000+0000",
+        gusLastModified: "2026-06-15T15:32:35.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3056,12 +3056,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 52,
+        percentComplete: 57,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:34:29.000+0000",
+        gusLastModified: "2026-06-15T19:19:27.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3100,12 +3100,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 100,
+        percentComplete: 14,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:42:31.000+0000",
+        gusLastModified: "2026-06-15T15:55:24.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3144,12 +3144,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: 7,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:36:19.000+0000",
+        gusLastModified: "2026-06-16T00:53:33.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3188,12 +3188,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 20,
+        percentComplete: 40,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:41:07.000+0000",
+        gusLastModified: "2026-06-15T19:19:35.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3232,12 +3232,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 50,
+        percentComplete: 20,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:41:17.000+0000",
+        gusLastModified: "2026-06-15T19:19:35.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3369,7 +3369,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:59:52.000+0000",
+        gusLastModified: "2026-06-15T12:28:37.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3413,7 +3413,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:10:18.000+0000",
+        gusLastModified: "2026-06-11T13:22:43.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3457,7 +3457,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:05:49.000+0000",
+        gusLastModified: "2026-06-15T12:22:57.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3496,12 +3496,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 71,
+        percentComplete: 75,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:06:56.000+0000",
+        gusLastModified: "2026-06-15T20:43:40.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3545,7 +3545,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:57:43.000+0000",
+        gusLastModified: "2026-06-15T12:22:57.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3584,12 +3584,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 81,
+        percentComplete: 84,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:00:46.000+0000",
+        gusLastModified: "2026-06-15T12:30:13.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3633,7 +3633,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T13:00:41.000+0000",
+        gusLastModified: "2026-06-15T12:29:51.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3672,12 +3672,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Medium",
-        percentComplete: 71,
+        percentComplete: 96,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:18:35.000+0000",
+        gusLastModified: "2026-06-15T10:05:14.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3716,12 +3716,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Large",
-        percentComplete: 67,
+        percentComplete: 83,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T13:08:52.000+0000",
+        gusLastModified: "2026-06-13T13:06:45.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3765,7 +3765,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:20:27.000+0000",
+        gusLastModified: "2026-06-15T13:04:28.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3897,7 +3897,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:10:47.000+0000",
+        gusLastModified: "2026-06-15T12:49:24.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -3936,12 +3936,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 82,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:40:37.000+0000",
+        gusLastModified: "2026-06-10T19:04:46.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4117,7 +4117,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:04:55.000+0000",
+        gusLastModified: "2026-06-15T12:38:07.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4156,12 +4156,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 89,
+        percentComplete: 96,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:11:52.000+0000",
+        gusLastModified: "2026-06-15T19:10:00.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4172,7 +4172,7 @@ const roadmapDataD360 = [
     {
         id: 72,
         title: "[262] [DataShare] Activation Match boost support",
-        description: "PRD for the Activation Match boost : https://docs.google.com/document/d/1UQD9gV-Jrfci-ictVKo-1GJdoEzXvmVrdt9nwWPvOmk/edit?tab=t.0#heading=h.u1gyj1iipx9b",
+        description: "for the Activation Match boost : https://docs.google.com/document/d/1UQD9gV-Jrfci-ictVKo-1GJdoEzXvmVrdt9nwWPvOmk/edit?tab=t.0#heading=h.u1gyj1iipx9b",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -4189,7 +4189,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "PRD for the Activation Match boost : https://docs.google.com/document/d/1UQD9gV-Jrfci-ictVKo-1GJdoEzXvmVrdt9nwWPvOmk/edit?tab=t.0#heading=h.u1gyj1iipx9b",
+            overview: "for the Activation Match boost : https://docs.google.com/document/d/1UQD9gV-Jrfci-ictVKo-1GJdoEzXvmVrdt9nwWPvOmk/edit?tab=t.0#heading=h.u1gyj1iipx9b",
             keyFeatures: [],
             impact: ""
         },
@@ -4304,7 +4304,7 @@ const roadmapDataD360 = [
     {
         id: 75,
         title: "[262] Audience triggered flows",
-        description: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc",
+        description: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc - ** - ** see",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -4321,7 +4321,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc",
+            overview: "Consolidate single flow type for different data sources as trigger types: Segments, List, CRm record, campaign members etc - ** - ** see",
             keyFeatures: [],
             impact: ""
         },
@@ -4332,12 +4332,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 95,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:20:27.000+0000",
+        gusLastModified: "2026-06-12T13:11:16.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4376,12 +4376,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 94,
+        percentComplete: 95,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:11:52.000+0000",
+        gusLastModified: "2026-06-16T06:05:59.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4645,7 +4645,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:56:19.000+0000",
+        gusLastModified: "2026-06-15T12:16:53.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4689,7 +4689,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:04:26.000+0000",
+        gusLastModified: "2026-06-15T12:37:35.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4733,7 +4733,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-08T11:36:52.000+0000",
+        gusLastModified: "2026-06-15T14:15:11.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4761,7 +4761,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "This epic introduces an auto-generation capability that creates meaningful labels and descriptions for elements added to a Flow, based on the user's configuration. It also includes a feature to de-emphasize the metadata section for users who prefer to focus on the core aspects of building a flow. What customer problem does this solve? It reduces friction in the flow building process by automating metadata entry, allowing users to focus on building rather than manual configuration. What data, customer insight, or business trend makes this feature important and timely? Users have reported that manual entry of metadata slows down their workflow, leading to inconsistent documentation. Would this give us a competitive advantage? Yes, by providing a streamlined experience, we can enhance user satisfaction and reduce time to build, setting us apart from competitors. Who are we building this feature for? This feature is designed for both Power Users (admins and pro developers) and Emerging Users (business users and new admins). VOC records IdeaExchange records User can automatically generate meaningful labels and descriptions for Flow elements. User can collapse the metadata section to focus on building flows. User can opt in or out of auto-generation and metadata collapse features based on their preferences. As an Emerging User, I want to add elements quickly without configuring labels and descriptions so I can focus on building. As a Power User, I want to visualize the flow structu…",
+            overview: "This epic introduces an auto-generation capability that creates meaningful labels and descriptions for elements added to a Flow, based on the user's configuration. It also includes a feature to de-emphasize the metadata section for users who prefer to focus on the core aspects of building a flow. What customer problem does this solve? It reduces friction in the flow building process by automating metadata entry, allowing users to focus on building rather than manual configuration. What data, customer insight, or business trend makes this feature important and timely? Users have reported that manual entry of metadata slows down their workflow, leading to inconsistent documentation. Would this give us a competitive advantage? Yes, by providing a streamlined experience, we can enhance user satisfaction and reduce time to build, setting us apart from competitors.This feature is designed for both Power Users (admins and pro developers) and Emerging Users (business users and new admins). VOC records IdeaExchange records User can automatically generate meaningful labels and descriptions for Flow elements. User can collapse the metadata section to focus on building flows. User can opt in or out of auto-generation and metadata collapse features based on their preferences. As an Emerging User, I want to add elements quickly without configuring labels and descriptions so I can focus on building. As a Power User, I want to visualize the flow structure before finalizing metadata, allowing…",
             keyFeatures: [],
             impact: ""
         },
@@ -4777,7 +4777,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-09T19:11:53.000+0000",
+        gusLastModified: "2026-06-15T14:20:53.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -4992,12 +4992,12 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 12,
+        percentComplete: 17,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:41:51.000+0000",
+        gusLastModified: "2026-06-16T06:03:49.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -5041,7 +5041,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:42:17.000+0000",
+        gusLastModified: "2026-06-16T08:09:57.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -5113,7 +5113,7 @@ const roadmapDataD360 = [
         v2momMethod: "Data Cloud",
         version: "d360",
         details: {
-            overview: "Objective: Define and align on a unified governance model for enforcing privacy-preserving policies on data shared to external platforms via the DaaS endpoint. 264 Scope: Finalize the @governance schema for the getTables DaaS response (projection, mandatory_filters, aggregation_policy, masking) Align with external partners (Snowflake, BigQuery, Databricks) on the endpoint structure and contract Audit capability of the policy enforcement Validate that the proposed @governance format can be translated to each partner's native policy enforcement (Snowflake DDL, BigQuery analysisrules, etc.) Define the conversion chain: CleanRoom Template → Cedar Policy → @governance in API → Partner-native enforcement Out of Scope (264): - Implementation of policy generation or enforcement - Consumer override UX - Audit/reconciliation - User-level (role-based) policies",
+            overview: "Objective: Define and align on a unified governance model for enforcing privacy-preserving policies on data shared to external platforms via the DaaS endpoint. 264 Scope: Finalize the @governance schema for the getTables DaaS response (projection, mandatory_filters, aggregation_policy, masking) Align with external partners (Snowflake, BigQuery, Databricks) on the endpoint structure and contract Audit capability of the policy enforcement Validate that the proposed @governance format can be translated to each partner's native policy enforcement (Snowflake DDL, BigQuery analysisrules, etc.) Define the conversion chain: CleanRoom Template → Cedar Policy → @governance in API → Partner-native enforcement Out of Scope (264): - Implementation of policy generation or enforcement - Consumer override - Audit/reconciliation - User-level (role-based) policies",
             keyFeatures: [],
             impact: ""
         },
@@ -5124,7 +5124,7 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: null,
         slippageComments: null,
         pathToGreen: null,
         source: null,
@@ -5261,7 +5261,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:43:44.000+0000",
+        gusLastModified: "2026-06-11T19:13:07.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -5305,7 +5305,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:43:44.000+0000",
+        gusLastModified: "2026-06-16T06:48:35.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -5344,7 +5344,7 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: null,
         slippageComments: null,
         pathToGreen: null,
         source: null,
@@ -5393,7 +5393,7 @@ const roadmapDataD360 = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-04T05:43:47.000+0000",
+        gusLastModified: "2026-06-11T10:24:49.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null,
@@ -5432,7 +5432,7 @@ const roadmapDataD360 = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: null,
         slippageComments: null,
         pathToGreen: null,
         source: null,
@@ -7320,7 +7320,7 @@ if (typeof module !== 'undefined' && module.exports) {
 // Statuses updated from historical GUS completion data (builds 258, 260, 262)
 // Periods enriched with Salesforce seasonal release names from GUS ADM_Release__c
 
-const LAST_GUS_REFRESH = "2026-06-10";
+const LAST_GUS_REFRESH = "2026-06-13";
 const roadmapDataGUS = [
     {
         id: 1,
@@ -7399,7 +7399,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T12:47:54.000+0000",
+        gusLastModified: "2026-06-15T12:30:13.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -7440,7 +7440,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T13:06:46.000+0000",
+        gusLastModified: "2026-06-15T12:41:04.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -7491,7 +7491,7 @@ const roadmapDataGUS = [
     {
         id: 5,
         title: "Activities: Safe deletion strategy of Dangling rows",
-        description: "Epic for Morgan Stanley work in collaboration with Platform teams for safe deletion strategy of Dangling rows. More details here: https://docs.google.com/document/d/1SwwRnMBk3IeChS3UDMqGNKWOh9uZpDMf6z1dOx2xUfk/edit?tab=t.0 Background",
+        description: "Epic for Morgan Stanley work in collaboration with Platform teams for safe deletion strategy of Dangling rows. More details here: https://docs.google.com/document/d/1SwwRnMBk3IeChS3UDMqGNKWOh9uZpDMf6z1dOx2xUfk/edit?tab=t.0 Background: MS Financing LLC's Salesforce organisation co…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7508,7 +7508,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Epic for Morgan Stanley work in collaboration with Platform teams for safe deletion strategy of Dangling rows. More details here: https://docs.google.com/document/d/1SwwRnMBk3IeChS3UDMqGNKWOh9uZpDMf6z1dOx2xUfk/edit?tab=t.0 Background",
+            overview: "Epic for Morgan Stanley work in collaboration with Platform teams for safe deletion strategy of Dangling rows. More details here: https://docs.google.com/document/d/1SwwRnMBk3IeChS3UDMqGNKWOh9uZpDMf6z1dOx2xUfk/edit?tab=t.0 Background: MS Financing LLC's Salesforce organisation contains over 100 million records, primarily Events, that are soft-deleted (IsDeleted=TRUE) but are not being physically purged from the database. These records are visible via ALL ROWS SOQL queries and Workbench but do not appear in the standard Salesforce Recycle Bin UI. Business Impact: The presence of such a large volume of unpurged records is causing latency issues with list views for the customer. This indicates that even soft-deleted records are impacting query performance. The customer is also concerned about data hygiene and wants to understand \"how we got here\" to prevent recurrence.",
             keyFeatures: [
                 "Q3: Completed",
                 "Q4: NA",
@@ -7536,7 +7536,7 @@ const roadmapDataGUS = [
     {
         id: 6,
         title: "Add soft-cutoff for EAC and Inbox customers",
-        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents dependi…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7553,7 +7553,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents depending on Emails today context-less. Helps push customers to migrate ahead of Microsoft's Oct cut-off, to avoid service disruption Add logic to address what it means to cut-off access for O365 -- EAC + Inbox customers in August '26 and plan their support and transition over to graph between Aug and Oct.",
             keyFeatures: [
                 "Dev Handoff: ✅ 03/16",
                 "Q3 Handover:  ✅ 04/01",
@@ -7583,7 +7583,7 @@ const roadmapDataGUS = [
     {
         id: 7,
         title: "Agentic Pipeline Inspection & Forecasting",
-        description: "Problem statement: Customers view forecasting as a critical part of the selling journey. It is a process that is very much integrated in the flow of their work. Forecasting is very manual and time taking",
+        description: "Problem statement: Customers view forecasting as a critical part of the selling journey. It is a process that is very much integrated in the flow of their work. Forecasting is very manual and time taking Proposed Solution Integrate forecasting in pipeline management journey Let a…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -7600,7 +7600,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Problem statement: Customers view forecasting as a critical part of the selling journey. It is a process that is very much integrated in the flow of their work. Forecasting is very manual and time taking",
+            overview: "Problem statement: Customers view forecasting as a critical part of the selling journey. It is a process that is very much integrated in the flow of their work. Forecasting is very manual and time taking Proposed Solution Integrate forecasting in pipeline management journey Let agentic insights guide the forecasting process for reps",
             keyFeatures: [
                 "Dev Done: 07/23 (264 FF)",
                 "Q3 HandOff: 07/25",
@@ -7617,12 +7617,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 27,
+        percentComplete: 35,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:44:54.000+0000",
+        gusLastModified: "2026-06-16T07:21:48.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -7664,12 +7664,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 73,
+        percentComplete: 88,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:16:41.000+0000",
+        gusLastModified: "2026-06-15T19:12:08.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -7677,7 +7677,7 @@ const roadmapDataGUS = [
     {
         id: 9,
         title: "Capacity: Add add airflow to FBOT",
-        description: "Capacity: Add Airflow to FBOT introduces a scalable orchestration layer to manage complex, long-running workflows reliably. It improves operational resilience, enables automation at scale, and reduces manual intervention and fa",
+        description: "Capacity: Add Airflow to FBOT introduces a scalable orchestration layer to manage complex, long-running workflows reliably. It improves operational resilience, enables automation at scale, and reduces manual intervention and failure risk, needed to support cell level migration",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -7694,7 +7694,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Capacity: Add Airflow to FBOT introduces a scalable orchestration layer to manage complex, long-running workflows reliably. It improves operational resilience, enables automation at scale, and reduces manual intervention and fa",
+            overview: "Capacity: Add Airflow to FBOT introduces a scalable orchestration layer to manage complex, long-running workflows reliably. It improves operational resilience, enables automation at scale, and reduces manual intervention and failure risk, needed to support cell level migration",
             keyFeatures: [],
             impact: "This was eventually marked below the line for 262 but it would appear as though migration will now be above the line for 264. It's not clear to me exactly when the effort will start but we will be in touch with migration team to be sure this is not a blocker for them"
         },
@@ -7718,7 +7718,7 @@ const roadmapDataGUS = [
     {
         id: 10,
         title: "Capacity: Cell Level Migration Readiness",
-        description: "Cell-Level Migration Readiness ensures each cell has the capacity, isolation, and operational readiness to migrate workloads safely at scale. It reduces migration risk, prevents customer impact during transitions, and enables faster,",
+        description: "Cell-Level Migration Readiness ensures each cell has the capacity, isolation, and operational readiness to migrate workloads safely at scale. It reduces migration risk, prevents customer impact during transitions, and enables faster, more predictable platform evolution. Once the…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7735,7 +7735,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Cell-Level Migration Readiness ensures each cell has the capacity, isolation, and operational readiness to migrate workloads safely at scale. It reduces migration risk, prevents customer impact during transitions, and enables faster,",
+            overview: "Cell-Level Migration Readiness ensures each cell has the capacity, isolation, and operational readiness to migrate workloads safely at scale. It reduces migration risk, prevents customer impact during transitions, and enables faster, more predictable platform evolution. Once the new cell is up in Feb '26, begin migrating data from one cell to another for better performance and load sharing",
             keyFeatures: [],
             impact: "-"
         },
@@ -7759,7 +7759,7 @@ const roadmapDataGUS = [
     {
         id: 11,
         title: "Capacity: Prod5 - New Cell Readiness  - Deploy Services (SRE)",
-        description: "Phase 1: “The POC and Spiking phase is finished” Test deployment in dev fi new cell for 1 service of each type Phase 2: “Finish individual epics + Start Integration testing” Test deployment in dev fi new ce",
+        description: "Phase 1: “The POC and Spiking phase is finished” Test deployment in dev fi new cell for 1 service of each type Phase 2: “Finish individual epics + Start Integration testing” Test deployment in dev fi new cell for 1 group of service Phase 3: “Pre Prod works end to end, Prod is rea…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7776,7 +7776,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Phase 1: “The POC and Spiking phase is finished” Test deployment in dev fi new cell for 1 service of each type Phase 2: “Finish individual epics + Start Integration testing” Test deployment in dev fi new ce",
+            overview: "Phase 1: “The POC and Spiking phase is finished” Test deployment in dev fi new cell for 1 service of each type Phase 2: “Finish individual epics + Start Integration testing” Test deployment in dev fi new cell for 1 group of service Phase 3: “Pre Prod works end to end, Prod is ready to start” Test deployment in dev fi new cell for 50% of service Phase 4: “Use the same process to repeat in prod5 and finish” Test deployment in dev fi new cell for 100% of service. start to deploy in prod fi Turnkey doc for more info",
             keyFeatures: [],
             impact: "4/3: Decision made to launch a few customers without waiting for events-to-core. We will start that process today\r\n3/27: Final Q3 signoff done. The Events-to-Core incident/rollback has altered the rollout plan though. Tentatively the rollout gates will now follow the events-to-core rollout gates and proceed to completion over the next 2 weeks or so"
         },
@@ -7792,7 +7792,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-08T16:00:46.000+0000",
+        gusLastModified: "2026-06-14T12:59:05.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -7800,7 +7800,7 @@ const roadmapDataGUS = [
     {
         id: 12,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus]",
-        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
+        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams: Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate] Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus] Capacity: Prod…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7817,7 +7817,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
+            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams: Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate] Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus] Capacity: Prod5 - New Cell Readiness to onboard traffic [EAC Foundation]",
             keyFeatures: [],
             impact: "3/27 - Complete.\r\n3/20 - Will finish configuring alerts for new cell today. Going live next week."
         },
@@ -7828,12 +7828,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 83,
+        percentComplete: 87,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T13:26:13.000+0000",
+        gusLastModified: "2026-06-15T13:14:41.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -7841,7 +7841,7 @@ const roadmapDataGUS = [
     {
         id: 13,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate]",
-        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
+        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams: Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate] Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus] Capacity: Prod…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7858,7 +7858,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
+            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams: Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate] Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus] Capacity: Prod5 - New Cell Readiness to onboard traffic [EAC Foundation]",
             keyFeatures: [],
             impact: "4/10 - Started onboarding customers to new cell with no known issue for Stargate services so far\r\n4/2 - Q3 signed off, waiting for customer onboarding"
         },
@@ -7882,7 +7882,7 @@ const roadmapDataGUS = [
     {
         id: 14,
         title: "Capacity: Prod5 - New Cell Readiness to onboard traffic [EAC Foundation]",
-        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
+        description: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams: Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate] Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus] Capacity: Prod…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -7899,7 +7899,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams",
+            overview: "After the GA in 260 (Feb '26), ensure the new cell is ready to directly onboard the new EAC customers Epics for all 3 teams: Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Stargate] Capacity: Prod5 - New Cell Readiness to onboard traffic [A360 Nexus] Capacity: Prod5 - New Cell Readiness to onboard traffic [EAC Foundation]",
             keyFeatures: [],
             impact: "2/6 - A few small bugs/blockers remain, after which we can deploy our new cell to prod, eta 2/10. We decided to postpone the new cell deployment to stage, pending resolution with Vault access.\r\n1/20 - Some of the production promotion tasks are taking longer than expected, and still working through Q3/Q4 bugs."
         },
@@ -7923,7 +7923,7 @@ const roadmapDataGUS = [
     {
         id: 15,
         title: "Deal Risk Alerts from conversations and C360",
-        description: "Overview Synthesizes signals from interactions (calls, emails, meetings) and opportunity changes to generate explainable business judgments. Categorizes insights into Peril (Friction & Risk), Process (Velocity), and People (En",
+        description: "Overview Synthesizes signals from interactions (calls, emails, meetings) and opportunity changes to generate explainable business judgments. Categorizes insights into Peril (Friction & Risk), Process (Velocity), and People (Engagement Health). Utilizes both LLM-based methodology…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -7940,7 +7940,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Overview Synthesizes signals from interactions (calls, emails, meetings) and opportunity changes to generate explainable business judgments. Categorizes insights into Peril (Friction & Risk), Process (Velocity), and People (En",
+            overview: "Overview Synthesizes signals from interactions (calls, emails, meetings) and opportunity changes to generate explainable business judgments. Categorizes insights into Peril (Friction & Risk), Process (Velocity), and People (Engagement Health). Utilizes both LLM-based methodology for unstructured data and statistical model-based methodology for quantitative rules. Note: There is a separate epic for statistical or SOQL based insights Setup & Customization Administrators can enable OOTB insights via a global toggle in setup pages. Supports custom LLM-based insights where admins define names, severity, data sources, and prompts. Allows editing and disabling of existing OOTB LLM-based insights to suit organizational needs. Front End & Consumption Surfaces risks on Pipeline Inspection and Forecasting pages, showing counts and top insights on hover. Provides an expanded side panel for detailed views of insight sources, severity sorting, and full historical context. Integrated into Opportunity record pages and scoring models to influence win/loss predictions. : https://docs.google.com/document/d/1SvOUj9-3gH3zFUJXj5puQbdLPYSq29csu2f3AgQuNGo/edit?tab=t.0",
             keyFeatures: [
                 "Dev Done: 07/23 (264 FF)",
                 "Q3 HandOff: 07/25",
@@ -7957,12 +7957,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 50,
+        percentComplete: 36,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T15:14:10.000+0000",
+        gusLastModified: "2026-06-16T08:13:28.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -7970,7 +7970,7 @@ const roadmapDataGUS = [
     {
         id: 16,
         title: "E2C Migration Support",
-        description: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Support Email to Core Mi",
+        description: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Support Email to Core Migration from off-core",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -7987,7 +7987,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Support Email to Core Mi",
+            overview: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Support Email to Core Migration from off-core",
             keyFeatures: [],
             impact: "-"
         },
@@ -8011,7 +8011,7 @@ const roadmapDataGUS = [
     {
         id: 17,
         title: "EAC: Config-driven capture for all",
-        description: "Legacy cleanup: to ensure all Email and Event data can be safely moved to Core, further unlocking Agentic and Data cloud use cases for customers. AP to enf",
+        description: "Legacy cleanup: to ensure all Email and Event data can be safely moved to Core, further unlocking Agentic and Data cloud use cases for customers. AP to enforce data capture by configuration for ALL orgs (hybrid and config-less), We only start enforce data capture by configuration…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -8028,7 +8028,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Legacy cleanup: to ensure all Email and Event data can be safely moved to Core, further unlocking Agentic and Data cloud use cases for customers. AP to enf",
+            overview: "Legacy cleanup: to ensure all Email and Event data can be safely moved to Core, further unlocking Agentic and Data cloud use cases for customers. AP to enforce data capture by configuration for ALL orgs (hybrid and config-less), We only start enforce data capture by configuration around Jun 2023. We need to start enforcing config-based data capture for all older orgs. https://salesforce.quip.com/EkgoAf4gpqZw Notes(02/10): Scope for the current release is to proceed with implementation of DS<5 which doesn't need . Implementation of is extended scope.",
             keyFeatures: [
                 "260 DoR No Feature",
                 "CX Handoff to Dev: ✅ 3/25 (CA)",
@@ -8058,7 +8058,7 @@ const roadmapDataGUS = [
     {
         id: 18,
         title: "EAC: Performance Monitoring of Contact Sync",
-        description: "Help monitor and evaluate Contact sync health on a ongoing basis. Currently this prod feature has no monitoring established and often customers like IBM express interest enabling",
+        description: "Help monitor and evaluate Contact sync health on a ongoing basis. Currently this prod feature has no monitoring established and often customers like IBM express interest enabling them at scale, and partnership with Slack etc are looking to auto-enable it. Goal is to help monitor…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -8075,7 +8075,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Help monitor and evaluate Contact sync health on a ongoing basis. Currently this prod feature has no monitoring established and often customers like IBM express interest enabling",
+            overview: "Help monitor and evaluate Contact sync health on a ongoing basis. Currently this prod feature has no monitoring established and often customers like IBM express interest enabling them at scale, and partnership with Slack etc are looking to auto-enable it. Goal is to help monitor and evaluate Contact sync health on a ongoing basis.",
             keyFeatures: [
                 "CX Handoff to Dev: ✅  3/25 (CA)",
                 "Dev Done: ✅ 3/27 (in 262)",
@@ -8105,7 +8105,7 @@ const roadmapDataGUS = [
     {
         id: 19,
         title: "ECI In (Starter & Pro) - Phase 1",
-        description: "TLDR Phase 1 – Feb '26 | Transcriptions (GA) Enable ECI Transcriptions for existing voice/video providers",
+        description: "TLDR Phase 1 – Feb '26 | Transcriptions (GA) Enable ECI Transcriptions for existing voice/video providers in Starter/Pro. Includes automated record matching, speaker separation, and simplified ECI Setup in Go. Starter/Pro team will handle setup readiness and improvements (Quick S…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -8122,7 +8122,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "TLDR Phase 1 – Feb '26 | Transcriptions (GA) Enable ECI Transcriptions for existing voice/video providers",
+            overview: "TLDR Phase 1 – Feb '26 | Transcriptions (GA) Enable ECI Transcriptions for existing voice/video providers in Starter/Pro. Includes automated record matching, speaker separation, and simplified ECI Setup in Go. Starter/Pro team will handle setup readiness and improvements (Quick Setup, Setup from Slack). TDs logged on Starter/Pro [TD-0286935, TD-0286936, TD-0286940, TD-0287613] Assumptions: No usage limits; storage covered by Salesforce via ECI → Core migration. Phase 2 – Mar '26 | Call Summary + Generative Insights (GA) GA of Call Summary and Generative Insights for Starter/Pro orgs, bringing feature parity with upmarket CI. Starter/Pro team to enable Auto-on in Go and related setup updates. TD logged on Starter/Pro [TD-0286942] Assumes no AI metering, with Agentforce, Prompt Builder, and LLM Gateway access available for Starter/Pro. Phase 3 – TBD | Conversation Hub + Recall (GA) Pending Data Cloud availability in Starter/Pro and Recall integrations in Upmarket. To be revisited once DC readiness and downstream dependencies are defined.",
             keyFeatures: [
                 "Dev Handoff: 1/20 (delayed by 2 days)",
                 "Q3 hoff: 1/22 (complete)",
@@ -8144,7 +8144,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:02:30.000+0000",
+        gusLastModified: "2026-06-15T14:04:20.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8152,7 +8152,7 @@ const roadmapDataGUS = [
     {
         id: 20,
         title: "ECI In (Starter & Pro) - Phase 2",
-        description: "PRD https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0#heading=h.i4np6zxvfga7 Phase 2 is the support of some ECI LLM features Starter editions: Ca",
+        description: "https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0#heading=h.i4np6zxvfga7 Phase 2 is the support of some ECI LLM features Starter editions: Call summaries, triggered manually by the users Pro Editions: Call summaries, triggered manually b…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -8169,7 +8169,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "PRD https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0#heading=h.i4np6zxvfga7 Phase 2 is the support of some ECI LLM features Starter editions: Ca",
+            overview: "https://docs.google.com/document/d/1-stAmnA0cNqijxE9fhPIcijOXqL18TTIRfXjCXB4I98/edit?tab=t.0#heading=h.i4np6zxvfga7 Phase 2 is the support of some ECI LLM features Starter editions: Call summaries, triggered manually by the users Pro Editions: Call summaries, triggered manually by the users, and Gen Insights Test Plan: https://salesforce.quip.com/rBebAdrIpvPb",
             keyFeatures: [
                 "Phase2 - LLM",
                 "feature set frozen: 2/24",
@@ -8191,7 +8191,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:09:59.000+0000",
+        gusLastModified: "2026-06-15T14:13:30.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8199,7 +8199,7 @@ const roadmapDataGUS = [
     {
         id: 21,
         title: "ECI In Core - OOTB Reporting/Analytics documentation",
-        description: "In 262, existing ECI customers will move to Core. Current ECI customers have OOB Reporting and Analytics, which no longer will work with CRMA and AP sunsetting. These existing reports/analytics will freeze in time on migration to Core. We",
+        description: "In 262, existing ECI customers will move to Core. Current ECI customers have OOB Reporting and Analytics, which no longer will work with CRMA and AP sunsetting. These existing reports/analytics will freeze in time on migration to Core. We need to set the expectations with custome…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -8216,7 +8216,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "In 262, existing ECI customers will move to Core. Current ECI customers have OOB Reporting and Analytics, which no longer will work with CRMA and AP sunsetting. These existing reports/analytics will freeze in time on migration to Core. We",
+            overview: "In 262, existing ECI customers will move to Core. Current ECI customers have OOB Reporting and Analytics, which no longer will work with CRMA and AP sunsetting. These existing reports/analytics will freeze in time on migration to Core. We need to set the expectations with customers via Help docs, Release notes and in-product experiences for Reporting/Analytics.",
             keyFeatures: [],
             impact: "04/28\r\n- I'm currently working with Michael Hoban (writer for ECI) on the Data Residency document. This document will have information related to ECI to Core and new entities introduced for the migration. I'd want to keep our documentation epic open until this information is published (I'll update the ETA for this after discussing with Michael).\r\n\r\n04/21\r\n- Help and RN are published (still in preview until R0 - https://help.salesforce.com/s/articleView?id=release-notes.rn_sales_eci_summer_migration.htm&release=262&type=5)"
         },
@@ -8240,7 +8240,7 @@ const roadmapDataGUS = [
     {
         id: 22,
         title: "ECI Ingestion Recrawl",
-        description: "262 Milestones: MS Recrawl Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors",
+        description: "262 Milestones: MS Recrawl Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors : DEPRIORATIZED 260 Epic Milestones",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -8257,7 +8257,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "262 Milestones: MS Recrawl Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors",
+            overview: "262 Milestones: MS Recrawl Manual Recrawl for Google and MS Teams. Zoom already exists. MS teams SDK 6 upgrade Verifier for all 3 vendors : DEPRIORATIZED 260 Epic Milestones",
             keyFeatures: [
                 "Dev Handoff: Complete",
                 "Q3 Sign Off: 2/4 -BLOCKED",
@@ -8326,7 +8326,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:26:28.000+0000",
+        gusLastModified: "2026-06-16T06:31:54.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8367,12 +8367,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Extra Large",
-        percentComplete: 100,
+        percentComplete: 99,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-08T11:24:03.000+0000",
+        gusLastModified: "2026-06-15T13:24:33.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8380,7 +8380,7 @@ const roadmapDataGUS = [
     {
         id: 25,
         title: "ECI to Core Migration Communication Plan",
-        description: "Creating this epic to track the progress on communication to customers. Communication and Migration Plans Milestones: 3/15/2026: Create a draft communication plan, review and align with stakeholders",
+        description: "Creating this epic to track the progress on communication to customers. Communication and Migration Plans Milestones: 3/15/2026: Create a draft communication plan, review and align with stakeholders Email Drafts (Pre and Post Migration) (here) KA & FAQs (here) 3/31/2026: Send Ema…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -8397,7 +8397,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Creating this epic to track the progress on communication to customers. Communication and Migration Plans Milestones: 3/15/2026: Create a draft communication plan, review and align with stakeholders",
+            overview: "Creating this epic to track the progress on communication to customers. Communication and Migration Plans Milestones: 3/15/2026: Create a draft communication plan, review and align with stakeholders Email Drafts (Pre and Post Migration) (here) KA & FAQs (here) 3/31/2026: Send Emails to Admins for the 1.7K Orgs [List ACTIVE ECI ORGs here] 3/31/2026: Publish KA April/May: Initiate Direct Engagement w/ CSMs [P0] Signature Customers = 86 customers [P1] Premier and Standard Customers: Outreach through the TMP Guide Program May/June: Educate CCE and Support teams on the migration strategy Discuss Migration Plan in May Support Sessions between Support/T&P Office Hour with Support Jun/Jul: Migration Here is a draft plan.",
             keyFeatures: [],
             impact: "4/22 - Initial email is out, KA already published\r\n4/1 - Email 1 to now go out on 4/16 due to time required for translations by the tcr team. Email 2 to be tied to the migration rollout. KA already out."
         },
@@ -8421,7 +8421,7 @@ const roadmapDataGUS = [
     {
         id: 26,
         title: "Email to Core Migrations:  Tool Support",
-        description: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Supporting migration t",
+        description: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Supporting migration tool from GA to Sandbox to Prod rollout.",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -8438,7 +8438,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Supporting migration t",
+            overview: "Unlock Agents for existing EAC base by bringing their Emails to core and opening them up for Agent context and Data cloud analytics and more. Supporting migration tool from GA to Sandbox to Prod rollout.",
             keyFeatures: [
                 "Continuous support"
             ],
@@ -8456,7 +8456,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T12:25:47.000+0000",
+        gusLastModified: "2026-06-15T16:28:31.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8464,7 +8464,7 @@ const roadmapDataGUS = [
     {
         id: 27,
         title: "Email to Core Migrations: Low Risk Orgs",
-        description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
+        description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. Lets kickoff the next phase toward force migrations of low risk orgs Notes (02/10): Forced migration is not part of…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -8481,7 +8481,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
+            overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. Lets kickoff the next phase toward force migrations of low risk orgs Notes (02/10): Forced migration is not part of this epic and is extended scope.(That needs which is targetted towards end of Feb and a detailed )",
             keyFeatures: [
                 "CX Handoff to Dev: NA (no UI text)",
                 "Dev Done: ✅ 3/31",
@@ -8503,7 +8503,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:25:47.000+0000",
+        gusLastModified: "2026-06-15T12:41:28.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8511,7 +8511,7 @@ const roadmapDataGUS = [
     {
         id: 28,
         title: "Email to Core Migrations: Orgs NOT using EOL features",
-        description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
+        description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. Lets kickoff the next phase toward force migrations of low risk orgs EOL features: Activity metrics, dashboard, a36…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -8528,7 +8528,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
+            overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. Lets kickoff the next phase toward force migrations of low risk orgs EOL features: Activity metrics, dashboard, a360 and recommended connections.",
             keyFeatures: [
                 "CX Handoff to Dev: Na (no UI text)Dev Done: 4/28Q3/Q4 Handover: 4/28Q3 Sign off: Sourav/RonakQ4 Sign off: Amarendu/AshvinTentative roll out start: May endTentative roll out end: July end"
             ],
@@ -8541,12 +8541,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 96,
+        percentComplete: 98,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T13:11:34.000+0000",
+        gusLastModified: "2026-06-15T19:12:37.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8554,7 +8554,7 @@ const roadmapDataGUS = [
     {
         id: 29,
         title: "Email to Core Migrations: Orgs using EOL features",
-        description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
+        description: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. Lets kickoff the next phase toward force migrations of low risk orgs EOL features: Activity metrics, dashboard, a36…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -8571,7 +8571,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. L",
+            overview: "Unlock Agents and Data cloud for existing base by bringing their Emails to core, unlock various use cases and context. After email to core migration tool GA in Nov. Lets kickoff the next phase toward force migrations of low risk orgs EOL features: Activity metrics, dashboard, a360 and recommended connections. Note: Please note that the roll out is not applicable for this feature as it is very much future dated. This epic will track Engineering readiness only and the Q3, Q4 readiness as well.",
             keyFeatures: [
                 "CX Handoff to Dev: ✅ 3/25(CA)",
                 "Dev Done: 4/28 ✅",
@@ -8588,12 +8588,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 87,
+        percentComplete: 93,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:00:16.000+0000",
+        gusLastModified: "2026-06-16T05:46:20.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8601,11 +8601,11 @@ const roadmapDataGUS = [
     {
         id: 30,
         title: "Embedded AI Fast Follow- March",
-        description: "2/18 dev complete for 260.10 [Q3] test plan WIP 2/3 - Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade. - Otherwise, on track for GTM #2 (260.10). 1/20 On tra. ",
+        description: "(no description in GUS) — Embedded AI Fast Follow- March",
         category: "feature",
         status: "completed",
-        period: "TBD",
-        quarter: "TBD",
+        period: "Build -",
+        quarter: "Build -",
         date: "-",
         owner: "Allison Burnett",
         prdLink: "",
@@ -8618,7 +8618,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "2/18 dev complete for 260.10 [Q3] test plan WIP 2/3 - Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade. - Otherwise, on track for GTM #2 (260.10). 1/20 On tra. ",
+            overview: "(no description in GUS) — Embedded AI Fast Follow- March",
             keyFeatures: [],
             impact: "2/18\r\ndev complete for 260.10\r\n[Q3] test plan WIP\r\n2/3\r\n- Upgrade from Free to higher edition: Leadership alignment needed on whether Agentforce can be set up automatically during the upgrade.\r\n- Otherwise, on track for GTM #2 (260.10)."
         },
@@ -8642,11 +8642,11 @@ const roadmapDataGUS = [
     {
         id: 31,
         title: "Embedded AI in Free - Simplified Agent Setup, record summarization & email draft",
-        description: "Deliver easy setup of embedded ai functionality in Free Suite Includes",
+        description: "Deliver easy setup of embedded ai functionality in Free Suite Includes: - File based Flexi-Pages (Free, Starter & Pro) - record summarization - email drafting - 1 click setup experience Figma",
         category: "feature",
         status: "completed",
-        period: "260.10",
-        quarter: "260.10",
+        period: "Build 260.10",
+        quarter: "Build 260.10",
         date: "260.10",
         owner: "Allison Burnett",
         prdLink: "https://docs.google.com/document/d/1ZuLkcKI5I0Xs1XGMurHOM9vLNgelI2fIg_9Jm7P1ISM/edit?tab=t.0#heading=h.c7lv2tt0ly0",
@@ -8659,7 +8659,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Deliver easy setup of embedded ai functionality in Free Suite Includes",
+            overview: "Deliver easy setup of embedded ai functionality in Free Suite Includes: - File based Flexi-Pages (Free, Starter & Pro) - record summarization - email drafting - 1 click setup experience Figma",
             keyFeatures: [
                 "Users save time and boost productivity, and with AI-powered summaries and drafting personalized, in-context emails in the flow of work. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."
             ],
@@ -8677,7 +8677,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T12:39:23.000+0000",
+        gusLastModified: "2026-06-15T12:26:48.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8685,11 +8685,11 @@ const roadmapDataGUS = [
     {
         id: 32,
         title: "Embedded AI in Starter & Pro -SMB",
-        description: "Support Embedded AI/record summarization component OOTB for Starter & Pro Figma - https://www.figma.com/design/SZHl25nuoyFB4s4cYHLh3Y/Agentforce-for-Do",
+        description: "Support Embedded AI/record summarization component OOTB for Starter & Pro Figma - https://www.figma.com/design/SZHl25nuoyFB4s4cYHLh3Y/Agentforce-for-Downmarket?node-id=298-110752&t=6CU1SHj2bA9QmrVF-0",
         category: "feature",
         status: "completed",
-        period: "260.7",
-        quarter: "260.7",
+        period: "Build 260.7",
+        quarter: "Build 260.7",
         date: "260.7",
         owner: "Allison Burnett",
         prdLink: "https://docs.google.com/document/d/13e5SlBAMzrX44gH5VKYZi3CpJywYR_AuQdB_lxQVRfE/edit?tab=t.0#heading=h.c7lv2tt0ly0",
@@ -8702,7 +8702,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Support Embedded AI/record summarization component OOTB for Starter & Pro Figma - https://www.figma.com/design/SZHl25nuoyFB4s4cYHLh3Y/Agentforce-for-Do",
+            overview: "Support Embedded AI/record summarization component OOTB for Starter & Pro Figma - https://www.figma.com/design/SZHl25nuoyFB4s4cYHLh3Y/Agentforce-for-Downmarket?node-id=298-110752&t=6CU1SHj2bA9QmrVF-0",
             keyFeatures: [
                 "Users save time and boost productivity, and with AI-powered summaries and drafting personalized, in-context emails in the flow of work. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."
             ],
@@ -8775,7 +8775,7 @@ const roadmapDataGUS = [
     {
         id: 34,
         title: "Enhance & Improve Graph API",
-        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents dependi…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -8792,7 +8792,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents depending on Emails today context-less. From Core, Migrate and address feedback from EAC, Inbox and SDR customers",
             keyFeatures: [
                 "Continuous support"
             ],
@@ -8818,7 +8818,7 @@ const roadmapDataGUS = [
     {
         id: 35,
         title: "Events to Core for all",
-        description: "Security feature unlocking Agents via new and existing EAC customer, by d iscontinue Event storage on offcore to address security concerns from prospecting Finservs customers like",
+        description: "Security feature unlocking Agents via new and existing EAC customer, by discontinue Event storage on offcore to address security concerns from prospecting Finservs customers like Barclays etc. Starting 260, we are anyway not storing Event data offcore for any of our net new custo…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -8835,7 +8835,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Security feature unlocking Agents via new and existing EAC customer, by d iscontinue Event storage on offcore to address security concerns from prospecting Finservs customers like",
+            overview: "Security feature unlocking Agents via new and existing EAC customer, by discontinue Event storage on offcore to address security concerns from prospecting Finservs customers like Barclays etc. Starting 260, we are anyway not storing Event data offcore for any of our net new customers directly onboarding E2C. With this epic, address migration of event data for existing customers with event data on Offcore. https://docs.google.com/document/d/1zAo5iqLeCaFhtOxCOxR4PwQ-tBzLe_t9HR0LjWjVVWk/edit?usp=drive_open&ouid=102714833823902439773",
             keyFeatures: [
                 "Custom Rollout Strategy: ✅ 04/06",
                 "Rollout Initiated: 04/06",
@@ -8864,7 +8864,7 @@ const roadmapDataGUS = [
     {
         id: 36,
         title: "GA Graph API for Starter/Pro",
-        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents dependi…",
         category: "feature",
         status: "completed",
         period: "Winter '26 Patch (260.patch)",
@@ -8881,7 +8881,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents depending on Emails today context-less. With no migration, all Starter/Pro customer's activity capture will stop after Oct '26 Add migrationg logic for existing starter/pro orgs to move off EWS to Graph api to avoid sync disruption",
             keyFeatures: [
                 "CX Only"
             ],
@@ -8907,7 +8907,7 @@ const roadmapDataGUS = [
     {
         id: 37,
         title: "GA: Recommended Connections",
-        description: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided co",
+        description: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided context even with historic activities (emails) and past collaborators who a given contact has worked with. Evaluate the path forward to re-impleme…",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -8924,7 +8924,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided co",
+            overview: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided context even with historic activities (emails) and past collaborators who a given contact has worked with. Evaluate the path forward to re-implement Recommended connections, ensuring feature parity with offerings today. ensure it is future scalable and compatible as we look to add Calls, slack interactions and other data points in context 9th March: Repurposed the epic for spiking to take the same to GA and changed the release month accordingly.",
             keyFeatures: [],
             impact: "3/16\r\n- Decision to pause the epic due to low adoption and effort required to GA\r\n\r\n3/10\r\n1. Following up for index creation on Email message Relation table.\r\n2. VAT is completed on 4th March. \r\n3. Basic Draft PR is ready"
         },
@@ -8948,7 +8948,7 @@ const roadmapDataGUS = [
     {
         id: 38,
         title: "Gen ECI - Enhanced Gen AI Intelligence (DS)",
-        description: "HLD: https://docs.google.com/document/d/1oLuQXrZSzbNT3y08rJGiQb230BrXPmnykZNrFg_NdmA/edit?usp=sharing Enhance intelligence with generative AI pipeline for ECI, instead of bifurcated experience today. Admin setup",
+        description: "HLD: https://docs.google.com/document/d/1oLuQXrZSzbNT3y08rJGiQb230BrXPmnykZNrFg_NdmA/edit?usp=sharing Enhance intelligence with generative AI pipeline for ECI, instead of bifurcated experience today. Admin setup Simplify setup, allowing generative ECI-related features to be turne…",
         category: "feature",
         status: "completed",
         period: "Winter '26 Patch (260.patch)",
@@ -8965,7 +8965,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "HLD: https://docs.google.com/document/d/1oLuQXrZSzbNT3y08rJGiQb230BrXPmnykZNrFg_NdmA/edit?usp=sharing Enhance intelligence with generative AI pipeline for ECI, instead of bifurcated experience today. Admin setup",
+            overview: "HLD: https://docs.google.com/document/d/1oLuQXrZSzbNT3y08rJGiQb230BrXPmnykZNrFg_NdmA/edit?usp=sharing Enhance intelligence with generative AI pipeline for ECI, instead of bifurcated experience today. Admin setup Simplify setup, allowing generative ECI-related features to be turned on in one place Probably removing granular gen-eci-related feature setups & PSL's Turn any insight on/off Intelligence orchestration After transcription, instead of hawking for keyword insights, everything is run through LLM Detects and stores keyword insights Runs generative insights New data exists for keywords (ie. everything is generative, with more detail) Call summary Everything is 1 prompt for LLM Exposed in prompt builder for customers to edit OOTB Gen Insights Have a few gen insights OOTB Exist in setup, can be turned off/deleted. UI impact Assess how we display new generative data where we only have keyword mention/snippets today Assess combining gen insights with overall insights in our voice/video components or in activity timeline Updates to call summary component as it's auto-generated Admin setup simplification for gen features/PSL's needed Assess voice/video/hub components for consolidating gen/keyword insights, summary, action items, next steps, and additional insight details Activity timeline insight/snippet changes Assess call summary component 260 Epic Milestones",
             keyFeatures: [
                 "Dev Handoff: Completed on 1/12",
                 "Q3 Project branch : DONE 02/02",
@@ -8982,12 +8982,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Large",
-        percentComplete: 90,
+        percentComplete: 91,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:34:53.000+0000",
+        gusLastModified: "2026-06-15T20:32:10.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -8995,7 +8995,7 @@ const roadmapDataGUS = [
     {
         id: 39,
         title: "Gong Transcript Backfill",
-        description: "The primary goal of the Transcript Backfill feature is to allow customers to leverage the existing Gong Managed Package to quickly popul",
+        description: "The primary goal of the Transcript Backfill feature is to allow customers to leverage the existing Gong Managed Package to quickly populate the ECI with historical transcript data. This data is critical for powering agentic platform features, including agentic prospecting and USI…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -9012,7 +9012,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "The primary goal of the Transcript Backfill feature is to allow customers to leverage the existing Gong Managed Package to quickly popul",
+            overview: "The primary goal of the Transcript Backfill feature is to allow customers to leverage the existing Gong Managed Package to quickly populate the ECI with historical transcript data. This data is critical for powering agentic platform features, including agentic prospecting and USI, ensuring customers can gain immediate value. This will also be used as a launching pad for transitioning Gong customers to ECI customers. This feature must provide a simple, single-click experience for ECI-enabled organizations to backfill existing Gong transcripts that are already present in the managed package. This data must be pulled from the managed package and processed through the existing ECI Pipeline, complete with participant and related record matching that Gong has already completed. Gong will completely own the managed package and the work to place transcripts within it.",
             keyFeatures: [
                 "Dev Handoff: ETA 1/26",
                 "Q3 Sign Off: ETA 2/7 (10 days)",
@@ -9034,7 +9034,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:00:46.000+0000",
+        gusLastModified: "2026-06-15T12:30:13.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9042,7 +9042,7 @@ const roadmapDataGUS = [
     {
         id: 40,
         title: "In-Person Meeting Ingestion",
-        description: "In-person meetings supported as a channel of ingestion Setup UI updates to setup in-person meetings as a channel and settings Integration with SF mobile app for how they create these and pass in data Ingest in-person meeting",
+        description: "In-person meetings supported as a channel of ingestion Setup UI updates to setup in-person meetings as a channel and settings Integration with SF mobile app for how they create these and pass in data Ingest in-person meetings, possibly through voice call entities with special tag…",
         category: "feature",
         status: "completed",
         period: "Winter '26 Patch (260.patch)",
@@ -9059,7 +9059,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "In-person meetings supported as a channel of ingestion Setup UI updates to setup in-person meetings as a channel and settings Integration with SF mobile app for how they create these and pass in data Ingest in-person meeting",
+            overview: "In-person meetings supported as a channel of ingestion Setup UI updates to setup in-person meetings as a channel and settings Integration with SF mobile app for how they create these and pass in data Ingest in-person meetings, possibly through voice call entities with special tagging for identification Full end-to-end processing of intelligence pipeline/insights Possible setup experience for admin to control/turn on/off, but possibly not Any record changes/callouts that this is in-person or missing things (like audio-only in a video call?) Summary Mobile will be owning building this experience and they will supply us a transcript. We just need hawking to be able to ingest the transcript. 260 Epic Milestones",
             keyFeatures: [
                 "ECI API Dev Hand off: Complete",
                 "E2E Dev Handoff: Complete. 2/20 (handoff moved to 2/20 from 2/6 )",
@@ -9135,7 +9135,7 @@ const roadmapDataGUS = [
     {
         id: 42,
         title: "Lightning Sync Migration tool to include Graph API options",
-        description: "Once EOL is announced, we need to upgrade the LS to EAC migration tool to reflect Graph API changes else >60% of LS base will not be able to use LS.",
+        description: "Once EOL is announced, we need to upgrade the LS to EAC migration tool to reflect Graph API changes else >60% of LS base will not be able to use LS. Update Lightning Sync Migration tool options, to include EAC's O365 Graph API migration option",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -9152,7 +9152,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Once EOL is announced, we need to upgrade the LS to EAC migration tool to reflect Graph API changes else >60% of LS base will not be able to use LS.",
+            overview: "Once EOL is announced, we need to upgrade the LS to EAC migration tool to reflect Graph API changes else >60% of LS base will not be able to use LS. Update Lightning Sync Migration tool options, to include EAC's O365 Graph API migration option",
             keyFeatures: [
                 "CX Handoff to Dev: ✅ 3/25 (CA)",
                 "Dev Done: ✅ 262 FF",
@@ -9169,12 +9169,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 0,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-09T15:52:36.000+0000",
+        gusLastModified: "2026-06-10T19:21:09.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9182,7 +9182,7 @@ const roadmapDataGUS = [
     {
         id: 43,
         title: "Lightning Sync: Retirement, parity and automigration to EAC",
-        description: "If no EOL, additional expense to maintain a legacy product used across FinServ and PubSec customers with 6k MAO and 500k MAU",
+        description: "If no EOL, additional expense to maintain a legacy product used across FinServ and PubSec customers with 6k MAO and 500k MAU Retire Lightning Sync (feature parity and automigrate customers after email/event on core)",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -9199,7 +9199,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "If no EOL, additional expense to maintain a legacy product used across FinServ and PubSec customers with 6k MAO and 500k MAU",
+            overview: "If no EOL, additional expense to maintain a legacy product used across FinServ and PubSec customers with 6k MAO and 500k MAU Retire Lightning Sync (feature parity and automigrate customers after email/event on core)",
             keyFeatures: [
                 "CX Handoff to Dev: ✅ 3/25 (CA)",
                 "Dev Done:  ✅",
@@ -9216,12 +9216,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 85,
+        percentComplete: 79,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:15:40.000+0000",
+        gusLastModified: "2026-06-15T20:17:36.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9229,7 +9229,7 @@ const roadmapDataGUS = [
     {
         id: 44,
         title: "Momentum",
-        description: "Integrate with Momentum https://docs.google.com/spreadsheets/d/1sfngYDGp8Kip2ktMdBwcikRXnfEKnpZZJldbuiTiCpg/edit?gid=0#gid=0d/1L8FB6YgG4LrlyF-yT8a2fe5Y0vq1fmFtQMXo0eby_JE/edit?gid",
+        description: "Integrate with Momentum https://docs.google.com/spreadsheets/d/1sfngYDGp8Kip2ktMdBwcikRXnfEKnpZZJldbuiTiCpg/edit?gid=0#gid=0 https://docs.google.com/spreadsheets/d/1L8FB6YgG4LrlyF-yT8a2fe5Y0vq1fmFtQMXo0eby_JE/edit?gid=0#gid=0",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -9246,7 +9246,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Integrate with Momentum https://docs.google.com/spreadsheets/d/1sfngYDGp8Kip2ktMdBwcikRXnfEKnpZZJldbuiTiCpg/edit?gid=0#gid=0d/1L8FB6YgG4LrlyF-yT8a2fe5Y0vq1fmFtQMXo0eby_JE/edit?gid",
+            overview: "Integrate with Momentum https://docs.google.com/spreadsheets/d/1sfngYDGp8Kip2ktMdBwcikRXnfEKnpZZJldbuiTiCpg/edit?gid=0#gid=0 https://docs.google.com/spreadsheets/d/1L8FB6YgG4LrlyF-yT8a2fe5Y0vq1fmFtQMXo0eby_JE/edit?gid=0#gid=0",
             keyFeatures: [],
             impact: "4/21: Phase One sync up with Deepmala and PJ.  Phase Two cron needs numbers from PJ."
         },
@@ -9257,12 +9257,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Extra Large",
-        percentComplete: 75,
+        percentComplete: 71,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:17:58.000+0000",
+        gusLastModified: "2026-06-15T14:23:29.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9270,7 +9270,7 @@ const roadmapDataGUS = [
     {
         id: 45,
         title: "PI Contact Intelligence: See engaged contacts in oppty list",
-        description: "See number of engaged contacts as a column in the opportunity list",
+        description: "See number of engaged contacts as a column in the opportunity list Milestones : M1 : Show engaged contact count on oppty list - (April - Internal demo) M2 : Support mouse hover action for contact insights - (May Patch - 260.14)",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9287,7 +9287,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "See number of engaged contacts as a column in the opportunity list",
+            overview: "See number of engaged contacts as a column in the opportunity list Milestones : M1 : Show engaged contact count on oppty list - (April - Internal demo) M2 : Support mouse hover action for contact insights - (May Patch - 260.14)",
             keyFeatures: [
                 "Dev Done: 4/09",
                 "Q3 HandOff: 4/10",
@@ -9309,7 +9309,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:58:03.000+0000",
+        gusLastModified: "2026-06-15T12:24:21.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9317,7 +9317,7 @@ const roadmapDataGUS = [
     {
         id: 46,
         title: "PI Contact Intelligence: See engaged contacts in side panel",
-        description: "See which contacts have had recent activities, their role in the deal and level of engagement. (In the Pipeline Inspection and Forecasting side panels)",
+        description: "See which contacts have had recent activities, their role in the deal and level of engagement. (In the Pipeline Inspection and Forecasting side panels) Milestones : M1: Support CI in side panel with mock data - (Feb - Internal demo) M2: Support Opportunity Contact Role add/update…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9334,7 +9334,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "See which contacts have had recent activities, their role in the deal and level of engagement. (In the Pipeline Inspection and Forecasting side panels)",
+            overview: "See which contacts have had recent activities, their role in the deal and level of engagement. (In the Pipeline Inspection and Forecasting side panels) Milestones : M1: Support CI in side panel with mock data - (Feb - Internal demo) M2: Support Opportunity Contact Role add/update - (March - Internal demo) M3: Integration with timeline API - (April - Internal demo) M4: E2E Integration - (May Patch - 260.14)",
             keyFeatures: [
                 "Dev Done: 4/09",
                 "Q3 HandOff: 4/10",
@@ -9364,7 +9364,7 @@ const roadmapDataGUS = [
     {
         id: 47,
         title: "Pipeline Inspection Column: Activity Heatmap",
-        description: "(no description in GUS) — Pipeline Inspection Column: Activity Heatmap",
+        description: "Activity Heatmap column in the Pipeline Inspection list view",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9381,7 +9381,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — Pipeline Inspection Column: Activity Heatmap",
+            overview: "Activity Heatmap column in the Pipeline Inspection list view",
             keyFeatures: [
                 "Dev Done: 3/12",
                 "Q3 HandOff: 3/13",
@@ -9398,12 +9398,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Large",
-        percentComplete: 60,
+        percentComplete: 80,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:16:13.000+0000",
+        gusLastModified: "2026-06-11T19:05:15.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9411,7 +9411,7 @@ const roadmapDataGUS = [
     {
         id: 48,
         title: "Pipeline Inspection: AI Summarization - Side Panel UI",
-        description: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities",
+        description: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities and get instantaneous, grounded replies based on call transcripts and email data. As a seller managing my pipeline, or manager reviewing my team's…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9428,7 +9428,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities",
+            overview: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities and get instantaneous, grounded replies based on call transcripts and email data. As a seller managing my pipeline, or manager reviewing my team's pipeline, I want to be able get overall information about each deal without drilling into individual activities. To quickly get up to speed, I want a summary of the most recent few activities on the deal (\"weekly updates\") To prepare for meetings or plan my follow-up actions, I want to ask specific questions about activities on the deal, and get detailed replies based on the full content of call transcripts and email data (\"ask anything\") To orient myself on a deal, I want to get a comprehensive overview of the deal, including CRM data and activities related to the deal (\"deal brief\") I want details around the customer, their goals, pain points and key players As a seller working in a team selling environment, I want to see answers based on interactions between the customer and my colleagues working on the deal. Milestones : - M1: Support 4 utterances powered by sales agent (April Patch - 260.12)",
             keyFeatures: [
                 "Dev Done: 3/12",
                 "Q3 HandOff: Old : 3/13, New : 3/16",
@@ -9458,7 +9458,7 @@ const roadmapDataGUS = [
     {
         id: 49,
         title: "Pipeline Inspection: AI Summarization - Topics and Actions",
-        description: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities",
+        description: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities and get instantaneous, grounded replies based on call transcripts and email data. As a seller managing my pipeline, or manager reviewing my team's…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9475,7 +9475,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities",
+            overview: "This feature directly competes with Gong’s \"Ask Anything\" feature by allowing sellers to ask specific questions about deal activities and get instantaneous, grounded replies based on call transcripts and email data. As a seller managing my pipeline, or manager reviewing my team's pipeline, I want to be able get overall information about each deal without drilling into individual activities. To quickly get up to speed, I want a summary of the most recent few activities on the deal (\"weekly updates\") To prepare for meetings or plan my follow-up actions, I want to ask specific questions about activities on the deal, and get detailed replies based on the full content of call transcripts and email data (\"ask anything\") To orient myself on a deal, I want to get a comprehensive overview of the deal, including CRM data and activities related to the deal (\"deal brief\") I want details around the customer, their goals, pain points and key players As a seller working in a team selling environment, I want to see answers based on interactions between the customer and my colleagues working on the deal.",
             keyFeatures: [
                 "Dev Done: 3/12",
                 "Q3 HandOff: 3/13",
@@ -9492,12 +9492,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 91,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:16:13.000+0000",
+        gusLastModified: "2026-06-13T10:01:16.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9552,7 +9552,7 @@ const roadmapDataGUS = [
     {
         id: 51,
         title: "Pipeline Inspection: Data loading to allow lazy loaded synthetic columns",
-        description: "5/5: Gate rollout completed 100% 3/3/26: QA complete 2/23/26: Dev complete. 2/17/26: Main concern brought up was code from Framework and Activities branch being needed for work in Contacts branch. Teams are connecting. 2/9/26: QA complete.",
+        description: "(no description in GUS) — Pipeline Inspection: Data loading to allow lazy loaded synthetic columns",
         category: "feature",
         status: "completed",
         period: "Winter '26 Patch (260.patch)",
@@ -9569,7 +9569,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "5/5: Gate rollout completed 100% 3/3/26: QA complete 2/23/26: Dev complete. 2/17/26: Main concern brought up was code from Framework and Activities branch being needed for work in Contacts branch. Teams are connecting. 2/9/26: QA complete.",
+            overview: "(no description in GUS) — Pipeline Inspection: Data loading to allow lazy loaded synthetic columns",
             keyFeatures: [
                 "Dev Done: 3/12",
                 "Q3 HandOff: N/A",
@@ -9586,12 +9586,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 50,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-08T11:25:19.000+0000",
+        gusLastModified: "2026-06-11T19:06:28.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9599,7 +9599,7 @@ const roadmapDataGUS = [
     {
         id: 52,
         title: "Pipeline Inspection: Support synthetic column default column widths",
-        description: "syntheticCols-defaultWidths.png",
+        description: "(no description in GUS) — Pipeline Inspection: Support synthetic column default column widths",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9616,7 +9616,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "syntheticCols-defaultWidths.png",
+            overview: "(no description in GUS) — Pipeline Inspection: Support synthetic column default column widths",
             keyFeatures: [
                 "Dev Done: 3/12",
                 "Q3 HandOff: 3/13",
@@ -9646,7 +9646,7 @@ const roadmapDataGUS = [
     {
         id: 53,
         title: "Pipeline Management: Adoption - Setup Flow & Prompt Improvements",
-        description: "Address the top usability blockers on our GA scope: Figma Add a section in our Go",
+        description: "Address the top usability blockers on our GA scope: Figma Add a section in our Go page for a list of Prompt Templates. Add descriptions to both the list of Prompt Templates and Flows explaining what they do.",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9663,7 +9663,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Address the top usability blockers on our GA scope: Figma Add a section in our Go",
+            overview: "Address the top usability blockers on our GA scope: Figma Add a section in our Go page for a list of Prompt Templates. Add descriptions to both the list of Prompt Templates and Flows explaining what they do.",
             keyFeatures: [
                 "Dev Done: 2/12",
                 "Q3 HandOff: 2/13",
@@ -9740,7 +9740,7 @@ const roadmapDataGUS = [
     {
         id: 55,
         title: "Pipeline Management: Improve PI EPT Phase 1 - Date range",
-        description: "Improve EPT Phase 1 [Cron Job] Creation of Sales deal agent Cron Job to delete the Expire",
+        description: "Improve EPT Phase 1 [Cron Job] Creation of Sales deal agent Cron Job to delete the Expired suggestions [Deal Agent][Perf] [Fix First] Pipeline Inspection Date Range on the AiGenActionItem query",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9757,7 +9757,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Improve EPT Phase 1 [Cron Job] Creation of Sales deal agent Cron Job to delete the Expire",
+            overview: "Improve EPT Phase 1 [Cron Job] Creation of Sales deal agent Cron Job to delete the Expired suggestions [Deal Agent][Perf] [Fix First] Pipeline Inspection Date Range on the AiGenActionItem query",
             keyFeatures: [
                 "Dev Done: 2/12",
                 "Q3 HandOff: 2/13",
@@ -9779,7 +9779,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-09T15:52:48.000+0000",
+        gusLastModified: "2026-06-15T19:09:54.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9787,7 +9787,7 @@ const roadmapDataGUS = [
     {
         id: 56,
         title: "Platform: AP Split to Harness Migration",
-        description: "modernizes the deployment pipeline by moving to a scalable, standardized delivery platform. It reduces release risk, improves deployment velocity, and establishes a consistent foundation",
+        description: "Platform: AP Split to Harness Migration modernizes the deployment pipeline by moving to a scalable, standardized delivery platform. It reduces release risk, improves deployment velocity, and establishes a consistent foundation for future platform growth.",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -9804,7 +9804,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "modernizes the deployment pipeline by moving to a scalable, standardized delivery platform. It reduces release risk, improves deployment velocity, and establishes a consistent foundation",
+            overview: "Platform: AP Split to Harness Migration modernizes the deployment pipeline by moving to a scalable, standardized delivery platform. It reduces release risk, improves deployment velocity, and establishes a consistent foundation for future platform growth.",
             keyFeatures: [],
             impact: "Completed with no issues"
         },
@@ -9828,7 +9828,7 @@ const roadmapDataGUS = [
     {
         id: 57,
         title: "Q1 2026 CX Sales EAC | EAC Doc Refactor",
-        description: "Work relating to the EAC doc refactor project. Targeting ToC restructure, Intro and Security sections rewrite during the 260 release timeframe (due mid-Feb 2026) Harini's progres tracker: https://docs.google.com/presentation",
+        description: "Work relating to the EAC doc refactor project. Targeting ToC restructure, Intro and Security sections rewrite during the 260 release timeframe (due mid-Feb 2026) Harini's progres tracker: https://docs.google.com/presentation/d/1YOCqwfIoKEO9FkdJE17eI0V6dD0JJ6RbzjlegyPWtts/edit?sli…",
         category: "feature",
         status: "completed",
         period: "Winter '26 Patch (260.patch)",
@@ -9845,7 +9845,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Work relating to the EAC doc refactor project. Targeting ToC restructure, Intro and Security sections rewrite during the 260 release timeframe (due mid-Feb 2026) Harini's progres tracker: https://docs.google.com/presentation",
+            overview: "Work relating to the EAC doc refactor project. Targeting ToC restructure, Intro and Security sections rewrite during the 260 release timeframe (due mid-Feb 2026) Harini's progres tracker: https://docs.google.com/presentation/d/1YOCqwfIoKEO9FkdJE17eI0V6dD0JJ6RbzjlegyPWtts/edit?slide=id.g3c810308d47_0_13#slide=id.g3c810308d47_0_13 See working docs: Sophia's refactor plan deck - plan overview EAC Refactor Plan NOTES EAC Doc Overhaul Working Doc",
             keyFeatures: [],
             impact: "-"
         },
@@ -9869,7 +9869,7 @@ const roadmapDataGUS = [
     {
         id: 58,
         title: "RIQ releases + Build and Release get well",
-        description: "Trust: RIQ Releases + Build and Release Get-Well stabilizes and hardens the release pipeline to reduce defects and deployment risk. It improves release predictability, shortens recovery time, and strengthens overall platform re",
+        description: "Trust: RIQ Releases + Build and Release Get-Well stabilizes and hardens the release pipeline to reduce defects and deployment risk. It improves release predictability, shortens recovery time, and strengthens overall platform reliability and trust, and will now include all cadence…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -9886,7 +9886,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Trust: RIQ Releases + Build and Release Get-Well stabilizes and hardens the release pipeline to reduce defects and deployment risk. It improves release predictability, shortens recovery time, and strengthens overall platform re",
+            overview: "Trust: RIQ Releases + Build and Release Get-Well stabilizes and hardens the release pipeline to reduce defects and deployment risk. It improves release predictability, shortens recovery time, and strengthens overall platform reliability and trust, and will now include all cadence based releases",
             keyFeatures: [],
             impact: "4/3: Riq, exchange, google have all been completed in some form in the previous weeks. RIQ is underway now with a both a normal change set and also an offline effort to redeploy any services which have not been deployed in a long time. Current main focus of RIQ is on jdk17 deployments. Tech discussions around future of riq release ongoing\r\n2/13: Google release underway but waiting on one service with a deploy bug (probably in fit test). As usual see #prodpush for real time updates"
         },
@@ -9902,7 +9902,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Operations",
-        gusLastModified: "2026-06-08T10:50:50.000+0000",
+        gusLastModified: "2026-06-13T10:21:48.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -9957,7 +9957,7 @@ const roadmapDataGUS = [
     {
         id: 60,
         title: "Record Matching Flow",
-        description: "TLDR Transition our (related record) matching service from toggle to be re-built in flow Admins can customize Possibly to include how participants are matched Bonus - aligning with EAC matching as we",
+        description: "TLDR Transition our (related record) matching service from toggle to be re-built in flow Admins can customize Possibly to include how participants are matched Bonus - aligning with EAC matching as well as single feature Small tweak to feature in admin setup that this now links to…",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -9974,7 +9974,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "TLDR Transition our (related record) matching service from toggle to be re-built in flow Admins can customize Possibly to include how participants are matched Bonus - aligning with EAC matching as we",
+            overview: "TLDR Transition our (related record) matching service from toggle to be re-built in flow Admins can customize Possibly to include how participants are matched Bonus - aligning with EAC matching as well as single feature Small tweak to feature in admin setup that this now links to a flow (instead of toggle) or removed Test plan Doc: https://docs.google.com/spreadsheets/d/1RzY5S9ufr9ftKb5nMKKTpTo_A95zyMFwNVn632iT9oo/edit?gid=0#gid=0",
             keyFeatures: [
                 "Dev Handoff: 3/12",
                 "Q3 Sign Off: 3/20 (delayed on blocker bug) (Sign off done for validating regression as we are not going GA with this epic)",
@@ -10003,7 +10003,7 @@ const roadmapDataGUS = [
     {
         id: 61,
         title: "SCV Transcript Ingestion",
-        description: "TLDR For orgs using SCV, admins can add this in setup, and it shows up whenever set up, regardless of which vendor they're using for SCV ECI should calls for (ECI users) + (any SCV calls), regardless of vendor.",
+        description: "TLDR For orgs using SCV, admins can add this in setup, and it shows up whenever set up, regardless of which vendor they're using for SCV ECI should calls for (ECI users) + (any SCV calls), regardless of vendor. We should pull in transcripts and store, same as we do for video vend…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -10020,7 +10020,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "TLDR For orgs using SCV, admins can add this in setup, and it shows up whenever set up, regardless of which vendor they're using for SCV ECI should calls for (ECI users) + (any SCV calls), regardless of vendor.",
+            overview: "TLDR For orgs using SCV, admins can add this in setup, and it shows up whenever set up, regardless of which vendor they're using for SCV ECI should calls for (ECI users) + (any SCV calls), regardless of vendor. We should pull in transcripts and store, same as we do for video vendor transcripts If no transcript, can transcribe Should encompass regardless of where transcript is. SCV already has transcripts, but historically we had issues of inability to access (AWS vs google cloud) Investigate EOL and transition from app exchange product as well. Small tweak to admin setup of how users see SCV and link to them, based on vendor. Include EOL of managed package + everything in TL;DR secction",
             keyFeatures: [
                 "M1 April - E2E Steel thread in UI",
                 "M2 May - Data Cloud DataKit",
@@ -10042,7 +10042,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T10:06:21.000+0000",
+        gusLastModified: "2026-06-12T20:18:11.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -10050,7 +10050,7 @@ const roadmapDataGUS = [
     {
         id: 62,
         title: "SRE Run The Business including support and security requests",
-        description: "Description including Target Customer and Benefit or Goal (The “Who, What and Why”) Run the business requests include infra releases onboarding offboarding troubleshooting access",
+        description: "Description including Target Customer and or Goal (The “Who, What and Why”) Run the business requests include infra releases onboarding offboarding troubleshooting access user escalations through the #infraquestions slack channel (What testable deliverables are required to comple…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -10067,7 +10067,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Description including Target Customer and Benefit or Goal (The “Who, What and Why”) Run the business requests include infra releases onboarding offboarding troubleshooting access",
+            overview: "Description including Target Customer and or Goal (The “Who, What and Why”) Run the business requests include infra releases onboarding offboarding troubleshooting access user escalations through the #infraquestions slack channel (What testable deliverables are required to complete this Epic, Including NFRs?) Goals The primary goal of this initiative is to ensure the stability and continuity of business operations by effectively managing and addressing \"Run the Business\" (RTB) requests. Tasks Tasks are turned into GUS Work Items Link to Relevant Documentation",
             keyFeatures: [],
             impact: "4/3: In addition to previously managed efforts around AL2023 bash code coverage, this week vault updates have been front and center. Terramon changes are done\r\n3/20: So many things have been added here: AL2023 updates, terramon, bash code coverage. We will have an effort soon to decide of some of these need their own epics"
         },
@@ -10083,7 +10083,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:31:48.000+0000",
+        gusLastModified: "2026-06-15T19:31:24.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -10091,7 +10091,7 @@ const roadmapDataGUS = [
     {
         id: 63,
         title: "Sales Agent in Slack",
-        description: "Enable sellers to work with their Sales Agent in Slack",
+        description: "Enable sellers to work with their Sales Agent in Slack - Automatically connect your Sales Agent to Slack - Get proactive notifications about suggested deal actions in Slack",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -10108,7 +10108,7 @@ const roadmapDataGUS = [
         v2momMethod: "Slack for All Editions",
         version: "gus",
         details: {
-            overview: "Enable sellers to work with their Sales Agent in Slack",
+            overview: "Enable sellers to work with their Sales Agent in Slack - Automatically connect your Sales Agent to Slack - Get proactive notifications about suggested deal actions in Slack",
             keyFeatures: [
                 "Open gate for all instances"
             ],
@@ -10319,7 +10319,7 @@ const roadmapDataGUS = [
     {
         id: 69,
         title: "Sales Methodologies: OOTB methodologies",
-        description: "Phase 1: Out-of-the-Box (OOTB) MEDDIC Methodology Implementation Pipeline Inspection List View UI updates Pipeline Inspection Detail View UI updates Admin selector to select from standard set of methodologie",
+        description: "Phase 1: Out-of-the-Box (OOTB) MEDDIC Methodology Implementation Pipeline Inspection List View UI updates Pipeline Inspection Detail View UI updates Admin selector to select from standard set of methodologies.",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -10336,7 +10336,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Phase 1: Out-of-the-Box (OOTB) MEDDIC Methodology Implementation Pipeline Inspection List View UI updates Pipeline Inspection Detail View UI updates Admin selector to select from standard set of methodologie",
+            overview: "Phase 1: Out-of-the-Box (OOTB) MEDDIC Methodology Implementation Pipeline Inspection List View UI updates Pipeline Inspection Detail View UI updates Admin selector to select from standard set of methodologies.",
             keyFeatures: [
                 "Dev Done: 03/12",
                 "GTM Release Branch Merge: 3/17",
@@ -10366,7 +10366,7 @@ const roadmapDataGUS = [
     {
         id: 70,
         title: "Sales Methodologies: Pipeline Management Agent - Autonomous",
-        description: "(no description in GUS) — Sales Methodologies: Pipeline Management Agent - Autonomous",
+        description: "Phase 3: Sales Methodologies: Pipeline Management Agent - Autonomous",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -10383,11 +10383,11 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — Sales Methodologies: Pipeline Management Agent - Autonomous",
+            overview: "Phase 3: Sales Methodologies: Pipeline Management Agent - Autonomous",
             keyFeatures: [
                 "Dev Done: Old: 5/15, New: 5/8Q3 HandOff: Old : 5/18, New: 5/19Q3 Sign-Off:Q4 Hand-Off: Old : 5/18, New: 5/13Q4 Sign-Off:UX/CX Hand-Off: Old : 5/18, New: 5/13UX/CX Sign-Off"
             ],
-            impact: "5/27/26\n- Few bugs were identified in internal blitz, team is working on the fix and also working on the patch approval doc to push the fix in patch branch.\n- ETA to fix all bugs : 05/28\n\n5/19/26\n- Handed over for testing."
+            impact: "6/16/26\r\n- Gates will be enabled next week once 262.10 code is available in all instances.\r\n\r\n5/27/26\r\n- Few bugs were identified in internal blitz, team is working on the fix and also working on the patch approval doc to push the fix in patch branch.\r\n- ETA to fix all bugs : 05/28"
         },
         gusEpicId: "a3QEE000002GqPh2AK",
         project: "[SFAi] Pipeline & Forecast Intelligence (Off-cycle / Monthly Releases)",
@@ -10401,7 +10401,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:14:09.000+0000",
+        gusLastModified: "2026-06-16T08:35:22.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -10448,7 +10448,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:37:44.000+0000",
+        gusLastModified: "2026-06-15T13:54:56.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -10544,7 +10544,7 @@ const roadmapDataGUS = [
     {
         id: 74,
         title: "Sales Workspace GA",
-        description: "Single pane of glass for sellers to collaborate with agents",
+        description: "Single pane of glass for sellers to collaborate with agents - 3 OOTB KPIs with suggested actions - Agents Working monitor - Magic Feed",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -10561,7 +10561,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Single pane of glass for sellers to collaborate with agents",
+            overview: "Single pane of glass for sellers to collaborate with agents - 3 OOTB KPIs with suggested actions - Agents Working monitor - Magic Feed",
             keyFeatures: [
                 "Open gate in all instances"
             ],
@@ -10681,7 +10681,7 @@ const roadmapDataGUS = [
     {
         id: 77,
         title: "Sales Workspace KPI Trust (Data Governance Tech Debt & Caching for EPT)",
-        description: "KPI Trust (Data Governance Tech Debt & Caching for EPT) Active workstreams that will get covered as part of this epic are as follows - Data Governance onboar",
+        description: "KPI Trust (Data Governance Tech Debt & Caching for EPT) Active workstreams that will get covered as part of this epic are as follows - Data Governance onboarding to rule builder framework. Metric card progress loading. Milestones : M1: Data Governance onboarding to rule builder f…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -10698,7 +10698,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "KPI Trust (Data Governance Tech Debt & Caching for EPT) Active workstreams that will get covered as part of this epic are as follows - Data Governance onboar",
+            overview: "KPI Trust (Data Governance Tech Debt & Caching for EPT) Active workstreams that will get covered as part of this epic are as follows - Data Governance onboarding to rule builder framework. Metric card progress loading. Milestones : M1: Data Governance onboarding to rule builder framework - (May Patch - 260.14) M2: Metric card progress loading (Tentative April Patch - 260.12)",
             keyFeatures: [
                 "Dev Done: Old : 4/9, New : 5/7",
                 "Q3 HandOff: Old : 4/10, New : 5/13",
@@ -10728,7 +10728,7 @@ const roadmapDataGUS = [
     {
         id: 78,
         title: "Sales Workspace KPIs: Post-GA Enhancements",
-        description: "Continue to work with DC/Semantic Layer teams to reduce cost and EPT. Active workstreams that will get covered as part of this epic are as follows - Number forma",
+        description: "Continue to work with DC/Semantic Layer teams to reduce cost and EPT. Active workstreams that will get covered as part of this epic are as follows - Number formatting in navigation panel EPT gain of 300ms Active Account Revised defintion Backward compatibility with older definiti…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -10745,7 +10745,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Continue to work with DC/Semantic Layer teams to reduce cost and EPT. Active workstreams that will get covered as part of this epic are as follows - Number forma",
+            overview: "Continue to work with DC/Semantic Layer teams to reduce cost and EPT. Active workstreams that will get covered as part of this epic are as follows - Number formatting in navigation panel EPT gain of 300ms Active Account Revised defintion Backward compatibility with older definitions with UI branching strategy. Milestones : - M1 : EPT gain of 300ms (Feb Patch - 260.7) M2: Number formatting in navigation panel (March Patch -260.10) M3: Active Account Revised defintion (April Patch - 260.12) M4: [Non-functional] : Backward compatibility with older definitions with UI branching strategy. (May Patch - 260.14)",
             keyFeatures: [
                 "Dev Done: 3/12",
                 "Q3 HandOff: Old :3/13 , New : 3/17",
@@ -10767,7 +10767,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:34:41.000+0000",
+        gusLastModified: "2026-06-15T13:28:52.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -10775,7 +10775,7 @@ const roadmapDataGUS = [
     {
         id: 79,
         title: "Sales Workspace New KPIs (incl. X-Cloud)",
-        description: "Add new KPIs to KPI Center and allow sales reps to configure which KPIs display by default. Scope limited to 260 KPIs listed in",
+        description: "Add new KPIs to KPI Center and allow sales reps to configure which KPIs display by default. Scope limited to 260 KPIs listed in here. vgong: 10/1 downgraded to 2.25 to match the allocation. Need to cut some scope",
         category: "feature",
         status: "planned",
         period: "Winter '27 (266)",
@@ -10792,7 +10792,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Add new KPIs to KPI Center and allow sales reps to configure which KPIs display by default. Scope limited to 260 KPIs listed in",
+            overview: "Add new KPIs to KPI Center and allow sales reps to configure which KPIs display by default. Scope limited to 260 KPIs listed in here. vgong: 10/1 downgraded to 2.25 to match the allocation. Need to cut some scope",
             keyFeatures: [],
             impact: "-"
         },
@@ -10816,7 +10816,7 @@ const roadmapDataGUS = [
     {
         id: 80,
         title: "Sales Workspace Simplified Setup",
-        description: "Reduce the complexity and number of steps in the Go Sales Workspace feature page to simplify the setup experience for customers Milestones: M1: Merge Intelligence view in one step - March (Internal demo) M2: Orchestrate",
+        description: "Reduce the complexity and number of steps in the Go Sales Workspace feature page to simplify the setup experience for customers Milestones: M1: Merge Intelligence view in one step - March (Internal demo) M2: Orchestrate DG permset & datakit in one step - April (Internal demo) M3:…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -10833,7 +10833,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Reduce the complexity and number of steps in the Go Sales Workspace feature page to simplify the setup experience for customers Milestones: M1: Merge Intelligence view in one step - March (Internal demo) M2: Orchestrate",
+            overview: "Reduce the complexity and number of steps in the Go Sales Workspace feature page to simplify the setup experience for customers Milestones: M1: Merge Intelligence view in one step - March (Internal demo) M2: Orchestrate DG permset & datakit in one step - April (Internal demo) M3: SSOT package version validation - April (Internal demo) M4: E2E integration of epic - (May Patch - 260.14)",
             keyFeatures: [
                 "Dev Done: 4/09",
                 "Q3 HandOff: 4/10",
@@ -10855,7 +10855,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:37:44.000+0000",
+        gusLastModified: "2026-06-15T13:08:17.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -10863,7 +10863,7 @@ const roadmapDataGUS = [
     {
         id: 81,
         title: "Spike: Email privacy options on Core",
-        description: "Frequent enterprise security ask to adoption EAC Email sync. Lacking this we are losing deal that could potentially lead to Agentforce customers like Amazon etc.",
+        description: "Frequent enterprise security ask to adoption EAC Email sync. Lacking this we are losing deal that could potentially lead to Agentforce customers like Amazon etc. I’m exploring opportunities to enhance customer privacy in future releases, as this continues to surface as a key conc…",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -10880,7 +10880,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Frequent enterprise security ask to adoption EAC Email sync. Lacking this we are losing deal that could potentially lead to Agentforce customers like Amazon etc.",
+            overview: "Frequent enterprise security ask to adoption EAC Email sync. Lacking this we are losing deal that could potentially lead to Agentforce customers like Amazon etc. I’m exploring opportunities to enhance customer privacy in future releases, as this continues to surface as a key concern among enterprise and financial services customers who want to use Agentforce in a manner that ensures data remains private to each user. With larger enterprise customers exploring agentforce with EAC, they are looking to have additional privacy controls beyond \"email header only\" sync option.",
             keyFeatures: [],
             impact: "1/20:\r\nEpic Nevered by the product\r\n1/13: \r\nNot started. Stretch item."
         },
@@ -10904,7 +10904,7 @@ const roadmapDataGUS = [
     {
         id: 82,
         title: "Storm Right Sizing plus Graviton",
-        description: "This is a structural cost lever that lowers infra run-rate, protects margins at scale, and future-proofs our platform without impacting reliability or velocity. Storm Right Sizing + Graviton together optimize both how much co",
+        description: "This is a structural cost lever that lowers infra run-rate, protects margins at scale, and future-proofs our platform without impacting reliability or velocity. Storm Right Sizing + Graviton together optimize both how much compute we use and how efficiently it runs—eliminating ov…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -10921,7 +10921,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "This is a structural cost lever that lowers infra run-rate, protects margins at scale, and future-proofs our platform without impacting reliability or velocity. Storm Right Sizing + Graviton together optimize both how much co",
+            overview: "This is a structural cost lever that lowers infra run-rate, protects margins at scale, and future-proofs our platform without impacting reliability or velocity. Storm Right Sizing + Graviton together optimize both how much compute we use and how efficiently it runs—eliminating over-provisioning while delivering better price-performance.",
             keyFeatures: [],
             impact: "3/27: The graviton portion will be finished with the jdk17 upgrades. The memory portion will only happen after the jdk17 upgrades (approx the end of the 262 release)\r\n2/13: This has been co-mingled with the turnkey/new cell efforts. Right now this config is live in all the new turnkey cells...Q4 will sign off on it there and it will first be live in prod in the new cell. Shortly thereafter it will also go live on new jdk17 storm clusters in prod"
         },
@@ -10945,7 +10945,7 @@ const roadmapDataGUS = [
     {
         id: 83,
         title: "Test Epic",
-        description: "(no description in GUS) — Test Epic",
+        description: "This is a test placeholder epic",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -10962,7 +10962,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — Test Epic",
+            overview: "This is a test placeholder epic",
             keyFeatures: [
                 "Dev Handoff: 1/20 (delayed by 2 days)",
                 "Q3 hoff: 1/22 (complete)",
@@ -11052,7 +11052,7 @@ const roadmapDataGUS = [
         details: {
             overview: "New insight: Escalated case related to opportunity/account",
             keyFeatures: [],
-            impact: "6/9: Spike is done, readout is scheduled for today. Implementation will start now\r\n6/2: Intern is working on spike"
+            impact: "6/16: Implementation is on track, no issues to call out\r\n6/9: Spike is done, readout is scheduled for today. Implementation will start now"
         },
         gusEpicId: "a3QEE00000220Qz2AI",
         project: "[SFAi] Sales Workspace (Off-cycle / Monthly Releases)",
@@ -11066,7 +11066,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Engineering",
-        gusLastModified: "2026-06-09T15:21:50.000+0000",
+        gusLastModified: "2026-06-16T05:01:29.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11093,7 +11093,7 @@ const roadmapDataGUS = [
         details: {
             overview: "Sales reps can filter the agent feed by categories",
             keyFeatures: [],
-            impact: "6/9: The data model review is still not complete, but the team has started implementation in parallel. No blockers to call out for now\r\n6/2: Implementation started, working with data modelers on the new entities"
+            impact: "6:16:  Data modelers signed off on new entities. Team is heads down on implementation \r\n6/9: The data model review is still not complete, but the team has started implementation in parallel. No blockers to call out for now"
         },
         gusEpicId: "a3QEE000002Okwb2AC",
         project: "[SFAi] Sales Workspace (Off-cycle / Monthly Releases)",
@@ -11107,7 +11107,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Engineering",
-        gusLastModified: "2026-06-10T15:31:53.000+0000",
+        gusLastModified: "2026-06-16T05:04:11.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11149,7 +11149,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-09T15:17:19.000+0000",
+        gusLastModified: "2026-06-15T21:45:25.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11160,8 +11160,8 @@ const roadmapDataGUS = [
         description: "As an admin, I can report on how recommendations were handled by sales reps- how many had no interation, were dismissed, or where the action button was clicked.",
         category: "feature",
         status: "planned",
-        period: "TBD",
-        quarter: "TBD",
+        period: "Build -",
+        quarter: "Build -",
         date: "-",
         owner: "Lizzy Perruzzi",
         prdLink: "",
@@ -11223,21 +11223,21 @@ const roadmapDataGUS = [
                 "Q4 Hand-Off: N/A",
                 "Q4 Sign-Off: N/A"
             ],
-            impact: "6/9: Gate rollout happening this week\r\n6/2: Patch rollout happening this week"
+            impact: "6/16: Gate rollout completed yesterday\r\n6/9: Gate rollout happening this week"
         },
         gusEpicId: "a3QEE000001u0ft2AA",
         project: "[SFAi] Sales Workspace (Off-cycle / Monthly Releases)",
-        targetRollOutDate: "2026-06-12T23:00:00.000+0000",
+        targetRollOutDate: "2026-06-15T23:00:00.000+0000",
         docStatus: null,
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 86,
+        percentComplete: 75,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Engineering",
-        gusLastModified: "2026-06-09T15:20:42.000+0000",
+        gusLastModified: "2026-06-16T05:02:21.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11245,7 +11245,7 @@ const roadmapDataGUS = [
     {
         id: 90,
         title: "Upgrade Cassandra major version",
-        description: "Feature Overview (The “What”) Upgrading Cassandra to version 4+ across our services to enhance performance, reliability, and scalability while aligning with long-term tech enablement goals. This epic includes the necessary ste",
+        description: "(The “What”) Upgrading Cassandra to version 4+ across our services to enhance performance, reliability, and scalability while aligning with long-term tech enablement goals. This epic includes the necessary steps to ensure a smooth upgrade process, mitigate risks, and maintain sys…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -11262,7 +11262,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Feature Overview (The “What”) Upgrading Cassandra to version 4+ across our services to enhance performance, reliability, and scalability while aligning with long-term tech enablement goals. This epic includes the necessary ste",
+            overview: "(The “What”) Upgrading Cassandra to version 4+ across our services to enhance performance, reliability, and scalability while aligning with long-term tech enablement goals. This epic includes the necessary steps to ensure a smooth upgrade process, mitigate risks, and maintain system stability. It also includes improving monitoring, documentation, and runbooks to support the upgraded system effectively. (The “Why”) Upgrading Cassandra to version 4+ improves system performance, security, and maintainability. It ensures our technology stack is up-to-date and supported, reducing technical debt and enabling future enhancements. This upgrade reinforces trust by maintaining the reliability of services dependent on Cassandra and provides engineering teams with tools and documentation to operate the upgraded system effectively. l (The “Who”) Internal Engineering teams Improved performance and stability of services dependent on Cassandra. A seamless upgrade with minimal downtime or impact on end-users. Enhanced operational readiness with updated dashboards, runbooks, and alerts. Reduced long-term technical debt and future-proofing of critical infrastructure. Technical Upgrade Process Cassandra upgraded to version 4+ in all environments (dev, stage1, prod3 and prod5). Migration plans are validated and executed successfully with minimal impact. Dependencies and compatibility issues with connected systems are addressed. and Validation Comprehensive integration and upgrade executed, includ…",
             keyFeatures: [],
             impact: "5/1: Stage will start on Monday. Full schedule presented to Nikhil\r\n4/3: after feedback we have decided we must do this rollout 1-AZ at a time. We have finished a new MO to do that (tested in pre-prod). Other feedback was to test the process first on a real copy of the production data (not just pre-prod data). This required an update to our DR tools. That update is in the process of being tested in pre-prod. When we proceed we will first upgrade the 'fake' (restored from backup) copy first as a test. Jeff is on PTO next week though so he will start that when he is back on 4/13"
         },
@@ -11278,7 +11278,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-08T10:46:59.000+0000",
+        gusLastModified: "2026-06-13T13:31:19.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11286,7 +11286,7 @@ const roadmapDataGUS = [
     {
         id: 91,
         title: "Upgrade Java on ES to jdk17",
-        description: "must be done by April to be compliant with central team requests Else, Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update",
+        description: "must be done by April to be compliant with central team requests Else, Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be out of compliance, we will have to shut…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -11303,7 +11303,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "must be done by April to be compliant with central team requests Else, Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update",
+            overview: "must be done by April to be compliant with central team requests Else, Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be out of compliance, we will have to shut AP and unable to support our base acros different products (EAC, Inbox, SDR, Sales engagement and so on)",
             keyFeatures: [],
             impact: "3/6: This is all done\r\n2/13: Errors have been overcome in pre-prod and change has been deployed to 1 prod cluster....assuming no issues will likely be deployed to the rest next week"
         },
@@ -11327,7 +11327,7 @@ const roadmapDataGUS = [
     {
         id: 92,
         title: "Upgrade Postgresql to 14.X",
-        description: "Background We are preparing for an upcoming Amazon RDS PostgreSQL upgrade from Postgres 13 → Postgres 14 . As part of this effort, we need to ensure our platform JDBC driver is aligned with the supported and recommended",
+        description: "Background We are preparing for an upcoming Amazon RDS PostgreSQL upgrade from Postgres 13 → Postgres 14. As part of this effort, we need to ensure our platform JDBC driver is aligned with the supported and recommended versions for PostgreSQL 14. Currently, our platform is using:…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -11344,7 +11344,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Background We are preparing for an upcoming Amazon RDS PostgreSQL upgrade from Postgres 13 → Postgres 14 . As part of this effort, we need to ensure our platform JDBC driver is aligned with the supported and recommended",
+            overview: "Background We are preparing for an upcoming Amazon RDS PostgreSQL upgrade from Postgres 13 → Postgres 14. As part of this effort, we need to ensure our platform JDBC driver is aligned with the supported and recommended versions for PostgreSQL 14. Currently, our platform is using: PostgreSQL JDBC driver: 42.2.13 (released in 2020) Target driver version: 42.7.x (current stable branch, early 2026) While PostgreSQL JDBC drivers are backward compatible and protocol-stable, running a 5+ year old driver against a newer database version is not recommended for long-term support, security, and bug-fix coverage. Why This Work Is Necessary Vendor Support & Compatibility PostgreSQL JDBC 42.7.x is the officially supported branch for Postgres 14. 42.2.13 is no longer actively maintained. Staying on an outdated driver increases risk of: Undiscovered bugs Security vulnerabilities Missing performance and stability fixes Future-Proofing Aligning driver and database versions reduces risk during: RDS engine upgrades TLS changes Authentication changes (IAM, SCRAM, etc.) JVM upgrades (JDK17+) Platform Consistency Our JDBC dependency is centrally managed via: activities-platform-parent POM → PostgresModule → Runtime services This enforces consistency across all services and prevents version drift. Why the Rollout Is Non-Trivial The JDBC driver version is inherited from the activities-platform-parent POM, not directly from PostgresModule. Therefore, the required change flow is: Upgrade JDBC version i…",
             keyFeatures: [],
             impact: "4/3: Christina has taken this over from Xing. We now have a TD to do it by 4/30. We have not strictly committed to this date but we will attempt to hit it. The change has been in pre-prod for a while and Christina is attempting to get all stakeholders onboard to verify that it has not caused any issues in pre-prod before writing a change doc\r\n3/27: This is live on pre-prod but was not promoted by Xing before he left on parental leave. We will assign to someone else on the team in April"
         },
@@ -11360,7 +11360,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:30:08.000+0000",
+        gusLastModified: "2026-06-11T12:17:27.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11368,7 +11368,7 @@ const roadmapDataGUS = [
     {
         id: 93,
         title: "Upgrade zookeeper",
-        description: "Trust: Upgrade ZooKeeper (v3.7) modernizes core infrastructure to supported, secure versions. It reduces security and stability risk, ensures vendor supportability, and protects platform reliability at scale.",
+        description: "Trust: Upgrade ZooKeeper (v3.7) modernizes core infrastructure to supported, secure versions. It reduces security and stability risk, ensures vendor supportability, and protects platform reliability at scale. Zookeeper Current version v3.7 of zk in falcon is EOL since Feb 2024. L…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -11385,7 +11385,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Trust: Upgrade ZooKeeper (v3.7) modernizes core infrastructure to supported, secure versions. It reduces security and stability risk, ensures vendor supportability, and protects platform reliability at scale.",
+            overview: "Trust: Upgrade ZooKeeper (v3.7) modernizes core infrastructure to supported, secure versions. It reduces security and stability risk, ensures vendor supportability, and protects platform reliability at scale. Zookeeper Current version v3.7 of zk in falcon is EOL since Feb 2024. Latest version 3.9 has improved security, performance enhancements and bug fixes. Work Involved: Upgrade java Upgrade to 3.8 Upgrade to 3.9 ZK releases: https://zookeeper.apache.org/releases.html",
             keyFeatures: [],
             impact: "1/30: This is complete and working in prod"
         },
@@ -11409,11 +11409,11 @@ const roadmapDataGUS = [
     {
         id: 94,
         title: "[258.Patch] New Simple Email Builder Experience in Starter & Pro Suite",
-        description: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. Link to PRD",
+        description: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. Link to : Email Solution in Free Edition",
         category: "feature",
         status: "completed",
-        period: "258.patch",
-        quarter: "258.patch",
+        period: "Build 258.patch",
+        quarter: "Build 258.patch",
         date: "258.patch",
         owner: "Rob Everetts",
         prdLink: "http://Email Solution in Free Edition",
@@ -11426,7 +11426,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. Link to PRD",
+            overview: "Add the perm and access to the Abridged Email Builder to Starter and Pro Suite orgs, both new and existing. Link to : Email Solution in Free Edition",
             keyFeatures: [
                 "Streamlined builder makes it easier for users to create emails with more template designs and a simplified experience. The better time-to-value enhances the onboarding and adoption, leading to more engagement and retention for marketing-focused users."
             ],
@@ -11452,11 +11452,11 @@ const roadmapDataGUS = [
     {
         id: 95,
         title: "[260] AI for SMB - Agentforce platform in Starter/Pro",
-        description: "Deliver cloud-managed Agent to support MVP agentic use cases in SlackCRM and LEX. Enable Agentforce Platform in Starter/Pro with constraints to control CTS.",
+        description: "Deliver cloud-managed Agent to support MVP agentic use cases in SlackCRM and LEX. Enable Agentforce Platform in Starter/Pro with constraints to control CTS. Includes: - 1-click Setup Experience - Auto-provisioning of Data Cloud - Discoverability of the feature for new user - Crea…",
         category: "feature",
         status: "completed",
-        period: "260.10",
-        quarter: "260.10",
+        period: "Build 260.10",
+        quarter: "Build 260.10",
         date: "260.10",
         owner: "Allison Burnett",
         prdLink: "https://docs.google.com/document/d/1vBCLScy5hP-k-VAGFJ4DqORhPwG-TF7ohBTGNLhfWLM/edit?tab=t.0#heading=h.nwqbr7wo5qyc",
@@ -11469,7 +11469,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Deliver cloud-managed Agent to support MVP agentic use cases in SlackCRM and LEX. Enable Agentforce Platform in Starter/Pro with constraints to control CTS.",
+            overview: "Deliver cloud-managed Agent to support MVP agentic use cases in SlackCRM and LEX. Enable Agentforce Platform in Starter/Pro with constraints to control CTS. Includes: - 1-click Setup Experience - Auto-provisioning of Data Cloud - Discoverability of the feature for new user - Create cloud-managed Agent - Upgrade path to EE+ Agents - Expose Agentforce licenses / perms - Hide Agent Builder - Constrained use of Prompt Builder - Uplift to Data Cloud tenant Requires partnership with DC/AI Platform teams. Figma Starter 252 Copilot",
             keyFeatures: [
                 "Built-in, employee-facing agent that acts as a personalized assistant & saves time for users via conversational inputs and secure AI. Democratizing Agentforce capabilities for SMBs strengthens the Suites' value proposition, accelerating NL acquisition."
             ],
@@ -11487,7 +11487,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:29:56.000+0000",
+        gusLastModified: "2026-06-15T12:27:25.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11495,7 +11495,7 @@ const roadmapDataGUS = [
     {
         id: 96,
         title: "[260][Demand] Restricted UMA in Free Edition",
-        description: "260] UMA Rest",
+        description: "260] UMA Restricted Solution in Free Edition UMA in Free Requirements Matrix The Restricted UMA in Free Edition epic focuses on delivering a simplified version of the Unified Marketing Application (UMA) within the Salesforce Free Edition. This will include essential marketing fea…",
         category: "feature",
         status: "completed",
         period: "Winter '26 (260)",
@@ -11512,7 +11512,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "260] UMA Rest",
+            overview: "260] UMA Restricted Solution in Free Edition UMA in Free Requirements Matrix The Restricted UMA in Free Edition epic focuses on delivering a simplified version of the Unified Marketing Application (UMA) within the Salesforce Free Edition. This will include essential marketing features that allow users to run basic email campaigns while providing clear upgrade paths to more advanced functionalities in paid editions. Solves the problem of limited marketing capabilities for users in the Free Edition, enabling them to manage basic CRM needs without upgrading. The demand for a competitive freemium offering necessitates these features to attract and retain users. This will provide a competitive advantage by allowing users to experience key marketing functionalities without barriers, increasing the likelihood of future upgrades. Small businesses or individuals seeking CRM solutions without initial investment. Voice of Customer (VOC) records indicate a need for basic marketing tools in free tiers. IdeaExchange records suggest enhancements for low-cost solutions. User can create and manage simple email campaigns. User can send limited volumes of emails per month. User can view and edit existing campaigns with restrictions on complexity. As a Free Edition user, I can create a single email campaign. As a Free Edition user, I can view my campaign performance metrics. As a Free Edition user, I can send up to 100 emails/day. Advanced marketing features available in paid editions. Complex c…",
             keyFeatures: [
                 "Users build, manage, and send single-email campaigns via limited marketing automation, rounding out a full suite of OOTB sales, service, and marketing tools. A more robust experience accelerates our New Logo acquisition."
             ],
@@ -11530,7 +11530,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: "PRD Conversion",
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:02:06.000+0000",
+        gusLastModified: "2026-06-15T13:23:02.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11574,7 +11574,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:12:21.000+0000",
+        gusLastModified: "2026-06-13T14:37:01.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11612,12 +11612,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 68,
+        percentComplete: 71,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T13:00:57.000+0000",
+        gusLastModified: "2026-06-15T12:30:46.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11625,7 +11625,7 @@ const roadmapDataGUS = [
     {
         id: 99,
         title: "[262] - General Trust Tabasco",
-        description: "Justification",
+        description: "Justification: EAC / E2C Customer Escalations, Oncall Support, Deployment, Sync Latency. Migration Wizard, Data Import Wizard, Activity Timeline Maintain services for for EAC, SDR, Starter and Inbox involving > 1M datasources",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -11642,7 +11642,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Justification",
+            overview: "Justification: EAC / E2C Customer Escalations, Oncall Support, Deployment, Sync Latency. Migration Wizard, Data Import Wizard, Activity Timeline Maintain services for for EAC, SDR, Starter and Inbox involving > 1M datasources",
             keyFeatures: [
                 "256 DoR No"
             ],
@@ -11668,7 +11668,7 @@ const roadmapDataGUS = [
     {
         id: 100,
         title: "[262] Consistent Recurring Event Edit experience (API and UI)",
-        description: "Red Account, enhancement/fix promise: Wolter Kluvers agreed to renew w/ us based on this fix. Gap in behavior between UX and API for Event CRUD. There is a",
+        description: "Red Account, enhancement/fix promise: Wolter Kluvers agreed to renew w/ us based on this fix. Gap in behavior between and API for Event CRUD. There is a gap in UI vs API for Calendar Event creation. Within the UI, edits to a recurring event will result in a modal asking you to co…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -11685,7 +11685,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Red Account, enhancement/fix promise: Wolter Kluvers agreed to renew w/ us based on this fix. Gap in behavior between UX and API for Event CRUD. There is a",
+            overview: "Red Account, enhancement/fix promise: Wolter Kluvers agreed to renew w/ us based on this fix. Gap in behavior between and API for Event CRUD. There is a gap in UI vs API for Calendar Event creation. Within the UI, edits to a recurring event will result in a modal asking you to confirm change for this event only or all. However, when done via API, there is no prompt and the deciding field is READ only. https://salesforce.quip.com/XkPxAQlVxgTB",
             keyFeatures: [
                 "CX Handoff to Dev: NA (no UI text)",
                 "Dev Done: ✅ 1/25",
@@ -11715,7 +11715,7 @@ const roadmapDataGUS = [
     {
         id: 101,
         title: "[262] Create OOTB Account Plans permset and update setup",
-        description: "We plan to create an OOTB permission set for Account Plans. Currently in setup, we ask admins to create a custom permission set to give users access to the Account Plan, Account Plan Objective, and Account Plan Objective Measure objects. We will now c",
+        description: "We plan to create an OOTB permission set for Account Plans. Currently in setup, we ask admins to create a custom permission set to give users access to the Account Plan, Account Plan Objective, and Account Plan Objective Measure objects. We will now create an OOTB permission set,…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -11732,7 +11732,7 @@ const roadmapDataGUS = [
         v2momMethod: "Platform",
         version: "gus",
         details: {
-            overview: "We plan to create an OOTB permission set for Account Plans. Currently in setup, we ask admins to create a custom permission set to give users access to the Account Plan, Account Plan Objective, and Account Plan Objective Measure objects. We will now c",
+            overview: "We plan to create an OOTB permission set for Account Plans. Currently in setup, we ask admins to create a custom permission set to give users access to the Account Plan, Account Plan Objective, and Account Plan Objective Measure objects. We will now create an OOTB permission set, and change the text in Go and the Sales Account Plans Setup page to tell admins to give users access to Account Plans and the related objects by assigning them the Account Plans permission set.",
             keyFeatures: [],
             impact: "3/10: QA Complete\r\n3/3: On track. QA in progress\r\nSome of the work has been picked up for 262, remaining will move out to 264 based on available capacity.\r\n\r\nPicked up Context Translation feature, changes done from our end but gated for testing until context provides full support. Should get in end of 2a or by early 2b.\r\n\r\n2b - Handover for translations next week, Q2 testing in progress."
         },
@@ -11784,12 +11784,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 94,
+        percentComplete: 95,
         slippageComments: null,
         pathToGreen: "Ran into integration issues with C2C + Kafka de-serialization errors. Fixed both, and deployment is in progress. Final things to test are writing to Mongo and Cassandra for reconciliation logic.",
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T13:16:32.000+0000",
+        gusLastModified: "2026-06-15T12:58:30.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11838,7 +11838,7 @@ const roadmapDataGUS = [
     {
         id: 104,
         title: "[262] General Trust - Centaurus",
-        description: "(no description in GUS) — [262] General Trust - Centaurus",
+        description: "[262] General Trust - Centaurus",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -11855,7 +11855,7 @@ const roadmapDataGUS = [
         v2momMethod: "Platform",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — [262] General Trust - Centaurus",
+            overview: "[262] General Trust - Centaurus",
             keyFeatures: [],
             impact: "4/14/26\n- On track, no blockers\n\n4/07/26\n- On track, no blockers"
         },
@@ -11879,7 +11879,7 @@ const roadmapDataGUS = [
     {
         id: 105,
         title: "[262] General Trust - Forecasting Content",
-        description: "Trust Rotation + Misc General Reactive Trust Items (includes TDs and other small requests that don’t fit into any other epics) MDAPI to add setup Pref, MDAPI Supp",
+        description: "Trust Rotation + Misc General Reactive Trust Items (includes TDs and other small requests that don’t fit into any other epics) MDAPI to add setup Pref, MDAPI Support for Custom Columns (WIs linked with epic)",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -11896,7 +11896,7 @@ const roadmapDataGUS = [
         v2momMethod: "Platform",
         version: "gus",
         details: {
-            overview: "Trust Rotation + Misc General Reactive Trust Items (includes TDs and other small requests that don’t fit into any other epics) MDAPI to add setup Pref, MDAPI Supp",
+            overview: "Trust Rotation + Misc General Reactive Trust Items (includes TDs and other small requests that don’t fit into any other epics) MDAPI to add setup Pref, MDAPI Support for Custom Columns (WIs linked with epic)",
             keyFeatures: [],
             impact: "-"
         },
@@ -11912,7 +11912,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T12:29:00.000+0000",
+        gusLastModified: "2026-06-15T12:55:33.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11953,7 +11953,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:15:40.000+0000",
+        gusLastModified: "2026-06-15T12:33:18.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -11989,12 +11989,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 97,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T12:49:42.000+0000",
+        gusLastModified: "2026-06-15T19:07:12.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12002,7 +12002,7 @@ const roadmapDataGUS = [
     {
         id: 108,
         title: "[262] General Trust - Perseus",
-        description: "(no description in GUS) — [262] General Trust - Perseus",
+        description: "[262] General Trust - Perseus",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -12019,7 +12019,7 @@ const roadmapDataGUS = [
         v2momMethod: "Platform",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — [262] General Trust - Perseus",
+            overview: "[262] General Trust - Perseus",
             keyFeatures: [],
             impact: "4/14/26\n- On track, no blockers\n\n4/07/26\n- On track, no blockers"
         },
@@ -12084,7 +12084,7 @@ const roadmapDataGUS = [
     {
         id: 110,
         title: "[262] General Trust - Taurus",
-        description: "(no description in GUS) — [262] General Trust - Taurus",
+        description: "[262] General Trust - Taurus",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -12101,7 +12101,7 @@ const roadmapDataGUS = [
         v2momMethod: "Platform",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — [262] General Trust - Taurus",
+            overview: "[262] General Trust - Taurus",
             keyFeatures: [],
             impact: "4/14/26\n- On track, no blockers\n\n4/07/26\r\n- On track, no blockers"
         },
@@ -12125,7 +12125,7 @@ const roadmapDataGUS = [
     {
         id: 111,
         title: "[262] General Trust A360 Nexus",
-        description: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving &g",
+        description: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving > 1M datasources",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -12142,7 +12142,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving &g",
+            overview: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving > 1M datasources",
             keyFeatures: [],
             impact: "-"
         },
@@ -12153,12 +12153,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 73,
+        percentComplete: 80,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T13:33:04.000+0000",
+        gusLastModified: "2026-06-15T10:05:38.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12166,7 +12166,7 @@ const roadmapDataGUS = [
     {
         id: 112,
         title: "[262] General Trust A360 Stargate",
-        description: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving &g",
+        description: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving > 1M datasources; Mongo long term stabilization effort",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -12183,7 +12183,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving &g",
+            overview: "Customer Escalations, Oncall Support, Deployment, Sync Latency; Maintain services for for EAC, SDR, Starter and Inbox involving > 1M datasources; Mongo long term stabilization effort",
             keyFeatures: [],
             impact: "-"
         },
@@ -12199,7 +12199,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T12:48:43.000+0000",
+        gusLastModified: "2026-06-15T12:54:54.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12453,7 +12453,7 @@ const roadmapDataGUS = [
     {
         id: 119,
         title: "[262] Pipeline Forecasting Onboarding",
-        description: "(no description in GUS) — [262] Pipeline Forecasting Onboarding",
+        description: "[262] Pipeline Forecasting Onboarding",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -12470,7 +12470,7 @@ const roadmapDataGUS = [
         v2momMethod: "Platform",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — [262] Pipeline Forecasting Onboarding",
+            overview: "[262] Pipeline Forecasting Onboarding",
             keyFeatures: [],
             impact: "4/14/26\n- On track, KTs underway from pipeline forecasting team\n\n4/07/26\n- On track, KTs underway from pipeline forecasting team"
         },
@@ -12494,7 +12494,7 @@ const roadmapDataGUS = [
     {
         id: 120,
         title: "[262] Retroactive Matching: Oppty and Contacts/Leads via apex and Lex",
-        description: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided context even with historic activities (emails",
+        description: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided context even with historic activities (emails). This epic concludes the pending retroactive matching feature parity items with Emails as Salesforc…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -12511,7 +12511,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided context even with historic activities (emails",
+            overview: "Feature parity: to ensure all Email and Event data can be safely moved to Core without missing any core functionalities that provided context even with historic activities (emails). This epic concludes the pending retroactive matching feature parity items with Emails as Salesforce Activity.",
             keyFeatures: [
                 "CX Handoff to Dev:  ✅ NA (no UI text)",
                 "Dev Done: ✅ 3/26",
@@ -12528,12 +12528,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 80,
+        percentComplete: 78,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:00:11.000+0000",
+        gusLastModified: "2026-06-10T19:21:09.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12582,7 +12582,7 @@ const roadmapDataGUS = [
     {
         id: 122,
         title: "[262] Trust: Exchange Crawler Stabilization",
-        description: "3/6: On Track",
+        description: "(no description in GUS) — [262] Trust: Exchange Crawler Stabilization",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -12599,7 +12599,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "3/6: On Track",
+            overview: "(no description in GUS) — [262] Trust: Exchange Crawler Stabilization",
             keyFeatures: [],
             impact: "3/6: On Track"
         },
@@ -12623,7 +12623,7 @@ const roadmapDataGUS = [
     {
         id: 123,
         title: "[262] Trust: MongoDb Stabilization",
-        description: "DataSource is the most write-intensive collection. In the past, excessive MongoDB write volume has resulted in multi-second write latencies, causing significant backlogs in the ingestion pipeline. MongoDB serves as a metadata store for the ingestion p",
+        description: "DataSource is the most write-intensive collection. In the past, excessive MongoDB write volume has resulted in multi-second write latencies, causing significant backlogs in the ingestion pipeline. MongoDB serves as a metadata store for the ingestion pipelines, and the data is lar…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -12640,7 +12640,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "DataSource is the most write-intensive collection. In the past, excessive MongoDB write volume has resulted in multi-second write latencies, causing significant backlogs in the ingestion pipeline. MongoDB serves as a metadata store for the ingestion p",
+            overview: "DataSource is the most write-intensive collection. In the past, excessive MongoDB write volume has resulted in multi-second write latencies, causing significant backlogs in the ingestion pipeline. MongoDB serves as a metadata store for the ingestion pipelines, and the data is largely stable with the exception of watermarks. The majority of write traffic originates from frequent watermark updates. This document explores coalescing watermark updates to reduce overall write operations.",
             keyFeatures: [],
             impact: "-"
         },
@@ -12664,7 +12664,7 @@ const roadmapDataGUS = [
     {
         id: 124,
         title: "[262] [Internal Epic for PI handoff/Not customer facing ] Activity Heatmap",
-        description: "Show Activity Heatmap for last 30 days ac",
+        description: "Show Activity Heatmap for last 30 days activities. this component should be page able to pulled into Pipeline and also show on Activity timeline : https://docs.google.com/document/d/1DpJoP6MCw_UiIp4esvhi94YSZ1gbV1HIL3K2zwcmTzI/edit?tab=t.0#heading=h.vmgvokhkkazu",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -12681,7 +12681,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "Show Activity Heatmap for last 30 days ac",
+            overview: "Show Activity Heatmap for last 30 days activities. this component should be page able to pulled into Pipeline and also show on Activity timeline : https://docs.google.com/document/d/1DpJoP6MCw_UiIp4esvhi94YSZ1gbV1HIL3K2zwcmTzI/edit?tab=t.0#heading=h.vmgvokhkkazu",
             keyFeatures: [
                 "Dev Handoff: ✅ 03/12",
                 "Dev Complete: ✅ 03/25",
@@ -12698,12 +12698,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Large",
-        percentComplete: 96,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-08T11:24:08.000+0000",
+        gusLastModified: "2026-06-11T19:06:19.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12711,7 +12711,7 @@ const roadmapDataGUS = [
     {
         id: 125,
         title: "[264] General Trust - Centaurus",
-        description: "(no description in GUS) — [264] General Trust - Centaurus",
+        description: "[264] General Trust - Centaurus",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -12728,9 +12728,9 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — [264] General Trust - Centaurus",
+            overview: "[264] General Trust - Centaurus",
             keyFeatures: [],
-            impact: "6/9/26\r\n- On track, no blockers\r\n\r\n6/2/26\r\n- On track, no blockers"
+            impact: "6/16/26\r\n- On track, no blockers\r\n\r\n6/9/26\r\n- On track, no blockers"
         },
         gusEpicId: "a3QEE000002LcHF2A0",
         project: "[SFAi] Core Sales Platform",
@@ -12739,12 +12739,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 75,
+        percentComplete: 78,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:30:32.000+0000",
+        gusLastModified: "2026-06-16T08:31:59.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12752,7 +12752,7 @@ const roadmapDataGUS = [
     {
         id: 126,
         title: "[264] General Trust - Perseus",
-        description: "(no description in GUS) — [264] General Trust - Perseus",
+        description: "[264] General Trust - Perseus",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -12769,9 +12769,9 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — [264] General Trust - Perseus",
+            overview: "[264] General Trust - Perseus",
             keyFeatures: [],
-            impact: "6/9/26\r\n- On track, no blockers\r\n\r\n6/2/26\r\n- On track, no blockers"
+            impact: "6/16/26\r\n- On track, no blockers\r\n\r\n6/9/26\r\n- On track, no blockers"
         },
         gusEpicId: "a3QEE000002LcU92AK",
         project: "[SFAi] Core Sales Platform",
@@ -12785,7 +12785,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-09T12:55:13.000+0000",
+        gusLastModified: "2026-06-16T08:26:31.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12793,7 +12793,7 @@ const roadmapDataGUS = [
     {
         id: 127,
         title: "[264] General Trust - Taurus",
-        description: "(no description in GUS) — [264] General Trust - Taurus",
+        description: "[264] General Trust - Taurus",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -12810,9 +12810,9 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — [264] General Trust - Taurus",
+            overview: "[264] General Trust - Taurus",
             keyFeatures: [],
-            impact: "6/9/26\r\n- On track, no blockers\r\n\r\n6/2/26\r\n- On track, no blockers"
+            impact: "6/16/26\r\n- On track, no blockers\r\n\r\n6/9/26\r\n- On track, no blockers"
         },
         gusEpicId: "a3QEE000002LcYz2AK",
         project: "[SFAi] Core Sales Platform",
@@ -12821,12 +12821,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 33,
+        percentComplete: 67,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:17:22.000+0000",
+        gusLastModified: "2026-06-16T08:25:36.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12834,7 +12834,7 @@ const roadmapDataGUS = [
     {
         id: 128,
         title: "[264] Pipeline Forecasting Onboarding",
-        description: "(no description in GUS) — [264] Pipeline Forecasting Onboarding",
+        description: "[264] Pipeline Forecasting Onboarding",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -12851,9 +12851,9 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "(no description in GUS) — [264] Pipeline Forecasting Onboarding",
+            overview: "[264] Pipeline Forecasting Onboarding",
             keyFeatures: [],
-            impact: "6/9/26\r\n- On track, KTs underway\r\n\r\n6/2/26\r\n- On track, KTs underway"
+            impact: "6/16/26\r\n- On track, KTs underway\r\n\r\n6/9/26\r\n- On track, KTs underway"
         },
         gusEpicId: "a3QEE000002Lcab2AC",
         project: "[SFAi] Core Sales Platform",
@@ -12867,7 +12867,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Non-Engineering",
-        gusLastModified: "2026-06-09T12:58:26.000+0000",
+        gusLastModified: "2026-06-16T08:30:25.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12875,7 +12875,7 @@ const roadmapDataGUS = [
     {
         id: 129,
         title: "[A360 Nexus] Graph API GA Migration Support (data capture, performance and SLA)",
-        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents dependi…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -12892,7 +12892,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents depending on Emails today context-less. From Off-Core, Migrate and address feedback from EAC, Inbox and SDR customers Nexus owns: Retry Jobs on hitting concurrency limits of Msft Graph API.",
             keyFeatures: [],
             impact: "4/10 - Supporting as needed. No work pending.\r\n3/27 - Supporting as needed. No work pending."
         },
@@ -12916,7 +12916,7 @@ const roadmapDataGUS = [
     {
         id: 130,
         title: "[A360 Nexus] JDK Upgrade",
-        description: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be",
+        description: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be out of compliance, we will have to shut AP and unable to support our base acros different products (EAC, Inbox,…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -12933,7 +12933,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be",
+            overview: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be out of compliance, we will have to shut AP and unable to support our base acros different products (EAC, Inbox, SDR, Sales engagement and so on) (https://salesforce.enterprise.slack.com/docs/T0257US1S/F094J4WJJ1W)",
             keyFeatures: [],
             impact: "4/10 - Production deployments halted due to snappy compression bug on graviton hardware. RCA in progress. Will resume deployments following bug fix and verification.\r\n3/27 - Production deployments in progress, including new cell. Vault-Mesh TD-0300769 is not ready to be included in these pushes."
         },
@@ -12944,12 +12944,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 92,
+        percentComplete: 97,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T12:57:03.000+0000",
+        gusLastModified: "2026-06-15T19:07:26.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -12957,7 +12957,7 @@ const roadmapDataGUS = [
     {
         id: 131,
         title: "[A360 Stargate] Graph API GA Migration Support (data capture, perf and SLA)",
-        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+        description: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents dependi…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -12974,7 +12974,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without G",
+            overview: "MSFT is retiring EWS APIs in Oct '26 impacting over 85k customers across 5 different products (EAC, Inbox, SDR, Lightning Sync and Starter/Pro). Come october '26 without Graph API migration path and integration, sync will stop working for all these customers making Agents depending on Emails today context-less. From Off-Core, Migrate and address feedback from EAC, Inbox and SDR customers Stargate owns: Delta Sync API Threading Crawling using Graph API",
             keyFeatures: [],
             impact: "3/6: Onoging support on track"
         },
@@ -12998,7 +12998,7 @@ const roadmapDataGUS = [
     {
         id: 132,
         title: "[A360 Stargate] JDK Upgrade",
-        description: "Out of Compliance, Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc",
+        description: "Out of Compliance, Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc https://salesforce.enterprise.slack.com/docs/T0257US1S/F094J4WJJ1W",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -13015,7 +13015,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Out of Compliance, Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc",
+            overview: "Out of Compliance, Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc https://salesforce.enterprise.slack.com/docs/T0257US1S/F094J4WJJ1W",
             keyFeatures: [],
             impact: "5/1: all services should finish prodpush today.\r\n4/10: resolved SNAPPY issue, resuming prod push."
         },
@@ -13026,12 +13026,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 98,
+        percentComplete: 96,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:29:12.000+0000",
+        gusLastModified: "2026-06-15T12:45:55.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -13039,11 +13039,11 @@ const roadmapDataGUS = [
     {
         id: 133,
         title: "[Deprioritized for 260] SCV Transcript Ingestion",
-        description: "SCV alignment Leverage SCV transcripts directly - SCV gets transcripts directly from Vendors UX Admin setup for how we showcase SCV as a provider, link to their",
+        description: "SCV alignment Leverage SCV transcripts directly - SCV gets transcripts directly from Vendors Admin setup for how we showcase SCV as a provider, link to their setup or show enabled HLD: https://docs.google.com/document/d/1-FI0bzl9fgwhhDqJZyCS0xI4F683nd6n7xGqUtxveS4/edit?usp=sharin…",
         category: "feature",
         status: "planned",
-        period: "260.btl",
-        quarter: "260.btl",
+        period: "Build 260.btl",
+        quarter: "Build 260.btl",
         date: "260.btl",
         owner: "Cole Bennett",
         prdLink: "https://salesforce.quip.com/w96QARHDQ86W",
@@ -13056,7 +13056,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "SCV alignment Leverage SCV transcripts directly - SCV gets transcripts directly from Vendors UX Admin setup for how we showcase SCV as a provider, link to their",
+            overview: "SCV alignment Leverage SCV transcripts directly - SCV gets transcripts directly from Vendors Admin setup for how we showcase SCV as a provider, link to their setup or show enabled HLD: https://docs.google.com/document/d/1-FI0bzl9fgwhhDqJZyCS0xI4F683nd6n7xGqUtxveS4/edit?usp=sharing",
             keyFeatures: [
                 "260 DoR No Feature"
             ],
@@ -13082,7 +13082,7 @@ const roadmapDataGUS = [
     {
         id: 134,
         title: "[EAC Foundation] JDK Upgrade",
-        description: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be",
+        description: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be out of compliance, we will have to shut AP and unable to support our base acros different products (EAC, Inbox,…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -13099,7 +13099,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be",
+            overview: "Out of Compliance; Deprecation Notice of JDK 8 and JDK 11 at Salesforce by 04/01; Required to update the AP stack clients like Kafka, storm etc without which AP will be out of compliance, we will have to shut AP and unable to support our base acros different products (EAC, Inbox, SDR, Sales engagement and so on) (https://salesforce.enterprise.slack.com/docs/T0257US1S/F094J4WJJ1W) Migrate AP codebase to JDK 17 - for details see Activity Platform JDK 17 Migration Plan",
             keyFeatures: [
                 "260 DoR No Feature"
             ],
@@ -13117,7 +13117,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Engineering",
-        gusLastModified: "2026-06-10T12:46:16.000+0000",
+        gusLastModified: "2026-06-15T13:21:44.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -13150,7 +13150,7 @@ const roadmapDataGUS = [
                 "Q4 Hand-Off:",
                 "Q4 Sign-Off:"
             ],
-            impact: "6/9: Merged to GTM rel. Testing/ Blitz this week.\n\n6/2: On track for 6/4. 2 pending stories - 1 in QA and another in progress"
+            impact: "6/16: Testing on GTM rel in progress\r\n\r\n6/9: Merged to GTM rel. Testing/ Blitz this week."
         },
         gusEpicId: "a3QEE000002Fz5F2AS",
         project: "[SFAi] Pipeline & Forecast Intelligence (Off-cycle / Monthly Releases)",
@@ -13159,12 +13159,12 @@ const roadmapDataGUS = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 19,
+        percentComplete: 88,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:26:49.000+0000",
+        gusLastModified: "2026-06-16T03:55:32.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -13172,7 +13172,7 @@ const roadmapDataGUS = [
     {
         id: 136,
         title: "[GTM Rel 2] Columns in OOTB list experience",
-        description: "Allow sales ops to set the default layout for all sellers, and add new calculated columns to custom lists Make synthetic columns default added on specific list views This is when all new columns are complete and added to the p",
+        description: "Allow sales ops to set the default layout for all sellers, and add new calculated columns to custom lists Make synthetic columns default added on specific list views This is when all new columns are complete and added to the pipeline inspection experience.",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -13189,7 +13189,7 @@ const roadmapDataGUS = [
         v2momMethod: "",
         version: "gus",
         details: {
-            overview: "Allow sales ops to set the default layout for all sellers, and add new calculated columns to custom lists Make synthetic columns default added on specific list views This is when all new columns are complete and added to the p",
+            overview: "Allow sales ops to set the default layout for all sellers, and add new calculated columns to custom lists Make synthetic columns default added on specific list views This is when all new columns are complete and added to the pipeline inspection experience.",
             keyFeatures: [
                 "Dev Done:",
                 "Q3 HandOff: N/A",
@@ -13197,7 +13197,7 @@ const roadmapDataGUS = [
                 "Q4 Hand-Off:",
                 "Q4 Sign-Off:"
             ],
-            impact: "6/9: GTM merge blocked due to 1 platform TF. Fix out for review. \n6/2: On track for 6/4 - 1 story pending QA (delayed due to CI instance issues)"
+            impact: "6/16: Testing on GTM rel in progress\r\n\r\n6/9: GTM merge blocked due to 1 platform TF. Fix out for review."
         },
         gusEpicId: "a3QEE0000021z6j2AA",
         project: "[SFAi] Pipeline & Forecast Intelligence (Off-cycle / Monthly Releases)",
@@ -13211,7 +13211,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-09T04:35:46.000+0000",
+        gusLastModified: "2026-06-16T03:55:18.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -13256,7 +13256,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:49:09.000+0000",
+        gusLastModified: "2026-06-15T13:06:33.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -13264,7 +13264,7 @@ const roadmapDataGUS = [
     {
         id: 138,
         title: "[M1] [AP Galaxy] 262 - Planned/Unplanned Trust",
-        description: "A360 FY25 V2MOM : https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit",
+        description: "A360 FY25 V2MOM: https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit As part of this Epic we would like to address the Trust related items. TM Duties: https://salesforce.quip.com/b2oGALCcfF0s",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -13281,7 +13281,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "A360 FY25 V2MOM : https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit",
+            overview: "A360 FY25 V2MOM: https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit As part of this Epic we would like to address the Trust related items. TM Duties: https://salesforce.quip.com/b2oGALCcfF0s",
             keyFeatures: [
                 "262 DoR No Trust"
             ],
@@ -13299,7 +13299,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: "Operations",
-        gusLastModified: "2026-06-10T12:37:34.000+0000",
+        gusLastModified: "2026-06-15T12:52:08.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -13307,7 +13307,7 @@ const roadmapDataGUS = [
     {
         id: 139,
         title: "[M1] [Activities] 262 - Planned/Unplanned Trust",
-        description: "A360 FY25 V2MOM : https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit",
+        description: "A360 FY25 V2MOM: https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit As part of this Epic we would like to address the Trust related items. TM Duties: https://salesforce.quip.com/b2oGALCcfF0s",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -13324,7 +13324,7 @@ const roadmapDataGUS = [
         v2momMethod: "Trust",
         version: "gus",
         details: {
-            overview: "A360 FY25 V2MOM : https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit",
+            overview: "A360 FY25 V2MOM: https://docs.google.com/document/d/1Og-mQCcJfa0gG8wwxAxkKDgD9VLb6UTUzsvVWPE06V4/edit As part of this Epic we would like to address the Trust related items. TM Duties: https://salesforce.quip.com/b2oGALCcfF0s",
             keyFeatures: [
                 "262 DoR No Trust"
             ],
@@ -13350,7 +13350,7 @@ const roadmapDataGUS = [
     {
         id: 140,
         title: "[Not customer facing release] Recall (Teams, Meet, Zoom)",
-        description: "TLDR Recall used to allow user authentication to calendar/provider Bot should auto-join call OR user can manually add/remove Captures meeting details, participant details, calendar details, transcript/record",
+        description: "TLDR Recall used to allow user authentication to calendar/provider Bot should auto-join call OR user can manually add/remove Captures meeting details, participant details, calendar details, transcript/recording ASAP after meeting for ingestion Should also improve participant matc…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -13367,7 +13367,7 @@ const roadmapDataGUS = [
         v2momMethod: "Gong",
         version: "gus",
         details: {
-            overview: "TLDR Recall used to allow user authentication to calendar/provider Bot should auto-join call OR user can manually add/remove Captures meeting details, participant details, calendar details, transcript/record",
+            overview: "TLDR Recall used to allow user authentication to calendar/provider Bot should auto-join call OR user can manually add/remove Captures meeting details, participant details, calendar details, transcript/recording ASAP after meeting for ingestion Should also improve participant matching Possibly as pilot Ofek EOL for transcription - all existing customer on legacy integrations no longer can use Ofek transcription service New customers only see recall in setup moving forward Small changes to setup (possibly removing some admin oauth steps for Teams or Zoom) and user oauth process for giving calendar access Small tweaks to figure out how to transition between recall vs current design (how it works with transcripts for other channels)",
             keyFeatures: [
                 "Dev Handoff: Milestone 2 due 3/13",
                 "Q3 Sign Off: n/a (to be picked up with integration work in 264)",
@@ -13388,7 +13388,7 @@ const roadmapDataGUS = [
         pathToGreen: null,
         source: null,
         epicCategory: null,
-        gusLastModified: "2026-06-10T12:15:40.000+0000",
+        gusLastModified: "2026-06-15T12:12:38.000+0000",
         releaseStage: null,
         featureLifecycleStage: null,
         productFeature: null
@@ -13399,8 +13399,8 @@ const roadmapDataGUS = [
         description: "work to support leads for SlackCRM org recycle - changing the number of days record ownership change",
         category: "feature",
         status: "completed",
-        period: "260.10",
-        quarter: "260.10",
+        period: "Build 260.10",
+        quarter: "Build 260.10",
         date: "260.10",
         owner: "Alana Cutler",
         prdLink: "",
@@ -13439,7 +13439,7 @@ const roadmapDataGUS = [
 ];
 
 
-const LAST_GUS_REFRESH_SC = "2026-06-11";
+const LAST_GUS_REFRESH_SC = "2026-06-13";
 const roadmapDataServiceCloud = [
     {
         id: 1,
@@ -13477,7 +13477,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:48:08.000+0000",
+        gusLastModified: "2026-06-15T15:03:00.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13521,7 +13521,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T13:04:55.000+0000",
+        gusLastModified: "2026-06-15T12:38:24.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13565,7 +13565,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T13:31:03.000+0000",
+        gusLastModified: "2026-06-15T13:22:49.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13609,7 +13609,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:09:04.000+0000",
+        gusLastModified: "2026-06-15T15:15:36.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13648,12 +13648,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 51,
+        percentComplete: 53,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:57:14.000+0000",
+        gusLastModified: "2026-06-16T06:26:54.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13664,7 +13664,7 @@ const roadmapDataServiceCloud = [
     {
         id: 6,
         title: "Requests Panel - Shift PTO/Absence Requests/Open Shift Requests",
-        description: "An integrated panel to view, approve, or deny PTO and shift drop/pick requests directly within the scheduling context. PRD - https://docs.google.com/document/d/1tG-MSQ-BMht5ORjBGOy45Sk7iLj0MXBqYZVBlkIORdo/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-sco…",
+        description: "An integrated panel to view, approve, or deny PTO and shift drop/pick requests directly within the scheduling context. - https://docs.google.com/document/d/1tG-MSQ-BMht5ORjBGOy45Sk7iLj0MXBqYZVBlkIORdo/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -13681,7 +13681,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "An integrated panel to view, approve, or deny PTO and shift drop/pick requests directly within the scheduling context. PRD - https://docs.google.com/document/d/1tG-MSQ-BMht5ORjBGOy45Sk7iLj0MXBqYZVBlkIORdo/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ The Problem: Leave requests and shift swaps often sit in a separate inbox or queue, disconnected from the actual schedule, leading to approved leave conflicting with assigned shifts. The Solution: An integrated panel to view, approve, or deny PTO and Swap/Open Shift requests directly within the scheduling context. User Story: As a Planner , When employees submit PTO or Shift Swap requests, I want to review these requests in the context of the actual schedule to see the impact of approval, So that I can approve/reject requests confidently without creating coverage gaps. : 1. UI & Accessibility Scenario: Accessing the Requests Panel Given the user is actively viewing the scheduling interface, When they click the \"Requests\" icon or tab, Then a dedicated panel opens. And it displays a sortable/filterable list of pending PTO and Shift Swap requests relevant to the resources currently visible on the schedule. Scenario: Visual indicators on the schedule grid Given a resource has a pending PTO or Swap request in the system, Then a distinct visual indicator (e.g., a pending icon, a striped highlight) appears directly on their schedule row or on the specific shift in the grid. And…",
+            overview: "An integrated panel to view, approve, or deny PTO and shift drop/pick requests directly within the scheduling context. - https://docs.google.com/document/d/1tG-MSQ-BMht5ORjBGOy45Sk7iLj0MXBqYZVBlkIORdo/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ The Problem: Leave requests and shift swaps often sit in a separate inbox or queue, disconnected from the actual schedule, leading to approved leave conflicting with assigned shifts. The Solution: An integrated panel to view, approve, or deny PTO and Swap/Open Shift requests directly within the scheduling context. User Story: As a Planner, When employees submit PTO or Shift Swap requests, I want to review these requests in the context of the actual schedule to see the impact of approval, So that I can approve/reject requests confidently without creating coverage gaps. : 1. UI & Accessibility Scenario: Accessing the Requests Panel Given the user is actively viewing the scheduling interface, When they click the \"Requests\" icon or tab, Then a dedicated panel opens. And it displays a sortable/filterable list of pending PTO and Shift Swap requests relevant to the resources currently visible on the schedule. Scenario: Visual indicators on the schedule grid Given a resource has a pending PTO or Swap request in the system, Then a distinct visual indicator (e.g., a pending icon, a striped highlight) appears directly on their schedule row or on the specific shift in the grid. And hovering…",
             keyFeatures: [],
             impact: ""
         },
@@ -13692,12 +13692,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 47,
+        percentComplete: 63,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T19:04:21.000+0000",
+        gusLastModified: "2026-06-15T19:08:29.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13708,7 +13708,7 @@ const roadmapDataServiceCloud = [
     {
         id: 7,
         title: "Search and Filter on Grid",
-        description: "The EPIC focuses on adding search and filter capabilities on the coverage grid. PRD - https://docs.google.com/document/d/1TM5AZoHXifT2ioIeAOaeS17ufcnpDE-ZhGURoYWYfqc/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Advanced…",
+        description: "The EPIC focuses on adding search and filter capabilities on the coverage grid. - https://docs.google.com/document/d/1TM5AZoHXifT2ioIeAOaeS17ufcnpDE-ZhGURoYWYfqc/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Advanced Filters…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -13725,7 +13725,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "The EPIC focuses on adding search and filter capabilities on the coverage grid. PRD - https://docs.google.com/document/d/1TM5AZoHXifT2ioIeAOaeS17ufcnpDE-ZhGURoYWYfqc/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Advanced Filters and Search Capability The Problem: Schedulers often struggle to isolate relevant data amidst thousands of shift records. Finding specific skills, rule violations, or coverage gaps requires navigating multiple screens or scrolling endlessly. The Solution: A granular filtering allowing multi-select criteria such as Service Territory, Job Profile, Skills, Custom Objects, Request Types, Violations, Status, Shift Template combined with a \"Smart Object Search\" helps narrow down the results for effective review and updates. User Story: As a Planner When I am viewing a schedule board populated with hundreds of shifts and resources. I want to instantly isolate specific subsets of data (e.g., finding all Electricians in NY or finding a specific employee by name). So that I can focus on relevant information and make targeted updates without scrolling through irrelevant data. - P0. Ability to save and retrieve filters: Users should be able to save the filters they create and easily retrieve them. they should also be able to persist their filter as default filter everytime they load the shift ui. They should also be able to provide a name to their filters eg. team 1 etc. 1. UI & Filter Accessibility Scena…",
+            overview: "The EPIC focuses on adding search and filter capabilities on the coverage grid. - https://docs.google.com/document/d/1TM5AZoHXifT2ioIeAOaeS17ufcnpDE-ZhGURoYWYfqc/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Advanced Filters and Search Capability The Problem: Schedulers often struggle to isolate relevant data amidst thousands of shift records. Finding specific skills, rule violations, or coverage gaps requires navigating multiple screens or scrolling endlessly. The Solution: A granular filtering allowing multi-select criteria such as Service Territory, Job Profile, Skills, Custom Objects, Request Types, Violations, Status, Shift Template combined with a \"Smart Object Search\" helps narrow down the results for effective review and updates. User Story: As a Planner When I am viewing a schedule board populated with hundreds of shifts and resources. I want to instantly isolate specific subsets of data (e.g., finding all Electricians in NY or finding a specific employee by name). So that I can focus on relevant information and make targeted updates without scrolling through irrelevant data. - P0. Ability to save and retrieve filters: Users should be able to save the filters they create and easily retrieve them. they should also be able to persist their filter as default filter everytime they load the shift ui. They should also be able to provide a name to their filters eg. team 1 etc. 1. UI & Filter Accessibility Scenario: Acc…",
             keyFeatures: [],
             impact: ""
         },
@@ -13736,12 +13736,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 46,
+        percentComplete: 57,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:01:19.000+0000",
+        gusLastModified: "2026-06-15T23:40:14.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13780,12 +13780,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 68,
+        percentComplete: 70,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:49:49.000+0000",
+        gusLastModified: "2026-06-16T07:07:58.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13829,7 +13829,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:58:22.000+0000",
+        gusLastModified: "2026-06-15T12:25:00.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13840,7 +13840,7 @@ const roadmapDataServiceCloud = [
     {
         id: 10,
         title: "[262][SF/SPA] Setup and Activation for Record Companion Skills - Google CCAI",
-        description: "DESCRIPTION INCLUDING TARGET CUSTOMER AND BENEFIT OR GOAL (The \"What\") This epic establishes a pluggable partner framework for the Service Assistant's Record Companion, enabling the substitution of native Salesforce AI skills with qualified third-party partner capabilities. For…",
+        description: "INCLUDING TARGET CUSTOMER AND OR GOAL (The \"What\") This epic establishes a pluggable partner framework for the Service Assistant's Record Companion, enabling the substitution of native Salesforce AI skills with qualified third-party partner capabilities. For this initial POC (Rel…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -13857,7 +13857,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "DESCRIPTION INCLUDING TARGET CUSTOMER AND BENEFIT OR GOAL (The \"What\") This epic establishes a pluggable partner framework for the Service Assistant's Record Companion, enabling the substitution of native Salesforce AI skills with qualified third-party partner capabilities. For this initial POC (Release 262), we will pilot the framework by creating a connector for Google CCAI Agent Assist . This allows the Service Assistant to consume and display key features from Google's suite—specifically Conversation Summarization (Catchup & AutoSummary), Smart Reply, and Knowledge Assist—directly within the standard Service Assistant UI for both Messaging and Voice channels. Benefit/Business Case (The \"Why\") Unlock Strategic Accounts: Many enterprise customers have made C-suite investments in Google CCAI. This \"Bring Your Own AI\" (BYO-AI) model removes adoption blockers by allowing them to use Salesforce Console without \"ripping and replacing\" their existing tuned models. Validate Extensibility: This serves as the critical proof-of-concept for the Service Assistant Framework Extensibility (260) strategy, proving our architecture is open and flexible. Target Customer / Persona (The \"Who\") Salesforce Admin: Needs to configure the integration via a guided setup page using Google Project IDs and Named Credentials. CSR (Messaging & Voice): Needs seamless access to AI summaries and replies during active conversations without switching tools. / High-Level Requirements Framework Switch: A centr…",
+            overview: "INCLUDING TARGET CUSTOMER AND OR GOAL (The \"What\") This epic establishes a pluggable partner framework for the Service Assistant's Record Companion, enabling the substitution of native Salesforce AI skills with qualified third-party partner capabilities. For this initial POC (Release 262), we will pilot the framework by creating a connector for Google CCAI Agent Assist. This allows the Service Assistant to consume and display key features from Google's suite—specifically Conversation Summarization (Catchup & AutoSummary), Smart Reply, and Knowledge Assist—directly within the standard Service Assistant UI for both Messaging and Voice channels. /Business Case (The \"Why\") Unlock Strategic Accounts: Many enterprise customers have made C-suite investments in Google CCAI. This \"Bring Your Own AI\" (BYO-AI) model removes adoption blockers by allowing them to use Salesforce Console without \"ripping and replacing\" their existing tuned models. Validate Extensibility: This serves as the critical proof-of-concept for the Service Assistant Framework Extensibility (260) strategy, proving our architecture is open and flexible. Salesforce Admin: Needs to configure the integration via a guided setup page using Google Project IDs and Named Credentials. CSR (Messaging & Voice): Needs seamless access to AI summaries and replies during active conversations without switching tools. / High-Level Requirements Framework Switch: A central Record Actor must be able to swap Salesforce skills for Google s…",
             keyFeatures: [],
             impact: ""
         },
@@ -13873,7 +13873,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:16:21.000+0000",
+        gusLastModified: "2026-06-15T13:03:23.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13884,7 +13884,7 @@ const roadmapDataServiceCloud = [
     {
         id: 11,
         title: "[262][SF/SPA] Setup and Activation for Record Companion Skills - Customer 360",
-        description: "Epic Name: [262] [SRA] Proactive Customer 360 Insights Card DESCRIPTION INCLUDING TARGET CUSTOMER AND BENEFIT OR GOAL (THE \"WHO, WHAT AND WHY\") (The \"What\") This epic delivers the Customer 360 Capability Card , a core \"Record Companion Skill\" for the Service Assistant. It is a m…",
+        description: "Epic Name: [262] [SRA] Proactive Customer 360 Insights Card INCLUDING TARGET CUSTOMER AND OR GOAL (THE \"WHO, WHAT AND WHY\") (The \"What\") This epic delivers the Customer 360 Capability Card, a core \"Record Companion Skill\" for the Service Assistant. It is a modular LWC container d…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -13901,7 +13901,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Epic Name: [262] [SRA] Proactive Customer 360 Insights Card DESCRIPTION INCLUDING TARGET CUSTOMER AND BENEFIT OR GOAL (THE \"WHO, WHAT AND WHY\") (The \"What\") This epic delivers the Customer 360 Capability Card , a core \"Record Companion Skill\" for the Service Assistant. It is a modular LWC container designed to dynamically surface four critical context areas directly in the CSR's flow of work: Account Summary: Customer identity and business status. Engagement Summary: Issue intent and history. Sentiment: Real-time emotional state. SLA Insights: Urgency and time remaining. Benefit/Business Case (The \"Why\") CSR Efficiency (AHT Reduction): Solves the \"1-to-many\" data fragmentation challenge by removing the need for agents to manually switch tabs to find basic customer context. Intelligent Handoffs: Provides immediate, pre-grounded context for human agents taking over from AI interactions. Extensibility: Establishes the standard model for how future data-surfacing skills are built and deployed in the Service Assistant framework. Target Customer / Persona (The \"Who\") CSR (Service Agent): Needs a \"single source of truth\" for immediate action without navigating away from the engagement. Salesforce Admin: Needs to configure which data cards are visible based on agent profiles and permissions. / High-Level Requirements Unified View: Agents see a single card containing all four data points upon record load. Resilience: If one data source fails (e.g., Sentiment API), the other cards mus…",
+            overview: "Epic Name: [262] [SRA] Proactive Customer 360 Insights Card INCLUDING TARGET CUSTOMER AND OR GOAL (THE \"WHO, WHAT AND WHY\") (The \"What\") This epic delivers the Customer 360 Capability Card, a core \"Record Companion Skill\" for the Service Assistant. It is a modular LWC container designed to dynamically surface four critical context areas directly in the CSR's flow of work: Account Summary: Customer identity and business status. Engagement Summary: Issue intent and history. Sentiment: Real-time emotional state. SLA Insights: Urgency and time remaining. /Business Case (The \"Why\") CSR Efficiency (AHT Reduction): Solves the \"1-to-many\" data fragmentation challenge by removing the need for agents to manually switch tabs to find basic customer context. Intelligent Handoffs: Provides immediate, pre-grounded context for human agents taking over from AI interactions. Extensibility: Establishes the standard model for how future data-surfacing skills are built and deployed in the Service Assistant framework. CSR (Service Agent): Needs a \"single source of truth\" for immediate action without navigating away from the engagement. Salesforce Admin: Needs to configure which data cards are visible based on agent profiles and permissions. / High-Level Requirements Unified View: Agents see a single card containing all four data points upon record load. Resilience: If one data source fails (e.g., Sentiment API), the other cards must still load successfully (Non-blocking UI). Configurability: Admin…",
             keyFeatures: [],
             impact: ""
         },
@@ -13917,7 +13917,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:13:07.000+0000",
+        gusLastModified: "2026-06-15T12:10:20.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -13928,7 +13928,7 @@ const roadmapDataServiceCloud = [
     {
         id: 12,
         title: "[262][SF/SPA] Service Assistant Adaptive Experience GA Refinement Work",
-        description: "This epic includes any refinement work needed on Service Assistant Adaptive Experience that will be done in 262 What: Capture and complete all refinement, bug fixes, and low-lift improvements fromhat are still outstanding or deprioritized.…",
+        description: "This epic includes any refinement work needed on Service Assistant Adaptive Experience that will be done in 262 What: Capture and complete all refinement, bug fixes, and low-lift improvements from Service Assistant Adaptive Experience that are still outstanding or deprioritized.…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -13945,7 +13945,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "This epic includes any refinement work needed on Service Assistant Adaptive Experience that will be done in 262 What: Capture and complete all refinement, bug fixes, and low-lift improvements fromhat are still outstanding or deprioritized. This epic ensures polish and completion of previously scoped features, tech debt cleanup, and usability enhancements as we move into 262 Why: Shipping a high-quality experience requires following through on refinement tasks that didn’t make the cut due to prioritization or time constraints. Addressing these now helps reduce user friction, increase adoption, and avoid technical debt stacking up in later cycles. : Fix bugs and any high-priority polish items coming out from Adaptive Experience High priority UI/UX inconsistencies are resolved Any tech debt or temporary workarounds from Adaptive Experience are cleaned up Out of Scope: Net-new feature development Major architectural changes Known Risks / Dependencies: Risk of over-scoping—focus remains on small, scoped, high-impact fixes Potential dependencies on other teams",
+            overview: "This epic includes any refinement work needed on Service Assistant Adaptive Experience that will be done in 262 What: Capture and complete all refinement, bug fixes, and low-lift improvements from Service Assistant Adaptive Experience that are still outstanding or deprioritized. This epic ensures polish and completion of previously scoped features, tech debt cleanup, and usability enhancements as we move into 262 Why: Shipping a high-quality experience requires following through on refinement tasks that didn’t make the cut due to prioritization or time constraints. Addressing these now helps reduce user friction, increase adoption, and avoid technical debt stacking up in later cycles. : Fix bugs and any high-priority polish items coming out from Adaptive Experience High priority UI/ inconsistencies are resolved Any tech debt or temporary workarounds from Adaptive Experience are cleaned up Out of Scope: Net-new feature development Major architectural changes Known Risks / Dependencies: Risk of over-scoping—focus remains on small, scoped, high-impact fixes Potential dependencies on other teams",
             keyFeatures: [],
             impact: ""
         },
@@ -13956,12 +13956,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 86,
+        percentComplete: 88,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T23:33:16.000+0000",
+        gusLastModified: "2026-06-15T19:08:54.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14005,7 +14005,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:49:49.000+0000",
+        gusLastModified: "2026-06-15T15:38:07.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14044,12 +14044,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 60,
+        percentComplete: 80,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:52:02.000+0000",
+        gusLastModified: "2026-06-14T10:07:20.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14088,12 +14088,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 69,
+        percentComplete: 73,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T22:23:20.000+0000",
+        gusLastModified: "2026-06-15T14:21:10.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14104,7 +14104,7 @@ const roadmapDataServiceCloud = [
     {
         id: 16,
         title: "Schedule Manager 264 Stretch",
-        description: "(no description in GUS) — Schedule Manager 264 Stretch",
+        description: "Schedule Manager 264 Stretch",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -14121,7 +14121,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "(no description in GUS) — Schedule Manager 264 Stretch",
+            overview: "Schedule Manager 264 Stretch",
             keyFeatures: [],
             impact: ""
         },
@@ -14137,7 +14137,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T19:43:37.000+0000",
+        gusLastModified: "2026-06-15T21:00:09.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14176,12 +14176,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Medium",
-        percentComplete: 80,
+        percentComplete: 78,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T21:45:41.000+0000",
+        gusLastModified: "2026-06-15T19:12:30.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14269,7 +14269,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:45:25.000+0000",
+        gusLastModified: "2026-06-16T03:25:54.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14352,12 +14352,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 95,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-08T15:24:45.000+0000",
+        gusLastModified: "2026-06-15T19:14:27.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14396,12 +14396,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 94,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-09T10:16:40.000+0000",
+        gusLastModified: "2026-06-12T19:10:17.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14445,7 +14445,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:40:20.000+0000",
+        gusLastModified: "2026-06-16T03:31:29.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14484,12 +14484,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 17,
+        percentComplete: 67,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:35:09.000+0000",
+        gusLastModified: "2026-06-16T03:28:16.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14500,7 +14500,7 @@ const roadmapDataServiceCloud = [
     {
         id: 25,
         title: "Agentforce for Shift Planners - Optimize Shift Mgt with Agentforce Prompts",
-        description: "PRD Link . - https://docs.google.com/document/d/1yDJjfB30_2zRKn08-ug8q_E_idyNaBRALjlHMkYoYtI/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Problem - Schedulers and planners suffer from cognitive overload when trying to b…",
+        description: "Link. - https://docs.google.com/document/d/1yDJjfB30_2zRKn08-ug8q_E_idyNaBRALjlHMkYoYtI/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Problem - Schedulers and planners suffer from cognitive overload when trying to balance co…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -14517,7 +14517,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "PRD Link . - https://docs.google.com/document/d/1yDJjfB30_2zRKn08-ug8q_E_idyNaBRALjlHMkYoYtI/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Problem - Schedulers and planners suffer from cognitive overload when trying to balance complex, competing variables—employee availability, specific skill requirements, strict labor laws, and tight labor budgets. When inevitable disruptions happen (like last-minute sick calls or sudden spikes in demand), planners are forced into a stressful, reactive scramble. Manually cross-referencing multiple systems to find an eligible, non-overtime employee to fill a gap is highly time-consuming and often results in costly overtime, compliance violations, or understaffed shifts. Solution - Introduce Agentforce Schedule Assist, an intelligent, conversational AI partner embedded directly within the scheduling grid. Instead of manually filtering through lists, the planner can use natural language to resolve complex constraints. A planner can simply prompt, \"Find an available employee with a forklift certification to cover Tuesday's 8 AM shift without triggering overtime,\" or ask the AI to proactively draft a fully optimized weekly schedule based on forecasted demand and historical foot traffic. Agentforce Assist analyzes the data instantly and presents actionable, click-to-apply recommendations. User Story - As a schedule planner, I want to use a conversational AI assistant to request informatio…",
+            overview: "Link. - https://docs.google.com/document/d/1yDJjfB30_2zRKn08-ug8q_E_idyNaBRALjlHMkYoYtI/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Problem - Schedulers and planners suffer from cognitive overload when trying to balance complex, competing variables—employee availability, specific skill requirements, strict labor laws, and tight labor budgets. When inevitable disruptions happen (like last-minute sick calls or sudden spikes in demand), planners are forced into a stressful, reactive scramble. Manually cross-referencing multiple systems to find an eligible, non-overtime employee to fill a gap is highly time-consuming and often results in costly overtime, compliance violations, or understaffed shifts. Solution - Introduce Agentforce Schedule Assist, an intelligent, conversational AI partner embedded directly within the scheduling grid. Instead of manually filtering through lists, the planner can use natural language to resolve complex constraints. A planner can simply prompt, \"Find an available employee with a forklift certification to cover Tuesday's 8 AM shift without triggering overtime,\" or ask the AI to proactively draft a fully optimized weekly schedule based on forecasted demand and historical foot traffic. Agentforce Assist analyzes the data instantly and presents actionable, click-to-apply recommendations. User Story - As a schedule planner, I want to use a conversational AI assistant to request information and exe…",
             keyFeatures: [],
             impact: ""
         },
@@ -14533,7 +14533,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:11:20.000+0000",
+        gusLastModified: "2026-06-15T15:17:21.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14544,7 +14544,7 @@ const roadmapDataServiceCloud = [
     {
         id: 26,
         title: "Create shifts manually using capacity plan and shift Patterns",
-        description: "PRD - https://docs.google.com/document/d/1-w96mQ1Hazcp__KgTlRKIgQUPENWAyXfnRWpgyXZqyw/edit?tab=t.0#heading=h.wiklgl6fia8k PRD - UX Link - https://shiftmanager-262-…",
+        description: "https://docs.google.com/document/d/1-w96mQ1Hazcp__KgTlRKIgQUPENWAyXfnRWpgyXZqyw/edit?tab=t.0#heading=h.wiklgl6fia8k - https://docs.google.com/document/d/1-w96mQ1Hazcp__KgTlRKIgQUPENWAyXfnRWpgyXZqyw/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -14561,7 +14561,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "PRD - https://docs.google.com/document/d/1-w96mQ1Hazcp__KgTlRKIgQUPENWAyXfnRWpgyXZqyw/edit?tab=t.0#heading=h.wiklgl6fia8k PRD - UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Problem - Scheduling is often treated as a repetitive weekly administrative burden. Planners frequently scramble at the last minute to build the next week's roster, leaving agents with little notice and reducing the team's ability to react to long-term trends. Today we do not have an option to create a mass schedule at once. The user needs to create shifts one by one or using patterns. Solution - This solution enables planners to automate and streamline workforce management by generating schedules at scale. Instead of manual, day-by-day roster creation, users can instantly build out schedules across various service territories and job profiles using capacity plan requirements or shift patterns. User Story - As a Planner , I want to configure and generate schedules using a unified interface where I can select capacity plan, define date ranges, set duration defaults (like 4 weeks) with a specific initial status (e.g., Tentative), So that I can efficiently create accurate, coverage-aligned schedules for my workforce. 1. UI & Field Validation Scenario : Viewing the Schedule Creation form Given the user navigates to the Schedule Creation interface, Then they must see the f…",
+            overview: "https://docs.google.com/document/d/1-w96mQ1Hazcp__KgTlRKIgQUPENWAyXfnRWpgyXZqyw/edit?tab=t.0#heading=h.wiklgl6fia8k - https://docs.google.com/document/d/1-w96mQ1Hazcp__KgTlRKIgQUPENWAyXfnRWpgyXZqyw/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Problem - Scheduling is often treated as a repetitive weekly administrative burden. Planners frequently scramble at the last minute to build the next week's roster, leaving agents with little notice and reducing the team's ability to react to long-term trends. Today we do not have an option to create a mass schedule at once. The user needs to create shifts one by one or using patterns. Solution - This solution enables planners to automate and streamline workforce management by generating schedules at scale. Instead of manual, day-by-day roster creation, users can instantly build out schedules across various service territories and job profiles using capacity plan requirements or shift patterns. User Story - As a Planner, I want to configure and generate schedules using a unified interface where I can select capacity plan, define date ranges, set duration defaults (like 4 weeks) with a specific initial status (e.g., Tentative), So that I can efficiently create accurate, coverage-aligned schedules for my workforce. 1. UI & Field Validation Scenario: Viewing the Schedule Creation form Given the user navigates to the Schedule Creation interface, Then they must see the following fields…",
             keyFeatures: [],
             impact: ""
         },
@@ -14572,12 +14572,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 60,
+        percentComplete: 67,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T20:45:24.000+0000",
+        gusLastModified: "2026-06-15T19:16:31.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14605,7 +14605,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "A granular interface allowing schedulers to insert, edit, and drag specific activities within a parent shift. This includes a right-click or hover menu to quickly add standard activities (Lunch, Break, Meeting) or custom ad-hoc tasks without altering the master shift boundaries. PRD - https://docs.google.com/document/d/1PZLq5efr34HK9W7rnFtCbVsoxLYgYgT1XLWMfdKktFU/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Shift Activities - Create and Manage The Problem: Treating a shift as a single contiguous block (e.g., \"9 AM - 5 PM\") creates a \"black box\" regarding actual availability. Without visibility into breaks, lunches, admin time, or travel, schedulers often overestimate capacity, assigning work to agents during their non-productive times. The Solution: A granular interface allowing schedulers to insert, edit, and drag specific activities within a parent shift. This includes a right-click or hover menu to quickly add standard activities (Lunch, Break, Meeting) or custom ad-hoc tasks without altering the master shift boundaries. User Story - As a Planner , When a shift is assigned, but I need to specify what the agent is doing during that time (e.g., Lunch, Training, Work), I want to insert and manage granular activities within the shift timeline, So that I have an accurate view of \"Net Productive Hours\" and agents have clear schedules. - 1. Activity Creation & Deletion Scenario: Adding a new activity via the grid Given…",
+            overview: "A granular interface allowing schedulers to insert, edit, and drag specific activities within a parent shift. This includes a right-click or hover menu to quickly add standard activities (Lunch, Break, Meeting) or custom ad-hoc tasks without altering the master shift boundaries. - https://docs.google.com/document/d/1PZLq5efr34HK9W7rnFtCbVsoxLYgYgT1XLWMfdKktFU/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Shift Activities - Create and Manage The Problem: Treating a shift as a single contiguous block (e.g., \"9 AM - 5 PM\") creates a \"black box\" regarding actual availability. Without visibility into breaks, lunches, admin time, or travel, schedulers often overestimate capacity, assigning work to agents during their non-productive times. The Solution: A granular interface allowing schedulers to insert, edit, and drag specific activities within a parent shift. This includes a right-click or hover menu to quickly add standard activities (Lunch, Break, Meeting) or custom ad-hoc tasks without altering the master shift boundaries. User Story - As a Planner, When a shift is assigned, but I need to specify what the agent is doing during that time (e.g., Lunch, Training, Work), I want to insert and manage granular activities within the shift timeline, So that I have an accurate view of \"Net Productive Hours\" and agents have clear schedules. - 1. Activity Creation & Deletion Scenario: Adding a new activity via the grid Given the user…",
             keyFeatures: [],
             impact: ""
         },
@@ -14621,7 +14621,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T19:09:45.000+0000",
+        gusLastModified: "2026-06-15T19:16:35.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14632,7 +14632,7 @@ const roadmapDataServiceCloud = [
     {
         id: 28,
         title: "Drag and Drop Actions on the Grid",
-        description: "Use drag and drop actions on the grid to move shifts, templates and shift activities. PRD - https://docs.google.com/document/d/1nLbkSOuf8Cx6Jk9zR3cD8iBkFv_zQLexGNqVCiB67YI/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Dr…",
+        description: "Use drag and drop actions on the grid to move shifts, templates and shift activities. - https://docs.google.com/document/d/1nLbkSOuf8Cx6Jk9zR3cD8iBkFv_zQLexGNqVCiB67YI/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Drag and D…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -14649,7 +14649,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Use drag and drop actions on the grid to move shifts, templates and shift activities. PRD - https://docs.google.com/document/d/1nLbkSOuf8Cx6Jk9zR3cD8iBkFv_zQLexGNqVCiB67YI/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Drag and Drop Shift Templates Capability The Problem: Managers and shift planners often spend hours manually typing out shift details—such as start times, end times, roles, and break durations—for every single employee on a weekly or monthly schedule. This repetitive, manual data entry is incredibly tedious and highly prone to human error. A simple typo can result in understaffing, overlapping shifts, or an employee showing up at the wrong time, which ultimately impacts business operations and employee satisfaction. The Solution: Introduce a sidebar or menu of pre-configured shift templates (e.g., \"Morning Cashier: 8 AM - 4 PM\" or \"Night Shift: 10 PM - 6 AM\") alongside the main calendar grid. Users can simply click on a specific template, drag it across the screen, and drop it directly into the desired cell (representing an employee and a specific date) on the scheduling grid to instantly assign that exact shift. User Story - As a schedule manager, I want to drag and drop pre-configured shift templates directly onto specific employee rows and date columns within the scheduling grid, So that I can build accurate schedules faster, eliminate manual typing errors, and visually confirm coverage in real-time.…",
+            overview: "Use drag and drop actions on the grid to move shifts, templates and shift activities. - https://docs.google.com/document/d/1nLbkSOuf8Cx6Jk9zR3cD8iBkFv_zQLexGNqVCiB67YI/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Drag and Drop Shift Templates Capability The Problem: Managers and shift planners often spend hours manually typing out shift details—such as start times, end times, roles, and break durations—for every single employee on a weekly or monthly schedule. This repetitive, manual data entry is incredibly tedious and highly prone to human error. A simple typo can result in understaffing, overlapping shifts, or an employee showing up at the wrong time, which ultimately impacts business operations and employee satisfaction. The Solution: Introduce a sidebar or menu of pre-configured shift templates (e.g., \"Morning Cashier: 8 AM - 4 PM\" or \"Night Shift: 10 PM - 6 AM\") alongside the main calendar grid. Users can simply click on a specific template, drag it across the screen, and drop it directly into the desired cell (representing an employee and a specific date) on the scheduling grid to instantly assign that exact shift. User Story - As a schedule manager, I want to drag and drop pre-configured shift templates directly onto specific employee rows and date columns within the scheduling grid, So that I can build accurate schedules faster, eliminate manual typing errors, and visually confirm coverage in real-time. : Templ…",
             keyFeatures: [],
             impact: ""
         },
@@ -14660,12 +14660,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 38,
+        percentComplete: 33,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T19:09:45.000+0000",
+        gusLastModified: "2026-06-15T19:16:35.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14709,7 +14709,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T21:48:17.000+0000",
+        gusLastModified: "2026-06-15T14:25:40.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14720,7 +14720,7 @@ const roadmapDataServiceCloud = [
     {
         id: 30,
         title: "264 SFS [OI] Scenario Planning Data Model for SFS and MWM",
-        description: "UX Mock: https://mwm-e2e-0291d2f52968.herokuapp.com/capacity-plan/ Business Case Capacity planning is the critical bridge between demand forecasting and execution. Today, planners rely on fragmented tools or manual spreadsheets to determine staffing needs, resulting in inefficie…",
+        description: "Mock: https://mwm-e2e-0291d2f52968.herokuapp.com/capacity-plan/ Business Case Capacity planning is the critical bridge between demand forecasting and execution. Today, planners rely on fragmented tools or manual spreadsheets to determine staffing needs, resulting in inefficiencie…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -14737,7 +14737,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "UX Mock: https://mwm-e2e-0291d2f52968.herokuapp.com/capacity-plan/ Business Case Capacity planning is the critical bridge between demand forecasting and execution. Today, planners rely on fragmented tools or manual spreadsheets to determine staffing needs, resulting in inefficiencies, over/under staffing, and increased labor costs. This feature provides: • A single pane of glass for demand → headcount translation • Automated schedule creation by creating shifts from headcount • Scenario-driven planning to optimize workforce utilization Feature Scope • Scenario planning with editable planning parameters (utilization %, average handle time/duration, total demand forecast) • Multiple scenarios with scenario comparison (baseline vs adjusted) • Visualization of demand vs capacity and over/under staffing : P0 - Must Have 1. Navigation: Users can visualize capacity plans from list view, with record home page replaced by planning studio. When capacity plan is created from forecast page, user is navigated to planning studio. 2. Visualization Graph: Capacity graph displays bar chart of total active service resources (STM) for territories in capacity plan. Line graph shows required headcount from forecast-to-headcount conversion. Support date range selection and intervals (month/week/day/hour). 3. Filters: Support filtering by skills (multi-select with AND logic) and job profiles to filter available resources and required headcount. 4. Schedule Creation: Generate shifts button creates…",
+            overview: "Mock: https://mwm-e2e-0291d2f52968.herokuapp.com/capacity-plan/ Business Case Capacity planning is the critical bridge between demand forecasting and execution. Today, planners rely on fragmented tools or manual spreadsheets to determine staffing needs, resulting in inefficiencies, over/under staffing, and increased labor costs. This feature provides: • A single pane of glass for demand → headcount translation • Automated schedule creation by creating shifts from headcount • Scenario-driven planning to optimize workforce utilization Feature Scope • Scenario planning with editable planning parameters (utilization %, average handle time/duration, total demand forecast) • Multiple scenarios with scenario comparison (baseline vs adjusted) • Visualization of demand vs capacity and over/under staffing : P0 - Must Have 1. Navigation: Users can visualize capacity plans from list view, with record home page replaced by planning studio. When capacity plan is created from forecast page, user is navigated to planning studio. 2. Visualization Graph: Capacity graph displays bar chart of total active service resources (STM) for territories in capacity plan. Line graph shows required headcount from forecast-to-headcount conversion. Support date range selection and intervals (month/week/day/hour). 3. Filters: Support filtering by skills (multi-select with AND logic) and job profiles to filter available resources and required headcount. 4. Schedule Creation: Generate shifts button creates shif…",
             keyFeatures: [],
             impact: "05/18 - On track"
         },
@@ -14748,12 +14748,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 43,
+        percentComplete: 47,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T19:09:53.000+0000",
+        gusLastModified: "2026-06-16T01:52:52.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14792,12 +14792,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 50,
+        percentComplete: 53,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T22:32:13.000+0000",
+        gusLastModified: "2026-06-16T05:38:04.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14808,7 +14808,7 @@ const roadmapDataServiceCloud = [
     {
         id: 32,
         title: "[264] ITAM - Inventory Ledger Transactions",
-        description: "Inventory Management Spillovers PRD Epic 1: Inventory Ledger Transactions The previous serialized inventory model automatically created Product Item Transactions (PIT) and Product Item Additional Transactions (PIAT) to track inventory movement. PIT captured inventory movement in…",
+        description: "Inventory Management Spillovers Epic 1: Inventory Ledger Transactions The previous serialized inventory model automatically created Product Item Transactions (PIT) and Product Item Additional Transactions (PIAT) to track inventory movement. PIT captured inventory movement in and…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -14825,7 +14825,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Inventory Management Spillovers PRD Epic 1: Inventory Ledger Transactions The previous serialized inventory model automatically created Product Item Transactions (PIT) and Product Item Additional Transactions (PIAT) to track inventory movement. PIT captured inventory movement in and out of a stockroom, while PIAT captured movement between inventory states (e.g., reducing available quantity and increasing allocated quantity). We plan to extend the tracking in the new asset based inventory model.",
+            overview: "Inventory Management Spillovers Epic 1: Inventory Ledger Transactions The previous serialized inventory model automatically created Product Item Transactions (PIT) and Product Item Additional Transactions (PIAT) to track inventory movement. PIT captured inventory movement in and out of a stockroom, while PIAT captured movement between inventory states (e.g., reducing available quantity and increasing allocated quantity). We plan to extend the tracking in the new asset based inventory model.",
             keyFeatures: [],
             impact: ""
         },
@@ -14836,12 +14836,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 71,
+        percentComplete: 84,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T22:31:12.000+0000",
+        gusLastModified: "2026-06-15T19:17:09.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14852,7 +14852,7 @@ const roadmapDataServiceCloud = [
     {
         id: 33,
         title: "[264] ITAM - Employee Offboarding",
-        description: "Employee Onboarding & Offboarding LINK PRD Status: Product Review Design Status: WIP Figma: < > Value Statement & Business Case (the “What” & the “Why”) Onboarding An Asset Manager should be able to easily and quickly initiate a New Hire Bundle for one or more employees at a tim…",
+        description: "Employee Onboarding & Offboarding LINK Status: Product Review Design Status: WIP Figma: < > Value Statement & Business Case (the “What” & the “Why”) Onboarding An Asset Manager should be able to easily and quickly initiate a New Hire Bundle for one or more employees at a time AM…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -14869,7 +14869,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Employee Onboarding & Offboarding LINK PRD Status: Product Review Design Status: WIP Figma: < > Value Statement & Business Case (the “What” & the “Why”) Onboarding An Asset Manager should be able to easily and quickly initiate a New Hire Bundle for one or more employees at a time AM should be able to onboard employee in such a way that they do not need to individually create New Hardware Request for each employee Offboarding An Asset Manager should be able to easily and quickly initiate a reclaim of all Assets related to one or more employees. Asset Managers should be able to do this via the CRM or via agentforce Initial Feature Scope Included: Onboarding Bulk Action on Employee page to “Initiate Hardware Fulfillment” for multiple employees Action triggers a service process where Asset Manager can can multi select Products within a catalog and create SR for each individual employee Employee receives a notification with catalog item where he/she can fill in shipping information which then updates the created Service Request Admin can configure what information should be prefilled by AM vs what should be configurable by employee. Offboarding Bulk Action on Employee page to “Reclaim All Assets” for multiple employees Action on Employee Record to “Reclaim All Assets” Action creates SR with attributes while triggering notification to employee to populate other details Excluded: Stretch - Agentic action for Asset Manager to initiate Request and Reclaim all Asset workflow for one o…",
+            overview: "Employee Onboarding & Offboarding LINK Status: Product Review Design Status: WIP Figma: < > Value Statement & Business Case (the “What” & the “Why”) Onboarding An Asset Manager should be able to easily and quickly initiate a New Hire Bundle for one or more employees at a time AM should be able to onboard employee in such a way that they do not need to individually create New Hardware Request for each employee Offboarding An Asset Manager should be able to easily and quickly initiate a reclaim of all Assets related to one or more employees. Asset Managers should be able to do this via the CRM or via agentforce Initial Feature Scope Included: Onboarding Bulk Action on Employee page to “Initiate Hardware Fulfillment” for multiple employees Action triggers a service process where Asset Manager can can multi select Products within a catalog and create SR for each individual employee Employee receives a notification with catalog item where he/she can fill in shipping information which then updates the created Service Request Admin can configure what information should be prefilled by AM vs what should be configurable by employee. Offboarding Bulk Action on Employee page to “Reclaim All Assets” for multiple employees Action on Employee Record to “Reclaim All Assets” Action creates SR with attributes while triggering notification to employee to populate other details Excluded: Stretch - Agentic action for Asset Manager to initiate Request and Reclaim all Asset workflow for one or mor…",
             keyFeatures: [],
             impact: ""
         },
@@ -14880,12 +14880,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 60,
+        percentComplete: 69,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T19:10:12.000+0000",
+        gusLastModified: "2026-06-15T19:17:09.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -14896,7 +14896,7 @@ const roadmapDataServiceCloud = [
     {
         id: 34,
         title: "[264] ITAM - Setup UI - Dynamic Enum Mappers for Asset Status",
-        description: "Asset Status BPO Link PRD Status: Product Review UX: Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcod…",
+        description: "Asset Status BPO Link Status: Product Review : Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded to s…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -14913,7 +14913,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Asset Status BPO Link PRD Status: Product Review UX: Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded to specific Asset Status, and hence we are introducing a Mapping Layer. This allows Admins to explicitly define how custom statuses interact with core system logic, ensuring scalability without custom code. Enable customers to explicitly map each Asset Status to the following features and functions Status Category (within Asset) Inventory Quantity (on Product Item) Lifecycle Transition (on Asset Activity) Asset Search Filter (on Add Asset model within any Object) Initial Feature Scope Included: Centralized Setup UI: A single BPO (Business Process Organizer) within ITAM Setup. Multi-Function Mapping: Links Status to Category, Quantity Logic, Transactions, and Search. OOTB Defaults: Standard Salesforce statuses come pre-mapped. Guardrails: Reconciliation on adding or updating mappings Protection against deleting active asset status Excluded: Audit logging Job Performers & Key Jobs CX Review of Labels and explanation text in each tab Check potential backport feasibility What should be part of an Asset Based License? Should this even be within the ITAM setup or should it be different? UX Missing Error State Reconciliation Trigger for Inventory Quantity and Status Category Mapping [TBD] Default Mappings…",
+            overview: "Asset Status BPO Link Status: Product Review : Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded to specific Asset Status, and hence we are introducing a Mapping Layer. This allows Admins to explicitly define how custom statuses interact with core system logic, ensuring scalability without custom code. Enable customers to explicitly map each Asset Status to the following features and functions Status Category (within Asset) Inventory Quantity (on Product Item) Lifecycle Transition (on Asset Activity) Asset Search Filter (on Add Asset model within any Object) Initial Feature Scope Included: Centralized Setup UI: A single BPO (Business Process Organizer) within ITAM Setup. Multi-Function Mapping: Links Status to Category, Quantity Logic, Transactions, and Search. OOTB Defaults: Standard Salesforce statuses come pre-mapped. Guardrails: Reconciliation on adding or updating mappings Protection against deleting active asset status Excluded: Audit logging Job Performers & Key Jobs CX Review of Labels and explanation text in each tab Check potential backport feasibility What should be part of an Asset Based License? Should this even be within the ITAM setup or should it be different? Missing Error State Reconciliation Trigger for Inventory Quantity and Status Category Mapping [TBD] Default Mappings Default S…",
             keyFeatures: [],
             impact: ""
         },
@@ -14940,7 +14940,7 @@ const roadmapDataServiceCloud = [
     {
         id: 35,
         title: "[264] ITAM - Employee Asset Management Agent",
-        description: "Agentforce: Employee Request Self-Service Link PRD Status: Product Review UX: Ludmyla Almeida Greer Status: Ready for Eng review Value Statement (the “What”) Enable Agentforce to monitor, interpret, and act on employee comments on in-flight service requests—autonomously answerin…",
+        description: "Agentforce: Employee Request Self-Service Link Status: Product Review : Ludmyla Almeida Greer Status: Ready for Eng review Value Statement (the “What”) Enable Agentforce to monitor, interpret, and act on employee comments on in-flight service requests—autonomously answering quest…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -14957,7 +14957,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Agentforce: Employee Request Self-Service Link PRD Status: Product Review UX: Ludmyla Almeida Greer Status: Ready for Eng review Value Statement (the “What”) Enable Agentforce to monitor, interpret, and act on employee comments on in-flight service requests—autonomously answering questions or completing allowed changes without human intervention, while escalating only when necessary. Problem Being Solved Employees frequently comment on service requests to: Ask for status updates Request minor changes Today, IT fulfillers must manually monitor, interpret, and respond which leads to High operational overhead Slow response times Fulfillers acting as human routers for trivial work The Win Agentforce handles routine request chatter end-to-end IT fulfillers engage only for true exceptions Every action and conversation is logged for audit and traceability Business Case (the “Why”) With agentforce, customer except fully automated workflows which improve agent productivity Employee except faster/instant response and resolution times Initial Feature Scope Interpretation and Employee Agent Response/Comment Monitoring Agentforce routes request to ITAM employee update agent using multi agent framework Agentforce monitors employee comments on Service Request Identifies requests related to ITAM based on Service Request type Identifies intent between question vs change request Autonomous Responses Agentforce answers common request-related questions directly in the request thread: What’s the…",
+            overview: "Agentforce: Employee Request Self-Service Link Status: Product Review : Ludmyla Almeida Greer Status: Ready for Eng review Value Statement (the “What”) Enable Agentforce to monitor, interpret, and act on employee comments on in-flight service requests—autonomously answering questions or completing allowed changes without human intervention, while escalating only when necessary. Problem Being Solved Employees frequently comment on service requests to: Ask for status updates Request minor changes Today, IT fulfillers must manually monitor, interpret, and respond which leads to High operational overhead Slow response times Fulfillers acting as human routers for trivial work The Win Agentforce handles routine request chatter end-to-end IT fulfillers engage only for true exceptions Every action and conversation is logged for audit and traceability Business Case (the “Why”) With agentforce, customer except fully automated workflows which improve agent productivity Employee except faster/instant response and resolution times Initial Feature Scope Interpretation and Employee Agent Response/Comment Monitoring Agentforce routes request to ITAM employee update agent using multi agent framework Agentforce monitors employee comments on Service Request Identifies requests related to ITAM based on Service Request type Identifies intent between question vs change request Autonomous Responses Agentforce answers common request-related questions directly in the request thread: What’s the status…",
             keyFeatures: [],
             impact: ""
         },
@@ -14984,7 +14984,7 @@ const roadmapDataServiceCloud = [
     {
         id: 36,
         title: "Framework Enhancements - Dynamic Enum Mappers for Asset Status",
-        description: "Asset Status BPO Link PRD Status: Product Review UX: Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcod…",
+        description: "Asset Status BPO Link Status: Product Review : Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded to s…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -15001,7 +15001,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Asset Status BPO Link PRD Status: Product Review UX: Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded to specific Asset Status, and hence we are introducing a Mapping Layer. This allows Admins to explicitly define how custom statuses interact with core system logic, ensuring scalability without custom code. Enable customers to explicitly map each Asset Status to the following features and functions Status Category (within Asset) Inventory Quantity (on Product Item) Lifecycle Transition (on Asset Activity) Asset Search Filter (on Add Asset model within any Object) Initial Feature Scope Included: Centralized Setup UI: A single BPO (Business Process Organizer) within ITAM Setup. Multi-Function Mapping: Links Status to Category, Quantity Logic, Transactions, and Search. OOTB Defaults: Standard Salesforce statuses come pre-mapped. Guardrails: Reconciliation on adding or updating mappings Protection against deleting active asset status Excluded: Audit logging Job Performers & Key Jobs CX Review of Labels and explanation text in each tab Check potential backport feasibility What should be part of an Asset Based License? Should this even be within the ITAM setup or should it be different? UX Missing Error State Reconciliation Trigger for Inventory Quantity and Status Category Mapping [TBD] Default Mappings…",
+            overview: "Asset Status BPO Link Status: Product Review : Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded to specific Asset Status, and hence we are introducing a Mapping Layer. This allows Admins to explicitly define how custom statuses interact with core system logic, ensuring scalability without custom code. Enable customers to explicitly map each Asset Status to the following features and functions Status Category (within Asset) Inventory Quantity (on Product Item) Lifecycle Transition (on Asset Activity) Asset Search Filter (on Add Asset model within any Object) Initial Feature Scope Included: Centralized Setup UI: A single BPO (Business Process Organizer) within ITAM Setup. Multi-Function Mapping: Links Status to Category, Quantity Logic, Transactions, and Search. OOTB Defaults: Standard Salesforce statuses come pre-mapped. Guardrails: Reconciliation on adding or updating mappings Protection against deleting active asset status Excluded: Audit logging Job Performers & Key Jobs CX Review of Labels and explanation text in each tab Check potential backport feasibility What should be part of an Asset Based License? Should this even be within the ITAM setup or should it be different? Missing Error State Reconciliation Trigger for Inventory Quantity and Status Category Mapping [TBD] Default Mappings Default S…",
             keyFeatures: [],
             impact: ""
         },
@@ -15017,7 +15017,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:41:33.000+0000",
+        gusLastModified: "2026-06-16T04:51:08.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15028,7 +15028,7 @@ const roadmapDataServiceCloud = [
     {
         id: 37,
         title: "Framework Enhancements - Enforcement of IT Asset",
-        description: "IT Asset Enforcement Link PRD Status: Product Review UX: Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be har…",
+        description: "IT Asset Enforcement Link Status: Product Review : Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -15045,7 +15045,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "IT Asset Enforcement Link PRD Status: Product Review UX: Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded to specific Asset Status, and hence we are introducing a Mapping Layer. This allows Admins to explicitly define how custom statuses interact with core system logic, ensuring scalability without custom code. Enable customers to explicitly map each Asset Status to the following features and functions Status Category (within Asset) Inventory Quantity (on Product Item) Lifecycle Transition (on Asset Activity) Asset Search Filter (on Add Asset model within any Object) Initial Feature Scope Included: Centralized Setup UI: A single BPO (Business Process Organizer) within ITAM Setup. Multi-Function Mapping: Links Status to Category, Quantity Logic, Transactions, and Search. OOTB Defaults: Standard Salesforce statuses come pre-mapped. Guardrails: Reconciliation on adding or updating mappings Protection against deleting active asset status Excluded: Audit logging Job Performers & Key Jobs CX Review of Labels and explanation text in each tab Check potential backport feasibility What should be part of an Asset Based License? Should this even be within the ITAM setup or should it be different? UX Missing Error State Reconciliation Trigger for Inventory Quantity and Status Category Mapping [TBD] Default Mapp…",
+            overview: "IT Asset Enforcement Link Status: Product Review : Ludmyla Almeida Greer Design Status: WIP Figma: Link Value Statement & Business Case (the “What” & the “Why”) Asset Status is a customer-extensible picklist. Downstream features (Inventory, Search, Lifecycle) cannot be hardcoded to specific Asset Status, and hence we are introducing a Mapping Layer. This allows Admins to explicitly define how custom statuses interact with core system logic, ensuring scalability without custom code. Enable customers to explicitly map each Asset Status to the following features and functions Status Category (within Asset) Inventory Quantity (on Product Item) Lifecycle Transition (on Asset Activity) Asset Search Filter (on Add Asset model within any Object) Initial Feature Scope Included: Centralized Setup UI: A single BPO (Business Process Organizer) within ITAM Setup. Multi-Function Mapping: Links Status to Category, Quantity Logic, Transactions, and Search. OOTB Defaults: Standard Salesforce statuses come pre-mapped. Guardrails: Reconciliation on adding or updating mappings Protection against deleting active asset status Excluded: Audit logging Job Performers & Key Jobs CX Review of Labels and explanation text in each tab Check potential backport feasibility What should be part of an Asset Based License? Should this even be within the ITAM setup or should it be different? Missing Error State Reconciliation Trigger for Inventory Quantity and Status Category Mapping [TBD] Default Mappings Defau…",
             keyFeatures: [],
             impact: ""
         },
@@ -15100,12 +15100,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 33,
+        percentComplete: 44,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T20:14:55.000+0000",
+        gusLastModified: "2026-06-15T15:42:08.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15149,7 +15149,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:52:45.000+0000",
+        gusLastModified: "2026-06-15T15:08:31.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15237,7 +15237,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:52:45.000+0000",
+        gusLastModified: "2026-06-15T15:08:31.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15336,7 +15336,7 @@ const roadmapDataServiceCloud = [
     {
         id: 44,
         title: "[264][SF/SPA] SRA - URL Display and Clickability in Guidance Plans",
-        description: "GUS Epic Description: [264][SF/SPA] SRA - URL Display and Clickability in Guidance Plans Source PRD: prd-262-url-display-clickability-guidance-plans.md PRD Google Doc: https://docs.google.com/document/d/1hDvELj9KsNB8zH9ITIByYFUGnngf0V4zBTcjRhF9KsY/edit PRD Canvas: https://salesf…",
+        description: "GUS Epic Description: [264][SF/SPA] SRA - URL Display and Clickability in Guidance Plans Source : prd-262-url-display-clickability-guidance-plans.md Google Doc: https://docs.google.com/document/d/1hDvELj9KsNB8zH9ITIByYFUGnngf0V4zBTcjRhF9KsY/edit Canvas: https://salesforce.enterpr…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -15353,7 +15353,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "GUS Epic Description: [264][SF/SPA] SRA - URL Display and Clickability in Guidance Plans Source PRD: prd-262-url-display-clickability-guidance-plans.md PRD Google Doc: https://docs.google.com/document/d/1hDvELj9KsNB8zH9ITIByYFUGnngf0V4zBTcjRhF9KsY/edit PRD Canvas: https://salesforce.enterprise.slack.com/docs/T01G0063H29/F0ARJ4CTBK9 Generated: 2026-05-26 URLs in Guidance Plan steps — whether sourced from Knowledge Article content or Topic Instructions — are currently rendered as plain, non-clickable text. This feature makes URLs in Guidance Plan steps clickable hyperlinks that open in a new browser tab, keeping the Service Console session active. The fix closes a regression relative to Dynamic Plans (which already render URLs as clickable links) and honors the intent of admins who embed URLs in Topic Instructions and Knowledge Articles specifically so reps will follow them. Benefits / Goals (The \"Why\") • Admin intent is silently ignored today — URLs authored into Topic Instructions render as inert text; this restores the link as a functional, clickable resource in every plan step. • Guidance Plans lag Dynamic Plans in URL rendering fidelity — this closes the parity gap so reps experience consistent behavior across both plan types. • Copy-paste friction compounds at scale in high-volume contact centers; removing it ensures reps follow admin-curated resource links rather than skipping them under time pressure. Target Customer / Persona (The \"Who\") Service reps executing Guidanc…",
+            overview: "GUS Epic Description: [264][SF/SPA] SRA - URL Display and Clickability in Guidance Plans Source : prd-262-url-display-clickability-guidance-plans.md Google Doc: https://docs.google.com/document/d/1hDvELj9KsNB8zH9ITIByYFUGnngf0V4zBTcjRhF9KsY/edit Canvas: https://salesforce.enterprise.slack.com/docs/T01G0063H29/F0ARJ4CTBK9 Generated: 2026-05-26 URLs in Guidance Plan steps — whether sourced from Knowledge Article content or Topic Instructions — are currently rendered as plain, non-clickable text. This feature makes URLs in Guidance Plan steps clickable hyperlinks that open in a new browser tab, keeping the Service Console session active. The fix closes a regression relative to Dynamic Plans (which already render URLs as clickable links) and honors the intent of admins who embed URLs in Topic Instructions and Knowledge Articles specifically so reps will follow them. • Admin intent is silently ignored today — URLs authored into Topic Instructions render as inert text; this restores the link as a functional, clickable resource in every plan step. • Guidance Plans lag Dynamic Plans in URL rendering fidelity — this closes the parity gap so reps experience consistent behavior across both plan types. • Copy-paste friction compounds at scale in high-volume contact centers; removing it ensures reps follow admin-curated resource links rather than skipping them under time pressure. Service reps executing Guidance Plans who need to follow admin-authored resource links without breaking their…",
             keyFeatures: [],
             impact: ""
         },
@@ -15364,12 +15364,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 33,
+        percentComplete: 40,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:38:56.000+0000",
+        gusLastModified: "2026-06-13T15:56:45.000+0000",
         productOwner: "Chad Goldsmith",
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15397,7 +15397,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "This epic includes any refinement work needed on Service Assistant Adaptive Experience, Dynamic Plans, and Guidance Plans What: Capture and complete all refinement, bug fixes, and low-lift improvements from Service Assistant that are still outstanding or deprioritized. This epic ensures polish and completion of previously scoped features, tech debt cleanup, and usability enhancements as we move into 264. Why: Shipping a high-quality experience requires following through on refinement tasks that didn’t make the release timeline to prioritization or time constraints. Addressing these now helps reduce user friction, increase adoption, and avoid technical debt stacking up in later cycles. : Fix bugs and any high-priority polish items coming out from GAV2 High priority UI/UX inconsistencies are resolved Any tech debt or temporary workarounds from GAV2 are cleaned up Out of Scope: Net-new feature development Major architectural changes Known Risks / Dependencies: Risk of over-scoping—focus remains on small, scoped, high-impact fixes Potential dependencies on other teams",
+            overview: "This epic includes any refinement work needed on Service Assistant Adaptive Experience, Dynamic Plans, and Guidance Plans What: Capture and complete all refinement, bug fixes, and low-lift improvements from Service Assistant that are still outstanding or deprioritized. This epic ensures polish and completion of previously scoped features, tech debt cleanup, and usability enhancements as we move into 264. Why: Shipping a high-quality experience requires following through on refinement tasks that didn’t make the release timeline to prioritization or time constraints. Addressing these now helps reduce user friction, increase adoption, and avoid technical debt stacking up in later cycles. : Fix bugs and any high-priority polish items coming out from GAV2 High priority UI/ inconsistencies are resolved Any tech debt or temporary workarounds from GAV2 are cleaned up Out of Scope: Net-new feature development Major architectural changes Known Risks / Dependencies: Risk of over-scoping—focus remains on small, scoped, high-impact fixes Potential dependencies on other teams",
             keyFeatures: [],
             impact: ""
         },
@@ -15408,12 +15408,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 50,
+        percentComplete: 57,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:32:54.000+0000",
+        gusLastModified: "2026-06-15T19:19:09.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15424,7 +15424,7 @@ const roadmapDataServiceCloud = [
     {
         id: 46,
         title: "[264][SF/SPA] SRA Implement Per-Channel Summary Plan Toggle & Auto Run",
-        description: "GUS Epic Description: [264][SF/SPA] SRA - Show/Hide Summary Plan for Message and Voice Source PRD: prd-262-show-hide-summary-plan-autorun.md PRD Google Doc: https://docs.google.com/document/d/1ro6zjLcGUEgo7HzfedkdPL12MmLmeoYyV_x6qGUS9Ms/edit PRD Canvas: https://salesforce.enterp…",
+        description: "GUS Epic Description: [264][SF/SPA] SRA - Show/Hide Summary Plan for Message and Voice Source : prd-262-show-hide-summary-plan-autorun.md Google Doc: https://docs.google.com/document/d/1ro6zjLcGUEgo7HzfedkdPL12MmLmeoYyV_x6qGUS9Ms/edit Canvas: https://salesforce.enterprise.slack.c…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -15441,7 +15441,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "GUS Epic Description: [264][SF/SPA] SRA - Show/Hide Summary Plan for Message and Voice Source PRD: prd-262-show-hide-summary-plan-autorun.md PRD Google Doc: https://docs.google.com/document/d/1ro6zjLcGUEgo7HzfedkdPL12MmLmeoYyV_x6qGUS9Ms/edit PRD Canvas: https://salesforce.enterprise.slack.com/docs/T01G0063H29/F0B2Q2E4A6L Generated: 2026-05-26 Service Rep Assistant today forces all Messaging and Voice channels through a fixed sequence: Summary Plan generates, renders, and the rep must click \"Run Plan\" before Dynamic Plan execution begins. This feature introduces a per-channel admin toggle — Show Summary Plan (ON/OFF, default ON) — that lets admins configure whether the Summary Plan is generated and displayed for Message and Voice independently. When Show Summary is OFF, generation is skipped entirely, the card is absent, and the Dynamic Plan executes automatically since there is no Run Plan button. Separately and unconditionally, the Summary Plan is removed as a grounding or context variable input for Dynamic Plans on Message and Voice channels; Hyperclassifier intent replaces it as the grounding signal in both toggle states. Benefits / Goals (The \"Why\") • Eliminates 12–15s critical-path latency on Voice calls by skipping Summary Plan generation entirely when Show = OFF, getting reps to the first Dynamic Plan step faster. • Removes the Run Plan click tax on live channels — when Show = OFF, the Dynamic Plan auto-runs without any rep action required. • Improves Dynamic Plan qua…",
+            overview: "GUS Epic Description: [264][SF/SPA] SRA - Show/Hide Summary Plan for Message and Voice Source : prd-262-show-hide-summary-plan-autorun.md Google Doc: https://docs.google.com/document/d/1ro6zjLcGUEgo7HzfedkdPL12MmLmeoYyV_x6qGUS9Ms/edit Canvas: https://salesforce.enterprise.slack.com/docs/T01G0063H29/F0B2Q2E4A6L Generated: 2026-05-26 Service Rep Assistant today forces all Messaging and Voice channels through a fixed sequence: Summary Plan generates, renders, and the rep must click \"Run Plan\" before Dynamic Plan execution begins. This feature introduces a per-channel admin toggle — Show Summary Plan (ON/OFF, default ON) — that lets admins configure whether the Summary Plan is generated and displayed for Message and Voice independently. When Show Summary is OFF, generation is skipped entirely, the card is absent, and the Dynamic Plan executes automatically since there is no Run Plan button. Separately and unconditionally, the Summary Plan is removed as a grounding or context variable input for Dynamic Plans on Message and Voice channels; Hyperclassifier intent replaces it as the grounding signal in both toggle states. • Eliminates 12–15s critical-path latency on Voice calls by skipping Summary Plan generation entirely when Show = OFF, getting reps to the first Dynamic Plan step faster. • Removes the Run Plan click tax on live channels — when Show = OFF, the Dynamic Plan auto-runs without any rep action required. • Improves Dynamic Plan quality by decoupling the Summary Plan from…",
             keyFeatures: [],
             impact: ""
         },
@@ -15452,12 +15452,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 100,
+        percentComplete: 80,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T21:16:12.000+0000",
+        gusLastModified: "2026-06-15T21:34:05.000+0000",
         productOwner: "Chad Goldsmith",
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15468,7 +15468,7 @@ const roadmapDataServiceCloud = [
     {
         id: 47,
         title: "[264][SF/SPA] SRA - Summary Plan to Message History for Case AE",
-        description: "GUS Epic Description: [264][SF/SPA] SRA - Summary Plan to Message History for Case AE Source PRD: prd-262-summary-plan-to-message-history.md PRD Google Doc: https://docs.google.com/document/d/1g8RiCAlIXXhkXUgSzx_umuQ5Vcs-AZBuBgUkG3u5G5E/edit Generated: 2026-05-26 In the Adaptive…",
+        description: "GUS Epic Description: [264][SF/SPA] SRA - Summary Plan to Message History for Case AE Source : prd-262-summary-plan-to-message-history.md Google Doc: https://docs.google.com/document/d/1g8RiCAlIXXhkXUgSzx_umuQ5Vcs-AZBuBgUkG3u5G5E/edit Generated: 2026-05-26 In the Adaptive Experie…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -15485,7 +15485,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "GUS Epic Description: [264][SF/SPA] SRA - Summary Plan to Message History for Case AE Source PRD: prd-262-summary-plan-to-message-history.md PRD Google Doc: https://docs.google.com/document/d/1g8RiCAlIXXhkXUgSzx_umuQ5Vcs-AZBuBgUkG3u5G5E/edit Generated: 2026-05-26 In the Adaptive Experience (AE) for Case, the Summary Plan card is currently pinned to the top of the component — always the first thing a rep sees, regardless of where they are in the conversation. This feature moves the Summary Plan into the message history feed as a ShowSummaryPlan entry in RecActorActionFeed , rendered at the point in the timeline when the rep opened the case. Generation is migrated from the legacy CaseAgentCaseHook save-hook trigger to ServicePlanSkillActor on RECORD_HOME_LOAD , so generation only fires when a rep actually opens the case rather than on every case save. Pre-GA cases with existing GenOpPlan records are handled via lazy-load backfill at first AE load — no migration task required. Benefits / Goals (The \"Why\") • The fixed Summary Plan position violates the AE conversation model — moving it into the feed lets it appear at the right moment in the timeline and scroll away naturally as the conversation progresses. • CaseAgentCaseHook fires on every case save, generating plans that are never seen and consuming gen AI capacity unnecessarily; moving trigger to RECORD_HOME_LOAD fires only when a rep opens the case. • RecActorActionFeed is already the canonical data source for Messaging and…",
+            overview: "GUS Epic Description: [264][SF/SPA] SRA - Summary Plan to Message History for Case AE Source : prd-262-summary-plan-to-message-history.md Google Doc: https://docs.google.com/document/d/1g8RiCAlIXXhkXUgSzx_umuQ5Vcs-AZBuBgUkG3u5G5E/edit Generated: 2026-05-26 In the Adaptive Experience (AE) for Case, the Summary Plan card is currently pinned to the top of the component — always the first thing a rep sees, regardless of where they are in the conversation. This feature moves the Summary Plan into the message history feed as a ShowSummaryPlan entry in RecActorActionFeed, rendered at the point in the timeline when the rep opened the case. Generation is migrated from the legacy CaseAgentCaseHook save-hook trigger to ServicePlanSkillActor on RECORD_HOME_LOAD, so generation only fires when a rep actually opens the case rather than on every case save. Pre-GA cases with existing GenOpPlan records are handled via lazy-load backfill at first AE load — no migration task required. • The fixed Summary Plan position violates the AE conversation model — moving it into the feed lets it appear at the right moment in the timeline and scroll away naturally as the conversation progresses. • CaseAgentCaseHook fires on every case save, generating plans that are never seen and consuming gen AI capacity unnecessarily; moving trigger to RECORD_HOME_LOAD fires only when a rep opens the case. • RecActorActionFeed is already the canonical data source for Messaging and Voice AE; unifying Case onto the same m…",
             keyFeatures: [],
             impact: ""
         },
@@ -15501,7 +15501,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T22:01:45.000+0000",
+        gusLastModified: "2026-06-15T22:59:52.000+0000",
         productOwner: "Chad Goldsmith",
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15672,12 +15672,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 75,
+        percentComplete: 80,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-08T11:11:13.000+0000",
+        gusLastModified: "2026-06-11T10:15:11.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -15688,7 +15688,7 @@ const roadmapDataServiceCloud = [
     {
         id: 52,
         title: "[262] [Soba] Service Assistant Plan generation Testing Framework",
-        description: "Description This Epic covers any infrastructure/ work we do around Service Assistant. This includes, but is not limited to: OrgFarm - SOX owns the Service Assistant OrgFarm configuration ServicePlanTestPipeline - Used currently for verifying prompt quality when making changes, e…",
+        description: "Description This Epic covers any infrastructure/ work we do around Service Assistant. This includes, but is not limited to: OrgFarm - SOX owns the Service Assistant OrgFarm configuration ServicePlanTestPipeline - Used currently for verifying prompt quality when making changes, es…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -15996,7 +15996,7 @@ const roadmapDataServiceCloud = [
     {
         id: 59,
         title: "[SF][Trust][264] Quality Improvements and BwC Mitigation",
-        description: "In an effort to reverse the uptrend in BwCs and to shore up automation in legacy areas, teams are expected to allocate 258 capacity to analyze their features for quality gaps and take proactive measure to close them. See guidelines and recommended approaches: https://salesforce.…",
+        description: "In an effort to reverse the uptrend in BwCs and to shore up automation in legacy areas, teams are expected to allocate 258 capacity to analyze their features for quality gaps and take proactive measure to close them. See guidelines and recommended approaches: https://salesforce.q…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -16024,12 +16024,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: null,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-03T03:34:37.000+0000",
+        gusLastModified: "2026-06-13T16:09:10.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -16128,7 +16128,7 @@ const roadmapDataServiceCloud = [
     {
         id: 62,
         title: "[SOBA][262] Trust: Compliance - Enterprise Mandates",
-        description: "Support, Maintenance, or Project related efforts to maintain or meet new compliance certifications or deal with emerging risks of product abuse or AI/privacy/accessibility regulatory standards. + Safe Change Pipeline / Transition EW/EC push upgrades pipeline to the \"Package SFDX…",
+        description: "Support, Maintenance, or Project related efforts to maintain or meet new compliance certifications or deal with emerging risks of product abuse or AI/privacy/accessibility regulatory standards. + Safe Change Pipeline / Transition EW/EC push upgrades pipeline to the \"Package SFDX\"…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -16200,12 +16200,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 100,
+        percentComplete: 93,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-08T11:17:10.000+0000",
+        gusLastModified: "2026-06-15T19:08:09.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -16337,7 +16337,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-06T17:01:45.000+0000",
+        gusLastModified: "2026-06-15T14:15:11.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -16640,12 +16640,12 @@ const roadmapDataServiceCloud = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 96,
+        percentComplete: 93,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-08T11:25:39.000+0000",
+        gusLastModified: "2026-06-15T19:09:54.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -16937,7 +16937,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Program Charter: Link <---this is the harbor cruise version and will take 2 minutes to read Architecture: AI VAT - Error Architecture in Agentforce.docx <------this is the longer, more technical version of the program Program Tracker: Error Reporting Tracker with Milestones.xlsx Services covered in this EPIC Bots Event logs consumer (bot-svc-eventlogs) Bots Event logs consumer retry (bot-svc-eventlogs-retry) Bots Event logs aggregation consumer (bot-svc-agg) Bots Event logs aggregation consumer retry (bot-svc-agg-retry)",
+            overview: "Program Charter: Link <---this is the harbor cruise version and will take 2 minutes to read Architecture: AI VAT - Error Architecture in Agentforce.docx <------this is the longer, more technical version of the program Program Tracker: Error Reporting Tracker with Milestones.xlsx Services covered in this EPIC Bots Event logs consumer (bot-svc-eventlogs)Bots Event logs consumer retry (bot-svc-eventlogs-retry)Bots Event logs aggregation consumer (bot-svc-agg)Bots Event logs aggregation consumer retry (bot-svc-agg-retry)",
             keyFeatures: [],
             impact: ""
         },
@@ -17008,7 +17008,7 @@ const roadmapDataServiceCloud = [
     {
         id: 82,
         title: "264 SFS Customer Success - Book and schedule multi-day appointments",
-        description: "As a Call Center Agent, I want to search for a horizon where the multi-day appointment should start, receive available timeslots to begin the work so that I can provide the customer with a window start time for their project. As a Call Center Agent or Dispatcher, I want to succe…",
+        description: "As a Call Center Agent, I want to search for a horizon where the multi-day appointment should start, receive available timeslots to begin the work so that I can provide the customer with a window start time for their project. As a Call Center Agent or Dispatcher, I want to succes…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -17025,7 +17025,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "As a Call Center Agent, I want to search for a horizon where the multi-day appointment should start, receive available timeslots to begin the work so that I can provide the customer with a window start time for their project. As a Call Center Agent or Dispatcher, I want to successfully schedule a multi-day appointment once a slot is selected by the customer, ensuring the entire duration is blocked. As a System Administrator, I want the Optimization Engine to automatically schedule and shift multi-day appointments while strictly respecting the committed arrival window : API Support: The GET /appointment-slots (or equivalent) endpoint must support a multi_day flag or duration parameter. UI Support: The booking screen must visually indicate that the slot covers multiple days while highlighting the Day 1 arrival window. If the multi-day appointment is 3 days long, and the search horizon is 1 day long, i should still receive available timeslots when the appointment can start. The horizon search window sent to the engine should be extended with ± the duration of the appointment API Support: The POST /book-appointment endpoint must create a multi-day record and block the corresponding time on the resource's calendar across all required days. Gantt Support: “Schedule” operation for a multi-day requirement onto the Gantt must automatically \"snap\" the subsequent segments into the following working days/shifts. The system must prevent \"partial bookings\" (e.g., booking Day 1 and 2 but f…",
+            overview: "As a Call Center Agent, I want to search for a horizon where the multi-day appointment should start, receive available timeslots to begin the work so that I can provide the customer with a window start time for their project. As a Call Center Agent or Dispatcher, I want to successfully schedule a multi-day appointment once a slot is selected by the customer, ensuring the entire duration is blocked. As a System Administrator, I want the Optimization Engine to automatically schedule and shift multi-day appointments while strictly respecting the committed arrival window : API Support: The GET /appointment-slots (or equivalent) endpoint must support a multi_day flag or duration parameter. UI Support: The booking screen must visually indicate that the slot covers multiple days while highlighting the Day 1 arrival window. If the multi-day appointment is 3 days long, and the search horizon is 1 day long, i should still receive available timeslots when the appointment can start. The horizon search window sent to the engine should be extended with ± the duration of the appointment API Support: The POST /book-appointment endpoint must create a multi-day record and block the corresponding time on the resource's calendar across all required days. Gantt Support: “Schedule” operation for a multi-day requirement onto the Gantt must automatically \"snap\" the subsequent segments into the following working days/shifts. The system must prevent \"partial bookings\" (e.g., booking Day 1 and 2 but fa…",
             keyFeatures: [],
             impact: ""
         },
@@ -17448,7 +17448,7 @@ const roadmapDataServiceCloud = [
     {
         id: 92,
         title: "Auto Refresh of Gantt",
-        description: "To ensure that planners and schedule managers viewing the Gantt chart always see the most up-to-date schedule. The Gantt UI must automatically refresh without manual user intervention when relevant scheduling records are created, updated, or deleted in the background. The Gantt…",
+        description: "To ensure that planners and schedule managers viewing the Gantt chart always see the most up-to-date schedule. The Gantt UI must automatically refresh without manual user intervention when relevant scheduling records are created, updated, or deleted in the background. The Gantt c…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -17492,7 +17492,7 @@ const roadmapDataServiceCloud = [
     {
         id: 93,
         title: "[264] ITAM - LWC Component on Fulfillment Order to Reduce Clicks",
-        description: "Inventory Management Spillovers PRD Epic 2: Simplified LWC Component Build an LWC component on the Fulfillment Order that surfaces key Fulfillment Order Line (FOLI) information and provides quick action buttons directly on the Fulfillment Order page. This would reduce the number…",
+        description: "Inventory Management Spillovers Epic 2: Simplified LWC Component Build an LWC component on the Fulfillment Order that surfaces key Fulfillment Order Line (FOLI) information and provides quick action buttons directly on the Fulfillment Order page. This would reduce the number of c…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -17509,7 +17509,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Inventory Management Spillovers PRD Epic 2: Simplified LWC Component Build an LWC component on the Fulfillment Order that surfaces key Fulfillment Order Line (FOLI) information and provides quick action buttons directly on the Fulfillment Order page. This would reduce the number of clicks for an Inventory Manager from 13 to 7 (~50% reduction) and allows them to complete a fulfillment request within one screen instead of switching between three.",
+            overview: "Inventory Management Spillovers Epic 2: Simplified LWC Component Build an LWC component on the Fulfillment Order that surfaces key Fulfillment Order Line (FOLI) information and provides quick action buttons directly on the Fulfillment Order page. This would reduce the number of clicks for an Inventory Manager from 13 to 7 (~50% reduction) and allows them to complete a fulfillment request within one screen instead of switching between three.",
             keyFeatures: [],
             impact: ""
         },
@@ -17536,7 +17536,7 @@ const roadmapDataServiceCloud = [
     {
         id: 94,
         title: "[264] ITAM - Reminders for returns (both refresh and reclaim)",
-        description: "Reminder for Return PRD PRD Status: Product Review Design Status: WIP Org with SLA Notifications URL: https://orgfarm-52ad37fba7.test1.lightning.pc-rnd.force.com/lightning/page/home UN: epic.out.ac1c8da96b80@orgfarm.salesforce.com PS: orgfarm1234 Value Statement & Business Case…",
+        description: "Reminder for Return Status: Product Review Design Status: WIP Org with SLA Notifications URL: https://orgfarm-52ad37fba7.test1.lightning.pc-rnd.force.com/lightning/page/home UN: epic.out.ac1c8da96b80@orgfarm.salesforce.com PS: orgfarm1234 Value Statement & Business Case (The “Wha…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -17553,7 +17553,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Reminder for Return PRD PRD Status: Product Review Design Status: WIP Org with SLA Notifications URL: https://orgfarm-52ad37fba7.test1.lightning.pc-rnd.force.com/lightning/page/home UN: epic.out.ac1c8da96b80@orgfarm.salesforce.com PS: orgfarm1234 Value Statement & Business Case (The “What” and The “Why”) Asset Managers initiate return for hardware reclaim or refreshes but employees often forget to complete the physical return of the devices. This could happen either when - Return information is requested from the employee or Dropoff or shipment details are sent to employees. Asset Managers lack an automated way to follow up with employees and chase down unreturned assets. Automated reminders accelerates the hardware reclaim lifecycle, reduces asset shrinkage, and eliminates the manual overhead of IT teams to track down assets. Initial Feature Scope Included: Creation of Service Request for Return and Refresh when initiated via Asset or Bulk by Asset manager with basic attributes filled in and remaining attributes empty. Updated Intake flow with prefilled fields requested from employee which calls new invacable action New Invocable Action only updates existing service requests with attributes filled in by the employee and does not create a new SR OOTB Email/ Slack notification about Return initiation to employee with embedded link of created service catalog with SR ID [TD Required on Notification Team??] OOTB Email/ Slack notification about Return Details (shipment or Dropoff…",
+            overview: "Reminder for Return Status: Product Review Design Status: WIP Org with SLA Notifications URL: https://orgfarm-52ad37fba7.test1.lightning.pc-rnd.force.com/lightning/page/home UN: epic.out.ac1c8da96b80@orgfarm.salesforce.com PS: orgfarm1234 Value Statement & Business Case (The “What” and The “Why”) Asset Managers initiate return for hardware reclaim or refreshes but employees often forget to complete the physical return of the devices. This could happen either when - Return information is requested from the employee or Dropoff or shipment details are sent to employees. Asset Managers lack an automated way to follow up with employees and chase down unreturned assets. Automated reminders accelerates the hardware reclaim lifecycle, reduces asset shrinkage, and eliminates the manual overhead of IT teams to track down assets. Initial Feature Scope Included: Creation of Service Request for Return and Refresh when initiated via Asset or Bulk by Asset manager with basic attributes filled in and remaining attributes empty. Updated Intake flow with prefilled fields requested from employee which calls new invacable action New Invocable Action only updates existing service requests with attributes filled in by the employee and does not create a new SR OOTB Email/ Slack notification about Return initiation to employee with embedded link of created service catalog with SR ID [TD Required on Notification Team??] OOTB Email/ Slack notification about Return Details (shipment or Dropoff) to empl…",
             keyFeatures: [],
             impact: ""
         },
@@ -17580,7 +17580,7 @@ const roadmapDataServiceCloud = [
     {
         id: 95,
         title: "[264] ITAM - Fast Path sourcing for lean IT Teams",
-        description: "Fast Path Sourcing and Fulfillment PRD PRD Status: Product Review Design Status: WIP Value Statement & Business Case (the “What” & the “Why”) For small and medium-sized organizations with a single stockroom, the current multi-step sourcing and return planning process is redundan…",
+        description: "Fast Path Sourcing and Fulfillment Status: Product Review Design Status: WIP Value Statement & Business Case (the “What” & the “Why”) For small and medium-sized organizations with a single stockroom, the current multi-step sourcing and return planning process is redundant. Since…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -17597,7 +17597,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Fast Path Sourcing and Fulfillment PRD PRD Status: Product Review Design Status: WIP Value Statement & Business Case (the “What” & the “Why”) For small and medium-sized organizations with a single stockroom, the current multi-step sourcing and return planning process is redundant. Since the Fulfiller and Asset Manager are often the same person, they require a \"Fast Path\" to execution. This feature eliminates manual sourcing steps by automatically generating orders and allowing all actions to be performed directly within the Service Request (SR) interface, reducing \"clicks-to-completion\" and context switching. Initial Feature Scope Included: OOTB Flow which directly created the Fulfillment or Return Order without the user needing to do Sourcing or Return Planning. Ability for the user to complete all activities within Service Request without having to switch screens or goto another record page User should be able to view the fulfillment order LWC within the Service Request and perform actions like Add Asset and Allocate Inventory Users should be able to perform actions currently present within the FO and RO like items ready for pickup, items ready for shipment and Mark Delivered. Excluded: This \"Fast Path\" is explicitly disabled if the system detects multiple valid inventory locations which are asset based Job Performers & Key Jobs Employee Submits a Req -> Service Request (IT Fulfiller) -> Multiple Fulfillment Order (diff location) [Inventory M] Design On the Service Request…",
+            overview: "Fast Path Sourcing and Fulfillment Status: Product Review Design Status: WIP Value Statement & Business Case (the “What” & the “Why”) For small and medium-sized organizations with a single stockroom, the current multi-step sourcing and return planning process is redundant. Since the Fulfiller and Asset Manager are often the same person, they require a \"Fast Path\" to execution. This feature eliminates manual sourcing steps by automatically generating orders and allowing all actions to be performed directly within the Service Request (SR) interface, reducing \"clicks-to-completion\" and context switching. Initial Feature Scope Included: OOTB Flow which directly created the Fulfillment or Return Order without the user needing to do Sourcing or Return Planning. Ability for the user to complete all activities within Service Request without having to switch screens or goto another record page User should be able to view the fulfillment order LWC within the Service Request and perform actions like Add Asset and Allocate Inventory Users should be able to perform actions currently present within the FO and RO like items ready for pickup, items ready for shipment and Mark Delivered. Excluded: This \"Fast Path\" is explicitly disabled if the system detects multiple valid inventory locations which are asset based Job Performers & Key Jobs Employee Submits a Req -> Service Request (IT Fulfiller) -> Multiple Fulfillment Order (diff location) [Inventory M] Design On the Service Request Screen D…",
             keyFeatures: [],
             impact: ""
         },
@@ -17712,7 +17712,7 @@ const roadmapDataServiceCloud = [
     {
         id: 98,
         title: "[SPA][Trust][264] Quality Improvements and BwC Mitigation",
-        description: "In an effort to reverse the uptrend in BwCs and to shore up automation in legacy areas, teams are expected to allocate 258 capacity to analyze their features for quality gaps and take proactive measure to close them. See guidelines and recommended approaches: https://salesforce.…",
+        description: "In an effort to reverse the uptrend in BwCs and to shore up automation in legacy areas, teams are expected to allocate 258 capacity to analyze their features for quality gaps and take proactive measure to close them. See guidelines and recommended approaches: https://salesforce.q…",
         category: "feature",
         status: "in-progress",
         period: "Summer '26 (264)",
@@ -17844,7 +17844,7 @@ const roadmapDataServiceCloud = [
     {
         id: 101,
         title: "[25X] - Omni Reporting - Active time for Status based capacity",
-        description: "The Active Time field is a piece of data that we capture with tab based capacity. It records the amount of time that the agent has the work item record in 'focus' on the console. In focus means that it's the open console tab. It differs from the HandleTime field, which just reco…",
+        description: "The Active Time field is a piece of data that we capture with tab based capacity. It records the amount of time that the agent has the work item record in 'focus' on the console. In focus means that it's the open console tab. It differs from the HandleTime field, which just recor…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -17861,7 +17861,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "The Active Time field is a piece of data that we capture with tab based capacity. It records the amount of time that the agent has the work item record in 'focus' on the console. In focus means that it's the open console tab. It differs from the HandleTime field, which just records the amount of time between opening and closing the work item. We appear to have disabled this for Status Based Capacity. We would like to explore enabling it, and potentially fixing any issues that might occur. At the moment, for Tab based capacity, the active time is tracked in the client Core and sent to SCRT1 or SCRT2. SCRT1 or SCRT2 sum the active time with the previously captured values and send it back to Core. Finally Core persists the data as part of the AgentWork entity. When the AgentWork is persisted in core and the UI (omni widget) notified of the changes in work, SCRT will discard the data as it only works as a cache until all the data is persisted. For Tab based capacity, the active time is persisted in Core when the agents logs off or closes the work. The active data for Status based capacity model is already being tracked in the client and being sent to SCRT, although it is not persisted by Core. Three issues could be seen when enabling the active to be persisted in core for Status Based capacity: * When re-routing assigned or open work to the agent (when agent logins), SCRT doesn’t know what was the value of the active time from previous sessions and the UI starts counting the tim…",
+            overview: "The Active Time field is a piece of data that we capture with tab based capacity. It records the amount of time that the agent has the work item record in 'focus' on the console. In focus means that it's the open console tab. It differs from the HandleTime field, which just records the amount of time between opening and closing the work item. We appear to have disabled this for Status Based Capacity. We would like to explore enabling it, and potentially fixing any issues that might occur. At the moment, for Tab based capacity, the active time is tracked in the client Core and sent to SCRT1 or SCRT2. SCRT1 or SCRT2 sum the active time with the previously captured values and send it back to Core. Finally Core persists the data as part of the AgentWork entity. When the AgentWork is persisted in core and the UI (omni widget) notified of the changes in work, SCRT will discard the data as it only works as a cache until all the data is persisted. For Tab based capacity, the active time is persisted in Core when the agents logs off or closes the work. The active data for Status based capacity model is already being tracked in the client and being sent to SCRT, although it is not persisted by Core. Three issues could be seen when enabling the active to be persisted in core for Status Based capacity: * When re-routing assigned or open work to the agent (when agent logins), SCRT doesn’t know what was the value of the active time from previous sessions and the UI starts counting the time…",
             keyFeatures: [],
             impact: ""
         },
@@ -17888,7 +17888,7 @@ const roadmapDataServiceCloud = [
     {
         id: 102,
         title: "[25X] - Omni Reporting - Paused & In-progress time for status-based capacity",
-        description: "Active (status-based)/Paused/In-progress time - Lila (capture Lila concerns) - 35 SPs PRD: PRD: Agent Work Metrics Status Capacity Spike: TBD → 11 SPs Change permissions on active time (AgentWork entity) Add PausedTime (see CORE: RoutingRequest / Routing Connect - WorksAPIContro…",
+        description: "Active (status-based)/Paused/In-progress time - Lila (capture Lila concerns) - 35 SPs : : Agent Work Metrics Status Capacity Spike: TBD → 11 SPs Change permissions on active time (AgentWork entity) Add PausedTime (see CORE: RoutingRequest / Routing Connect - WorksAPIControler) Ad…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -17905,7 +17905,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Active (status-based)/Paused/In-progress time - Lila (capture Lila concerns) - 35 SPs PRD: PRD: Agent Work Metrics Status Capacity Spike: TBD → 11 SPs Change permissions on active time (AgentWork entity) Add PausedTime (see CORE: RoutingRequest / Routing Connect - WorksAPIControler ) Add InProgressTime (see CORE: RoutingRequest / Routing Connect - WorksAPIControler )",
+            overview: "Active (status-based)/Paused/In-progress time - Lila (capture Lila concerns) - 35 SPs : : Agent Work Metrics Status Capacity Spike: TBD → 11 SPs Change permissions on active time (AgentWork entity) Add PausedTime (see CORE: RoutingRequest / Routing Connect - WorksAPIControler) Add InProgressTime (see CORE: RoutingRequest / Routing Connect - WorksAPIControler)",
             keyFeatures: [],
             impact: ""
         },
@@ -17932,7 +17932,7 @@ const roadmapDataServiceCloud = [
     {
         id: 103,
         title: "[264] - Push Timeout Server Side",
-        description: "Moving the execution of the Push Timeout functionality to server side, as today it happens client side. The Problem Client side execution causes us a few problems Push Timeout doesn't work for mobile users Timing issues caused by network latency - some reporting times are a few…",
+        description: "Moving the execution of the Push Timeout functionality to server side, as today it happens client side. The Problem Client side execution causes us a few problems Push Timeout doesn't work for mobile users Timing issues caused by network latency - some reporting times are a few s…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -17976,7 +17976,7 @@ const roadmapDataServiceCloud = [
     {
         id: 104,
         title: "[262] TD - Enhance Omni-Channel Inbox with Typing Indicators",
-        description: "The Omni-Channel Inbox is a critical feature that allows agents to interact with various channels seamlessly. This epic focuses on enhancing the agent experience by introducing typing indicators during messaging conversations. Agents will be able to see when customers are typing…",
+        description: "The Omni-Channel Inbox is a critical feature that allows agents to interact with various channels seamlessly. This epic focuses on enhancing the agent experience by introducing typing indicators during messaging conversations. Agents will be able to see when customers are typing,…",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -17993,7 +17993,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "The Omni-Channel Inbox is a critical feature that allows agents to interact with various channels seamlessly. This epic focuses on enhancing the agent experience by introducing typing indicators during messaging conversations. Agents will be able to see when customers are typing, improving engagement and response times. Continuous improvement to inbox to deliver table stake capabilities across channels Solves the problem of delayed responses during messaging interactions, allowing agents to be more proactive. Customer feedback indicates a strong desire for real-time communication enhancements, making this feature timely and essential. This enhancement will provide a competitive advantage over other platforms like Intercom and Zendesk by improving the overall customer interaction experience. This feature is primarily built for customer service agents and sales agents who manage messaging channels. /High-Level Requirements Agents can see when a customer is typing during a messaging session. Agents can respond more quickly and accurately based on real-time typing indicators. Agents can manage their workload more effectively with enhanced visibility into customer engagement. As an agent, I can see typing indicators in the sidebar when a customer is typing, allowing me to prepare my response. As an agent, if a customer pauses typing for an extended period, I will stop seeing the typing indicator. Typing indicators for messages that are not accepted / opened by the agent. Further…",
+            overview: "The Omni-Channel Inbox is a critical feature that allows agents to interact with various channels seamlessly. This epic focuses on enhancing the agent experience by introducing typing indicators during messaging conversations. Agents will be able to see when customers are typing, improving engagement and response times. Continuous improvement to inbox to deliver table stake capabilities across channels Solves the problem of delayed responses during messaging interactions, allowing agents to be more proactive. Customer feedback indicates a strong desire for real-time communication enhancements, making this feature timely and essential. This enhancement will provide a competitive advantage over other platforms like Intercom and Zendesk by improving the overall customer interaction experience. This feature is primarily built for customer service agents and sales agents who manage messaging channels. Agents can see when a customer is typing during a messaging session. Agents can respond more quickly and accurately based on real-time typing indicators. Agents can manage their workload more effectively with enhanced visibility into customer engagement. As an agent, I can see typing indicators in the sidebar when a customer is typing, allowing me to prepare my response. As an agent, if a customer pauses typing for an extended period, I will stop seeing the typing indicator. Typing indicators for messages that are not accepted / opened by the agent. Further research is needed on depe…",
             keyFeatures: [],
             impact: ""
         },
@@ -18020,7 +18020,7 @@ const roadmapDataServiceCloud = [
     {
         id: 105,
         title: "[262] Service Replies for Chat & Messaging - Language Expansion",
-        description: "The \"What\" This initiative will involve (accuracy) for Wave 2 language expansion (beyond current Wave 1 languages). List of Wave 1 languages: https://docs.google.com/spreadsheets/d/1Q66YfPe4SNXy3CqPqU0tFF6l6-YbMZ729-XIUxPa-3M/edit?gid=0#gid=0 Initial Set of Wave 2 languages: Por…",
+        description: "The \"What\" This initiative will involve (accuracy) for Wave 2 language expansion (beyond current Wave 1 languages). List of Wave 1 languages: https://docs.google.com/spreadsheets/d/1Q66YfPe4SNXy3CqPqU0tFF6l6-YbMZ729-XIUxPa-3M/edit?gid=0#gid=0 Initial Set of Wave 2 languages: Port…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -18037,7 +18037,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "The \"What\" This initiative will involve (accuracy) for Wave 2 language expansion (beyond current Wave 1 languages). List of Wave 1 languages: https://docs.google.com/spreadsheets/d/1Q66YfPe4SNXy3CqPqU0tFF6l6-YbMZ729-XIUxPa-3M/edit?gid=0#gid=0 Initial Set of Wave 2 languages: Portuguese (Brazil), Portuguese (European), Swedish, Dutch, Thai, Russian, Norwegian, Korean, Finnish, Danish, Hebrew The \"Why\" Top customer ask from customers in APAC and EMEA The \"Who\" The primary users will be service reps who are working on chat channel in different countries. and DoR: Service Replies in Chat and Messaging are automatically translated to the CSR’s language. CSR sees all customer messages in his own user language, regardless of the customer’s language. Customers receive CSR replies in their original conversation language. If the customer switches languages mid-conversation, the system re-detects and adjusts translation accordingly. Original and translated versions of each message are accessible to the CSR for reference (not to the customer). If the detected language is not part of the supported list, the system generates the reply in English as a fallback language. PRD - https://docs.google.com/document/d/18sP-ROj6Hh_Fng5GiilwXgfd5MVPRL9OqI-HD9MGK0E/edit?tab=t.0",
+            overview: "The \"What\" This initiative will involve (accuracy) for Wave 2 language expansion (beyond current Wave 1 languages). List of Wave 1 languages: https://docs.google.com/spreadsheets/d/1Q66YfPe4SNXy3CqPqU0tFF6l6-YbMZ729-XIUxPa-3M/edit?gid=0#gid=0 Initial Set of Wave 2 languages: Portuguese (Brazil), Portuguese (European), Swedish, Dutch, Thai, Russian, Norwegian, Korean, Finnish, Danish, Hebrew The \"Why\" Top customer ask from customers in APAC and EMEA The \"Who\" The primary users will be service reps who are working on chat channel in different countries. and DoR: Service Replies in Chat and Messaging are automatically translated to the CSR’s language. CSR sees all customer messages in his own user language, regardless of the customer’s language. Customers receive CSR replies in their original conversation language. If the customer switches languages mid-conversation, the system re-detects and adjusts translation accordingly. Original and translated versions of each message are accessible to the CSR for reference (not to the customer). If the detected language is not part of the supported list, the system generates the reply in English as a fallback language. - https://docs.google.com/document/d/18sP-ROj6Hh_Fng5GiilwXgfd5MVPRL9OqI-HD9MGK0E/edit?tab=t.0",
             keyFeatures: [],
             impact: ""
         },
@@ -18064,7 +18064,7 @@ const roadmapDataServiceCloud = [
     {
         id: 106,
         title: "[264] A4S on Email - Image & Attachment Handling [Stretch]",
-        description: "Context We are developing the Attachment Handling feature for Agentforce for Service Email, enabling the AI agent to intelligently ingest, interpret, and act on images and file attachments (e.g., PDFs, JPGs, PNGs) received in customer emails. This capability is critical to autom…",
+        description: "Context We are developing the Attachment Handling feature for Agentforce for Service Email, enabling the AI agent to intelligently ingest, interpret, and act on images and file attachments (e.g., PDFs, JPGs, PNGs) received in customer emails. This capability is critical to automa…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -18081,7 +18081,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Context We are developing the Attachment Handling feature for Agentforce for Service Email, enabling the AI agent to intelligently ingest, interpret, and act on images and file attachments (e.g., PDFs, JPGs, PNGs) received in customer emails. This capability is critical to automating a broader set of service scenarios—especially in industries like insurance, travel, and e-commerce—where attachments such as claims forms, receipts, or photos of damaged goods provide essential context for issue resolution. This enhancement aims to reduce manual review workload, accelerate response times, and improve customer satisfaction by incorporating attachment data directly into AI-generated draft replies, helping us reach our goal of automating 80% of email interactions by 2027. Request To deliver this feature successfully, we require collaboration and support from the following: Develop and refine document understanding and capabilities for extracting relevant data from common file types (PDF, JPG, PNG, DOCX). To extend the email ingestion and response generation pipelines to integrate attachment context, ensuring seamless inclusion of parsed data in AI draft replies. To provide controls for enabling/disabling attachment handling and defining attachment-related rules such as max file size and supported file types. Relevant PRD Please refer to the Attachment Handling for Agentforce Service Email PRD for detailed scope, user stories, , technical requirements, and rollout plans.",
+            overview: "Context We are developing the Attachment Handling feature for Agentforce for Service Email, enabling the AI agent to intelligently ingest, interpret, and act on images and file attachments (e.g., PDFs, JPGs, PNGs) received in customer emails. This capability is critical to automating a broader set of service scenarios—especially in industries like insurance, travel, and e-commerce—where attachments such as claims forms, receipts, or photos of damaged goods provide essential context for issue resolution. This enhancement aims to reduce manual review workload, accelerate response times, and improve customer satisfaction by incorporating attachment data directly into AI-generated draft replies, helping us reach our goal of automating 80% of email interactions by 2027. Request To deliver this feature successfully, we require collaboration and support from the following: Develop and refine document understanding and capabilities for extracting relevant data from common file types (PDF, JPG, PNG, DOCX). To extend the email ingestion and response generation pipelines to integrate attachment context, ensuring seamless inclusion of parsed data in AI draft replies. To provide controls for enabling/disabling attachment handling and defining attachment-related rules such as max file size and supported file types. Relevant Please refer to the Attachment Handling for Agentforce Service Email for detailed scope, user stories, , technical requirements, and rollout plans.",
             keyFeatures: [],
             impact: ""
         },
@@ -18196,7 +18196,7 @@ const roadmapDataServiceCloud = [
     {
         id: 109,
         title: "[SPA][Trust][262] Quality Improvements and BwC Mitigation",
-        description: "In an effort to reverse the uptrend in BwCs and to shore up automation in legacy areas, teams are expected to allocate 258 capacity to analyze their features for quality gaps and take proactive measure to close them. See guidelines and recommended approaches: https://salesforce.…",
+        description: "In an effort to reverse the uptrend in BwCs and to shore up automation in legacy areas, teams are expected to allocate 258 capacity to analyze their features for quality gaps and take proactive measure to close them. See guidelines and recommended approaches: https://salesforce.q…",
         category: "feature",
         status: "in-progress",
         period: "Spring '26 (262)",
@@ -18328,7 +18328,7 @@ const roadmapDataServiceCloud = [
     {
         id: 112,
         title: "[December] Einstein Bots: TD Spikes and Mandates",
-        description: "Spike for TD-0254758 Coin Score improvements for SCRT2 and Event-Logs Spike for Digital Wallet PRD (Concise PRD to be shared)",
+        description: "Spike for TD-0254758 Coin Score improvements for SCRT2 and Event-Logs Spike for Digital Wallet (Concise to be shared)",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -18345,7 +18345,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Spike for TD-0254758 Coin Score improvements for SCRT2 and Event-Logs Spike for Digital Wallet PRD (Concise PRD to be shared)",
+            overview: "Spike for TD-0254758 Coin Score improvements for SCRT2 and Event-Logs Spike for Digital Wallet (Concise to be shared)",
             keyFeatures: [],
             impact: ""
         },
@@ -18372,7 +18372,7 @@ const roadmapDataServiceCloud = [
     {
         id: 113,
         title: "[262][SF/SPA] Industry Action Plans Skill for Service Rep Assistant",
-        description: "Link to PRD : https://docs.google.com/document/d/1AW963uMAuofw5jdY-tfmKgrIGThH3HlOA8rWWoNcCmQ/edit?tab=t.0#heading=h.wiklgl6fia8k",
+        description: "Link to : https://docs.google.com/document/d/1AW963uMAuofw5jdY-tfmKgrIGThH3HlOA8rWWoNcCmQ/edit?tab=t.0#heading=h.wiklgl6fia8k",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -18389,7 +18389,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Link to PRD : https://docs.google.com/document/d/1AW963uMAuofw5jdY-tfmKgrIGThH3HlOA8rWWoNcCmQ/edit?tab=t.0#heading=h.wiklgl6fia8k",
+            overview: "Link to : https://docs.google.com/document/d/1AW963uMAuofw5jdY-tfmKgrIGThH3HlOA8rWWoNcCmQ/edit?tab=t.0#heading=h.wiklgl6fia8k",
             keyFeatures: [],
             impact: ""
         },
@@ -18416,7 +18416,7 @@ const roadmapDataServiceCloud = [
     {
         id: 114,
         title: "[262] SFS [Trust] Work Capacity and agentforce Telemetry",
-        description: "Phase 1: Work Capacity Limit Activation (Pending CX) Work Capacity Limit Deactivation (Pending CX) Work Capacity Usage Work Capacity Availability @Sigal Shapira ​ , we will need to add telemetry to our agentforce actions (…",
+        description: "[262] SFS [Trust] Work Capacity and agentforce Telemetry Phase 1: Work Capacity Limit Activation (Pending CX) Work Capacity Limit Deactivation (Pending CX) Work Capacity Usage Work Capacity Availability @Sigal Shapira​ , we will need to add telemetry to our agentforce actions (co…",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -18433,7 +18433,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Phase 1: Work Capacity Limit Activation (Pending CX) Work Capacity Limit Deactivation (Pending CX) Work Capacity Usage Work Capacity Availability @Sigal Shapira ​ , we will need to add telemetry to our agentforce actions (conversational, Fill gaps and scheduling summary) @Eran Rotbart ​ please find the points which we can add to underst and usage of it. TD-0297401 (https://gus.lightning.force.com/lightning/r/ADM_Team_Dependency__c/a0nEE0000012cwiYAA/view)",
+            overview: "[262] SFS [Trust] Work Capacity and agentforce Telemetry Phase 1: Work Capacity Limit Activation (Pending CX) Work Capacity Limit Deactivation (Pending CX) Work Capacity Usage Work Capacity Availability @Sigal Shapira​ , we will need to add telemetry to our agentforce actions (conversational, Fill gaps and scheduling summary) @Eran Rotbart​ please find the points which we can add to understand usage of it. TD-0297401 (https://gus.lightning.force.com/lightning/r/ADM_Team_Dependency__c/a0nEE0000012cwiYAA/view)",
             keyFeatures: [],
             impact: "[Feb 01] Completed\n[Jan 25] On Track, Push the code to 260\n[Jan 11] On Track: Close it with the team\n[Jan 04] On Track, Test Telemetry on SDB6"
         },
@@ -18812,7 +18812,7 @@ const roadmapDataServiceCloud = [
     {
         id: 123,
         title: "[February] SCRT2 Chatbot Session Cleanup Improvements",
-        description: "Main doc: https://docs.google.com/document/d/1UDRZtkiK0pwykx4qYG_3XfyO7k0rrxBGZCuuYfmiR4c/edit?tab=t.e94je3kjhpma Slack discussion channel: https://salesforce.enterprise.slack.com/archives/C0AA5ETU335 (Private) Implement ClusterOrgletonBean Productionize with Alerts Implement Cl…",
+        description: "Main doc: https://docs.google.com/document/d/1UDRZtkiK0pwykx4qYG_3XfyO7k0rrxBGZCuuYfmiR4c/edit?tab=t.e94je3kjhpma Slack discussion channel: https://salesforce.enterprise.slack.com/archives/C0AA5ETU335 (Private) Implement ClusterOrgletonBean Productionize with Alerts Implement Clu…",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -18944,7 +18944,7 @@ const roadmapDataServiceCloud = [
     {
         id: 126,
         title: "[March] Einstein Bots: Tag & Handle Emergent Error Spikes in SCRT2 Chatbot",
-        description: "Tracking Sheet - https://docs.google.com/spreadsheets/d/1cRsgp8GM2Gsie_O-J-CDKgAqw8fGlN4LMWffmc1IOMM/edit?gid=630938163#gid=630938163 Slack Channel - #agentforce-supportability Focus on the top 10 emergent spikes listed here , for which you can find out more details in this repo…",
+        description: "Tracking Sheet - https://docs.google.com/spreadsheets/d/1cRsgp8GM2Gsie_O-J-CDKgAqw8fGlN4LMWffmc1IOMM/edit?gid=630938163#gid=630938163 Slack Channel - #agentforce-supportability Focus on the top 10 emergent spikes listed here, for which you can find out more details in this report…",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -18961,7 +18961,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "Tracking Sheet - https://docs.google.com/spreadsheets/d/1cRsgp8GM2Gsie_O-J-CDKgAqw8fGlN4LMWffmc1IOMM/edit?gid=630938163#gid=630938163 Slack Channel - #agentforce-supportability Focus on the top 10 emergent spikes listed here , for which you can find out more details in this report (plus some helpful screenshots are here )",
+            overview: "Tracking Sheet - https://docs.google.com/spreadsheets/d/1cRsgp8GM2Gsie_O-J-CDKgAqw8fGlN4LMWffmc1IOMM/edit?gid=630938163#gid=630938163 Slack Channel - #agentforce-supportability Focus on the top 10 emergent spikes listed here, for which you can find out more details in this report (plus some helpful screenshots are here)",
             keyFeatures: [],
             impact: ""
         },
@@ -19472,7 +19472,7 @@ const roadmapDataServiceCloud = [
     {
         id: 138,
         title: "262 [SF/SPA] Support URL Display and Clickability in Guidance Plans",
-        description: "This epic focuses on enhancing the Guidance Plans by enabling clickable URLs within the plan steps. Currently, URLs are rendered as plain text, causing interruptions in the workflow of service representatives. This change will allow URLs to be displayed as clickable hyperlinks,…",
+        description: "This epic focuses on enhancing the Guidance Plans by enabling clickable URLs within the plan steps. Currently, URLs are rendered as plain text, causing interruptions in the workflow of service representatives. This change will allow URLs to be displayed as clickable hyperlinks, i…",
         category: "feature",
         status: "planned",
         period: "Spring '26 (262)",
@@ -19489,7 +19489,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "This epic focuses on enhancing the Guidance Plans by enabling clickable URLs within the plan steps. Currently, URLs are rendered as plain text, causing interruptions in the workflow of service representatives. This change will allow URLs to be displayed as clickable hyperlinks, improving the usability and efficiency of Guidance Plans. This feature addresses the problem of broken workflows for service representatives who need to access resources quickly. By allowing clickable links, we honor the intent of admins who embed URLs in instructions, ensuring that resources are easily accessible. This enhancement will also bring consistency with existing features in Dynamic Plans and Agent Builder, providing a competitive advantage. This feature is primarily for Service Representatives (CSRs), Admins, and Knowledge Authors who rely on Guidance Plans to navigate resources efficiently. Customer feedback indicates a strong need for this enhancement. /High-Level Requirements - As a CSR, I can click on URLs in Guidance Plans to access resources without breaking my workflow. - As an Admin, I can embed URLs in Topic Instructions and have them render as clickable links. - As a Knowledge Author, I can ensure that URLs in Knowledge Articles are preserved and clickable in Guidance Plans. - As a CSR, I need to see URLs in Guidance Plan steps as clickable hyperlinks. - As an Admin, I want to embed a URL in a Topic Instruction and have it render as a clickable link in the plan step. - As a Knowle…",
+            overview: "This epic focuses on enhancing the Guidance Plans by enabling clickable URLs within the plan steps. Currently, URLs are rendered as plain text, causing interruptions in the workflow of service representatives. This change will allow URLs to be displayed as clickable hyperlinks, improving the usability and efficiency of Guidance Plans. This feature addresses the problem of broken workflows for service representatives who need to access resources quickly. By allowing clickable links, we honor the intent of admins who embed URLs in instructions, ensuring that resources are easily accessible. This enhancement will also bring consistency with existing features in Dynamic Plans and Agent Builder, providing a competitive advantage. This feature is primarily for Service Representatives (CSRs), Admins, and Knowledge Authors who rely on Guidance Plans to navigate resources efficiently. Customer feedback indicates a strong need for this enhancement. - As a CSR, I can click on URLs in Guidance Plans to access resources without breaking my workflow. - As an Admin, I can embed URLs in Topic Instructions and have them render as clickable links. - As a Knowledge Author, I can ensure that URLs in Knowledge Articles are preserved and clickable in Guidance Plans. - As a CSR, I need to see URLs in Guidance Plan steps as clickable hyperlinks. - As an Admin, I want to embed a URL in a Topic Instruction and have it render as a clickable link in the plan step. - As a Knowledge Author, I want URLs in…",
             keyFeatures: [],
             impact: ""
         },
@@ -19505,7 +19505,7 @@ const roadmapDataServiceCloud = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-04-10T01:47:27.000+0000",
+        gusLastModified: "2026-06-15T23:04:24.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -19516,7 +19516,7 @@ const roadmapDataServiceCloud = [
     {
         id: 139,
         title: "Adding Shift Segments template to Shift Templates",
-        description: "PRD - https://docs.google.com/document/d/10E8nasaDiQVg0GcJX_lVAQmq-ooGX2KI7NbqFEx_6xo/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Shift Segment Template - Create and Manage The Problem: While managers can easily schedu…",
+        description: "https://docs.google.com/document/d/10E8nasaDiQVg0GcJX_lVAQmq-ooGX2KI7NbqFEx_6xo/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Shift Segment Template - Create and Manage The Problem: While managers can easily schedule the ove…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -19533,7 +19533,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "PRD - https://docs.google.com/document/d/10E8nasaDiQVg0GcJX_lVAQmq-ooGX2KI7NbqFEx_6xo/edit?tab=t.0#heading=h.wiklgl6fia8k UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Shift Segment Template - Create and Manage The Problem: While managers can easily schedule the overall duration of a shift (e.g., 8 AM - 4 PM), defining what actually happens during that shift is highly manual. Scheduling mandatory breaks, specific station rotations, or dedicated task blocks (like \"inventory check\" or \"prep work\") requires the manager to micro-schedule every single employee, every single day. This is incredibly time-consuming, and missing a mandatory break scheduling can lead to labor compliance violations or employee frustration. The Solution: Allow users to nest Shift Activity Templates directly inside a parent Shift Template . Managers can pre-define specific, time-bound events that occur within the shift (e.g., automatically scheduling a 30-minute lunch break four hours in, or a 45-minute cleaning block at the end of the shift). When the overarching shift template is dragged and dropped onto the schedule, all of its embedded activities are instantly populated along with it. As a Planner I want to add Shift Segment templates to Shift Templates so that I can create shifts and shift segments of similar type. 1. Segment Template Creation & Management Scenario: Creating a new Segment Template (to be discussed with team) Given the user is in the shift template configuratio…",
+            overview: "https://docs.google.com/document/d/10E8nasaDiQVg0GcJX_lVAQmq-ooGX2KI7NbqFEx_6xo/edit?tab=t.0#heading=h.wiklgl6fia8k Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ Shift Segment Template - Create and Manage The Problem: While managers can easily schedule the overall duration of a shift (e.g., 8 AM - 4 PM), defining what actually happens during that shift is highly manual. Scheduling mandatory breaks, specific station rotations, or dedicated task blocks (like \"inventory check\" or \"prep work\") requires the manager to micro-schedule every single employee, every single day. This is incredibly time-consuming, and missing a mandatory break scheduling can lead to labor compliance violations or employee frustration. The Solution: Allow users to nest Shift Activity Templates directly inside a parent Shift Template. Managers can pre-define specific, time-bound events that occur within the shift (e.g., automatically scheduling a 30-minute lunch break four hours in, or a 45-minute cleaning block at the end of the shift). When the overarching shift template is dragged and dropped onto the schedule, all of its embedded activities are instantly populated along with it. As a Planner I want to add Shift Segment templates to Shift Templates so that I can create shifts and shift segments of similar type. 1. Segment Template Creation & Management Scenario: Creating a new Segment Template (to be discussed with team) Given the user is in the shift template configuration area, Whe…",
             keyFeatures: [],
             impact: ""
         },
@@ -19560,7 +19560,7 @@ const roadmapDataServiceCloud = [
     {
         id: 140,
         title: "Shift Stacking",
-        description: "A visual UI component that \"stacks\" shifts sharing similar timeframes vertically or groups them into a single expandable block, decluttering the grid view. PRD - https://docs.google.com/document/d/1ZDOTAs_zcMljN5OLu2p5_awHmnYYY2iDzxQxS0YIMqg/edit?tab=t.0 UX Link - https://shiftm…",
+        description: "A visual UI component that \"stacks\" shifts sharing similar timeframes vertically or groups them into a single expandable block, decluttering the grid view. - https://docs.google.com/document/d/1ZDOTAs_zcMljN5OLu2p5_awHmnYYY2iDzxQxS0YIMqg/edit?tab=t.0 Link - https://shiftmanager-2…",
         category: "feature",
         status: "planned",
         period: "Summer '26 (264)",
@@ -19577,7 +19577,7 @@ const roadmapDataServiceCloud = [
         v2momMethod: "Service Cloud",
         version: "service",
         details: {
-            overview: "A visual UI component that \"stacks\" shifts sharing similar timeframes vertically or groups them into a single expandable block, decluttering the grid view. PRD - https://docs.google.com/document/d/1ZDOTAs_zcMljN5OLu2p5_awHmnYYY2iDzxQxS0YIMqg/edit?tab=t.0 UX Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ The Problem: Traditional linear views become unreadable when multiple shifts overlap (e.g., 50 shifts/agents starting at 9:00 AM), leading to visual clutter and missed coverage gaps. The Solution: A visual UI component that \"stacks\" shifts sharing similar timeframes vertically or groups them into a single expandable block, decluttering the grid view. User Story - As a Planner When multiple agents are scheduled for identical time slots (e.g., 20 agents starting at 8:00 AM). I want to view them as a consolidated group rather than 20 individual rows that clutter the screen. So that I can assess total coverage density at a glance and reduce vertical scrolling. - 1. Grouping Logic & Visual Representation Scenario: Identifying and grouping overlapping shifts Given the user is viewing the schedule grid, When there are multiple shifts assigned to the same resource (or within the same grid cell) that share the exact same start and end times Then the system automatically groups these shifts into a single visual block on the UI to declutter the view. Scenario: Information displayed on a collapsed stack Given multiple shifts have been grouped into a stack, When the sta…",
+            overview: "A visual UI component that \"stacks\" shifts sharing similar timeframes vertically or groups them into a single expandable block, decluttering the grid view. - https://docs.google.com/document/d/1ZDOTAs_zcMljN5OLu2p5_awHmnYYY2iDzxQxS0YIMqg/edit?tab=t.0 Link - https://shiftmanager-262-scope-ca916c26db1e.herokuapp.com/ The Problem: Traditional linear views become unreadable when multiple shifts overlap (e.g., 50 shifts/agents starting at 9:00 AM), leading to visual clutter and missed coverage gaps. The Solution: A visual UI component that \"stacks\" shifts sharing similar timeframes vertically or groups them into a single expandable block, decluttering the grid view. User Story - As a Planner When multiple agents are scheduled for identical time slots (e.g., 20 agents starting at 8:00 AM). I want to view them as a consolidated group rather than 20 individual rows that clutter the screen. So that I can assess total coverage density at a glance and reduce vertical scrolling. - 1. Grouping Logic & Visual Representation Scenario: Identifying and grouping overlapping shifts Given the user is viewing the schedule grid, When there are multiple shifts assigned to the same resource (or within the same grid cell) that share the exact same start and end times Then the system automatically groups these shifts into a single visual block on the UI to declutter the view. Scenario: Information displayed on a collapsed stack Given multiple shifts have been grouped into a stack, When the stack is in…",
             keyFeatures: [],
             impact: ""
         },
@@ -19692,7 +19692,7 @@ const roadmapDataServiceCloud = [
 ];
 
 
-const LAST_GUS_REFRESH_SLACK = "2026-06-11";
+const LAST_GUS_REFRESH_SLACK = "2026-06-13";
 const roadmapDataSlack = [
     {
         id: 1,
@@ -19725,12 +19725,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 66,
+        percentComplete: 63,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-11T00:31:04.000+0000",
+        gusLastModified: "2026-06-16T06:34:43.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -19818,7 +19818,7 @@ const roadmapDataSlack = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:23:40.000+0000",
+        gusLastModified: "2026-06-15T12:07:50.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -19857,12 +19857,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Medium",
-        percentComplete: 84,
+        percentComplete: 76,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T12:29:17.000+0000",
+        gusLastModified: "2026-06-16T01:29:32.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -19906,7 +19906,7 @@ const roadmapDataSlack = [
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T14:48:45.000+0000",
+        gusLastModified: "2026-06-15T15:29:41.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -19950,7 +19950,7 @@ const roadmapDataSlack = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:11:00.000+0000",
+        gusLastModified: "2026-06-15T14:14:31.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -19989,12 +19989,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 100,
+        percentComplete: 67,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:34:48.000+0000",
+        gusLastModified: "2026-06-16T07:29:45.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20077,12 +20077,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 67,
+        percentComplete: 70,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T12:30:08.000+0000",
+        gusLastModified: "2026-06-15T22:16:15.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20121,12 +20121,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Small",
-        percentComplete: 38,
+        percentComplete: 89,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:35:09.000+0000",
+        gusLastModified: "2026-06-15T10:12:49.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20165,12 +20165,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Small",
-        percentComplete: 88,
+        percentComplete: 100,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Trust",
-        gusLastModified: "2026-06-10T15:31:34.000+0000",
+        gusLastModified: "2026-06-12T15:14:33.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20214,7 +20214,7 @@ const roadmapDataSlack = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:47:09.000+0000",
+        gusLastModified: "2026-06-15T13:45:57.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20297,12 +20297,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 68,
+        percentComplete: 76,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T19:55:34.000+0000",
+        gusLastModified: "2026-06-15T19:15:46.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20341,12 +20341,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 82,
+        percentComplete: 85,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:39:22.000+0000",
+        gusLastModified: "2026-06-16T06:15:44.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20390,7 +20390,7 @@ const roadmapDataSlack = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T14:37:56.000+0000",
+        gusLastModified: "2026-06-15T14:51:47.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20473,12 +20473,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: "Medium",
-        percentComplete: 5,
+        percentComplete: 14,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T20:58:56.000+0000",
+        gusLastModified: "2026-06-15T22:46:43.000+0000",
         productOwner: "Yuting Yang",
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20508,7 +20508,7 @@ const roadmapDataSlack = [
         details: {
             overview: "Migrate Slack connection to Surfaces, rather than Slack connected app",
             keyFeatures: [],
-            impact: "6/9: Pending platform blocker out for review. \n6/2: 1 remaining story + 1 blocking platform bug (W-21635616 - ETA 262.9). Needs update on our end once the bug is fixed."
+            impact: "6/16: NGA Platform blocker has been checked in - changes to be incorporated on our end today.\r\n\r\n6/9: Pending platform blocker out for review."
         },
         gusEpicId: "a3QEE0000027cdh",
         project: "[SFAi] Pipeline & Forecast Intelligence (Off-cycle / Monthly Releases)",
@@ -20517,12 +20517,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 67,
+        percentComplete: 81,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T13:10:16.000+0000",
+        gusLastModified: "2026-06-16T04:10:24.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20649,12 +20649,12 @@ const roadmapDataSlack = [
         readinessStatus: "Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: 43,
+        percentComplete: 53,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T21:32:16.000+0000",
+        gusLastModified: "2026-06-15T19:48:28.000+0000",
         productOwner: "Yuting Yang",
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20667,7 +20667,7 @@ const roadmapDataSlack = [
         title: "DLM-264-P0: Supporting Revenue Agents in Slackbot Design&POC - Foundational Work",
         description: "Please read Link Callout: The architecture decision needs to be aligned among Sales Cloud, Slack and Revenue Cloud. The goal for this epic is to get the MVP goals work with the design choice, and implement and test the quoting use cases. The epic needs to capture the pre-req for…",
         category: "feature",
-        status: "in-progress",
+        status: "planned",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -20675,7 +20675,7 @@ const roadmapDataSlack = [
         prdLink: "",
         team: "Rev Nova",
         scheduledBuild: "264",
-        health: "On Track",
+        health: "On Hold",
         devLead: "Saurabh Agarwal",
         designLead: "Saket Adhikarla",
         qualityLead: "",
@@ -20698,7 +20698,7 @@ const roadmapDataSlack = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-10T15:33:45.000+0000",
+        gusLastModified: "2026-06-15T15:41:52.000+0000",
         productOwner: "Yuting Yang",
         releaseStage: null,
         featureLifecycleStage: null,
@@ -20843,7 +20843,7 @@ const roadmapDataSlack = [
         title: "Slack Notifications for Meetings & Qualification",
         description: "(no description in GUS) — Slack Notifications for Meetings & Qualification",
         category: "feature",
-        status: "planned",
+        status: "in-progress",
         period: "Summer '26 (264)",
         quarter: "Summer '26 (264)",
         date: "264",
@@ -20851,7 +20851,7 @@ const roadmapDataSlack = [
         prdLink: "",
         team: "Inbox Services",
         scheduledBuild: "264",
-        health: "Not Started",
+        health: "On Track",
         devLead: "Harshavardhan Patil",
         designLead: "Kyle Mirro",
         qualityLead: "",
@@ -20869,12 +20869,12 @@ const roadmapDataSlack = [
         readinessStatus: "Not Ready",
         a11yStatus: null,
         tShirtSize: null,
-        percentComplete: null,
+        percentComplete: 0,
         slippageComments: null,
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-09T21:18:40.000+0000",
+        gusLastModified: "2026-06-15T15:10:26.000+0000",
         productOwner: "Tyler Schott",
         releaseStage: null,
         featureLifecycleStage: null,
@@ -21006,7 +21006,7 @@ const roadmapDataSlack = [
         pathToGreen: null,
         source: null,
         epicCategory: "Feature",
-        gusLastModified: "2026-06-08T11:12:21.000+0000",
+        gusLastModified: "2026-06-13T14:37:01.000+0000",
         productOwner: null,
         releaseStage: null,
         featureLifecycleStage: null,
@@ -21897,7 +21897,7 @@ const roadmapDataSlack = [
     {
         id: 51,
         title: "DLM-266-P0: Pilot - Deal Room in Slack",
-        description: "Please read Link Summary: Build an end-to-end steel thread that proves the sales flow: Quote creation → Approval workflow → Slack notification/approval → AWI state change → Opportunity update → Revenue recognition trigger (POC). This proves integration correctness and acts as the…",
+        description: "(no description in GUS) — DLM-266-P0: Pilot - Deal Room in Slack",
         category: "feature",
         status: "planned",
         period: "Winter '27 (266)",
@@ -21914,7 +21914,7 @@ const roadmapDataSlack = [
         v2momMethod: "Slack",
         version: "slack",
         details: {
-            overview: "Please read Link Summary: Build an end-to-end steel thread that proves the sales flow: Quote creation → Approval workflow → Slack notification/approval → AWI state change → Opportunity update → Revenue recognition trigger (POC). This proves integration correctness and acts as the demo path for sales and revenue teams. Key goals (short): Demonstrate end-to-end flow for an initial sale with a minimal dataset. Validate approval preview and action path end-to-end. Produce test scripts, a demo playbook, and a shortlist of required infra changes. Deliverables (short): Working demo tenant + scripts Test cases & acceptance checklist Gap list for production rollout",
+            overview: "(no description in GUS) — DLM-266-P0: Pilot - Deal Room in Slack",
             keyFeatures: [],
             impact: ""
         },
@@ -21941,7 +21941,7 @@ const roadmapDataSlack = [
     {
         id: 52,
         title: "DLM-266-P0: Supporting Amendment, Renewal and Cancellation Steel Thread in Slack",
-        description: "Amendment: When a customer requests a mid-sale change, I want to propose and route the amendment from Slack, so deals close faster and all changes are auditable. Renewal: When a contract is approaching renewal, I want automated renewal reminders and one-click quote generation in…",
+        description: "(no description in GUS) — DLM-266-P0: Supporting Amendment, Renewal and Cancellation Steel Thread in Slack",
         category: "feature",
         status: "planned",
         period: "Winter '27 (266)",
@@ -21958,7 +21958,7 @@ const roadmapDataSlack = [
         v2momMethod: "Slack",
         version: "slack",
         details: {
-            overview: "Amendment: When a customer requests a mid-sale change, I want to propose and route the amendment from Slack, so deals close faster and all changes are auditable. Renewal: When a contract is approaching renewal, I want automated renewal reminders and one-click quote generation in Slack, so renewals are timely and upsell opportunities are surfaced. Cancellation: When a customer signals cancellation, I want to open a retention swarm from Slack, propose tracked offers, and ensure billing and DRO actions execute if cancellation proceeds. As an AE, I want to propose and push quote amendments (term, qty, promo) from Slack so I can service mid-sale changes without switching apps. As a deal desk reviewer, I want to receive a concise amendment proposal in Slack with guardrail flags and an approval pathway so I can approve or request changes quickly. As an auditor, I want the amendment to produce a complete pre/post audit record tied to the work item and correlation id so changes are traceable. As a CSM, I want renewal opportunities surfaced in Slack Today with one-click draft renewal quote generation so I can act proactively. As a CSM, when a customer signals cancellation I want to open a private “Retention Swarm” from Slack to triage and propose retention offers so we can attempt to save the account. As a retention approver, I want to see the customer’s contract, last invoices, and suggested offers in Slack and approve offers quickly so we can act within SLA. [stretch] As Revenue Ops,…",
+            overview: "(no description in GUS) — DLM-266-P0: Supporting Amendment, Renewal and Cancellation Steel Thread in Slack",
             keyFeatures: [],
             impact: ""
         },
@@ -21985,7 +21985,7 @@ const roadmapDataSlack = [
     {
         id: 53,
         title: "PFT for Sales Agent in Slack",
-        description: "Sales Agent connected to Slack Sales Agent invoked in Slack (conversational UI) Pipeline Management notifications sent Pipeline Management notifications interacted with (accepted, declined)",
+        description: "(no description in GUS) — PFT for Sales Agent in Slack",
         category: "feature",
         status: "planned",
         period: "Winter '27 (266)",
@@ -22002,7 +22002,7 @@ const roadmapDataSlack = [
         v2momMethod: "Slack",
         version: "slack",
         details: {
-            overview: "Sales Agent connected to Slack Sales Agent invoked in Slack (conversational UI) Pipeline Management notifications sent Pipeline Management notifications interacted with (accepted, declined)",
+            overview: "(no description in GUS) — PFT for Sales Agent in Slack",
             keyFeatures: [],
             impact: ""
         },
@@ -22029,7 +22029,7 @@ const roadmapDataSlack = [
     {
         id: 54,
         title: "Sales Agent in Slack",
-        description: "Enable sellers to work with their Sales Agent in Slack - Automatically connect your Sales Agent to Slack - Get proactive notifications about suggested deal actions in Slack",
+        description: "(no description in GUS) — Sales Agent in Slack",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -22046,9 +22046,9 @@ const roadmapDataSlack = [
         v2momMethod: "Slack",
         version: "slack",
         details: {
-            overview: "Enable sellers to work with their Sales Agent in Slack - Automatically connect your Sales Agent to Slack - Get proactive notifications about suggested deal actions in Slack",
+            overview: "(no description in GUS) — Sales Agent in Slack",
             keyFeatures: [],
-            impact: "2/23/26: Gates open on all instances\r\n2/17/26: Gates rolling out through last weekend.  Should be complete by Wednesday."
+            impact: "2/23/26: Gates open on all instances\n2/17/26: Gates rolling out through last weekend."
         },
         gusEpicId: "a3QEE0000024rPZ",
         project: "[SFAi] Slack-First Sales (Off-cycle / Monthly Releases)",
@@ -22073,7 +22073,7 @@ const roadmapDataSlack = [
     {
         id: 55,
         title: "Sales Agent in Slack metering for notifications",
-        description: "Add user-level metering of 15 Pipeline Management notifications per day so that we don't overwhelm users with too many notifications, and control cost to serve.",
+        description: "(no description in GUS) — Sales Agent in Slack metering for notifications",
         category: "feature",
         status: "completed",
         period: "Spring '26 (262)",
@@ -22090,7 +22090,7 @@ const roadmapDataSlack = [
         v2momMethod: "Slack",
         version: "slack",
         details: {
-            overview: "Add user-level metering of 15 Pipeline Management notifications per day so that we don't overwhelm users with too many notifications, and control cost to serve.",
+            overview: "(no description in GUS) — Sales Agent in Slack metering for notifications",
             keyFeatures: [],
             impact: "5/12: Done and in production\n4/28: Validate on 260.Patch and sign off."
         },
@@ -22117,7 +22117,7 @@ const roadmapDataSlack = [
     {
         id: 56,
         title: "Unified Setup for Slack First Sales",
-        description: "As part of the “Slack-first Sales” product vision, we imagined what it might look like for a seller to do most of their work in Slack. (See vision demo below.) Unfortunately, achieving this today requires complicated configuration from multiple people: the Salesforce admin, the S…",
+        description: "(no description in GUS) — Unified Setup for Slack First Sales",
         category: "feature",
         status: "planned",
         period: "Winter '27 (266)",
@@ -22134,7 +22134,7 @@ const roadmapDataSlack = [
         v2momMethod: "Slack",
         version: "slack",
         details: {
-            overview: "As part of the “Slack-first Sales” product vision, we imagined what it might look like for a seller to do most of their work in Slack. (See vision demo below.) Unfortunately, achieving this today requires complicated configuration from multiple people: the Salesforce admin, the Slack admin, and the end user. We want to unify the key elements of Slack-first Sales into Salesforce Go, so that customers have a single place to configure and deploy Sales functionality to Slack. Slack configuration overview: https://docs.google.com/presentation/d/1ckyqdbL2orKhKohLOuxbPlgwBZEidTfdN4SWjmZ2Ti4/edit?usp=sharing Vision: Demo recording / Demo script Prototype: SalesAgentsInSlackDemo-73025.mov",
+            overview: "(no description in GUS) — Unified Setup for Slack First Sales",
             keyFeatures: [],
             impact: ""
         },
