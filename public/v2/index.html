@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentforce Roadmap v2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <h1>Agentforce Roadmap <span class="badge-v2">v2</span></h1>
+            <p class="sub">Live from GUS · Postgres-backed <span id="syncStamp" class="stamp"></span></p>
+        </div>
+        <div class="topbar-right">
+            <a class="legacy-link" href="/" title="Open the original roadmap">↩ Classic view</a>
+        </div>
+    </header>
+
+    <nav class="product-tabs" id="productTabs">
+        <button class="ptab active" data-product="gus">Agentforce (GUS)</button>
+        <button class="ptab" data-product="d360">Data 360</button>
+        <button class="ptab" data-product="service">Service Cloud</button>
+        <button class="ptab" data-product="slack">Slack</button>
+    </nav>
+
+    <section class="stats" id="stats" aria-label="Summary stats"></section>
+
+    <section class="controls">
+        <input type="search" id="search" placeholder="Search title, owner, cluster, feature…" autocomplete="off">
+        <div class="filter-bar" id="filterBar"></div>
+    </section>
+
+    <main id="grid" class="grid" aria-live="polite"></main>
+    <div id="empty" class="empty" hidden>No epics match these filters.</div>
+
+    <!-- Detail modal -->
+    <div id="modal" class="modal" hidden>
+        <div class="modal-card" role="dialog" aria-modal="true">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

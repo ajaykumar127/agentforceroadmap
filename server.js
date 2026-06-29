@@ -438,6 +438,11 @@ app.post('/logout', async (req, res) => {
 app.use(checkBreakGlass);
 app.use(requireAuth);
 
+// --- v2 (Postgres-backed roadmap) — additive, mounted before static -----
+// Everything under /v2 is auth-gated by the middleware above. The legacy
+// app at "/" is untouched.
+app.use('/v2', require('./routes/v2'));
+
 // Expose current user info to client (for greeting + manage-signin link)
 app.get('/api/me', (req, res) => {
     res.json({

@@ -1,15 +1,18 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-// Create PostgreSQL connection pool
+// Create PostgreSQL connection pool.
+// max defaults to 5 (NOT 20): Heroku essential-0 caps the whole DB at 20
+// connections and has no server-side PgBouncer, so one web dyno must stay
+// well under the cap to leave room for the laptop sync + occasional psql.
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    ssl: process.env.NODE_ENV === 'production' ? {
+    ssl: (process.env.NODE_ENV === 'production' || process.env.PGSSLMODE === 'require') ? {
         rejectUnauthorized: false
     } : false,
-    max: 20,
+    max: parseInt(process.env.PG_POOL_MAX, 10) || 5,
     idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 2000,
+    connectionTimeoutMillis: 5000,
 });
 
 // Test connection
