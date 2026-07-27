@@ -10,3 +10,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# Local scratch / data snapshots (not for the repo)
+data.js.backup
+data.js.pre-refresh-*
+data.js.v3-original
+gus_reports_parsed.json
+
